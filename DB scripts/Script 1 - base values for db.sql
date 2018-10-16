@@ -35,10 +35,8 @@ INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (15, 'Film
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`WydarzeniaSpecjalne`
 -- -----------------------------------------------------
-START TRANSACTION;
-USE `SZOK`;
 INSERT INTO `SZOK`.`WydarzeniaSpecjalne` (`id`, `nazwa`, `usunieto`) VALUES (1, 'Maraton', NULL);
-INSERT INTO `SZOK`.`WydarzeniaSpecjalne` (`id`, `nazwa`, `usunieto`) VALUES (2, 'Lady\'s Night', NULL);
+INSERT INTO `SZOK`.`WydarzeniaSpecjalne` (`id`, `nazwa`, `usunieto`) VALUES (2, 'Lejdis Najt', NULL);
 
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`TypySeansow`
@@ -138,8 +136,8 @@ INSERT INTO `SZOK`.`Miejsca` (`id`, `pozycja`, `numerMiejsca`, `Rzedy_id`) VALUE
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`Promocje`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`Promocje` (`id`, `nazwa`, `czyKwotowa`, `wartosc`, `poczatekPromocji`, `koniecPromocji`, `czyKobieta`, `staz`) VALUES (1, 'Promocja 1', 0, 10, '2018-01-01', '2018-12-31', , NULL);
-INSERT INTO `SZOK`.`Promocje` (`id`, `nazwa`, `czyKwotowa`, `wartosc`, `poczatekPromocji`, `koniecPromocji`, `czyKobieta`, `staz`) VALUES (2, 'Promocja 2', 0, 15, '2018-05-01', '2018-06-30', K, NULL);
+INSERT INTO `SZOK`.`Promocje` (`id`, `nazwa`, `czyKwotowa`, `wartosc`, `poczatekPromocji`, `koniecPromocji`, `czyKobieta`, `staz`) VALUES (1, 'Promocja 1', 0, 10, '2018-01-01', '2018-12-31', NULL , NULL);
+INSERT INTO `SZOK`.`Promocje` (`id`, `nazwa`, `czyKwotowa`, `wartosc`, `poczatekPromocji`, `koniecPromocji`, `czyKobieta`, `staz`) VALUES (2, 'Promocja 2', 0, 15, '2018-05-01', '2018-06-30', 1, NULL);
 INSERT INTO `SZOK`.`Promocje` (`id`, `nazwa`, `czyKwotowa`, `wartosc`, `poczatekPromocji`, `koniecPromocji`, `czyKobieta`, `staz`) VALUES (3, 'Promocja 3', 1, 10.00, '2018-03-01', '2018-09-30', NULL, '2018-01-12');
 
 -- -----------------------------------------------------
@@ -218,10 +216,10 @@ INSERT INTO `SZOK`.`Seans_ma_Filmy` (`Seanse_id`, `Filmy_id`, `kolejnosc`) VALUE
 INSERT INTO `SZOK`.`Seans_ma_Filmy` (`Seanse_id`, `Filmy_id`, `kolejnosc`) VALUES (4, 1, DEFAULT);
 
 -- -----------------------------------------------------
--- Data for table `SZOK`.`Filmy_ma_TypySeansow`
+-- Data for table `SZOK`.`Film_ma_TypySeansow`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`Filmy_ma_TypySeansow` (`Filmy_id`, `TypySeansow_id`) VALUES (1, 1);
-INSERT INTO `SZOK`.`Filmy_ma_TypySeansow` (`Filmy_id`, `TypySeansow_id`) VALUES (1, 2);
-INSERT INTO `SZOK`.`Filmy_ma_TypySeansow` (`Filmy_id`, `TypySeansow_id`) VALUES (1, 3);
-INSERT INTO `SZOK`.`Filmy_ma_TypySeansow` (`Filmy_id`, `TypySeansow_id`) VALUES (1, 4);
-INSERT INTO `SZOK`.`Filmy_ma_TypySeansow` (`Filmy_id`, `TypySeansow_id`) VALUES (2, 3);
+INSERT INTO `SZOK`.`Film_ma_TypySeansow` (`Filmy_id`, `TypySeansow_id`) VALUES (1, 1);
+INSERT INTO `SZOK`.`Film_ma_TypySeansow` (`Filmy_id`, `TypySeansow_id`) VALUES (1, 2);
+INSERT INTO `SZOK`.`Film_ma_TypySeansow` (`Filmy_id`, `TypySeansow_id`) VALUES (1, 3);
+INSERT INTO `SZOK`.`Film_ma_TypySeansow` (`Filmy_id`, `TypySeansow_id`) VALUES (1, 4);
+INSERT INTO `SZOK`.`Film_ma_TypySeansow` (`Filmy_id`, `TypySeansow_id`) VALUES (2, 3);
