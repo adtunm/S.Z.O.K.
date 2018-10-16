@@ -7,7 +7,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema SZOK
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `SZOK` ;
 
 -- -----------------------------------------------------
 -- Schema SZOK
@@ -204,7 +203,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Uzytkownicy` (
   `telefon` VARCHAR(9) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
   `dataRejestracji` DATE NOT NULL,
-  `plec` ENUM('M', 'K') NOT NULL,
+  `czyKobieta` TINYINT NOT NULL,
   `czyZablowoany` TINYINT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idUzytkownicy_UNIQUE` (`id` ASC),
@@ -333,7 +332,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Promocje` (
   `wartosc` DECIMAL(5,2) NOT NULL,
   `poczatekPromocji` DATE NOT NULL,
   `koniecPromocji` DATE NOT NULL,
-  `plec` ENUM('M', 'K') NULL,
+  `czyKobieta` TINYINT NULL,
   `staz` DATE NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idPromocje_UNIQUE` (`id` ASC))
@@ -354,7 +353,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Vouchery` (
   `losoweCyfry` DECIMAL(3,0) NOT NULL,
   `cyfraKontrolna` DECIMAL(1,0) NOT NULL,
   `czasWygenerowania` DATETIME NOT NULL,
-  `czyWykorzystany` TINYINT NULL,
+  `czyWykorzystanyy` TINYINT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idVouchery_UNIQUE` (`id` ASC))
 ENGINE = InnoDB;
@@ -606,11 +605,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `SZOK`.`Film_ma_TypySeansow`
+-- Table `SZOK`.`Filmy_ma_TypySeansow`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `SZOK`.`Film_ma_TypySeansow` ;
+DROP TABLE IF EXISTS `SZOK`.`Filmy_ma_TypySeansow` ;
 
-CREATE TABLE IF NOT EXISTS `SZOK`.`Film_ma_TypySeansow` (
+CREATE TABLE IF NOT EXISTS `SZOK`.`Filmy_ma_TypySeansow` (
   `Filmy_id` INT UNSIGNED NOT NULL,
   `TypySeansow_id` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`Filmy_id`, `TypySeansow_id`),
