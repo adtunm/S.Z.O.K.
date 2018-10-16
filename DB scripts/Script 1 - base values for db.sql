@@ -139,7 +139,7 @@ INSERT INTO `SZOK`.`Miejsca` (`id`, `pozycja`, `numerMiejsca`, `Rzedy_id`) VALUE
 -- Data for table `SZOK`.`Promocje`
 -- -----------------------------------------------------
 INSERT INTO `SZOK`.`Promocje` (`id`, `nazwa`, `czyKwotowa`, `wartosc`, `poczatekPromocji`, `koniecPromocji`, `czyKobieta`, `staz`) VALUES (1, 'Promocja 1', 0, 10, '2018-01-01', '2018-12-31', NULL , NULL);
-INSERT INTO `SZOK`.`Promocje` (`id`, `nazwa`, `czyKwotowa`, `wartosc`, `poczatekPromocji`, `koniecPromocji`, `czyKobieta`, `staz`) VALUES (2, 'Promocja 2', 0, 15, '2018-05-01', '2018-06-30', K, NULL);
+INSERT INTO `SZOK`.`Promocje` (`id`, `nazwa`, `czyKwotowa`, `wartosc`, `poczatekPromocji`, `koniecPromocji`, `czyKobieta`, `staz`) VALUES (2, 'Promocja 2', 0, 15, '2018-05-01', '2018-06-30', 1, NULL);
 INSERT INTO `SZOK`.`Promocje` (`id`, `nazwa`, `czyKwotowa`, `wartosc`, `poczatekPromocji`, `koniecPromocji`, `czyKobieta`, `staz`) VALUES (3, 'Promocja 3', 1, 10.00, '2018-03-01', '2018-09-30', NULL, '2018-01-12');
 
 -- -----------------------------------------------------
