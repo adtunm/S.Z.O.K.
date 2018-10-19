@@ -613,14 +613,14 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Film_ma_TypySeansow` (
   `Filmy_id` INT UNSIGNED NOT NULL,
   `TypySeansow_id` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`Filmy_id`, `TypySeansow_id`),
-  INDEX `fk_Film_has_TypySeansow_TypySeansow1_idx` (`TypySeansow_id` ASC),
-  INDEX `fk_Film_has_TypySeansow_Filmy1_idx` (`Filmy_id` ASC),
-  CONSTRAINT `fk_Film_has_TypySeansow_Filmy1`
+  INDEX `fk_Filmy_has_TypySeansow_TypySeansow1_idx` (`TypySeansow_id` ASC),
+  INDEX `fk_Filmy_has_TypySeansow_Filmy1_idx` (`Filmy_id` ASC),
+  CONSTRAINT `fk_Filmy_has_TypySeansow_Filmy1`
     FOREIGN KEY (`Filmy_id`)
     REFERENCES `SZOK`.`Filmy` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Film_has_TypySeansow_TypySeansow1`
+  CONSTRAINT `fk_Filmy_has_TypySeansow_TypySeansow1`
     FOREIGN KEY (`TypySeansow_id`)
     REFERENCES `SZOK`.`TypySeansow` (`id`)
     ON DELETE NO ACTION
