@@ -13,9 +13,56 @@ use Doctrine\ORM\Mapping as ORM;
 class Pulebiletow
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNazwa(): string
+    {
+        return $this->nazwa;
+    }
+
+    /**
+     * @param string $nazwa
+     */
+    public function setNazwa(string $nazwa): void
+    {
+        $this->nazwa = $nazwa;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getUsunieto(): ?bool
+    {
+        return $this->usunieto;
+    }
+
+    /**
+     * @param bool|null $usunieto
+     */
+    public function setUsunieto(?bool $usunieto): void
+    {
+        $this->usunieto = $usunieto;
+    }
+    /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
@@ -35,27 +82,5 @@ class Pulebiletow
      */
     private $usunieto;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Rodzajebiletow", inversedBy="pulebiletow")
-     * @ORM\JoinTable(name="pulabiletow_ma_rodzajebiletow",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="PuleBiletow_id", referencedColumnName="id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="RodzajeBiletow_id", referencedColumnName="id")
-     *   }
-     * )
-     */
-    private $rodzajebiletow;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->rodzajebiletow = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
 }
