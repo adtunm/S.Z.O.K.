@@ -13,6 +13,149 @@ use Doctrine\ORM\Mapping as ORM;
 class Vouchery
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isCzykwotowa(): bool
+    {
+        return $this->czykwotowa;
+    }
+
+    /**
+     * @param bool $czykwotowa
+     */
+    public function setCzykwotowa(bool $czykwotowa): void
+    {
+        $this->czykwotowa = $czykwotowa;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWartosc(): string
+    {
+        return $this->wartosc;
+    }
+
+    /**
+     * @param string $wartosc
+     */
+    public function setWartosc(string $wartosc): void
+    {
+        $this->wartosc = $wartosc;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getPoczatekpromocji(): \DateTime
+    {
+        return $this->poczatekpromocji;
+    }
+
+    /**
+     * @param \DateTime $poczatekpromocji
+     */
+    public function setPoczatekpromocji(\DateTime $poczatekpromocji): void
+    {
+        $this->poczatekpromocji = $poczatekpromocji;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getKoniecpromocji(): \DateTime
+    {
+        return $this->koniecpromocji;
+    }
+
+    /**
+     * @param \DateTime $koniecpromocji
+     */
+    public function setKoniecpromocji(\DateTime $koniecpromocji): void
+    {
+        $this->koniecpromocji = $koniecpromocji;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLosowecyfry(): string
+    {
+        return $this->losowecyfry;
+    }
+
+    /**
+     * @param string $losowecyfry
+     */
+    public function setLosowecyfry(string $losowecyfry): void
+    {
+        $this->losowecyfry = $losowecyfry;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCyfrakontrolna(): string
+    {
+        return $this->cyfrakontrolna;
+    }
+
+    /**
+     * @param string $cyfrakontrolna
+     */
+    public function setCyfrakontrolna(string $cyfrakontrolna): void
+    {
+        $this->cyfrakontrolna = $cyfrakontrolna;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCzaswygenerowania(): \DateTime
+    {
+        return $this->czaswygenerowania;
+    }
+
+    /**
+     * @param \DateTime $czaswygenerowania
+     */
+    public function setCzaswygenerowania(\DateTime $czaswygenerowania): void
+    {
+        $this->czaswygenerowania = $czaswygenerowania;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getCzywykorzystanyy(): ?bool
+    {
+        return $this->czywykorzystanyy;
+    }
+
+    /**
+     * @param bool|null $czywykorzystanyy
+     */
+    public function setCzywykorzystanyy(?bool $czywykorzystanyy): void
+    {
+        $this->czywykorzystanyy = $czywykorzystanyy;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})

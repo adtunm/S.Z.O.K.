@@ -13,6 +13,117 @@ use Doctrine\ORM\Mapping as ORM;
 class Seanse
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getPoczatekseansu(): \DateTime
+    {
+        return $this->poczatekseansu;
+    }
+
+    /**
+     * @param \DateTime $poczatekseansu
+     */
+    public function setPoczatekseansu(\DateTime $poczatekseansu): void
+    {
+        $this->poczatekseansu = $poczatekseansu;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getCzyodwolany(): ?bool
+    {
+        return $this->czyodwolany;
+    }
+
+    /**
+     * @param bool|null $czyodwolany
+     */
+    public function setCzyodwolany(?bool $czyodwolany): void
+    {
+        $this->czyodwolany = $czyodwolany;
+    }
+
+    /**
+     * @return \Pulebiletow
+     */
+    public function getPulebiletow(): \Pulebiletow
+    {
+        return $this->pulebiletow;
+    }
+
+    /**
+     * @param \Pulebiletow $pulebiletow
+     */
+    public function setPulebiletow(\Pulebiletow $pulebiletow): void
+    {
+        $this->pulebiletow = $pulebiletow;
+    }
+
+    /**
+     * @return \Sale
+     */
+    public function getSale(): \Sale
+    {
+        return $this->sale;
+    }
+
+    /**
+     * @param \Sale $sale
+     */
+    public function setSale(\Sale $sale): void
+    {
+        $this->sale = $sale;
+    }
+
+    /**
+     * @return \Typyseansow
+     */
+    public function getTypyseansow(): \Typyseansow
+    {
+        return $this->typyseansow;
+    }
+
+    /**
+     * @param \Typyseansow $typyseansow
+     */
+    public function setTypyseansow(\Typyseansow $typyseansow): void
+    {
+        $this->typyseansow = $typyseansow;
+    }
+
+    /**
+     * @return \Wydarzeniaspecjalne
+     */
+    public function getWydarzeniaspecjalne(): \Wydarzeniaspecjalne
+    {
+        return $this->wydarzeniaspecjalne;
+    }
+
+    /**
+     * @param \Wydarzeniaspecjalne $wydarzeniaspecjalne
+     */
+    public function setWydarzeniaspecjalne(\Wydarzeniaspecjalne $wydarzeniaspecjalne): void
+    {
+        $this->wydarzeniaspecjalne = $wydarzeniaspecjalne;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
@@ -75,27 +186,5 @@ class Seanse
      */
     private $wydarzeniaspecjalne;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Filmy", inversedBy="seanse")
-     * @ORM\JoinTable(name="seans_ma_filmy",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="Seanse_id", referencedColumnName="id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="Filmy_id", referencedColumnName="id")
-     *   }
-     * )
-     */
-    private $filmy;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->filmy = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
 }

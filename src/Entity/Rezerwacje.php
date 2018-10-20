@@ -13,6 +13,181 @@ use Doctrine\ORM\Mapping as ORM;
 class Rezerwacje
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImie(): string
+    {
+        return $this->imie;
+    }
+
+    /**
+     * @param string $imie
+     */
+    public function setImie(string $imie): void
+    {
+        $this->imie = $imie;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNazwisko(): string
+    {
+        return $this->nazwisko;
+    }
+
+    /**
+     * @param string $nazwisko
+     */
+    public function setNazwisko(string $nazwisko): void
+    {
+        $this->nazwisko = $nazwisko;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTelefon(): string
+    {
+        return $this->telefon;
+    }
+
+    /**
+     * @param string $telefon
+     */
+    public function setTelefon(string $telefon): void
+    {
+        $this->telefon = $telefon;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isCzyodwiedzajacy(): bool
+    {
+        return $this->czyodwiedzajacy;
+    }
+
+    /**
+     * @param bool $czyodwiedzajacy
+     */
+    public function setCzyodwiedzajacy(bool $czyodwiedzajacy): void
+    {
+        $this->czyodwiedzajacy = $czyodwiedzajacy;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isSfinalizowana(): bool
+    {
+        return $this->sfinalizowana;
+    }
+
+    /**
+     * @param bool $sfinalizowana
+     */
+    public function setSfinalizowana(bool $sfinalizowana): void
+    {
+        $this->sfinalizowana = $sfinalizowana;
+    }
+
+    /**
+     * @return \Pracownicy
+     */
+    public function getPracownicy(): \Pracownicy
+    {
+        return $this->pracownicy;
+    }
+
+    /**
+     * @param \Pracownicy $pracownicy
+     */
+    public function setPracownicy(\Pracownicy $pracownicy): void
+    {
+        $this->pracownicy = $pracownicy;
+    }
+
+    /**
+     * @return \Seanse
+     */
+    public function getSeanse(): \Seanse
+    {
+        return $this->seanse;
+    }
+
+    /**
+     * @param \Seanse $seanse
+     */
+    public function setSeanse(\Seanse $seanse): void
+    {
+        $this->seanse = $seanse;
+    }
+
+    /**
+     * @return \Uzytkownicy
+     */
+    public function getUzytkownicy(): \Uzytkownicy
+    {
+        return $this->uzytkownicy;
+    }
+
+    /**
+     * @param \Uzytkownicy $uzytkownicy
+     */
+    public function setUzytkownicy(\Uzytkownicy $uzytkownicy): void
+    {
+        $this->uzytkownicy = $uzytkownicy;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getMiejsca(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->miejsca;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $miejsca
+     */
+    public function setMiejsca(\Doctrine\Common\Collections\Collection $miejsca): void
+    {
+        $this->miejsca = $miejsca;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})

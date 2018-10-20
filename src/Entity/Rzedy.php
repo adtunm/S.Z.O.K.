@@ -13,6 +13,69 @@ use Doctrine\ORM\Mapping as ORM;
 class Rzedy
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNumerrzedu(): int
+    {
+        return $this->numerrzedu;
+    }
+
+    /**
+     * @param int $numerrzedu
+     */
+    public function setNumerrzedu(int $numerrzedu): void
+    {
+        $this->numerrzedu = $numerrzedu;
+    }
+
+    /**
+     * @return \Sale
+     */
+    public function getSale(): \Sale
+    {
+        return $this->sale;
+    }
+
+    /**
+     * @param \Sale $sale
+     */
+    public function setSale(\Sale $sale): void
+    {
+        $this->sale = $sale;
+    }
+
+    /**
+     * @return \Typyrzedow
+     */
+    public function getTypyrzedow(): \Typyrzedow
+    {
+        return $this->typyrzedow;
+    }
+
+    /**
+     * @param \Typyrzedow $typyrzedow
+     */
+    public function setTypyrzedow(\Typyrzedow $typyrzedow): void
+    {
+        $this->typyrzedow = $typyrzedow;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
