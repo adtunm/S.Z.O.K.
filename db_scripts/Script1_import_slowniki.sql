@@ -67,7 +67,26 @@ INSERT INTO `SZOK`.`RodzajePlatnosci` (`id`, `nazwa`, `usunieto`) VALUES (1, 'Ka
 INSERT INTO `SZOK`.`RodzajePlatnosci` (`id`, `nazwa`, `usunieto`) VALUES (2, 'Gotówka', NULL);
 INSERT INTO `SZOK`.`RodzajePlatnosci` (`id`, `nazwa`, `usunieto`) VALUES (3, 'Przelew', NULL);
 
+-- -----------------------------------------------------
+-- Data for table `SZOK`.`PuleBiletow`
+-- -----------------------------------------------------
+INSERT INTO `SZOK`.`PuleBiletow` (`id`, `nazwa`, `usunieto`) VALUES (1, 'Zwykłe 2d', NULL);
+INSERT INTO `SZOK`.`PuleBiletow` (`id`, `nazwa`, `usunieto`) VALUES (2, 'Zwykłe 3d', NULL);
+INSERT INTO `SZOK`.`PuleBiletow` (`id`, `nazwa`, `usunieto`) VALUES (3, 'Weekend 2d', NULL);
+INSERT INTO `SZOK`.`PuleBiletow` (`id`, `nazwa`, `usunieto`) VALUES (4, 'Weekend 3d', NULL);
 
 -- -----------------------------------------------------
--- Data for table `SZOK`.`Uzytkownicy` '1305485a712608fdc4d2fd1780c72919f2f54cf288525814bff7120737f6ddad'
+-- Data for table `SZOK`.`PulaBiletow_ma_RodzajeBiletow`
 -- -----------------------------------------------------
+INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (1, 1, 1, 20.00);
+INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (2, 1, 2, 17.00);
+INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (3, 1, 3, 15.00);
+INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (4, 2, 1, 30.00);
+INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (5, 2, 2, 25.00);
+INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (6, 2, 3, 20.00);
+INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (7, 3, 1, 25.00);
+INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (8, 3, 2, 22.00);
+INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (9, 3, 3, 19.00);
+INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (10, 4, 1, 35.00);
+INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (11, 4, 2, 30.00);
+INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (12, 4, 3, 27.00);
