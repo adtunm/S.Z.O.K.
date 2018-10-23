@@ -1,902 +1,902 @@
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.58,'10.01.17 00:00:00','10.07.17 00:00:00',378,7,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.3,'2017-10-01 00:00:00','2017-10-07 00:00:00',535,3,'2017-10-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.44,'10.01.17 00:00:00','10.07.17 00:00:00',496,6,'10.01.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.14,'2017-10-01 00:00:00','2017-10-07 00:00:00',787,9,'2017-10-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,15.13,'10.01.17 00:00:00','10.07.17 00:00:00',825,1,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.64,'2017-10-01 00:00:00','2017-10-07 00:00:00',797,3,'2017-10-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.94,'10.01.17 00:00:00','10.07.17 00:00:00',659,1,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.85,'2017-10-01 00:00:00','2017-10-07 00:00:00',678,3,'2017-10-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.08,'10.01.17 00:00:00','10.07.17 00:00:00',805,8,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,19.53,'2017-10-01 00:00:00','2017-10-07 00:00:00',637,7,'2017-10-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.31,'10.01.17 00:00:00','10.07.17 00:00:00',942,7,'10.01.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.79,'2017-10-01 00:00:00','2017-10-07 00:00:00',221,5,'2017-10-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.96,'10.01.17 00:00:00','10.07.17 00:00:00',149,5,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,13.28,'2017-10-01 00:00:00','2017-10-07 00:00:00',787,5,'2017-10-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.09,'10.01.17 00:00:00','10.07.17 00:00:00',979,4,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.63,'2017-10-01 00:00:00','2017-10-07 00:00:00',797,3,'2017-10-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.9,'10.01.17 00:00:00','10.07.17 00:00:00',309,7,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.26,'2017-10-01 00:00:00','2017-10-07 00:00:00',712,7,'2017-10-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.79,'10.01.17 00:00:00','10.07.17 00:00:00',680,7,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.25,'2017-10-01 00:00:00','2017-10-07 00:00:00',355,1,'2017-10-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.35,'10.01.17 00:00:00','10.07.17 00:00:00',313,3,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.3,'2017-10-01 00:00:00','2017-10-07 00:00:00',516,6,'2017-10-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,25.17,'10.01.17 00:00:00','10.07.17 00:00:00',319,5,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.12,'2017-10-01 00:00:00','2017-10-07 00:00:00',684,9,'2017-10-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.81,'10.01.17 00:00:00','10.07.17 00:00:00',812,9,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.64,'2017-10-01 00:00:00','2017-10-07 00:00:00',527,4,'2017-10-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.73,'10.01.17 00:00:00','10.07.17 00:00:00',569,3,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.25,'2017-10-01 00:00:00','2017-10-07 00:00:00',577,6,'2017-10-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.7,'10.01.17 00:00:00','10.07.17 00:00:00',734,2,'10.01.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.74,'2017-10-01 00:00:00','2017-10-07 00:00:00',555,2,'2017-10-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,26.85,'10.15.17 00:00:00','10.21.17 00:00:00',169,7,'10.15.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.17,'2017-10-15 00:00:00','2017-10-21 00:00:00',278,5,'2017-10-15 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,19.23,'10.15.17 00:00:00','10.21.17 00:00:00',652,1,'10.15.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.11,'2017-10-15 00:00:00','2017-10-21 00:00:00',702,1,'2017-10-15 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.46,'10.15.17 00:00:00','10.21.17 00:00:00',665,5,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.06,'2017-10-15 00:00:00','2017-10-21 00:00:00',757,3,'2017-10-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.95,'10.15.17 00:00:00','10.21.17 00:00:00',474,5,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.52,'2017-10-15 00:00:00','2017-10-21 00:00:00',681,2,'2017-10-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.11,'10.15.17 00:00:00','10.21.17 00:00:00',521,9,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.73,'2017-10-15 00:00:00','2017-10-21 00:00:00',218,6,'2017-10-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.41,'10.15.17 00:00:00','10.21.17 00:00:00',834,4,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.06,'2017-10-15 00:00:00','2017-10-21 00:00:00',496,5,'2017-10-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.99,'10.15.17 00:00:00','10.21.17 00:00:00',171,3,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.1,'2017-10-15 00:00:00','2017-10-21 00:00:00',832,5,'2017-10-15 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.33,'10.15.17 00:00:00','10.21.17 00:00:00',548,2,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.02,'2017-10-15 00:00:00','2017-10-21 00:00:00',621,1,'2017-10-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,15.25,'10.15.17 00:00:00','10.21.17 00:00:00',957,8,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.25,'2017-10-15 00:00:00','2017-10-21 00:00:00',771,7,'2017-10-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,14.26,'10.15.17 00:00:00','10.21.17 00:00:00',824,8,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.18,'2017-10-15 00:00:00','2017-10-21 00:00:00',264,1,'2017-10-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.08,'10.15.17 00:00:00','10.21.17 00:00:00',937,2,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.35,'2017-10-15 00:00:00','2017-10-21 00:00:00',927,4,'2017-10-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.12,'10.15.17 00:00:00','10.21.17 00:00:00',799,4,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,15.01,'2017-10-15 00:00:00','2017-10-21 00:00:00',771,3,'2017-10-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.87,'10.15.17 00:00:00','10.21.17 00:00:00',971,1,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.92,'2017-10-15 00:00:00','2017-10-21 00:00:00',832,3,'2017-10-15 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.57,'10.15.17 00:00:00','10.21.17 00:00:00',914,4,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.62,'2017-10-15 00:00:00','2017-10-21 00:00:00',466,4,'2017-10-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,18.84,'10.15.17 00:00:00','10.21.17 00:00:00',537,9,'10.15.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.08,'2017-10-15 00:00:00','2017-10-21 00:00:00',577,7,'2017-10-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.35,'10.29.17 00:00:00','11.04.17 00:00:00',546,6,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.75,'2017-10-29 00:00:00','2017-11-04 00:00:00',737,9,'2017-10-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.7,'10.29.17 00:00:00','11.04.17 00:00:00',863,1,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.14,'2017-10-29 00:00:00','2017-11-04 00:00:00',165,8,'2017-10-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.9,'10.29.17 00:00:00','11.04.17 00:00:00',166,7,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.14,'2017-10-29 00:00:00','2017-11-04 00:00:00',649,2,'2017-10-29 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.62,'10.29.17 00:00:00','11.04.17 00:00:00',697,7,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.08,'2017-10-29 00:00:00','2017-11-04 00:00:00',276,1,'2017-10-29 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.4,'10.29.17 00:00:00','11.04.17 00:00:00',290,7,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.17,'2017-10-29 00:00:00','2017-11-04 00:00:00',103,5,'2017-10-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,18.21,'10.29.17 00:00:00','11.04.17 00:00:00',874,4,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,12.54,'2017-10-29 00:00:00','2017-11-04 00:00:00',177,3,'2017-10-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.28,'10.29.17 00:00:00','11.04.17 00:00:00',762,2,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.9,'2017-10-29 00:00:00','2017-11-04 00:00:00',318,8,'2017-10-29 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.42,'10.29.17 00:00:00','11.04.17 00:00:00',206,9,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.42,'2017-10-29 00:00:00','2017-11-04 00:00:00',374,5,'2017-10-29 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.36,'10.29.17 00:00:00','11.04.17 00:00:00',933,8,'10.29.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.72,'2017-10-29 00:00:00','2017-11-04 00:00:00',734,7,'2017-10-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,14.98,'10.29.17 00:00:00','11.04.17 00:00:00',320,4,'10.29.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.82,'2017-10-29 00:00:00','2017-11-04 00:00:00',736,5,'2017-10-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.43,'10.29.17 00:00:00','11.04.17 00:00:00',174,9,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.31,'2017-10-29 00:00:00','2017-11-04 00:00:00',401,4,'2017-10-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.06,'10.29.17 00:00:00','11.04.17 00:00:00',976,8,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.61,'2017-10-29 00:00:00','2017-11-04 00:00:00',153,5,'2017-10-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.9,'10.29.17 00:00:00','11.04.17 00:00:00',668,5,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.78,'2017-10-29 00:00:00','2017-11-04 00:00:00',610,8,'2017-10-29 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.39,'10.29.17 00:00:00','11.04.17 00:00:00',563,1,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.92,'2017-10-29 00:00:00','2017-11-04 00:00:00',699,4,'2017-10-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.24,'10.29.17 00:00:00','11.04.17 00:00:00',203,3,'10.29.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.87,'2017-10-29 00:00:00','2017-11-04 00:00:00',869,2,'2017-10-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,16.11,'11.12.17 00:00:00','11.18.17 00:00:00',284,5,'11.12.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,20.06,'2017-11-12 00:00:00','2017-11-18 00:00:00',553,8,'2017-11-12 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.35,'11.12.17 00:00:00','11.18.17 00:00:00',967,9,'11.12.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.25,'2017-11-12 00:00:00','2017-11-18 00:00:00',765,3,'2017-11-12 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.71,'11.12.17 00:00:00','11.18.17 00:00:00',367,1,'11.12.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.95,'2017-11-12 00:00:00','2017-11-18 00:00:00',792,2,'2017-11-12 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.35,'11.12.17 00:00:00','11.18.17 00:00:00',465,2,'11.12.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,15.72,'2017-11-12 00:00:00','2017-11-18 00:00:00',333,5,'2017-11-12 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.89,'11.12.17 00:00:00','11.18.17 00:00:00',183,5,'11.12.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,13.23,'2017-11-12 00:00:00','2017-11-18 00:00:00',769,4,'2017-11-12 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.62,'11.12.17 00:00:00','11.18.17 00:00:00',381,3,'11.12.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.91,'2017-11-12 00:00:00','2017-11-18 00:00:00',319,6,'2017-11-12 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8,'11.12.17 00:00:00','11.18.17 00:00:00',230,9,'11.12.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.68,'2017-11-12 00:00:00','2017-11-18 00:00:00',709,5,'2017-11-12 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.26,'11.12.17 00:00:00','11.18.17 00:00:00',583,5,'11.12.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.23,'2017-11-12 00:00:00','2017-11-18 00:00:00',266,6,'2017-11-12 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,28.6,'11.12.17 00:00:00','11.18.17 00:00:00',194,9,'11.12.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.16,'2017-11-12 00:00:00','2017-11-18 00:00:00',459,4,'2017-11-12 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.45,'11.12.17 00:00:00','11.18.17 00:00:00',187,4,'11.12.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.7,'2017-11-12 00:00:00','2017-11-18 00:00:00',282,9,'2017-11-12 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,21.35,'11.12.17 00:00:00','11.18.17 00:00:00',144,2,'11.12.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.96,'2017-11-12 00:00:00','2017-11-18 00:00:00',270,8,'2017-11-12 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.42,'11.12.17 00:00:00','11.18.17 00:00:00',852,5,'11.12.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.05,'2017-11-12 00:00:00','2017-11-18 00:00:00',220,6,'2017-11-12 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,19.55,'11.12.17 00:00:00','11.18.17 00:00:00',164,9,'11.12.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.46,'2017-11-12 00:00:00','2017-11-18 00:00:00',125,3,'2017-11-12 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.39,'11.12.17 00:00:00','11.18.17 00:00:00',639,1,'11.12.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.45,'2017-11-12 00:00:00','2017-11-18 00:00:00',857,7,'2017-11-12 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.55,'11.12.17 00:00:00','11.18.17 00:00:00',341,8,'11.12.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.27,'2017-11-12 00:00:00','2017-11-18 00:00:00',175,3,'2017-11-12 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,26.32,'11.26.17 00:00:00','12.02.17 00:00:00',344,8,'11.26.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.87,'2017-11-26 00:00:00','2017-12-02 00:00:00',148,2,'2017-11-26 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.87,'11.26.17 00:00:00','12.02.17 00:00:00',892,9,'11.26.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.86,'2017-11-26 00:00:00','2017-12-02 00:00:00',767,4,'2017-11-26 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.63,'11.26.17 00:00:00','12.02.17 00:00:00',902,1,'11.26.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.56,'2017-11-26 00:00:00','2017-12-02 00:00:00',960,1,'2017-11-26 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.21,'11.26.17 00:00:00','12.02.17 00:00:00',316,8,'11.26.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.86,'2017-11-26 00:00:00','2017-12-02 00:00:00',557,7,'2017-11-26 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.98,'11.26.17 00:00:00','12.02.17 00:00:00',197,1,'11.26.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.23,'2017-11-26 00:00:00','2017-12-02 00:00:00',711,1,'2017-11-26 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,16.45,'11.26.17 00:00:00','12.02.17 00:00:00',676,4,'11.26.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.47,'2017-11-26 00:00:00','2017-12-02 00:00:00',681,9,'2017-11-26 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.14,'11.26.17 00:00:00','12.02.17 00:00:00',382,2,'11.26.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.52,'2017-11-26 00:00:00','2017-12-02 00:00:00',149,1,'2017-11-26 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.88,'11.26.17 00:00:00','12.02.17 00:00:00',686,2,'11.26.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.88,'2017-11-26 00:00:00','2017-12-02 00:00:00',771,7,'2017-11-26 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.13,'11.26.17 00:00:00','12.02.17 00:00:00',282,2,'11.26.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.83,'2017-11-26 00:00:00','2017-12-02 00:00:00',544,9,'2017-11-26 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.29,'11.26.17 00:00:00','12.02.17 00:00:00',153,6,'11.26.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.71,'2017-11-26 00:00:00','2017-12-02 00:00:00',497,9,'2017-11-26 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.21,'11.26.17 00:00:00','12.02.17 00:00:00',927,7,'11.26.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.1,'2017-11-26 00:00:00','2017-12-02 00:00:00',348,7,'2017-11-26 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,23.02,'11.26.17 00:00:00','12.02.17 00:00:00',328,2,'11.26.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.59,'2017-11-26 00:00:00','2017-12-02 00:00:00',679,6,'2017-11-26 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.21,'11.26.17 00:00:00','12.02.17 00:00:00',315,6,'11.26.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.18,'2017-11-26 00:00:00','2017-12-02 00:00:00',705,3,'2017-11-26 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.26,'11.26.17 00:00:00','12.02.17 00:00:00',521,4,'11.26.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.35,'2017-11-26 00:00:00','2017-12-02 00:00:00',434,4,'2017-11-26 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,28.8,'11.26.17 00:00:00','12.02.17 00:00:00',832,3,'11.26.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.57,'2017-11-26 00:00:00','2017-12-02 00:00:00',371,5,'2017-11-26 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,12,'12.10.17 00:00:00','12.16.17 00:00:00',954,2,'12.10.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.9,'2017-12-10 00:00:00','2017-12-16 00:00:00',877,2,'2017-12-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.56,'12.10.17 00:00:00','12.16.17 00:00:00',312,1,'12.10.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.33,'2017-12-10 00:00:00','2017-12-16 00:00:00',642,6,'2017-12-10 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.12,'12.10.17 00:00:00','12.16.17 00:00:00',495,3,'12.10.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.42,'2017-12-10 00:00:00','2017-12-16 00:00:00',955,8,'2017-12-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.73,'12.10.17 00:00:00','12.16.17 00:00:00',943,5,'12.10.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.67,'2017-12-10 00:00:00','2017-12-16 00:00:00',639,6,'2017-12-10 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.19,'12.10.17 00:00:00','12.16.17 00:00:00',751,6,'12.10.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.39,'2017-12-10 00:00:00','2017-12-16 00:00:00',321,1,'2017-12-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.84,'12.10.17 00:00:00','12.16.17 00:00:00',920,9,'12.10.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.96,'2017-12-10 00:00:00','2017-12-16 00:00:00',367,4,'2017-12-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,28.24,'12.10.17 00:00:00','12.16.17 00:00:00',422,8,'12.10.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.8,'2017-12-10 00:00:00','2017-12-16 00:00:00',981,7,'2017-12-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.48,'12.10.17 00:00:00','12.16.17 00:00:00',614,8,'12.10.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.19,'2017-12-10 00:00:00','2017-12-16 00:00:00',398,8,'2017-12-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,25.03,'12.10.17 00:00:00','12.16.17 00:00:00',127,9,'12.10.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,12.86,'2017-12-10 00:00:00','2017-12-16 00:00:00',358,7,'2017-12-10 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.8,'12.10.17 00:00:00','12.16.17 00:00:00',625,5,'12.10.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.39,'2017-12-10 00:00:00','2017-12-16 00:00:00',488,4,'2017-12-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.94,'12.10.17 00:00:00','12.16.17 00:00:00',805,1,'12.10.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.75,'2017-12-10 00:00:00','2017-12-16 00:00:00',914,5,'2017-12-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,28.4,'12.10.17 00:00:00','12.16.17 00:00:00',979,8,'12.10.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.51,'2017-12-10 00:00:00','2017-12-16 00:00:00',754,6,'2017-12-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.26,'12.10.17 00:00:00','12.16.17 00:00:00',514,7,'12.10.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.97,'2017-12-10 00:00:00','2017-12-16 00:00:00',598,6,'2017-12-10 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.42,'12.10.17 00:00:00','12.16.17 00:00:00',359,1,'12.10.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.79,'2017-12-10 00:00:00','2017-12-16 00:00:00',567,2,'2017-12-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.93,'12.10.17 00:00:00','12.16.17 00:00:00',262,9,'12.10.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.61,'2017-12-10 00:00:00','2017-12-16 00:00:00',187,4,'2017-12-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.74,'12.24.17 00:00:00','12.30.17 00:00:00',732,7,'12.24.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.49,'2017-12-24 00:00:00','2017-12-30 00:00:00',439,1,'2017-12-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.31,'12.24.17 00:00:00','12.30.17 00:00:00',735,6,'12.24.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.37,'2017-12-24 00:00:00','2017-12-30 00:00:00',903,6,'2017-12-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,15.72,'12.24.17 00:00:00','12.30.17 00:00:00',495,6,'12.24.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,27.2,'2017-12-24 00:00:00','2017-12-30 00:00:00',809,2,'2017-12-24 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,28.39,'12.24.17 00:00:00','12.30.17 00:00:00',796,2,'12.24.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.81,'2017-12-24 00:00:00','2017-12-30 00:00:00',723,5,'2017-12-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,28.08,'12.24.17 00:00:00','12.30.17 00:00:00',780,8,'12.24.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.18,'2017-12-24 00:00:00','2017-12-30 00:00:00',352,8,'2017-12-24 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.21,'12.24.17 00:00:00','12.30.17 00:00:00',608,5,'12.24.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1,'2017-12-24 00:00:00','2017-12-30 00:00:00',802,8,'2017-12-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.9,'12.24.17 00:00:00','12.30.17 00:00:00',625,6,'12.24.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,19.31,'2017-12-24 00:00:00','2017-12-30 00:00:00',565,2,'2017-12-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.97,'12.24.17 00:00:00','12.30.17 00:00:00',916,7,'12.24.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7,'2017-12-24 00:00:00','2017-12-30 00:00:00',780,5,'2017-12-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.17,'12.24.17 00:00:00','12.30.17 00:00:00',914,8,'12.24.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.07,'2017-12-24 00:00:00','2017-12-30 00:00:00',176,4,'2017-12-24 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.26,'12.24.17 00:00:00','12.30.17 00:00:00',856,2,'12.24.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.66,'2017-12-24 00:00:00','2017-12-30 00:00:00',881,7,'2017-12-24 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,25.92,'12.24.17 00:00:00','12.30.17 00:00:00',942,3,'12.24.17 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,23.14,'2017-12-24 00:00:00','2017-12-30 00:00:00',653,1,'2017-12-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.11,'12.24.17 00:00:00','12.30.17 00:00:00',357,4,'12.24.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.32,'2017-12-24 00:00:00','2017-12-30 00:00:00',682,5,'2017-12-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.48,'12.24.17 00:00:00','12.30.17 00:00:00',421,1,'12.24.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.1,'2017-12-24 00:00:00','2017-12-30 00:00:00',611,9,'2017-12-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.51,'12.24.17 00:00:00','12.30.17 00:00:00',828,2,'12.24.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.73,'2017-12-24 00:00:00','2017-12-30 00:00:00',333,2,'2017-12-24 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.35,'12.24.17 00:00:00','12.30.17 00:00:00',899,9,'12.24.17 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.68,'2017-12-24 00:00:00','2017-12-30 00:00:00',986,1,'2017-12-24 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.48,'01.07.18 00:00:00','01.13.18 00:00:00',395,3,'01.07.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,20.5,'2018-01-07 00:00:00','2018-01-13 00:00:00',569,6,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.37,'01.07.18 00:00:00','01.13.18 00:00:00',516,9,'01.07.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.68,'2018-01-07 00:00:00','2018-01-13 00:00:00',447,6,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.73,'01.07.18 00:00:00','01.13.18 00:00:00',130,1,'01.07.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.66,'2018-01-07 00:00:00','2018-01-13 00:00:00',965,8,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,29.49,'01.07.18 00:00:00','01.13.18 00:00:00',797,9,'01.07.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.3,'2018-01-07 00:00:00','2018-01-13 00:00:00',239,6,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,10.4,'01.07.18 00:00:00','01.13.18 00:00:00',278,2,'01.07.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.45,'2018-01-07 00:00:00','2018-01-13 00:00:00',938,4,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.29,'01.07.18 00:00:00','01.13.18 00:00:00',423,7,'01.07.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.46,'2018-01-07 00:00:00','2018-01-13 00:00:00',948,2,'2018-01-07 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.09,'01.07.18 00:00:00','01.13.18 00:00:00',300,3,'01.07.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5,'2018-01-07 00:00:00','2018-01-13 00:00:00',881,7,'2018-01-07 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.03,'01.07.18 00:00:00','01.13.18 00:00:00',221,2,'01.07.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.81,'2018-01-07 00:00:00','2018-01-13 00:00:00',232,3,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.19,'01.07.18 00:00:00','01.13.18 00:00:00',817,2,'01.07.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,10.64,'2018-01-07 00:00:00','2018-01-13 00:00:00',618,6,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.29,'01.07.18 00:00:00','01.13.18 00:00:00',985,1,'01.07.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,10.58,'2018-01-07 00:00:00','2018-01-13 00:00:00',911,8,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.74,'01.07.18 00:00:00','01.13.18 00:00:00',620,8,'01.07.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,25.03,'2018-01-07 00:00:00','2018-01-13 00:00:00',780,4,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.1,'01.07.18 00:00:00','01.13.18 00:00:00',216,9,'01.07.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,19.13,'2018-01-07 00:00:00','2018-01-13 00:00:00',202,9,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,22.44,'01.07.18 00:00:00','01.13.18 00:00:00',562,2,'01.07.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.97,'2018-01-07 00:00:00','2018-01-13 00:00:00',644,6,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.59,'01.07.18 00:00:00','01.13.18 00:00:00',661,5,'01.07.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,22.44,'2018-01-07 00:00:00','2018-01-13 00:00:00',107,8,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.71,'01.07.18 00:00:00','01.13.18 00:00:00',872,5,'01.07.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.62,'2018-01-07 00:00:00','2018-01-13 00:00:00',808,5,'2018-01-07 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.78,'01.21.18 00:00:00','01.27.18 00:00:00',519,8,'01.21.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.31,'2018-01-21 00:00:00','2018-01-27 00:00:00',760,2,'2018-01-21 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.8,'01.21.18 00:00:00','01.27.18 00:00:00',929,2,'01.21.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,25.01,'2018-01-21 00:00:00','2018-01-27 00:00:00',324,1,'2018-01-21 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.74,'01.21.18 00:00:00','01.27.18 00:00:00',148,6,'01.21.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.85,'2018-01-21 00:00:00','2018-01-27 00:00:00',130,7,'2018-01-21 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.02,'01.21.18 00:00:00','01.27.18 00:00:00',181,7,'01.21.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.16,'2018-01-21 00:00:00','2018-01-27 00:00:00',614,2,'2018-01-21 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.77,'01.21.18 00:00:00','01.27.18 00:00:00',864,3,'01.21.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.22,'2018-01-21 00:00:00','2018-01-27 00:00:00',451,1,'2018-01-21 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.22,'01.21.18 00:00:00','01.27.18 00:00:00',963,2,'01.21.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.26,'2018-01-21 00:00:00','2018-01-27 00:00:00',971,6,'2018-01-21 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.34,'01.21.18 00:00:00','01.27.18 00:00:00',510,2,'01.21.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.84,'2018-01-21 00:00:00','2018-01-27 00:00:00',324,6,'2018-01-21 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.44,'01.21.18 00:00:00','01.27.18 00:00:00',455,1,'01.21.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.08,'2018-01-21 00:00:00','2018-01-27 00:00:00',658,9,'2018-01-21 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.34,'01.21.18 00:00:00','01.27.18 00:00:00',676,5,'01.21.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.14,'2018-01-21 00:00:00','2018-01-27 00:00:00',638,3,'2018-01-21 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.9,'01.21.18 00:00:00','01.27.18 00:00:00',643,6,'01.21.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.03,'2018-01-21 00:00:00','2018-01-27 00:00:00',961,7,'2018-01-21 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.62,'01.21.18 00:00:00','01.27.18 00:00:00',360,3,'01.21.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,14.34,'2018-01-21 00:00:00','2018-01-27 00:00:00',103,7,'2018-01-21 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,26.92,'01.21.18 00:00:00','01.27.18 00:00:00',599,8,'01.21.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.99,'2018-01-21 00:00:00','2018-01-27 00:00:00',691,6,'2018-01-21 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.67,'01.21.18 00:00:00','01.27.18 00:00:00',886,6,'01.21.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.34,'2018-01-21 00:00:00','2018-01-27 00:00:00',334,3,'2018-01-21 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.86,'01.21.18 00:00:00','01.27.18 00:00:00',762,3,'01.21.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6,'2018-01-21 00:00:00','2018-01-27 00:00:00',401,3,'2018-01-21 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.02,'01.21.18 00:00:00','01.27.18 00:00:00',608,6,'01.21.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.2,'2018-01-21 00:00:00','2018-01-27 00:00:00',658,8,'2018-01-21 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.27,'02.04.18 00:00:00','02.10.18 00:00:00',646,7,'02.04.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.1,'2018-02-04 00:00:00','2018-02-10 00:00:00',431,1,'2018-02-04 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.14,'02.04.18 00:00:00','02.10.18 00:00:00',270,6,'02.04.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.86,'2018-02-04 00:00:00','2018-02-10 00:00:00',215,9,'2018-02-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.01,'02.04.18 00:00:00','02.10.18 00:00:00',713,6,'02.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.81,'2018-02-04 00:00:00','2018-02-10 00:00:00',734,2,'2018-02-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,24.46,'02.04.18 00:00:00','02.10.18 00:00:00',593,7,'02.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.17,'2018-02-04 00:00:00','2018-02-10 00:00:00',160,7,'2018-02-04 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.6,'02.04.18 00:00:00','02.10.18 00:00:00',556,7,'02.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.81,'2018-02-04 00:00:00','2018-02-10 00:00:00',465,4,'2018-02-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,19.48,'02.04.18 00:00:00','02.10.18 00:00:00',321,4,'02.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.48,'2018-02-04 00:00:00','2018-02-10 00:00:00',390,6,'2018-02-04 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.53,'02.04.18 00:00:00','02.10.18 00:00:00',323,2,'02.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.3,'2018-02-04 00:00:00','2018-02-10 00:00:00',426,5,'2018-02-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.94,'02.04.18 00:00:00','02.10.18 00:00:00',339,5,'02.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.41,'2018-02-04 00:00:00','2018-02-10 00:00:00',810,7,'2018-02-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.25,'02.04.18 00:00:00','02.10.18 00:00:00',694,9,'02.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.85,'2018-02-04 00:00:00','2018-02-10 00:00:00',439,4,'2018-02-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.17,'02.04.18 00:00:00','02.10.18 00:00:00',832,6,'02.04.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.3,'2018-02-04 00:00:00','2018-02-10 00:00:00',362,6,'2018-02-04 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.87,'02.04.18 00:00:00','02.10.18 00:00:00',679,3,'02.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.49,'2018-02-04 00:00:00','2018-02-10 00:00:00',407,5,'2018-02-04 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.98,'02.04.18 00:00:00','02.10.18 00:00:00',775,4,'02.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.17,'2018-02-04 00:00:00','2018-02-10 00:00:00',722,2,'2018-02-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.98,'02.04.18 00:00:00','02.10.18 00:00:00',316,3,'02.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,19.49,'2018-02-04 00:00:00','2018-02-10 00:00:00',681,4,'2018-02-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.65,'02.04.18 00:00:00','02.10.18 00:00:00',371,2,'02.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,29.75,'2018-02-04 00:00:00','2018-02-10 00:00:00',896,6,'2018-02-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.37,'02.04.18 00:00:00','02.10.18 00:00:00',424,5,'02.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.31,'2018-02-04 00:00:00','2018-02-10 00:00:00',807,4,'2018-02-04 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,29.68,'02.18.18 00:00:00','02.24.18 00:00:00',591,9,'02.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.35,'2018-02-18 00:00:00','2018-02-24 00:00:00',549,8,'2018-02-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.91,'02.18.18 00:00:00','02.24.18 00:00:00',953,6,'02.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.89,'2018-02-18 00:00:00','2018-02-24 00:00:00',912,8,'2018-02-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.67,'02.18.18 00:00:00','02.24.18 00:00:00',322,6,'02.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,12.22,'2018-02-18 00:00:00','2018-02-24 00:00:00',839,5,'2018-02-18 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.92,'02.18.18 00:00:00','02.24.18 00:00:00',747,4,'02.18.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.95,'2018-02-18 00:00:00','2018-02-24 00:00:00',748,7,'2018-02-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,15.36,'02.18.18 00:00:00','02.24.18 00:00:00',624,7,'02.18.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.33,'2018-02-18 00:00:00','2018-02-24 00:00:00',423,5,'2018-02-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.48,'02.18.18 00:00:00','02.24.18 00:00:00',250,4,'02.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.42,'2018-02-18 00:00:00','2018-02-24 00:00:00',760,8,'2018-02-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,29.87,'02.18.18 00:00:00','02.24.18 00:00:00',639,5,'02.18.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.58,'2018-02-18 00:00:00','2018-02-24 00:00:00',962,2,'2018-02-18 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.34,'02.18.18 00:00:00','02.24.18 00:00:00',782,1,'02.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.49,'2018-02-18 00:00:00','2018-02-24 00:00:00',116,2,'2018-02-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.1,'02.18.18 00:00:00','02.24.18 00:00:00',823,2,'02.18.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,12.41,'2018-02-18 00:00:00','2018-02-24 00:00:00',422,8,'2018-02-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,14.19,'02.18.18 00:00:00','02.24.18 00:00:00',176,9,'02.18.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.51,'2018-02-18 00:00:00','2018-02-24 00:00:00',660,5,'2018-02-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.11,'02.18.18 00:00:00','02.24.18 00:00:00',173,5,'02.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.52,'2018-02-18 00:00:00','2018-02-24 00:00:00',892,6,'2018-02-18 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.27,'02.18.18 00:00:00','02.24.18 00:00:00',161,6,'02.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.33,'2018-02-18 00:00:00','2018-02-24 00:00:00',872,2,'2018-02-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.55,'02.18.18 00:00:00','02.24.18 00:00:00',683,8,'02.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.71,'2018-02-18 00:00:00','2018-02-24 00:00:00',933,1,'2018-02-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,15.5,'02.18.18 00:00:00','02.24.18 00:00:00',226,4,'02.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,16.34,'2018-02-18 00:00:00','2018-02-24 00:00:00',916,2,'2018-02-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.97,'02.18.18 00:00:00','02.24.18 00:00:00',618,1,'02.18.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.15,'2018-02-18 00:00:00','2018-02-24 00:00:00',466,8,'2018-02-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.34,'03.04.18 00:00:00','03.10.18 00:00:00',390,1,'03.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.15,'2018-03-04 00:00:00','2018-03-10 00:00:00',911,3,'2018-03-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.73,'03.04.18 00:00:00','03.10.18 00:00:00',118,3,'03.04.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,24.65,'2018-03-04 00:00:00','2018-03-10 00:00:00',650,4,'2018-03-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.25,'03.04.18 00:00:00','03.10.18 00:00:00',586,4,'03.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.1,'2018-03-04 00:00:00','2018-03-10 00:00:00',906,8,'2018-03-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,28.44,'03.04.18 00:00:00','03.10.18 00:00:00',386,8,'03.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.22,'2018-03-04 00:00:00','2018-03-10 00:00:00',335,5,'2018-03-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,28.73,'03.04.18 00:00:00','03.10.18 00:00:00',519,4,'03.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.09,'2018-03-04 00:00:00','2018-03-10 00:00:00',859,6,'2018-03-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.62,'03.04.18 00:00:00','03.10.18 00:00:00',689,5,'03.04.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.02,'2018-03-04 00:00:00','2018-03-10 00:00:00',329,9,'2018-03-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.27,'03.04.18 00:00:00','03.10.18 00:00:00',484,1,'03.04.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.78,'2018-03-04 00:00:00','2018-03-10 00:00:00',606,9,'2018-03-04 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.49,'03.04.18 00:00:00','03.10.18 00:00:00',904,5,'03.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,17.36,'2018-03-04 00:00:00','2018-03-10 00:00:00',607,7,'2018-03-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.94,'03.04.18 00:00:00','03.10.18 00:00:00',769,1,'03.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.62,'2018-03-04 00:00:00','2018-03-10 00:00:00',374,8,'2018-03-04 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.75,'03.04.18 00:00:00','03.10.18 00:00:00',287,2,'03.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,16.02,'2018-03-04 00:00:00','2018-03-10 00:00:00',589,6,'2018-03-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.49,'03.04.18 00:00:00','03.10.18 00:00:00',766,9,'03.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.51,'2018-03-04 00:00:00','2018-03-10 00:00:00',590,8,'2018-03-04 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.66,'03.04.18 00:00:00','03.10.18 00:00:00',389,8,'03.04.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.5,'2018-03-04 00:00:00','2018-03-10 00:00:00',809,9,'2018-03-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,16.12,'03.04.18 00:00:00','03.10.18 00:00:00',520,7,'03.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.94,'2018-03-04 00:00:00','2018-03-10 00:00:00',817,6,'2018-03-04 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.23,'03.04.18 00:00:00','03.10.18 00:00:00',837,2,'03.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.58,'2018-03-04 00:00:00','2018-03-10 00:00:00',520,2,'2018-03-04 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,11.6,'03.04.18 00:00:00','03.10.18 00:00:00',519,3,'03.04.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.62,'2018-03-04 00:00:00','2018-03-10 00:00:00',534,5,'2018-03-04 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,23.5,'03.18.18 00:00:00','03.24.18 00:00:00',345,7,'03.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.37,'2018-03-18 00:00:00','2018-03-24 00:00:00',501,1,'2018-03-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,21.43,'03.18.18 00:00:00','03.24.18 00:00:00',270,6,'03.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.57,'2018-03-18 00:00:00','2018-03-24 00:00:00',769,6,'2018-03-18 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.27,'03.18.18 00:00:00','03.24.18 00:00:00',288,4,'03.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,14.56,'2018-03-18 00:00:00','2018-03-24 00:00:00',285,6,'2018-03-18 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.61,'03.18.18 00:00:00','03.24.18 00:00:00',970,8,'03.18.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.31,'2018-03-18 00:00:00','2018-03-24 00:00:00',452,1,'2018-03-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.64,'03.18.18 00:00:00','03.24.18 00:00:00',670,4,'03.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.06,'2018-03-18 00:00:00','2018-03-24 00:00:00',232,3,'2018-03-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.64,'03.18.18 00:00:00','03.24.18 00:00:00',782,9,'03.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.91,'2018-03-18 00:00:00','2018-03-24 00:00:00',799,7,'2018-03-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,23.99,'03.18.18 00:00:00','03.24.18 00:00:00',633,4,'03.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.07,'2018-03-18 00:00:00','2018-03-24 00:00:00',693,1,'2018-03-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.21,'03.18.18 00:00:00','03.24.18 00:00:00',837,9,'03.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.89,'2018-03-18 00:00:00','2018-03-24 00:00:00',134,1,'2018-03-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,24.5,'03.18.18 00:00:00','03.24.18 00:00:00',262,3,'03.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.98,'2018-03-18 00:00:00','2018-03-24 00:00:00',178,8,'2018-03-18 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,28.09,'03.18.18 00:00:00','03.24.18 00:00:00',894,5,'03.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.26,'2018-03-18 00:00:00','2018-03-24 00:00:00',768,7,'2018-03-18 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.11,'03.18.18 00:00:00','03.24.18 00:00:00',427,2,'03.18.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.16,'2018-03-18 00:00:00','2018-03-24 00:00:00',230,2,'2018-03-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,25.62,'03.18.18 00:00:00','03.24.18 00:00:00',114,6,'03.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.63,'2018-03-18 00:00:00','2018-03-24 00:00:00',378,8,'2018-03-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.27,'03.18.18 00:00:00','03.24.18 00:00:00',575,6,'03.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.46,'2018-03-18 00:00:00','2018-03-24 00:00:00',652,6,'2018-03-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.17,'03.18.18 00:00:00','03.24.18 00:00:00',432,7,'03.18.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.81,'2018-03-18 00:00:00','2018-03-24 00:00:00',547,8,'2018-03-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.58,'03.18.18 00:00:00','03.24.18 00:00:00',902,2,'03.18.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,10.82,'2018-03-18 00:00:00','2018-03-24 00:00:00',822,7,'2018-03-18 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.14,'04.01.18 00:00:00','04.07.18 00:00:00',307,4,'04.01.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.78,'2018-04-01 00:00:00','2018-04-07 00:00:00',570,3,'2018-04-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.82,'04.01.18 00:00:00','04.07.18 00:00:00',690,6,'04.01.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.16,'2018-04-01 00:00:00','2018-04-07 00:00:00',895,7,'2018-04-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.6,'04.01.18 00:00:00','04.07.18 00:00:00',993,5,'04.01.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.7,'2018-04-01 00:00:00','2018-04-07 00:00:00',439,9,'2018-04-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.85,'04.01.18 00:00:00','04.07.18 00:00:00',556,9,'04.01.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.37,'2018-04-01 00:00:00','2018-04-07 00:00:00',314,3,'2018-04-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.38,'04.01.18 00:00:00','04.07.18 00:00:00',614,3,'04.01.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.78,'2018-04-01 00:00:00','2018-04-07 00:00:00',786,2,'2018-04-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.15,'04.01.18 00:00:00','04.07.18 00:00:00',624,5,'04.01.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.11,'2018-04-01 00:00:00','2018-04-07 00:00:00',473,2,'2018-04-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.16,'04.01.18 00:00:00','04.07.18 00:00:00',880,4,'04.01.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.08,'2018-04-01 00:00:00','2018-04-07 00:00:00',707,8,'2018-04-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.11,'04.01.18 00:00:00','04.07.18 00:00:00',266,2,'04.01.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.52,'2018-04-01 00:00:00','2018-04-07 00:00:00',158,5,'2018-04-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.63,'04.01.18 00:00:00','04.07.18 00:00:00',979,6,'04.01.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.14,'2018-04-01 00:00:00','2018-04-07 00:00:00',815,1,'2018-04-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.71,'04.01.18 00:00:00','04.07.18 00:00:00',657,1,'04.01.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.13,'2018-04-01 00:00:00','2018-04-07 00:00:00',523,5,'2018-04-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.67,'04.01.18 00:00:00','04.07.18 00:00:00',778,8,'04.01.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,13.83,'2018-04-01 00:00:00','2018-04-07 00:00:00',817,2,'2018-04-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.68,'04.01.18 00:00:00','04.07.18 00:00:00',377,7,'04.01.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.94,'2018-04-01 00:00:00','2018-04-07 00:00:00',384,6,'2018-04-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.2,'04.01.18 00:00:00','04.07.18 00:00:00',475,3,'04.01.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.6,'2018-04-01 00:00:00','2018-04-07 00:00:00',766,9,'2018-04-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.48,'04.01.18 00:00:00','04.07.18 00:00:00',404,9,'04.01.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.9,'2018-04-01 00:00:00','2018-04-07 00:00:00',255,7,'2018-04-01 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.89,'04.01.18 00:00:00','04.07.18 00:00:00',139,3,'04.01.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.29,'2018-04-01 00:00:00','2018-04-07 00:00:00',443,9,'2018-04-01 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.94,'04.15.18 00:00:00','04.21.18 00:00:00',567,8,'04.15.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.81,'2018-04-15 00:00:00','2018-04-21 00:00:00',561,9,'2018-04-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.83,'04.15.18 00:00:00','04.21.18 00:00:00',188,6,'04.15.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.6,'2018-04-15 00:00:00','2018-04-21 00:00:00',559,1,'2018-04-15 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.46,'04.15.18 00:00:00','04.21.18 00:00:00',998,6,'04.15.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.98,'2018-04-15 00:00:00','2018-04-21 00:00:00',699,4,'2018-04-15 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.27,'04.15.18 00:00:00','04.21.18 00:00:00',631,6,'04.15.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.69,'2018-04-15 00:00:00','2018-04-21 00:00:00',111,6,'2018-04-15 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.12,'04.15.18 00:00:00','04.21.18 00:00:00',555,9,'04.15.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.47,'2018-04-15 00:00:00','2018-04-21 00:00:00',202,8,'2018-04-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.51,'04.15.18 00:00:00','04.21.18 00:00:00',669,8,'04.15.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.43,'2018-04-15 00:00:00','2018-04-21 00:00:00',321,6,'2018-04-15 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,29.9,'04.15.18 00:00:00','04.21.18 00:00:00',546,6,'04.15.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.35,'2018-04-15 00:00:00','2018-04-21 00:00:00',154,4,'2018-04-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.26,'04.15.18 00:00:00','04.21.18 00:00:00',753,2,'04.15.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.16,'2018-04-15 00:00:00','2018-04-21 00:00:00',676,2,'2018-04-15 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.57,'04.15.18 00:00:00','04.21.18 00:00:00',529,3,'04.15.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.03,'2018-04-15 00:00:00','2018-04-21 00:00:00',302,4,'2018-04-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.18,'04.15.18 00:00:00','04.21.18 00:00:00',351,2,'04.15.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,27.39,'2018-04-15 00:00:00','2018-04-21 00:00:00',335,5,'2018-04-15 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.95,'04.15.18 00:00:00','04.21.18 00:00:00',892,7,'04.15.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,27.54,'2018-04-15 00:00:00','2018-04-21 00:00:00',908,7,'2018-04-15 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,22.16,'04.15.18 00:00:00','04.21.18 00:00:00',835,6,'04.15.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.35,'2018-04-15 00:00:00','2018-04-21 00:00:00',770,1,'2018-04-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.78,'04.15.18 00:00:00','04.21.18 00:00:00',851,8,'04.15.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.6,'2018-04-15 00:00:00','2018-04-21 00:00:00',948,4,'2018-04-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.87,'04.15.18 00:00:00','04.21.18 00:00:00',547,8,'04.15.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.81,'2018-04-15 00:00:00','2018-04-21 00:00:00',394,4,'2018-04-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.26,'04.15.18 00:00:00','04.21.18 00:00:00',704,3,'04.15.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.83,'2018-04-15 00:00:00','2018-04-21 00:00:00',616,1,'2018-04-15 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.42,'04.29.18 00:00:00','05.05.18 00:00:00',450,6,'04.29.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.99,'2018-04-29 00:00:00','2018-05-05 00:00:00',418,5,'2018-04-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.9,'04.29.18 00:00:00','05.05.18 00:00:00',100,8,'04.29.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.33,'2018-04-29 00:00:00','2018-05-05 00:00:00',686,4,'2018-04-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.6,'04.29.18 00:00:00','05.05.18 00:00:00',168,7,'04.29.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.68,'2018-04-29 00:00:00','2018-05-05 00:00:00',949,4,'2018-04-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.23,'04.29.18 00:00:00','05.05.18 00:00:00',543,1,'04.29.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,26.29,'2018-04-29 00:00:00','2018-05-05 00:00:00',628,9,'2018-04-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.84,'04.29.18 00:00:00','05.05.18 00:00:00',663,9,'04.29.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,27.34,'2018-04-29 00:00:00','2018-05-05 00:00:00',379,5,'2018-04-29 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.83,'04.29.18 00:00:00','05.05.18 00:00:00',998,2,'04.29.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.37,'2018-04-29 00:00:00','2018-05-05 00:00:00',766,4,'2018-04-29 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.92,'04.29.18 00:00:00','05.05.18 00:00:00',603,7,'04.29.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.33,'2018-04-29 00:00:00','2018-05-05 00:00:00',783,6,'2018-04-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.31,'04.29.18 00:00:00','05.05.18 00:00:00',832,3,'04.29.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.39,'2018-04-29 00:00:00','2018-05-05 00:00:00',544,8,'2018-04-29 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.62,'04.29.18 00:00:00','05.05.18 00:00:00',128,7,'04.29.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.93,'2018-04-29 00:00:00','2018-05-05 00:00:00',130,3,'2018-04-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.72,'04.29.18 00:00:00','05.05.18 00:00:00',778,2,'04.29.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.1,'2018-04-29 00:00:00','2018-05-05 00:00:00',598,1,'2018-04-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,10.82,'04.29.18 00:00:00','05.05.18 00:00:00',904,4,'04.29.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.75,'2018-04-29 00:00:00','2018-05-05 00:00:00',166,7,'2018-04-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.3,'04.29.18 00:00:00','05.05.18 00:00:00',600,8,'04.29.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,28.66,'2018-04-29 00:00:00','2018-05-05 00:00:00',626,6,'2018-04-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,16.22,'04.29.18 00:00:00','05.05.18 00:00:00',151,1,'04.29.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.54,'2018-04-29 00:00:00','2018-05-05 00:00:00',951,9,'2018-04-29 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.04,'04.29.18 00:00:00','05.05.18 00:00:00',743,5,'04.29.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.18,'2018-04-29 00:00:00','2018-05-05 00:00:00',915,8,'2018-04-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,24.63,'04.29.18 00:00:00','05.05.18 00:00:00',864,6,'04.29.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.66,'2018-04-29 00:00:00','2018-05-05 00:00:00',635,2,'2018-04-29 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.74,'05.13.18 00:00:00','05.19.18 00:00:00',133,7,'05.13.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.58,'2018-05-13 00:00:00','2018-05-19 00:00:00',529,2,'2018-05-13 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,10.01,'05.13.18 00:00:00','05.19.18 00:00:00',890,9,'05.13.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.48,'2018-05-13 00:00:00','2018-05-19 00:00:00',761,9,'2018-05-13 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.12,'05.13.18 00:00:00','05.19.18 00:00:00',378,5,'05.13.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.71,'2018-05-13 00:00:00','2018-05-19 00:00:00',262,1,'2018-05-13 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.26,'05.13.18 00:00:00','05.19.18 00:00:00',757,7,'05.13.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.56,'2018-05-13 00:00:00','2018-05-19 00:00:00',551,1,'2018-05-13 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.32,'05.13.18 00:00:00','05.19.18 00:00:00',989,7,'05.13.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,27.88,'2018-05-13 00:00:00','2018-05-19 00:00:00',525,6,'2018-05-13 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.58,'05.13.18 00:00:00','05.19.18 00:00:00',804,7,'05.13.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.61,'2018-05-13 00:00:00','2018-05-19 00:00:00',975,1,'2018-05-13 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,22.61,'05.13.18 00:00:00','05.19.18 00:00:00',607,7,'05.13.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.57,'2018-05-13 00:00:00','2018-05-19 00:00:00',350,6,'2018-05-13 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.1,'05.13.18 00:00:00','05.19.18 00:00:00',917,9,'05.13.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2,'2018-05-13 00:00:00','2018-05-19 00:00:00',974,2,'2018-05-13 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.46,'05.13.18 00:00:00','05.19.18 00:00:00',419,1,'05.13.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.88,'2018-05-13 00:00:00','2018-05-19 00:00:00',792,3,'2018-05-13 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,29.44,'05.13.18 00:00:00','05.19.18 00:00:00',124,4,'05.13.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,26.61,'2018-05-13 00:00:00','2018-05-19 00:00:00',666,1,'2018-05-13 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.07,'05.13.18 00:00:00','05.19.18 00:00:00',289,8,'05.13.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,21.03,'2018-05-13 00:00:00','2018-05-19 00:00:00',832,6,'2018-05-13 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.66,'05.13.18 00:00:00','05.19.18 00:00:00',445,5,'05.13.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.24,'2018-05-13 00:00:00','2018-05-19 00:00:00',787,1,'2018-05-13 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.6,'05.13.18 00:00:00','05.19.18 00:00:00',478,4,'05.13.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.69,'2018-05-13 00:00:00','2018-05-19 00:00:00',937,9,'2018-05-13 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.38,'05.13.18 00:00:00','05.19.18 00:00:00',624,9,'05.13.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.63,'2018-05-13 00:00:00','2018-05-19 00:00:00',450,5,'2018-05-13 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.22,'05.13.18 00:00:00','05.19.18 00:00:00',992,1,'05.13.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.81,'2018-05-13 00:00:00','2018-05-19 00:00:00',719,6,'2018-05-13 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.33,'05.27.18 00:00:00','06.02.18 00:00:00',444,6,'05.27.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.33,'2018-05-27 00:00:00','2018-06-02 00:00:00',713,4,'2018-05-27 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.62,'05.27.18 00:00:00','06.02.18 00:00:00',778,6,'05.27.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.36,'2018-05-27 00:00:00','2018-06-02 00:00:00',918,2,'2018-05-27 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.76,'05.27.18 00:00:00','06.02.18 00:00:00',675,6,'05.27.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.51,'2018-05-27 00:00:00','2018-06-02 00:00:00',983,3,'2018-05-27 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.01,'05.27.18 00:00:00','06.02.18 00:00:00',198,2,'05.27.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.27,'2018-05-27 00:00:00','2018-06-02 00:00:00',889,6,'2018-05-27 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.47,'05.27.18 00:00:00','06.02.18 00:00:00',300,9,'05.27.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,18.36,'2018-05-27 00:00:00','2018-06-02 00:00:00',574,9,'2018-05-27 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.46,'05.27.18 00:00:00','06.02.18 00:00:00',275,2,'05.27.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.98,'2018-05-27 00:00:00','2018-06-02 00:00:00',662,8,'2018-05-27 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.01,'05.27.18 00:00:00','06.02.18 00:00:00',672,3,'05.27.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.81,'2018-05-27 00:00:00','2018-06-02 00:00:00',907,7,'2018-05-27 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.23,'05.27.18 00:00:00','06.02.18 00:00:00',379,6,'05.27.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.77,'2018-05-27 00:00:00','2018-06-02 00:00:00',917,3,'2018-05-27 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.27,'05.27.18 00:00:00','06.02.18 00:00:00',423,9,'05.27.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.34,'2018-05-27 00:00:00','2018-06-02 00:00:00',405,7,'2018-05-27 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6,'05.27.18 00:00:00','06.02.18 00:00:00',832,7,'05.27.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.07,'2018-05-27 00:00:00','2018-06-02 00:00:00',937,3,'2018-05-27 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.37,'05.27.18 00:00:00','06.02.18 00:00:00',889,3,'05.27.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.42,'2018-05-27 00:00:00','2018-06-02 00:00:00',101,9,'2018-05-27 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,8.01,'05.27.18 00:00:00','06.02.18 00:00:00',395,6,'05.27.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.37,'2018-05-27 00:00:00','2018-06-02 00:00:00',517,5,'2018-05-27 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.01,'05.27.18 00:00:00','06.02.18 00:00:00',424,6,'05.27.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,23.69,'2018-05-27 00:00:00','2018-06-02 00:00:00',800,8,'2018-05-27 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.94,'05.27.18 00:00:00','06.02.18 00:00:00',552,1,'05.27.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.89,'2018-05-27 00:00:00','2018-06-02 00:00:00',760,8,'2018-05-27 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.55,'05.27.18 00:00:00','06.02.18 00:00:00',233,3,'05.27.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.47,'2018-05-27 00:00:00','2018-06-02 00:00:00',456,3,'2018-05-27 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.82,'06.10.18 00:00:00','06.16.18 00:00:00',225,4,'06.10.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.03,'2018-06-10 00:00:00','2018-06-16 00:00:00',843,7,'2018-06-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.23,'06.10.18 00:00:00','06.16.18 00:00:00',439,8,'06.10.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.59,'2018-06-10 00:00:00','2018-06-16 00:00:00',360,5,'2018-06-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.41,'06.10.18 00:00:00','06.16.18 00:00:00',637,5,'06.10.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.87,'2018-06-10 00:00:00','2018-06-16 00:00:00',541,1,'2018-06-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.45,'06.10.18 00:00:00','06.16.18 00:00:00',792,8,'06.10.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.46,'2018-06-10 00:00:00','2018-06-16 00:00:00',463,2,'2018-06-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,7.54,'06.10.18 00:00:00','06.16.18 00:00:00',313,7,'06.10.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.32,'2018-06-10 00:00:00','2018-06-16 00:00:00',909,7,'2018-06-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,18.8,'06.10.18 00:00:00','06.16.18 00:00:00',147,6,'06.10.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,2.23,'2018-06-10 00:00:00','2018-06-16 00:00:00',867,6,'2018-06-10 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.45,'06.10.18 00:00:00','06.16.18 00:00:00',519,2,'06.10.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,4.98,'2018-06-10 00:00:00','2018-06-16 00:00:00',942,6,'2018-06-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.64,'06.10.18 00:00:00','06.16.18 00:00:00',373,8,'06.10.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.72,'2018-06-10 00:00:00','2018-06-16 00:00:00',926,6,'2018-06-10 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,21.74,'06.10.18 00:00:00','06.16.18 00:00:00',256,6,'06.10.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.95,'2018-06-10 00:00:00','2018-06-16 00:00:00',931,8,'2018-06-10 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.95,'06.10.18 00:00:00','06.16.18 00:00:00',572,5,'06.10.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.69,'2018-06-10 00:00:00','2018-06-16 00:00:00',604,9,'2018-06-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.93,'06.10.18 00:00:00','06.16.18 00:00:00',367,5,'06.10.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.94,'2018-06-10 00:00:00','2018-06-16 00:00:00',252,3,'2018-06-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.05,'06.10.18 00:00:00','06.16.18 00:00:00',945,4,'06.10.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.03,'2018-06-10 00:00:00','2018-06-16 00:00:00',169,6,'2018-06-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.5,'06.10.18 00:00:00','06.16.18 00:00:00',250,6,'06.10.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.33,'2018-06-10 00:00:00','2018-06-16 00:00:00',128,6,'2018-06-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,17.37,'06.10.18 00:00:00','06.16.18 00:00:00',541,7,'06.10.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,1.81,'2018-06-10 00:00:00','2018-06-16 00:00:00',945,6,'2018-06-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,28.14,'06.10.18 00:00:00','06.16.18 00:00:00',840,5,'06.10.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.01,'2018-06-10 00:00:00','2018-06-16 00:00:00',319,1,'2018-06-10 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.46,'06.24.18 00:00:00','06.30.18 00:00:00',346,4,'06.24.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.54,'2018-06-24 00:00:00','2018-06-30 00:00:00',458,7,'2018-06-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.47,'06.24.18 00:00:00','06.30.18 00:00:00',801,5,'06.24.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.43,'2018-06-24 00:00:00','2018-06-30 00:00:00',817,5,'2018-06-24 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.81,'06.24.18 00:00:00','06.30.18 00:00:00',207,8,'06.24.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,9.29,'2018-06-24 00:00:00','2018-06-30 00:00:00',278,8,'2018-06-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.59,'06.24.18 00:00:00','06.30.18 00:00:00',172,1,'06.24.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,16.92,'2018-06-24 00:00:00','2018-06-30 00:00:00',738,7,'2018-06-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,6.58,'06.24.18 00:00:00','06.30.18 00:00:00',626,4,'06.24.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.37,'2018-06-24 00:00:00','2018-06-30 00:00:00',447,1,'2018-06-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.48,'06.24.18 00:00:00','06.30.18 00:00:00',563,9,'06.24.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.11,'2018-06-24 00:00:00','2018-06-30 00:00:00',591,3,'2018-06-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.82,'06.24.18 00:00:00','06.30.18 00:00:00',872,2,'06.24.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,9.96,'2018-06-24 00:00:00','2018-06-30 00:00:00',120,8,'2018-06-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.1,'06.24.18 00:00:00','06.30.18 00:00:00',821,6,'06.24.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,6.58,'2018-06-24 00:00:00','2018-06-30 00:00:00',740,8,'2018-06-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.52,'06.24.18 00:00:00','06.30.18 00:00:00',795,7,'06.24.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,2.42,'2018-06-24 00:00:00','2018-06-30 00:00:00',798,7,'2018-06-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,15.26,'06.24.18 00:00:00','06.30.18 00:00:00',832,3,'06.24.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,5.64,'2018-06-24 00:00:00','2018-06-30 00:00:00',637,7,'2018-06-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,8.45,'06.24.18 00:00:00','06.30.18 00:00:00',827,5,'06.24.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.56,'2018-06-24 00:00:00','2018-06-30 00:00:00',799,3,'2018-06-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,7.08,'06.24.18 00:00:00','06.30.18 00:00:00',451,1,'06.24.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,4.36,'2018-06-24 00:00:00','2018-06-30 00:00:00',672,5,'2018-06-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,27.73,'06.24.18 00:00:00','06.30.18 00:00:00',208,3,'06.24.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.93,'2018-06-24 00:00:00','2018-06-30 00:00:00',647,6,'2018-06-24 00:00:00',NULL);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (1,3.74,'06.24.18 00:00:00','06.30.18 00:00:00',167,4,'06.24.18 00:00:00',NULL);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,5.77,'2018-06-24 00:00:00','2018-06-30 00:00:00',773,7,'2018-06-24 00:00:00',1);
  
  
-INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,3.62,'06.24.18 00:00:00','06.30.18 00:00:00',107,9,'06.24.18 00:00:00',1);
+INSERT INTO `vouchery` (`czyKwotowa`,`wartosc`,`poczatekPromocji`,`koniecPromocji`,`losoweCyfry`,`cyfraKontrolna`,`czasWygenerowania`,`czyWykorzystanyy`) VALUES (0,1.18,'2018-06-24 00:00:00','2018-06-30 00:00:00',682,1,'2018-06-24 00:00:00',1);
  
 
 

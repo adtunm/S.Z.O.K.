@@ -1,1502 +1,1502 @@
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mary','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Betty','Cragin','617407602','Ciska.Mulders1@excite.it','10.01.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Chuck58','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Christa','Mariojnisk','964192743','JohnSanders3@yahoo.it','2017-10-01 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hero820','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sharon','Antonucci','571162138','PJiminez@myspace.it','10.01.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Emily66','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Agnieszka','Scheffold','178867530','Patty.Ladaille@hotmail.net','2017-10-01 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Aoife07','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Elzbieta','Hamilton','625641436','Bas.Ward@freeweb.us','10.01.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joanne81','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Charles','Schubert','348826878','Victoria.Guethlein3@gmail.nl','2017-10-01 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Zoe70','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jesse','Durso','358684845','Norbert.Davis@gmail.com','10.01.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('HeroZero52','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gabbie','Boyer','082324469','P.Patricelli5@freeweb.ca','2017-10-01 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Benjy296','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Catharine','Royal','813194971','V.Pensec@gmail.cc','10.01.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Andrea5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Dick','Whitehurst','031914101','V.Glanswol2@kpn.be','2017-10-07 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gabbie553','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Anna','Nobles','457681690','Eric.Goodman1@telefonica.nl','10.07.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Geoffery','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Caitlin','Robbins','436227118','UBertelson1@gawab.net','2017-10-07 00:00:00',0,1);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Steve274','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tim','Wong','294886996','RickBrisco@kpn.cc','10.07.17 00:00:00',1,1);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bill045','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sjaak','DeWald','258259838','S.Swaine@telefonica.fr','2017-10-07 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Martien','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Erin','Morton','479896813','OliverLeGrand4@kpn.com','10.07.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Amy84','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Laura','Archer','692504396','HankHelfrich2@libero.nl','2017-10-13 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lewis8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Isak','van Dijk','832863776','PetraWooten@dolfijn.org','10.07.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Paul','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joanne','Walker','815955779','Jim.Arden@live.fr','2017-10-13 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mikkel5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Emma','Vostreys','318557219','A.Uitergeest@web.de','10.13.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Erik322','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marie','Swaine','623093348','GHeyn@mobileme.com','2017-10-13 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucy3','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Adrian','Lejarette','089958961','E.Davis@telfort.cc','10.13.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Netty2','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kees','Shapiro','987776773','Ronald.Reyes4@myspace.de','2017-10-19 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jurre','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leonie','Crocetti','259851403','Roy.Mairy@live.gov','10.13.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('GoPlaat','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Charles','Ionescu','724105919','Trees.Raines@libero.dk','2017-10-19 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Karen84','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nate','Sakurai','435172808','JackJackson@lycos.no','10.13.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Matt5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sean','Nithman','980468484','GGerschkow@kpn.gov','2017-10-19 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nathan15','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Patty','Shapiro','948795059','B.Uprovski@freeweb.ca','10.19.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anthony28','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julian','Franklin','823533288','L.DeWilde@gawab.net','2017-10-19 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Harold15','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Catherine','Imhoff','248063920','LindsyPengilly3@excite.cn','10.19.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Oliver446','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jody','Mcgrew','053880217','Mandy.Zimmerman2@web.cn','2017-10-19 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Henk29','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gabrielle','Morgan','889071523','Johan.Bergdahl1@gmail.nl','10.19.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Suzanne','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cath','Phelps','354708074','LynnWalker@aol.fr','2017-10-25 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Roger565','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Geoffery','Guyer','132635505','JStockton1@mobileme.cc','10.19.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tommy536','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cloe','Zimmerman','198739429','BasStevenson@gmail.es','2017-10-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Adam91','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucy','Moreau','654810485','WillLove@freeweb.co.uk','10.25.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Christopher430','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marcin','Bernstein','844238408','EBrisco@mobileme.nl','2017-10-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Koos','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Daan','Paul','168946864','NickGaskins@telfort.fr','10.25.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('PieterJan795','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ulla','Zia','081122866','PetraStannard3@excite.nl','2017-10-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jesse346','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Guus','Byrnes','678466825','Vincent.Wood1@libero.dk','10.25.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Luka403','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','James','Friedman','050695330','P.Wesolowski1@mymail.de','2017-10-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kim0','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alexander','Sharp','779550949','Lucy.Mariojnisk@excite.gov','10.31.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Betty573','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ton','Geoppo','719744205','BasImhoff@live.cc','2017-10-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Elin820','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tony','Markovi','090564163','WilliamPierce@gawab.com','10.31.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Chuck7','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Camilla','Ratliff','017347274','Matt.Koss3@freeweb.cn','2017-10-31 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Stephanie5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marieke','Hamilton','504354021','S.Wood@libero.no','10.31.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jean190','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sem','Thaler','997346666','K.Cramer3@lycos.dk','2017-10-31 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Leonie','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Annie','Herring','516059628','FreddyHuston@myspace.net','10.31.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Saskia','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mick','Barnett','559692194','Bas.Frega@gawab.com','2017-10-31 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Scotty9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Paul','Slemp','562422309','LiamPolti@mail.net','10.31.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Peg443','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Petra','Mitchell','911450811','E.Watson@myspace.cn','2017-10-31 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anna','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicolas','Braconi','020484692','Mattijs.Nefos@gmail.dk','10.31.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lotte79','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jim','Ionescu','738370800','BillMorton@gmail.fr','2017-10-31 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jace412','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jesse','Seibel','854706918','Fons.Goodnight@kpn.cn','10.31.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sara363','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Maximilian','Nadalin','254784839','Eric.Arnold@dolfijn.nl','2017-10-31 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Scotty','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicholas','DeBerg','283301410','Bianca.Davis3@hotmail.cn','11.06.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Charlie2','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Chuck','Hankins','238486219','R.Sakurai1@web.no','2017-10-31 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Talita1','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ada','Forsberg','714058588','OttoMarra@telefonica.cc','11.06.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Juana','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alejandro','Turk','587136084','CarlaPekagnan5@lycos.dk','2017-11-06 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ed4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Steve','Lawton','084660031','PabloJenssen@gawab.co.uk','11.06.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jonas33','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ruth','Van Toorenbeek','085194462','GNaley@mymail.gov','2017-11-06 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Harold2','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Georgina','Davis','529021151','Jackvan Dijk@hotmail.de','11.06.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Esther618','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Charles','Blount','280763904','UCaffray3@weboffice.net','2017-11-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Conor96','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rasmus','Pierce','281944794','FemkeMairy@freeweb.es','11.06.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Fabian','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leon','Wilson','925416961','RCrocetti2@kpn.es','2017-11-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sally90','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Iris','Orcutt','864228362','FredGibson@weboffice.no','11.06.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nicholas8','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Andrzej','Visentini','745995586','C.Uitergeest@weboffice.de','2017-11-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sofia77','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marco','Cantere','867019724','VDitmanen1@kpn.be','11.06.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Dirk','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nienke','Cappello','112140044','D.Krutkov3@weboffice.gov','2017-11-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucas4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Wilma','Wooten','555719601','MaartenBrennan@libero.de','11.12.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sjanie','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Harold','Stewart','009350532','Nigel.Pekagnan@weboffice.no','2017-11-12 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pieter','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jaap','Bitmacs','474259831','BrentShapiro@libero.co.uk','11.12.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nerea50','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Paula','Millikin','835416214','Frank.Nahay3@msn.gov','2017-11-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lars8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jeffery','Climent','040048703','RMejia@gawab.cc','11.12.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lara','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Will','Goodnight','207407201','James.Schlee@msn.dk','2017-11-12 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Margarita241','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kimberly','Pensec','489506650','J.Oyler@weboffice.org','11.12.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sylvia5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jessica','Plantz','202580135','Milan.Beckbau@telfort.it','2017-11-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Erik','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Fabian','Antonucci','062617634','Rick.Brown5@mail.gov','11.18.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Martin9','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Florian','Ladaille','927288376','TreesBergdahl2@web.cn','2017-11-12 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Magnus5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leah','Brown','753361569','K.Morton@live.ca','11.18.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jonas','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Vanessa','Seibel','775245988','Brent.Massingill@msn.cn','2017-11-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nicholas473','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Dave','Schubert','813168064','T.Whitehurst@telefonica.cc','11.18.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mathilde636','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Suzanne','Anderson','057328410','JohanWargula@myspace.nl','2017-11-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Andrzej574','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucas','Caffray','439968484','Richard.Deans@aol.de','11.18.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Karin67','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tinus','Crocetti','524808279','LGuyer4@aol.ca','2017-11-18 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rolla57','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Matthew','Yinger','131670370','BillChapman@telfort.ca','11.24.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Maja3','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Christa','Alspaugh','423741761','Bas.Hulshof@myspace.gov','2017-11-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Henk5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Daniela','Stannard','794142878','FredCappello3@libero.de','11.24.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Catharine14','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Liza','Bogdanovich','628429965','MartThaler1@weboffice.es','2017-11-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Amy','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucas','Overton','121636082','Fred.Jessen2@lycos.no','11.24.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sydney46','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Luke','Kuehn','169591052','Lynn.Guethlein5@hotmail.fr','2017-11-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hank5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Edwina','Van Toorenbeek','557232904','KClarke@weboffice.us','11.24.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rachel023','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mariska','Climent','724161804','Dan.Krutkov@lycos.be','2017-11-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Klara7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jaap','Willis','913811647','Will.Brisco3@web.cc','11.24.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Guus','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ryan','Brown','103734213','FredMiller@myspace.gov','2017-11-18 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ton68','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicholas','DeBerg','649296473','Fons.Climent5@hotmail.ca','11.24.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jamie66','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Oliver','Grote','222284961','TreesFreed@libero.us','2017-11-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Paula27','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicoline','Cooper','915535329','TonVostreys@dolfijn.dk','11.24.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Emma4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alexander','Phelps','802083374','Mick.Hulshof4@mymail.ca','2017-11-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jody1','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','William','Wooten','917422210','Gretsj.Koss5@gawab.es','11.30.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Katie811','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Robert','Raines','675262820','William.Keller@mail.org','2017-11-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Zoe','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jane','Brady','732238332','Bas.Knopp5@hotmail.cc','11.30.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Michel94','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jaclyn','Cooper','853617855','HankHarder@freeweb.gov','2017-11-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kaylee68','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rosa','Katsekes','790835461','PatrickIonescu@dolfijn.be','11.30.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ivan9','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cees','Green','473138160','Jake.Hoogbandt@live.dk','2017-11-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jody31','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bess','Waldo','866511431','AliceVisentini@mobileme.co.uk','12.06.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Filip69','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','PieterJan','Swaine','226300303','L.Korkovski5@gawab.dk','2017-11-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tara','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bess','Chapman','396372108','DanaPekagnan3@yahoo.be','12.06.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Co853','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ulla','Pengilly','143585870','RogerLawton1@hotmail.fr','2017-11-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tom','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joost','Young','501285891','Trees.Mitchell@kpn.cn','12.06.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Agnieszka','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hannah','Huston','578137270','PeterClarke@web.dk','2017-11-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Saskia04','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julie','Naley','886937082','Roger.Reyes@freeweb.org','12.06.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gabrielle5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Miriam','Mitchell','964708223','GHedgecock@myspace.co.uk','2017-11-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Manuel','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Paula','van Dijk','530199921','YPetrzelka@yahoo.gov','12.12.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hank','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tomasz','Williamson','033451780','PierreSwaine@gawab.com','2017-11-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Laura','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Krzysztof','Overton','704408317','Bill.Bryant@excite.com','12.12.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kees','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Carlos','Krutkov','597693102','NigelKorkovski1@telfort.com','2017-11-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nicholas506','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Elzbieta','Mairy','437363109','Nick.Wilson@libero.dk','12.12.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joanne','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tyler','Nelson','461230447','William.Wakefield@freeweb.cn','2017-12-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Zofia','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Saskia','Climent','628226717','Ton.Slater5@lycos.nl','12.12.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tim278','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ronald','Vostreys','615302682','Mattijs.Katsekes@hotmail.no','2017-12-06 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sid','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lu','Ward	','663064237','VictoriaArnold@mymail.com','12.12.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Eleanor45','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Piotr','LeGrand','478981878','BiancaSirabella4@telfort.co.uk','2017-12-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Suzanne','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kimmy','Anthony','793684632','SvenPatricelli@aol.com','12.18.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jaclyn808','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Maximilian','McCormick','294833324','G.King@yahoo.com','2017-12-06 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jaclyn931','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tonnie','Anderson','207947140','B.Van Toorenbeek@msn.com','12.18.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucas752','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Zoe','Roche','050815159','PatrickWhitehurst2@weboffice.es','2017-12-12 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Benjamin2','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Janet','Jiminez','608651164','William.Kellock@live.it','12.18.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Conor','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Eleanor','Foreman','724105250','RichardStevens@msn.cc','2017-12-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Daniela','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mario','Tudisco','371266189','JDavis4@weboffice.us','12.18.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sammy08','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julie','Chwatal','085385249','IMitchell3@lycos.net','2017-12-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Elzbieta555','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','William','Reames','664401553','SLangham@myspace.de','12.18.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Camilla51','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jordy','Waldo','469124122','ERoyal5@gmail.us','2017-12-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mario80','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Edward','Goodnight','513082438','P.Brylle3@telfort.it','12.24.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Piet36','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Pip','Brennan','323756626','FransRoyal@mymail.es','2017-12-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucille13','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Colin','Huston','768399650','DanLannigham3@libero.dk','12.24.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hannah046','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sherman','Donatelli','078169715','Rogier.Pengilly@weboffice.gov','2017-12-18 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mario9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Peg','Knight','536665183','Hank.Bruno4@gawab.es','12.24.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Cian','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joshua','Ionescu','992176619','E.Mitchell5@weboffice.ca','2017-12-18 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alba79','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gillian','Makelaar','039257568','Jean.Wood@telefonica.gov','12.24.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Viktor','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Robert','Hoyt','222910804','JHendrix@msn.co.uk','2017-12-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joshua','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Babette','Jenssen','462211430','BrentArcadi@hotmail.nl','12.24.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Klara36','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mathias','Waldo','165979083','Brent.Watson@msn.fr','2017-12-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Babette2','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Zofia','Pearlman','377747778','RBruno1@web.ca','12.30.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kayleigh','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kaylee','Archer','507732434','Stein.Makelaar5@libero.net','2017-12-18 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tomasz','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Peg','Schlee','270449009','R.Herzog4@aol.gov','12.30.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Simon','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hannah','Green','367822239','Trees.Nahay@excite.cn','2017-12-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sally','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Daniel','Huffsmitt','680800148','G.Spensley@freeweb.be','12.30.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Petra295','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rolla','Daughtery','466136218','S.Nelson@live.be','2017-12-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucia82','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julia','van het Hof','669689268','T.Wicks@telfort.be','12.30.17 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Matthew90','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ted','Zapetis','567924936','JHaynes@mobileme.net','2017-12-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pedro','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Vanessa','Poole','233551337','P.Troher4@mail.cn','12.30.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucille17','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Carolina','Zapetis','193233591','WillMcDaniel@web.dk','2017-12-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Herb','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jurre','Riegel','391136669','HansRobinson@gawab.org','12.30.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Shermie15','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Florian','Climent','826394993','IGaskins1@gmail.be','2017-12-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Peter','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Emma','Petterson','499595712','Femke.Lawton@aol.es','12.30.17 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sjon36','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Esther','Korkovski','224763115','RZurich2@kpn.be','2017-12-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Scott0','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rogier','Buchholz','063134792','HansMorton@dolfijn.be','01.05.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ciara22','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bo','Wesolowski','102735981','PeterDeans2@mobileme.nl','2017-12-30 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jane35','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Peggy','Stevenson','910735696','TonMejia@gawab.be','01.05.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rob892','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Chuck','LeGrand','233262340','RogerAnderson4@excite.be','2017-12-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jurre648','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jeanne','Little','366138576','GeoffryKuehn1@weboffice.net','01.05.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mike9','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','George','Grote','095324580','VictorWooten5@libero.org','2017-12-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Al6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Peg','Anderson','637537256','DFramus@myspace.com','01.05.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Siska22','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lizzy','Evans','792821050','Bill.Williamson5@freeweb.us','2017-12-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jeffery6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jonas','McCormick','740663479','DStannard3@telfort.us','01.05.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Koos5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','John','Millis','500735148','Rico.Swaine4@excite.de','2017-12-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jill103','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Betty','Mayberry','161267993','HansConley@kpn.nl','01.05.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Madison41','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hank','Nadalin','990712011','Sigrid.Jackson@yahoo.no','2018-01-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hugo05','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Luis','Ray','749726460','TRoger@mobileme.es','01.11.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joop','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Filip','Newman','808113588','Bill.Angarano4@gmail.dk','2018-01-05 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jessica974','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Giel','Kellock','632633422','RichardBoyer@myspace.org','01.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('GertJan9','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hanna','Menovosa','984142218','Alice.Pekagnan@freeweb.no','2018-01-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Georgina8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ciska','Pekaban','933361002','RKepler4@mail.net','01.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Georgina68','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jaclyn','Glanswol','944299055','Y.Stannard@live.net','2018-01-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marcin2','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kimberly','Olson','215582319','JClark@msn.no','01.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Peg6','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Diego','Miller','168771657','FransBarbee@mymail.fr','2018-01-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marcin475','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Herman','Cantere','096483892','D.Mariojnisk@myspace.org','01.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Max','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Patricia','Nelson','323926152','JIonescu2@kpn.com','2018-01-05 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Johnny66','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Siem','Bogdanovich','241426144','G.Gieske@dolfijn.com','01.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sharon9','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marie','Freeman','861362036','G.Ionescu1@dolfijn.it','2018-01-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ollie3','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rich','Archer','376096246','RYinger1@weboffice.no','01.17.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Suzanne4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tara','Howe','641504736','MattijsDaniel3@msn.fr','2018-01-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marie0','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Patricia','Little','598218711','MGuethlein4@web.de','01.17.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sjanie9','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sylvia','Toler','100980885','HBeckbau4@msn.no','2018-01-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Oliver904','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Siem','Krutkov','074260204','GBarnett5@yahoo.it','01.17.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('PieterJan76','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Talitha','Simonent','026542036','BPolti@aol.com','2018-01-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kayleigh86','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Siska','Linton','982473196','GWatson@freeweb.fr','01.17.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hanna891','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kees','Hardoon','836211349','WilliamMejia2@weboffice.es','2018-01-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anne11','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kimmy','Hamilton','178702076','NadineWood@excite.be','01.17.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Edwina1','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Drew','van Dijk','356205041','E.DelRosso@telefonica.dk','2018-01-11 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lena437','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Simon','Hoyt','307725387','Geoffry.Naley1@live.es','01.17.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rick937','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Pete','Hopper','522640519','Femke.Geoppo@freeweb.com','2018-01-17 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Caroline8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jean','Nahay','550080265','AmberSimonent@telefonica.net','01.17.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bill1','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucille','Cragin','355193631','TJackson@weboffice.es','2018-01-17 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anna64','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','John','Climent','212393664','V.Goodnight@libero.org','01.23.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Matthew69','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mathilde','Davis','839840448','BillBrady1@dolfijn.us','2018-01-17 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alice8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leo','Robinson','037643342','RoySanders5@kpn.net','01.23.18 00:00:00',1,1);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ada1','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mariska','Mulders','119734348','EBloom5@web.it','2018-01-17 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hero4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nerea','Mulders','016307896','Jack.Moore2@excite.es','01.23.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nigel2','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Zoe','Massingill','474501611','TonFrega@weboffice.ca','2018-01-17 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Maaike57','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ton','Bruno','008529013','GeoffryBrowne3@aol.co.uk','01.23.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Dygo33','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucy','Matthew','743863536','PVan Toorenbeek2@web.net','2018-01-17 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('John49','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Conor','Malone','787930755','Michael.Blount@mobileme.dk','01.23.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nigel63','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mary','Korkovski','549025909','S.Ward@telfort.cn','2018-01-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ross','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julia','Wood','549707104','PaulineDeBerg@msn.it','01.29.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ciara6','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mick','Whitehurst','528578978','G.Mayberry@mobileme.fr','2018-01-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joanne02','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tinus','Roche','392238712','Ann.Reames@mobileme.be','01.29.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Matt03','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Trevor','Katsekes','796817818','Frank.Williamson@web.fr','2018-01-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jamie070','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Anthony','Otto','238862773','Sydney.Gerschkow@mail.net','01.29.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kayleigh266','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Camilla','Hancock','112208564','VictoriaSharp@dolfijn.cc','2018-01-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nerea605','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Harry','Zimmerman','048624312','Johan.McDaniel2@lycos.es','01.29.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lukas139','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sue','Donatelli','654308942','Hvan Goes1@lycos.it','2018-01-23 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Georgina','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Fabian','Watson','211030646','FreddyNahay@libero.net','02.04.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ricky96','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jill','Hopper','421374080','MikeRoche@aol.be','2018-01-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Petra2','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rasmus','Hancock','534791277','PPyland5@myspace.ca','02.04.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ricky763','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Pip','Thaler','226302243','BrentPrior@web.it','2018-01-29 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ada398','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Teddy','Thompson','958887260','Mart.van Doorn@excite.cc','02.04.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marco992','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sally','Sakurai','745891901','PWilson@gawab.de','2018-01-29 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Harold07','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kay','Olson','164347506','P.Deleo@myspace.us','02.10.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Patty8','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sylvia','Beckbau','202990025','Leon.Suszantor3@web.it','2018-01-29 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lincoln9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ciara','Bruno','744947013','ENobles@mobileme.co.uk','02.10.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pieter218','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nathan','Chapman','488761327','Freddy.Lamere@live.net','2018-02-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Edward13','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Pablo','Zapetis','434037659','LJulieze@web.us','02.10.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rogier45','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kimmy','Pensec','444231732','ADeWilde1@excite.be','2018-02-04 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Richard98','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Herbert','Moore','451172623','Mattijs.Katsekes@telefonica.be','02.16.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Catherine','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joey','Kidd','246163734','Carla.Pekagnan4@lycos.gov','2018-02-04 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alvaro82','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Juan','Gonzalez','462459259','Gretsj.Koss@telfort.us','02.16.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ryan39','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mick','Jessen','954608342','Hank.Pyland@kpn.nl','2018-02-04 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bengie054','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Robert','Gunter','620832733','Mattijs.Nefos@yahoo.es','02.16.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Conor444','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jace','Mejia','928375735','Mick.Ladaille@gawab.org','2018-02-04 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rachael','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Giel','Roger','138034907','Mike.Glanswol@gawab.gov','02.16.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Talitha','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jaclyn','Dulisse','283750914','RichardBrisco@mobileme.com','2018-02-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Scott047','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ryan','Massingill','061162533','Ben.Lannigham@live.net','02.16.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gabbie938','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Erin','Pierce','113439457','Matt.Koss2@excite.us','2018-02-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Liam25','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sergio','Whitehurst','033131788','GeoffryIonescu3@myspace.us','02.22.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Florian788','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sid','Hollman','137941773','JPlantz2@msn.net','2018-02-10 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gert385','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sjanie','Storrs','047773896','Johan.Hoyt3@myspace.net','02.22.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ruth','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Liam','van der Laar','572257818','Y.Helbush2@web.it','2018-02-10 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pawel9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','John','Geoppo','326131227','Sjors.Hummel4@weboffice.nl','02.22.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Fabian9','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bess','Mitchell','328851649','G.Wakefield@excite.fr','2018-02-10 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ollie','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joey','Ayers','960588266','Martin.Trainor5@libero.be','02.22.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Harry10','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Piotr','Nithman','513061083','James.Caffray@aol.de','2018-02-10 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sophia409','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Isak','Nelson','880448051','I.Raines3@dolfijn.de','02.28.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Benjy493','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Milan','Marra','840883188','K.Harness@web.de','2018-02-10 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Al','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rik','Toler','113629052','DickSchubert5@hotmail.dk','02.28.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Emily3','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mathias','Petterson','862907084','VWeinstein4@mobileme.co.uk','2018-02-16 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alvaro616','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jozef','Lamere','857017369','William.Freed@aol.it','02.28.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ida57','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Dick','Koch','276951784','PeteBugno@myspace.us','2018-02-16 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Martina','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Fabian','Cramer','666647967','Pierre.Langham@msn.gov','02.28.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Julia216','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Anton','Scheffold','881596340','Ciska.Hulshof@mobileme.co.uk','2018-02-16 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Callum4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Daniela','Hulshof','402362874','GretsjDittrich@weboffice.ca','02.28.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kimberly58','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Aoife','Daniel','553232190','Richard.Queen5@hotmail.co.uk','2018-02-16 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bo','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Herb','Phillips','088024901','E.Gerschkow1@freeweb.co.uk','02.28.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mathias35','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sammy','Herring','226738556','SjorsFrancis5@libero.com','2018-02-16 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Thomas856','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joost','Shapiro','640644102','Madelein.Thaler@mymail.de','03.06.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pip33','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Florian','Caouette','402105856','H.Wakefield@libero.de','2018-02-16 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kees775','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucas','Pekagnan','352288936','Frank.Dean3@dolfijn.be','03.06.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Daniel35','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Delphine','Nadalin','866900271','LynnFramus@kpn.us','2018-02-22 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sue3','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Matthew','Mairy','661348363','Leon.Pensec@excite.fr','03.06.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lisa7','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rik','DeBuck','512408247','HDittrich1@kpn.nl','2018-02-22 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucia791','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Claudia','Esperiza','271407308','BillPearlman2@web.es','03.06.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Susan20','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sandra','Sanders','834034380','Richard.Rivers2@lycos.fr','2018-02-22 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tobias504','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Andrzej','Griffioen','129761853','HankSpensley1@freeweb.cc','03.12.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jill8','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jamie','Weaver','331592027','Martin.Browne@mobileme.es','2018-02-22 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sergio501','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Herbert','Symbouras','529124032','William.Wesolowski3@excite.es','03.12.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Charlie99','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cathy','Suszantor','278049654','LLawton@libero.net','2018-02-22 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Teddy','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Claudia','van het Hof','909132654','JakeAnderson@telfort.cn','03.12.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Scotty4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Betty','Bergdahl','221410562','William.Scheffold@lycos.cn','2018-02-22 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Zofia191','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jeanette','Bloom','932722964','FreddyNobles@kpn.cn','03.18.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bertje1','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sophia','Heyn','660323386','Victoria.Ionescu4@yahoo.cn','2018-02-22 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rogier46','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Phil','Vanderoever','962756071','H.Shapiro@mymail.no','03.18.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Chloe','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jo','Dulisse','016131268','Jenny.Moore@msn.us','2018-02-28 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sjanie7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Isabelle','Gerschkow','551179114','Freddy.Yinger@dolfijn.co.uk','03.18.18 00:00:00',1,1);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kimmy4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ricky','Hedgecock','130114527','ABeckbau@msn.de','2018-02-28 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Barbara','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lotte','Gibson','290570510','ELangham@dolfijn.ca','03.18.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Taylor6','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Isaac','Petterson','743404275','IMorton3@myspace.fr','2018-02-28 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bengie2','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Piet','Pearlman','877048370','Bill.Gibson2@web.net','03.18.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Margarita','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Henk','Robinson','100089444','Martin.Naff2@libero.nl','2018-03-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jan769','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Geoff','Keller','579607084','R.Moon2@mail.no','03.24.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nick57','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Herman','Mariojnisk','845753996','WillShapiro@live.it','2018-03-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Krzysztof8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tommy','Perilloux','572211243','Fred.Shapiro@telfort.dk','03.24.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Dirk21','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Anton','Schmidt','903459094','Petra.Noteboom5@gawab.ca','2018-03-06 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Raul','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jan','Gua Lima','551878220','JohanAllison@excite.com','03.24.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kim270','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Edwyn','McDaniel','771379195','Hans.Otto3@freeweb.es','2018-03-12 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Chuck256','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Helen','Helfrich','181496829','Frank.Gildersleeve@weboffice.us','03.24.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Babet','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tinus','Herrin','995415110','PaulineRoger@msn.co.uk','2018-03-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Florian4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Matthew','Watson','324112335','H.Waldo@freeweb.nl','03.24.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Camille4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kimberly','Clarke','358229353','APekagnan@yahoo.it','2018-03-12 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Niek03','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alvaro','Davis','394506073','Rick.Conley2@excite.cn','03.24.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Scottie5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Femke','Poplock','332477452','LHeyn5@live.cc','2018-03-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rachael05','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Teun','Ionescu','926045850','JConley4@hotmail.nl','03.30.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ike','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Henry','Bergdahl','709610503','I.McCrary5@libero.fr','2018-03-12 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sophia931','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Conor','Phillips','559908902','LeonBeckbau@kpn.de','03.30.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Co797','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ollie','Millis','252485891','G.Naff3@msn.nl','2018-03-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Wilma','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tony','Alspaugh','793106322','Rico.Caffray2@gmail.us','03.30.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Truus677','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nate','Queen','450472043','MEcchevarri4@libero.com','2018-03-18 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Stephen0','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gabbie','Brumley','226850489','DaveBotsik@mail.be','03.30.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jace78','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Babette','van der Laar','255886205','PeterSakurai4@live.cc','2018-03-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jean23','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ida','Marra','638472994','Bill.Ray@telefonica.us','03.30.18 00:00:00',0,1);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mario298','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Steph','Davis','148821893','Peter.Dean@lycos.cn','2018-03-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Roger010','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Helen','Hollman','731905649','Bianca.Antonucci4@gawab.de','04.05.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Maximilian15','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Giel','Foreman','333264034','YPlantz@libero.net','2018-03-18 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Michael','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Martina','Blount','609646491','M.Schubert@lycos.nl','04.05.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Niek1','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lia','Cross','532918228','Maarten.Anderson5@dolfijn.co.uk','2018-03-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jozef','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Teun','Press','327277995','Peter.Anthony@telfort.org','04.05.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Diego','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Johnny','LeGrand','956837770','Frans.Griffith@live.org','2018-03-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alexander996','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jonas','Vostreys','888916177','Johan.Orcutt@weboffice.it','04.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jurre','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hannah','Willis','131687742','E.Brisco2@libero.us','2018-03-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Julia109','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kayleigh','Hollman','592081761','FransIonescu5@hotmail.es','04.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jill','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Willy','Mairy','491796534','FrankBrumley@kpn.it','2018-03-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jeanette044','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marieke','Lawton','030884933','BillJones@aol.net','04.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hugo','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joop','Whitehurst','788059863','VictorKuehn@excite.cn','2018-03-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nate3','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rolla','King','623289980','T.Wicks1@hotmail.ca','04.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Claudia','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nigel','Young','840257783','Kay.Visentini@gmail.fr','2018-03-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lara5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Pip','Press','175147792','Freddy.Martin@libero.be','04.11.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Femke9','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ana','Clarke','908012938','Bill.Wesolowski@web.gov','2018-03-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joe8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Emma','Waldo','663448445','RichardStockton@gmail.dk','04.11.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Patricia9','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leo','Vostreys','209125332','H.Herrin@gawab.cn','2018-03-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pawel83','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucia','Wood','703097510','DPraeger@gmail.gov','04.17.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rosa7','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Maggie','Whitehurst','496633701','Rick.Slater1@web.fr','2018-03-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Dylan47','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','John','Nefos','987304103','Rick.Oyler@excite.gov','04.17.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mick','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sjaak','Paul','587225258','Ann.Trainor@mail.gov','2018-03-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('William4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Andrzej','van het Hof','222000064','H.Warner2@msn.gov','04.17.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Janet862','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Betty','Ecchevarri','148713175','PaulRobertson@libero.gov','2018-03-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Chuck','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hiram','Keller','549838243','DWalker2@freeweb.es','04.17.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ewa15','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Benjamin','Cramer','672931656','PMeterson@mail.cn','2018-03-30 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bob756','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Susan','Krutkov','796682170','MandyMatthew@lycos.cn','04.17.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Luke27','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Zofia','Reames','759422362','Brent.Miller@freeweb.no','2018-03-30 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Cath7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Steven','King','325458669','YChwatal@dolfijn.cn','04.23.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jody61','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jane','Willis','729699906','Hans.Voigt2@mail.org','2018-03-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Adrian03','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jaap','Otto','473832810','FransShapiro@weboffice.co.uk','04.23.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Malgorzata669','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Adrian','Phillips','816227642','Rogier.Storrs@freeweb.it','2018-04-05 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Iris65','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jolanda','Brennan','716333156','Bas.Kepler@msn.ca','04.23.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kayleigh20','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tomasz','Mejia','363237913','Patrick.Praeger@telefonica.dk','2018-04-05 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alexander','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Margarita','Linton','301779391','MickNelson@web.it','04.23.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Janet361','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Vincent','Queen','924927065','E.Deans@web.no','2018-04-05 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Dorothy6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jessica','Ionescu','651700629','LLee@mymail.es','04.29.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Scottie437','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mart','van Doorn','556156708','LZapetis@aol.cn','2018-04-05 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sarah','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicoline','Pierce','176796553','BillCramer@mobileme.gov','04.29.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Luca407','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jaclyn','Muench','572036642','Lucy.Roche3@myspace.dk','2018-04-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Katarzyna','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sam','Mcnally','412025586','NickLaudanski@myspace.fr','04.29.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sandra748','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bess','Watson','950875794','Will.Evans@telefonica.co.uk','2018-04-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nathan536','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Colin','Markovi','465179231','G.Freeman@excite.cc','04.29.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joseph662','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Babette','Ayers','877803437','GMillikin5@excite.net','2018-04-11 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Susan','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Carla','Nobles','569456752','P.Morton@libero.it','04.29.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Leah147','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Piet','Bruno','785618219','Bob.Leonarda4@dolfijn.co.uk','2018-04-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Emily','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Megan','Anderson','300070463','I.Poplock@kpn.it','05.05.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ryan130','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Simon','Novratni','308097174','KylieMcgrew5@weboffice.cn','2018-04-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jaclyn4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ruth','Nefos','364204728','MartinCohen@aol.no','05.05.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Barbara5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Philip','Buchholz','503674156','Stein.Van Dinter@hotmail.de','2018-04-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nienke12','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Geoffery','Mcnally','078059194','Victor.Katsekes@web.ca','05.05.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Siska','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Harry','Queen','842749925','JennyJohnson1@kpn.cc','2018-04-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lea145','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Juan','White','198845910','Lynn.Phelps3@msn.be','05.05.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jules4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Juana','Angarano','788016884','TreesToler@aol.no','2018-04-17 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jonas','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Adrian','Ostanik','689058042','KMorton@msn.com','05.05.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Adam','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ronald','Koch','668273459','HKidd1@aol.ca','2018-04-17 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pedro358','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ricardo','Jessen','886999726','Trees.Brady@telfort.no','05.05.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sofia','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Georgina','Matthew','427764767','G.Alspaugh@freeweb.cn','2018-04-17 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Filip34','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leo','Tudisco','068525232','Madelein.Vanderoever4@kpn.cn','05.11.18 00:00:00',1,1);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ed75','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Chloe','Van Dinter','258094753','PeterBogdanovich@myspace.de','2018-04-17 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Netty','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Delphine','Brennan','906251176','PeteGlanswol2@gmail.org','05.11.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucy57','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ton','Thaler','582838191','FreddyWilson@dolfijn.net','2018-04-17 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jonas46','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cecilie','Knight','418716916','WilliamToler3@hotmail.fr','05.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucy','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ricky','Helfrich','880243191','HankVoigt@mymail.com','2018-04-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Thomas','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Michael','Pekagnan','795615686','Ron.Schmidt2@excite.dk','05.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ted517','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jim','Bitmacs','241487405','NickJessen@hotmail.de','2018-04-23 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Klaas','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julie','Stewart','348657855','BasQueen@telfort.no','05.11.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hannah4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Manuel','Crocetti','517835869','Dana.Menovosa@web.cn','2018-04-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Olivia','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kim','Forsberg','977340585','Ciska.Thaler@mymail.cn','05.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lara492','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Johnny','Young','664775313','Patty.Geoppo@libero.dk','2018-04-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ruth','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','GertJan','Frega','719070818','Petra.Storrs@mail.co.uk','05.11.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marie1','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Aoife','Buchholz','130360107','BobDeWilde@yahoo.net','2018-04-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marco8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Babet','Makelaar','516871863','BartVan Dinter@aol.ca','05.17.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jonas40','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Andrea','Chapman','884104253','Femkevan Goes@weboffice.es','2018-04-23 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jo761','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Martin','van Dijk','994966686','Fred.Shapiro4@mobileme.cc','05.17.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Luca793','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Peggy','Orcutt','877811670','Brent.Symms@mymail.cc','2018-04-29 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Karin7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mike','Caouette','821984738','Pauline.Zapetis@msn.co.uk','05.17.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Charlotte225','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Helma','Slemp','252957660','Will.Hedgecock@gmail.us','2018-04-29 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kay','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sean','Pengilly','633385481','WillForeman3@mymail.org','05.17.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Leah672','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alex','Kidd','469441508','LynnBraconi@dolfijn.com','2018-04-29 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Linnea','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ike','Bugno','433480878','Patrick.Turk@libero.ca','05.17.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Edwina17','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Manuel','Geoppo','656967303','EManson@lycos.be','2018-04-29 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Krzysztof2','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Edward','Bergdahl','826048953','Victoria.Sharp@mobileme.us','05.17.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ike869','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rich','Miller','825336538','RichardMoreau4@myspace.net','2018-04-29 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Carla46','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julian','Zapetis','232964407','Rogier.Langham4@hotmail.org','05.17.18 00:00:00',0,1);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ada5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','David','Hoyt','583633793','Hank.Voigt4@kpn.be','2018-05-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Guus50','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sarah','Arden','705297432','RogerBrendjens2@yahoo.dk','05.23.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ricardo','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Thomas','Gieske','038653001','HankOrcutt3@telefonica.be','2018-05-05 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hank8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ivan','Conley','306934306','BrentHarness@mobileme.cc','05.23.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jody','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Anne','Stewart','836129866','Rick.Moreau1@live.it','2018-05-05 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Carla','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Camille','Novratni','301306395','William.Clarke5@libero.no','05.23.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hiram724','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Niek','Gua Lima','716956281','BillForeman1@weboffice.org','2018-05-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hannah0','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joe','Hulshof','977121408','BiancaIonescu@web.es','05.29.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Cees','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Charlie','Hulshof','655003624','RickFreed5@web.net','2018-05-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sjaak52','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ida','Maribarski','755191600','FredWhite@excite.be','05.29.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucille502','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sylvia','Pierce','586553082','Mart.Byrnes2@lycos.org','2018-05-05 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Geoff','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Peg','Howe','334543208','Frank.Mitchell@telfort.ca','05.29.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Maggie98','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alex','Brennan','078628509','RGriffioen@lycos.org','2018-05-05 00:00:00',1,1);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Maximilian1','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Krystyna','Wargula','766932410','William.Bruno@mymail.es','05.29.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sam','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Catharine','Malone','528304533','Lucas.Ladaille@lycos.com','2018-05-11 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Katie9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sofia','Sterrett','978404057','VCliment@gawab.org','05.29.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lotte548','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sjon','Stewart','481631465','Martin.Malone@aol.org','2018-05-11 00:00:00',0,1);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Elzbieta3','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ewa','Freed','863048335','UBarnett2@hotmail.cn','05.29.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Caitlin0','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rolla','Naff','652880241','IBloom@live.cn','2018-05-11 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('David458','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jack','Ecchevarri','631292113','NickConley2@dolfijn.net','05.29.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Luca','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sjanie','Poole','763420413','RickCramer@msn.es','2018-05-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tobias0','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alejandro','Wooten','333745062','BiancaDeleo@aol.com','06.04.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alice967','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Margo','Symbouras','005320801','Jake.Blacher5@web.de','2018-05-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Truus72','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Megan','Symms','004601003','RogierLangham@msn.nl','06.04.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Olivia471','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Caitlin','van Doorn','591765053','Milan.Griffioen2@mymail.net','2018-05-11 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('HeroZero47','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jonas','Durso','685082384','HMorton4@msn.cc','06.04.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Luka13','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Barbara','Kingslan','195592650','FransSpensley2@live.com','2018-05-11 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Carolina04','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucia','Pearlman','548094174','Hans.Jessen@web.com','06.04.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Manuel465','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Luke','Browne','900595059','GretsjCarlos@freeweb.co.uk','2018-05-17 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pedro39','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Andrzej','Barbee','086924019','Lindsy.Whitehurst4@telfort.fr','06.04.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Karen','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Oliver','Manson','103720721','Mart.Arden5@lycos.dk','2018-05-17 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Linnea4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Juan','Royal','483293812','BasMcnally2@lycos.de','06.10.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Camila53','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sharon','DelRosso','010227511','MandyDeBuck1@mobileme.dk','2018-05-17 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rosa6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cees','Hoogbandt','924325467','R.Anderson2@dolfijn.nl','06.10.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Benjamin','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jaap','Rivers','663752774','Ben.DeWilde@myspace.cc','2018-05-17 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Edwina22','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lisa','Hoogbandt','705530072','RichardWakefield@freeweb.nl','06.10.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jo3','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Herbert','Byrnes','769090445','K.Herring@libero.be','2018-05-17 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Daan9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Andrzej','Zapetis','307251916','EmmaDeBuck@mobileme.be','06.10.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gillian26','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Piotr','LeGrand','937713594','TLee@freeweb.be','2018-05-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Leah','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Geoffery','White','529335667','Vincent.Pengilly@aol.it','06.16.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Edwina314','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicholas','Thaler','036679193','JohanForeman@hotmail.it','2018-05-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Emil9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mike','van Goes','183613383','FreddyWargula1@excite.ca','06.16.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Javier35','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Thomas','Toler','846725132','G.Chwatal@excite.it','2018-05-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gill403','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hannah','Franklin','978161775','MDeBuck1@msn.us','06.16.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Harry','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Scottie','Julieze','282348430','L.Lezniak3@live.ca','2018-05-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anthony','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','George','Muench','984083733','Will.Brisco@myspace.nl','06.16.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tara4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Thelma','Watson','504378624','Frans.Long@aol.gov','2018-05-29 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tobias47','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Liza','Pekaban','370631760','Trees.Pyland@web.us','06.16.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Caitlin167','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Callum','Deleo','506570404','Gretsj.Beckbau@gawab.es','2018-05-29 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pedro6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Katie','Orcutt','880205957','GretsjSuszantor@myspace.ca','06.16.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Cathy','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bill','Lannigham','597264000','Victoria.Stannard5@libero.dk','2018-05-29 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ashley325','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rachael','Wolpert','538462255','Ciska.van der Laar3@yahoo.dk','06.22.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mariska','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ellie','Caouette','969878808','FransAyers@freeweb.org','2018-05-29 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Miriam46','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Max','Archer','282051904','JLamere@excite.de','06.22.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rogier28','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicolas','Bryant','383345969','TonGibson5@freeweb.co.uk','2018-05-29 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Madison','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','George','Ecchevarri','486919191','BillFranklin5@dolfijn.org','06.22.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Viktor5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lia','Gonzalez','137451352','Ronald.Thaler@live.dk','2018-05-29 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Herman3','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Filip','Lawton','180666612','CiskaWard@freeweb.no','06.28.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alice6','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sally','Daughtery','698564704','G.Zia@weboffice.no','2018-05-29 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Christa','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Isabelle','Cappello','705985441','GAngarano@lycos.cc','06.28.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alexis54','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Camila','Brennan','297127152','LindsyNaley5@mymail.no','2018-06-04 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Charlotte34','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucas','Roche','273950782','Victor.DeBerg@mymail.ca','06.28.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Frederik763','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Emil','Martin','152927076','Pauline.Stannard@gmail.ca','2018-06-04 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Georgina465','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jurre','Davis','186900849','DBitmacs@hotmail.org','06.28.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pawel42','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hiram','Cain','186516626','Y.Conley@mobileme.us','2018-06-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ashley84','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alba','Langham','508652220','Y.Cappello@mymail.fr','06.28.18 00:00:00',0,1);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Leon93','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Zoe','Wicks','121367758','Lindsy.Roger@live.net','2018-06-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Isak','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Babette','Bugno','098618980','AgnesDittrich1@mymail.cc','06.28.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ester','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Daan','Linhart','576452697','MartBrennan@msn.no','2018-06-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Giel85','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Maximilian','Davis','917372749','P.Liddle@live.no','07.04.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Callum','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bas','Miller','909321529','Trees.Massingill3@telfort.co.uk','2018-06-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Harold466','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ciska','Hulshof','779987770','MartinPoole4@hotmail.net','07.04.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sarah7','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Margarita','Bugno','677164561','FrankCaouette1@yahoo.no','2018-06-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Scott','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Manuel','Depew','353856527','L.Stannard@libero.cn','07.04.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pauline720','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joe','Robbins','381721867','HSuszantor4@mymail.es','2018-06-10 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Herbert','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Willy','Spensley','298975416','TreesAldritch@gawab.us','07.04.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Duncan898','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Harold','Richter','521052649','Sjors.Duvall@web.us','2018-06-10 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tomasz826','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ciska','Seibel','172597114','AnnDeBerg@lycos.cc','07.04.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bess16','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Manuel','Poole','064893057','GWilson@web.de','2018-06-10 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Claudia3','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bert','Williamson','718573341','BrendPekaban@libero.net','07.10.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Wilma02','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Zoe','Nahay','975544066','S.van Dijk2@libero.us','2018-06-10 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lincoln43','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ester','Phillips','780957213','MandyHeyn@mobileme.net','07.10.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ben86','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Dick','Laudanski','240012276','Jim.Duvall1@myspace.fr','2018-06-16 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sophie627','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mikkel','Knopp','187610861','Geoffry.Poole@msn.dk','07.10.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sandra','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tomasz','Leonarda','202849859','Pauline.Zimmerman@telefonica.org','2018-06-16 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ana22','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Maja','Barnett','433704229','EGrote@telfort.net','07.10.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Oscar65','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marieke','Oyler','063350446','RonaldArden@aol.co.uk','2018-06-16 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bram11','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Aoife','Perilloux','170107946','E.Kellock5@mail.cn','07.10.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ciska4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Victor','Buchholz','112684100','K.Bloom@lycos.co.uk','2018-06-16 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Cristian','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jordy','Muench','137143245','EBrady5@mymail.fr','07.16.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucy6','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leo','Arden','318461297','IHopper@mail.co.uk','2018-06-16 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jim4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Koos','Spensley','639462941','BiancaMoreau4@mail.cn','07.16.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Thelma','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Vanessa','Williamson','883990569','VNaley1@gmail.be','2018-06-16 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Geoff07','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sandra','Manson','618646678','Will.Waddell5@telfort.nl','07.16.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Frederik832','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Geoffery','Ward	','444094146','FransWeaver1@myspace.no','2018-06-22 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anna893','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cath','Griffioen','305751960','MWalker2@mail.com','07.16.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Drew55','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Dorothy','Overton','247261090','HansPyland5@lycos.ca','2018-06-22 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bert33','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jacob','Robertson','928166090','Femke.Geoppo@mobileme.dk','07.16.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tim68','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Elena','Wood','451848370','HankArcher@mobileme.de','2018-06-22 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Giel','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Krzysztof','Pekagnan','649532272','KLawton@lycos.cn','07.16.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Emma','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bess','van het Hof','593760361','Maddy.van Dijk2@lycos.it','2018-06-22 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anne27','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gerrit','Brown','289950632','R.Freed3@mail.be','07.22.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anthony22','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bill','Barbee','914065482','Richard.Emerson5@telfort.it','2018-06-22 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Elzbieta19','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Juan','Dean','876600814','Kylie.Caffray@mymail.co.uk','07.22.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Harold02','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gabrielle','Pickering','372262530','FrankWilliams1@mail.de','2018-06-22 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ida81','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Erik','Yinger','242434418','Petra.Symbouras@excite.nl','07.22.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Dave','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Shermie','Moreau','075586657','WilliamRivers@excite.de','2018-06-22 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Margo4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sue','Roger','513614053','Bob.Bitmacs3@mymail.net','07.22.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lena','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Filip','Durso','337825915','Leo.Hoogbandt@weboffice.gov','2018-06-28 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Oliver','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Herman','Royal','998495876','WillSirabella@telfort.dk','07.28.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Vanessa998','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Barbara','Poole','481877225','Dan.Menovosa5@mobileme.cn','2018-06-28 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Herbert26','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jessica','Storrs','325651615','YOlson@weboffice.fr','07.28.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mart9','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Duncan','Zia','066712048','Liam.Botsik@gawab.ca','2018-06-28 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alexis826','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sophia','Weaver','147383241','IKellock3@msn.de','07.28.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Emil','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kimberly','Hankins','711856763','A.Petterson@telfort.nl','2018-06-28 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Dirk317','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jack','DeBuck','947462677','YFreed4@telfort.ca','07.28.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Julia53','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lisa','Comeau','335867514','Madelein.Mulders@libero.it','2018-06-28 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Teddy96','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lisa','Imhoff','996797799','MikeBitmacs@hotmail.org','07.28.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ada33','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lotte','Bergdahl','988375944','WilliamMitchell@mail.de','2018-06-28 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gerrit40','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gillian','Raines','862048220','RicoSchmidt@freeweb.ca','08.03.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('GoSix','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ada','Duvall','601023845','TreesHaynes@dolfijn.no','2018-06-28 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mario','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Betty','Durso','280928034','PaulineFernandez4@hotmail.es','08.03.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Filip990','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lauren','Huffsmitt','089393990','RoyByrnes@mobileme.gov','2018-07-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jose','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kay','Schubert','994664410','RDepew3@freeweb.it','08.03.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joost5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Theodore','Green','483525842','Y.Lee@mail.cc','2018-07-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Margo8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Niek','Ditmanen','466316747','Dan.DeWilde@mail.gov','08.03.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sammy86','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Simon','Antonucci','594279812','EWarner@web.gov','2018-07-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Charles1','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Frederik','Langham	','823515084','SvenVan Toorenbeek@kpn.dk','08.03.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Elzbieta5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Benjamin','Trainor','701918859','MandyWood1@excite.org','2018-07-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Steve466','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Pieter','Goodman','774357692','Hank.Sterrett@msn.gov','08.03.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marta0','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jack','Sharp','534965595','Rick.Stevenson@aol.gov','2018-07-04 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Oscar8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sharon','Koss','623771041','HStockton@libero.nl','08.09.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kim73','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mathilde','Wooten','653465213','Will.Seibel@live.us','2018-07-10 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Iris97','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hanna','Pensec','727618574','FemkeLawton@telefonica.nl','08.09.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ted','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alvaro','DeWald','650831146','RogierCantere1@gmail.ca','2018-07-10 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nerea','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jane','Marra','460098354','MattPatricelli@mymail.org','08.09.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Geoff20','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julia','Mitchell','784969756','TStannard@lycos.gov','2018-07-10 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ida498','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nick','Slater','594438007','J.Press@telefonica.ca','08.09.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jace5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Katie','Lezniak','890840296','Freddy.Scheffold@msn.cc','2018-07-10 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Richard','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Teun','Willis','880747344','Frank.Voigt@telfort.com','08.09.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Theo0','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jaclyn','Hancock','096529406','K.Pyland@freeweb.fr','2018-07-10 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Andrzej','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Olivia','Roger','394551322','VictorSharp4@gawab.nl','08.09.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Edwyn6','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Conor','Martin','019687504','Rogier.Matthew1@yahoo.us','2018-07-16 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mads','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Steven','Daughtery','042393473','Rick.Zurich5@telefonica.no','08.09.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Niklas177','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mads','Crocetti','282822759','PMcCrary1@yahoo.gov','2018-07-16 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Thelma','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lena','Bright','638141991','T.Hummel@gmail.org','08.15.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ellie30','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jody','Morton','274905321','Bianca.Morton@aol.net','2018-07-16 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Charles263','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Piet','Moon','032545612','BobMaribarski4@dolfijn.no','08.15.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Syd','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kayleigh','Robbins','704853808','MadeleinHollman1@hotmail.be','2018-07-16 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ike44','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Coby','Haynes','542629188','BillBoyer@weboffice.es','08.15.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Laura140','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Chloe','Watson','949030143','Frank.Freed2@aol.fr','2018-07-16 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Julian78','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Karin','Lejarette','501922225','SuusHowe@aol.org','08.15.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nicolas513','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Co','Hamilton','398901254','Freddy.Chwatal@freeweb.ca','2018-07-22 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Simon','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tony','Franklin','517151393','WillBuchholz@weboffice.org','08.15.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Julia267','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Max','Bugno','287910940','BartHoogbandt@aol.us','2018-07-22 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Trevor241','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tommy','Griffioen','555382284','JKellock@weboffice.fr','08.21.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nathan8','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joop','Stockton','301139737','Ann.van Goes1@mymail.co.uk','2018-07-22 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Milan6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Netty','Patricelli','487792707','Nick.DeWald@weboffice.org','08.21.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Henk','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Willy','Pearlman','000131206','LindsyDeBuck2@kpn.es','2018-07-22 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ellie5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Maximilian','Carlos','196422208','HHaynes@aol.net','08.21.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lizzy','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tommy','Morton','097710716','YChwatal2@live.es','2018-07-22 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Cameron934','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Delphine','Caouette','809447735','WilliamCaouette3@telfort.nl','08.21.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bertje912','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Iris','Wood','272979115','RLove2@yahoo.it','2018-07-28 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Herb043','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Isaac','Paddock','003908010','T.Lee@myspace.fr','08.21.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ike78','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Anton','van Dijk','813279085','Ronaldvan der Laar1@kpn.cc','2018-07-28 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Adam9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jose','Troher','020907337','JakeHulshof@telefonica.com','08.21.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Charles739','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lara','McCormick','802692640','NIgolavski@aol.gov','2018-07-28 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('HeroZero','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jody','Sanders','905926923','P.Boyer@gawab.ca','08.27.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ruth027','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Chloe','Thaler','270476404','Lynn.Kuehn2@mail.no','2018-07-28 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Simon9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lotte','Cramer','711701511','Will.Martin@libero.es','08.27.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rando0','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leo','Knight','683116950','RichardMartin3@dolfijn.gov','2018-07-28 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Conor7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','PieterJan','Clarke','099026835','JeanOlson@telfort.cc','08.27.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marie','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alejandro','Dulisse','494014090','Peter.Zia@excite.com','2018-08-03 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Dylan','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Margarita','Harness','972495311','LeoAnderson@live.nl','08.27.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('William','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ton','Paddock','332434862','Nick.Wilson4@mymail.co.uk','2018-08-03 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Martina45','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cath','McCrary','431874637','MaartenCrocetti@libero.no','08.27.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mads0','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sigrid','Jiminez','720262172','RBoyer@myspace.cn','2018-08-03 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Maximilian628','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joshua','Manson','872492784','Ann.Cain@myspace.org','08.27.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('GoPlaat0','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Chris','Dean','637191310','RickImhoff4@web.com','2018-08-09 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Filip0','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kim','Climent','403795614','WillNahay2@telfort.co.uk','08.27.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joe','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jolanda','Ray','755737866','Ton.Conley@hotmail.co.uk','2018-08-09 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Shermie','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Carlos','Pyland','151004593','Richard.Williamson4@mobileme.nl','09.02.18 00:00:00',1,1);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lea148','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Olivia','Matthew','266499158','LUitergeest3@web.de','2018-08-09 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Edwina26','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Chloe','Hoogbandt','472820702','MaddyMakelaar5@gawab.net','09.02.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hugo41','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jurre','Sanders','803797307','GeoffryCohen3@dolfijn.es','2018-08-09 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sofia','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Dorothy','Glanswol','134508028','PClark@kpn.ca','09.02.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Niklas458','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Will','Sakurai','317384233','PatrickSchubert@freeweb.net','2018-08-09 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Samantha','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','David','Nahay','600413581','Rick.Evans@lycos.dk','09.02.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Elena79','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Giel','Liddle','435077614','NGua Lima5@libero.cn','2018-08-09 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ainhoa6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sammy','Green','457450540','L.Pekaban3@telefonica.dk','09.02.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ryan','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ed','Davis','840417921','BasWard@excite.cc','2018-08-09 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('William26','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jaap','Glanswol','353885841','HWolpert@myspace.ca','09.02.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Herbert','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joanne','Cragin','895624922','LynnPengilly5@hotmail.net','2018-08-15 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Viktor61','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lincoln','Gieske','311702836','BasPearlman@lycos.ca','09.08.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pete5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hank','Nahay','418630654','Fred.Daughtery2@yahoo.cc','2018-08-15 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Elin8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leonie','Moreau','714103260','PDelRosso@gawab.us','09.08.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tonnie068','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gert','Cragin','400212586','Mart.Brendjens2@dolfijn.net','2018-08-15 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Geoffery7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Fabian','Koss','627849308','Lynn.Goodnight@telfort.es','09.08.18 00:00:00',1,1);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sem98','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Matt','Laudanski','661242858','FrankDeans@web.be','2018-08-15 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Camila7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tony','Cohen','556975804','K.Archer@freeweb.gov','09.14.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Raul','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Scottie','Johnson','071366355','PeterJones@lycos.net','2018-08-21 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Karin83','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sem','Bruno','002900888','Peter.Nahay4@lycos.cn','09.14.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Julia5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kay','Sanders','731370901','L.Blount@mobileme.co.uk','2018-08-21 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pablo272','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rich','Liddle','869034783','DanaDitmanen5@mobileme.com','09.14.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Colin','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Isak','Allison','047560928','P.Pickering1@gawab.ca','2018-08-21 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ellie31','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sara','Williamson','675824170','Ciska.Francis1@yahoo.nl','09.20.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Paul3','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Chuck','Laudanski','903485875','HankManson@live.dk','2018-08-21 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pauline529','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Pauline','Sakurai','835921230','JohanComeau5@mymail.it','09.20.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Karin8','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicolas','Angarano','432257131','Maarten.Kepler3@aol.nl','2018-08-21 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lara622','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Michel','Ecchevarri','306578293','Bas.Cramer@telfort.fr','09.20.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Martien652','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','James','Forsberg','007184474','T.Walker4@myspace.ca','2018-08-21 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kimmy37','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Martin','Press','940952708','TreesSirabella3@dolfijn.cn','09.20.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pablo','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Dave','Nefos','889007274','BrentFox@msn.com','2018-08-27 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lukas86','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Giel','Cramer','835720834','FrankForsberg5@mymail.us','09.26.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sherman745','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rich','Stewart','752809853','D.Climent@gmail.be','2018-08-27 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Drew925','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Krzysztof','Sharp','539952118','TreesStewart3@aol.us','09.26.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Izzy','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Laura','Clarke','131997912','LDeBerg@myspace.cc','2018-08-27 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mathias','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Teun','Barnett','602615077','I.Nahay@telefonica.us','09.26.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sean','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hannah','Stockton','473468721','Victoria.Naff@freeweb.co.uk','2018-09-02 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tomasz7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','George','Hopper','842533818','Mart.Francis2@kpn.dk','09.26.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Karen980','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jean','Weinstein','366695085','YLee@weboffice.cn','2018-09-02 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pauline500','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cecilie','Forsberg','098325530','HankBuchholz@mobileme.org','10.02.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tom28','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julian','Linhart','288063746','BrendMarkovi@hotmail.com','2018-09-02 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ron83','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sarah','Anderson','627562762','E.Weaver2@aol.org','10.02.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tomas2','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jamie','Hamilton','164753400','WillMejia@gmail.ca','2018-09-02 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bess933','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ashley','Lawton','301213075','Victoria.Symbouras@myspace.cn','10.02.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mikkel1','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Louise','Freed','628700838','G.Anthony4@gmail.es','2018-09-02 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Peter440','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cecilie','Anderson','611456259','HankRoyal@live.be','10.02.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jaclyn94','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Michael','Weaver','036656617','G.Chwatal@libero.it','2018-09-08 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Florian','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Giel','Overton','003104093','VDonatelli@telefonica.com','10.08.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Carla','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Camilla','Rauch','401180323','R.Zimmerman@aol.it','2018-09-08 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Andrea93','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Theo','Crocetti','902535799','PeterGaskins5@telfort.dk','10.08.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jacob','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Maaike','Suszantor','228686916','FransWilson@freeweb.us','2018-09-08 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Adam229','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cees','Turk','987422686','V.Richter1@kpn.co.uk','10.08.18 00:00:00',1,1);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marek79','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Christian','van Doorn','072182887','JackHowe@live.ca','2018-09-08 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Vanessa9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Coby','White','940573385','BasChwatal1@mymail.gov','10.08.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mathias708','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicholas','Millis','775196216','I.Kidd@gawab.cn','2018-09-08 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lea9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kim','Beckbau','324383529','FreddyPlantz@myspace.be','10.08.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alice','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Drew','Nobles','397019757','H.Imhoff@myspace.com','2018-09-14 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Cristina2','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Andrew','Moore','177459275','TreesZurich@mail.de','10.08.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Leah','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ewa','Miller','632621747','BenDeWilde@excite.de','2018-09-14 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joop','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Camilla','Nadalin','909932648','ECramer@excite.com','10.14.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mary70','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jim','Millis','183173429','LiamEcchevarri@mymail.com','2018-09-14 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sylvia240','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Anthony','Korkovski','981971805','Martin.Praeger@web.cn','10.14.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Isaac94','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Al','Arnold','884679023','R.Makelaar@live.nl','2018-09-14 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nigel383','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','George','Zapetis','660660072','Pauline.Framus@live.gov','10.14.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bess93','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leah','Storrs','185884539','Hans.Arcadi@hotmail.gov','2018-09-14 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jean725','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nick','Buchholz','249480706','PWatson4@libero.it','10.20.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mads67','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Esther','Brisco','017905807','HSakurai5@mymail.cn','2018-09-14 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sjon20','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Matt','Green','511274449','Sjorsvan der Laar3@aol.ca','10.20.18 00:00:00',0,1);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gillian1','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Paula','Anderson','482581625','Richard.Hamilton@aol.ca','2018-09-20 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lars38','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Malgorzata','Moore','805057029','Y.Ostanik@weboffice.nl','10.20.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('PieterJan459','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julian','Perilloux','693786926','Pauline.Browne@telefonica.it','2018-09-20 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Luka5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kayleigh','Yinger','899447710','HMcnally4@mail.org','10.20.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Martien5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Pauline','Oyler','817547643','Brent.Gaskins@msn.ca','2018-09-20 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rik9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Carlos','Fox','537451545','Sven.Suszantor@dolfijn.com','10.20.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Taylor73','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marty','Rauch','182630887','K.McDaniel@mail.es','2018-09-20 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anton1','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jill','Nahay','947329758','AgnesVan Toorenbeek1@lycos.no','10.20.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rogier','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mathilde','Hamilton','230549178','E.Hopper3@gawab.de','2018-09-20 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ed206','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicolas','Daniel','526459970','WilliamHelbush3@web.no','10.20.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bram75','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Claudia','Frega','841466118','Roy.Thaler@live.de','2018-09-20 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Julie3','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jules','Wilson','382294441','DickCain@mobileme.no','10.26.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Julian','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lukas','Boyer','758707829','ELamere@dolfijn.fr','2018-09-20 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jim','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Malgorzata','Francis','768297602','AnnCohen@weboffice.fr','10.26.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('John','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sjanie','Waldo','163412921','D.Phelps@mobileme.de','2018-09-26 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rik34','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Patricia','Shapiro','166967135','EWhite5@dolfijn.cn','10.26.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jordy65','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ciska','Lamere','662515941','NickLaudanski@myspace.us','2018-09-26 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Drew572','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Claudia','Arcadi','759106966','S.Pekagnan@myspace.dk','10.26.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ada','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kay','Ladaille','279501485','BillLaudanski@kpn.cc','2018-09-26 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Christopher00','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hank','King','574887299','K.Martin5@libero.cn','11.01.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rasmus5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kimberly','Cohen','934268458','Oliver.DeWilde@hotmail.ca','2018-09-26 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mart76','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Will','Moore','084803140','RogierGoodnight@aol.it','11.01.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Dygo608','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Steve','Poplock','708939769','Martin.Naff@dolfijn.dk','2018-09-26 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Luis','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cathy','Kepler','940248451','K.Press2@yahoo.de','11.01.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Isak7','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Paul','Francis','804085699','IAyers2@weboffice.co.uk','2018-09-26 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('James258','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sammy','Hulshof','809223894','VictorSchubert4@telefonica.be','11.01.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sem3','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joey','Leonarda','502956610','PChwatal@aol.us','2018-10-02 00:00:00',1,1);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Scottie48','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sofia','Chwatal','002180900','LucySimonent@libero.de','11.01.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pablo89','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Olivia','Paddock','966477805','PatrickCantere5@msn.dk','2018-10-02 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sergio','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Teun','Esperiza','731460072','Bill.Ratliff@mymail.us','11.01.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucy0','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Coby','Wood','202246790','RStannard@libero.gov','2018-10-02 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Francisco','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Maximilian','Pekaban','536727612','MadeleinLadaille@web.no','11.07.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tom769','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jozef','Van Toorenbeek','735612644','Bas.Liddle1@web.net','2018-10-02 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sjon0','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ricky','Phillips','071863740','Sven.Van Toorenbeek@excite.it','11.07.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Luke84','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Niek','Byrnes','754619550','PeterDeans@excite.dk','2018-10-02 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Louise','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Javier','Markovi','865079138','WGonzalez@dolfijn.us','11.07.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lewis5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Laura','Brady','706253745','Sjors.Francis4@excite.be','2018-10-08 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rogier','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Harold','Praeger','238727945','MadeleinVan Dinter@gmail.org','11.07.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rando250','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jamie','Hendrix','865203546','DCross@yahoo.cc','2018-10-08 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Martin0','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Susan','Plantz','576852066','Peter.Zurich1@telefonica.it','11.07.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Petra885','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucy','Poplock','095244035','Fred.King@aol.be','2018-10-08 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gabbie5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Giel','Green','391278587','ABrylle2@telefonica.dk','11.07.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Wilma8','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ben','Ditmanen','686119067','RichardJessen2@mymail.it','2018-10-08 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Dylan6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joost','Jiminez','470952378','R.King@freeweb.net','11.13.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ton2','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Steven','Millikin','795005687','Richard.McDaniel@telefonica.co.uk','2018-10-14 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Leo169','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Manuel','Ecchevarri','127963666','EricGoodman@hotmail.es','11.13.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lizzy654','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hannah','Schlee','147925816','MattijsFramus2@weboffice.com','2018-10-14 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('HeroZero442','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jorge','Bruno','922737542','NJulieze5@aol.nl','11.13.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Claudia8','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Katarzyna','Gunter','023821732','Rico.Bertelson@web.be','2018-10-14 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('GertJan16','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nate','Jenssen','229447813','FemkeDuvall@live.es','11.13.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sharon13','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Adrian','Long','119154870','WilliamHelbush4@kpn.dk','2018-10-20 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Carlos','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leontien','Cragin','025421084','RichardSterrett@kpn.es','11.19.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Elena78','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','GertJan','Ayers','940704253','PWilson3@telfort.gov','2018-10-20 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Matt162','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Theo','Wood','079263939','Trees.Chwatal@web.org','11.19.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tinus516','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Viktor','Koss','605184637','BiancaPyland@telefonica.cc','2018-10-20 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tyler','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lincoln','Symbouras','370459537','Hans.Wesolowski2@telfort.no','11.19.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sjon339','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Matthew','Brendjens','677298479','HansThompson1@gmail.org','2018-10-20 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Siska5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sammy','Hamilton','404010907','DanJenssen@weboffice.net','11.19.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Peg0','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kimberly','Petrzelka','674149708','Mattijs.Zapetis1@telfort.cn','2018-10-20 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gill','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Maaike','Zapetis','843949425','LBrown@mymail.de','11.19.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Theo00','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tara','Morton','711731816','BrentLinton3@aol.us','2018-10-20 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Linnea55','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Karen','Troher','234840459','GWilliamson@myspace.fr','11.19.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Martin','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Isabel','Matthew','367172260','Ben.LeGrand1@live.dk','2018-10-20 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rasmus7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cristina','Baltec','912497873','Victoria.Weinstein1@gawab.nl','11.25.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Edwyn84','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leonie','Schubert','398400364','FransOyler@libero.dk','2018-10-26 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucille56','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicoline','Scheffold','902085518','Martin.Matthew@aol.us','11.25.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joe96','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Milan','Emerson','397623952','Femke.van der Laar@msn.dk','2018-10-26 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lea6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Steph','Howe','096709466','W.Igolavski@mail.ca','11.25.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Talita4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ivan','Schlee','053425577','Emma.Katsekes@live.net','2018-10-26 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Klara83','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jeanne','Pekagnan','749884926','BenMenovosa@mymail.it','12.01.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('John650','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Isabelle','Griffioen','700793642','JamesMoore@web.nl','2018-11-01 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Karen','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tinus','Oyler','751878075','BrentWhite@telefonica.cn','12.01.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Maggie','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Patty','Gerschkow','535850373','GretsjPatricelli@web.be','2018-11-01 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Niek','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ross','Anderson','965718826','NickGaskins1@telfort.es','12.01.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Matthijs8','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicolas','Praeger','079290579','WillWaddell@freeweb.cc','2018-11-01 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Catherine','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Victor','Bugno','085542320','LDaniel@live.de','12.07.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mathias3','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Conor','Waddell','603759734','AnnLangham2@telefonica.gov','2018-11-01 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marieke','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Andrew','Martin','782675243','PeterWhite@dolfijn.cn','12.07.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Koos597','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Vanessa','Green','881169324','R.Bloom@gmail.co.uk','2018-11-07 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Leah6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lotte','Huston','931096316','RichardStevens1@msn.dk','12.07.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jamie3','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucas','van der Laar','021333227','FrankLawton@gawab.co.uk','2018-11-07 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jurre034','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sydney','Caffray','807684381','JackSanders@mymail.cn','12.07.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alva799','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jorge','Haynes','926131418','Nick.Mitchell3@excite.org','2018-11-07 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sophia','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ulla','Comeau','020682521','RickMayberry@aol.cc','12.07.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Andrea53','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Diego','Buchholz','618789251','Lynn.Kuehn@freeweb.org','2018-11-07 00:00:00',1,1);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Suzanne395','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Theodore','Wooten','771259869','Nadine.Howe2@dolfijn.dk','12.07.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Maja','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Filip','Botsik','042271813','Alice.Roche@live.gov','2018-11-07 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Chuck74','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Samantha','Paddock','180209916','M.Roche1@live.gov','12.07.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rolla','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Babette','Geoppo','476486795','LynnKatsekes4@gawab.org','2018-11-13 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ana','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rachel','Kuehn','396629054','LeonGonzalez@live.be','12.13.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Annie05','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sammy','Julieze','853218056','E.Friedman2@yahoo.gov','2018-11-13 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Michael49','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ann','Fernandez','840223513','FrankKeller@excite.it','12.13.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lucy979','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nathan','Thaler','599865748','VincentMuench@dolfijn.de','2018-11-13 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Betty','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tara','Anderson','636518312','R.Esperiza@myspace.gov','12.13.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hanna','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lea','Overton','466610285','BillLinton@gmail.es','2018-11-13 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Javier792','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Raul','Wong','542330759','V.Muench@aol.org','12.13.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Christopher24','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Elena','Moore','225312872','Dick.Katsekes@telefonica.es','2018-11-19 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sanne57','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Edwina','Ahlgren','473058193','Trees.Bloom@live.cn','12.13.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Esther','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jill','Ditmanen','200483852','Richard.Raines@mail.com','2018-11-19 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Stanislaw7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Emil','Alspaugh','853326364','HansMiller3@hotmail.cn','12.13.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Siem755','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucas','Pensec','474908476','Martvan het Hof@libero.org','2018-11-19 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jean75','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Claudia','Bertelson','847019880','Lynn.Sharp@yahoo.nl','12.13.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joost72','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sylvia','Riegel','824059989','MattKoss@lycos.cc','2018-11-19 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Liam1','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Luca','Zapetis','415085337','RickRoyal3@lycos.gov','12.19.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('James','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Aoife','Koss','912062115','Bianca.Lee1@web.no','2018-11-19 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lena8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Daniel','Waddell','279680236','R.Pengilly@freeweb.no','12.19.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sanne7','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julian','Brendjens','172289250','J.Moreau@telfort.us','2018-11-19 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Juana','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Adam','Van Toorenbeek','795751447','T.Sanders@kpn.co.uk','12.19.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ann008','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Margo','Ditmanen','185997600','Hans.Spensley@web.fr','2018-11-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Viktor578','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ashley','Clarke','176474829','William.Williams@myspace.no','12.25.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lincoln','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Koos','Watson','798351480','GeorgeLawton@telfort.de','2018-11-25 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hank98','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mariska','Pyland','385186957','A.LeGrand@myspace.no','12.25.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Robert44','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alba','Pengilly','518470769','FreddyCappello@lycos.de','2018-11-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anne','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Talitha','Moore','713054923','G.Wood@kpn.no','12.25.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lea3','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Chris','Vanderoever','866970900','Patty.Hoogbandt3@aol.no','2018-11-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Babette85','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Scott','Stewart','673872837','FredPoissant@weboffice.be','12.31.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hiram043','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Erin','Ladaille','112290943','L.Reyes@telefonica.org','2018-11-25 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kimmy9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ricardo','Lamere','027529894','RQueen1@telefonica.com','12.31.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ton216','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Amber','Gerschkow','468952589','AgnesJulieze@myspace.es','2018-12-01 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sara56','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Thomas','Visentini','619135684','Victoria.DeBuck@telfort.no','12.31.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jean65','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sjon','Hopper','250989343','Liam.Bitmacs5@myspace.cn','2018-12-01 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tony292','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julian','Beckbau','358444060','TreesDelRosso@web.net','12.31.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ivan942','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Charlotte','Mariojnisk','828305827','KTroher@mail.gov','2018-12-01 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marta32','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Zoe','Moore','148708229','M.Cohen@mobileme.de','12.31.18 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gabrielle','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Edwin','Praeger','390037744','Vincent.Guyer@gmail.no','2018-12-01 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('HeroKero38','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Edwin','Massingill','691413214','G.Manson@web.co.uk','12.31.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tomas0','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gabrielle','Foreman','995757012','JohanThompson@aol.nl','2018-12-01 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sean14','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tommy','Hollman','208832725','Dan.Pekagnan3@hotmail.net','12.31.18 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Chris117','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alejandro','Ray','400793096','Rick.Stockton@gmail.org','2018-12-01 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Teun','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Chuck','Wargula','079957128','T.Ward3@live.org','01.06.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ricky367','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mikkel','Waldo','856869038','WillHopper3@dolfijn.com','2018-12-07 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Javier','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Peggy','Depew','342706653','Mandy.Langham@web.org','01.06.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Al','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bess','Petterson','581208511','WillIonescu@lycos.cc','2018-12-07 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jim7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Liza','Zimmerman','657211933','RickHaynes@mobileme.net','01.06.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('GoPlaat600','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ada','Poole','791243454','Eric.Zimmerman@mobileme.dk','2018-12-07 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Caroline9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leonie','Kellock','033839888','R.Jones@telefonica.no','01.06.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bas30','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leo','Bitmacs','647441159','DPhelps@telefonica.com','2018-12-13 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Zofia785','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Madison','Warner','209094257','Bill.Gieske@kpn.dk','01.06.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sandra657','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ashley','Krutkov','872044675','J.Kidd@myspace.us','2018-12-13 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sjon','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jozef','Thompson','333422400','FransKing@freeweb.it','01.06.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sid','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jody','Vanderoever','257333164','J.Williams@web.fr','2018-12-13 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rasmus57','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Teun','Cross','357971116','JAllison@mail.org','01.12.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joop645','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Luis','Makelaar','302171855','PaulSchlee@excite.no','2018-12-19 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jan56','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Oliver','Helfrich','245998307','Bas.Plantz3@telefonica.cn','01.12.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Linnea4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jim','Davis','725651213','VictorZimmerman@mymail.cn','2018-12-19 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('GoPlaat041','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Christa','Rauch','084482505','Victor.Cain4@aol.gov','01.12.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sam619','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Guus','White','535948654','ABrylle3@web.gov','2018-12-19 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Karen155','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Henk','Grote','619391105','HTudisco2@myspace.dk','01.12.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Henk7','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jordy','Swaine','007928191','Mattijs.Wood4@weboffice.it','2018-12-19 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ainhoa','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bas','Igolavski','745947169','L.Jackson@lycos.no','01.12.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Erin589','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marek','Boyer','277238469','GeoffryMuench5@telefonica.us','2018-12-19 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Edwyn563','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Teddy','Schlee','797082220','BasLittle@weboffice.us','01.18.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Julia653','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Barbara','Wakefield','127132663','MandySharp4@web.com','2018-12-19 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sem6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gill','Goodnight','055788574','T.Hummel@excite.com','01.18.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Camille527','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ross','Van Dinter','920963776','CiskaAhlgren@freeweb.de','2018-12-25 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Susan692','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Isabel','Long','995426862','Freddy.Zia@telefonica.it','01.18.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Charlie63','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sjanie','van Goes','761775051','WilliamFreed3@live.org','2018-12-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lukas5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Erin','Troher','863873696','P.Moore@myspace.cn','01.24.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nicolas75','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kimmy','Hollman','743122871','Ann.Francis2@dolfijn.be','2018-12-25 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rando097','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ruth','McCrary','418150173','NigelLannigham3@mobileme.de','01.24.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Luca82','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Stephen','Franklin','938418412','KayDitmanen4@weboffice.de','2018-12-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Karin','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Giel','Ahlgren','059615256','BrendGua Lima@telefonica.gov','01.24.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Erik','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Catharine','Marra','275421805','Brent.Chwatal@live.cn','2018-12-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hero','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Co','Davis','003630722','Ton.Shapiro2@lycos.com','01.24.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Isabel0','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kayleigh','Green','568276218','H.King1@mail.es','2018-12-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Herman635','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gabrielle','Voigt','599343486','RPickering@mymail.de','01.24.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sergio','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Diego','Wood','910419203','HKidd@excite.de','2018-12-31 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Annie','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Patty','van Goes','792377355','PatrickWalker3@live.org','01.24.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Iris','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','John','Knopp','120440964','Emma.Malone4@kpn.org','2018-12-31 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Diego9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Anna','Arnold','252577562','Svan Dijk@msn.nl','01.24.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Amber66','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Iris','Koss','900815552','TonMcCormick3@telfort.us','2018-12-31 00:00:00',1,1);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Adam51','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kimmy','Hulshof','478616356','CamillaEcchevarri5@telfort.nl','01.30.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anthony','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicoline','Richter','942410045','PeterStevens2@lycos.cn','2018-12-31 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Eleanor25','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Annie','Robbins','087444284','Femke.Hoogbandt@dolfijn.ca','01.30.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Geoffery14','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ida','Markovi','485581310','Vincent.Zimmerman2@mymail.nl','2019-01-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tonnie80','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Juana','Miller','873499318','DickWhitehurst1@myspace.fr','01.30.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Coby140','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tonnie','Reyes','585229997','Matt.Brylle@gawab.ca','2019-01-06 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Philippa3','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gabrielle','Davis','011370188','Will.Boyer@weboffice.de','01.30.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ainhoa','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Pauline','Freed','689122605','Richard.Hankins1@kpn.dk','2019-01-06 00:00:00',1,1);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Elin76','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ed','Willis','438925103','G.Morton@mobileme.nl','01.30.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Maggie917','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Maximilian','Slemp','676438977','K.Jones@mymail.es','2019-01-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Will','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Megan','Gonzalez','491736446','Y.Daughtery1@aol.cc','01.30.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ross','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jean','Aldritch','613240024','S.Sanders3@web.cn','2019-01-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ted05','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Eleanor','Mcnally','951647332','G.Stockton@yahoo.cc','01.30.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Linnea','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Aoife','Riegel','077806870','ROtto@msn.es','2019-01-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Giood','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bob','Hollman','278732234','BrentStockton2@excite.org','02.05.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anthony2','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alexis','Lawton','537836935','NCarlos@kpn.es','2019-01-12 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Steph3','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Dorothy','Allison','339300214','KOrcutt@gawab.org','02.05.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Daniel27','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Edwin','Nefos','210858128','RPaddock4@msn.de','2019-01-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tom95','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ciara','Francis','628620506','PetraSchubert@dolfijn.cn','02.05.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jack67','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Liam','Mairy','049531804','J.Freed@telefonica.de','2019-01-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Thelma248','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Vincent','Gua Lima','954923692','SydneyChwatal1@msn.org','02.05.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('HeroKero2','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alexis','Brown','395277654','Pauline.Katsekes4@lycos.gov','2019-01-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Al60','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mario','Arcadi','769332264','Will.Anderson@libero.dk','02.11.19 00:00:00',1,1);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Talita40','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jeanette','Stewart','239200056','Fred.Allison4@myspace.org','2019-01-18 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jose07','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Co','Stockton','295421151','P.Poplock@mobileme.org','02.11.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Roger','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Charlotte','Malone','221386925','IFreeman@dolfijn.no','2019-01-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Siska19','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joop','Ratliff','521666061','Bartvan Doorn@gawab.fr','02.11.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ada88','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gert','Gonzalez','579326400','WilliamDavis@weboffice.net','2019-01-24 00:00:00',0,1);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Andrew2','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Drew','Mitchell','296758442','Bas.Royal4@freeweb.dk','02.11.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Dylan','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Elizabeth','Griffith','010760824','RichardWesolowski@telfort.co.uk','2019-01-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nathan65','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lauren','Williamson','792456905','IDelRosso@libero.cn','02.11.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tobias208','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Vincent','Linhart','460286150','Ronald.Anderson@mymail.it','2019-01-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Karin433','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Janet','Jiminez','420155166','David.Ijukop@freeweb.org','02.17.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Joost7','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ton','Noteboom','747218315','RichardMcCrary@msn.cn','2019-01-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Laura804','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Talita','Matthew','615203332','ELinhart3@telefonica.ca','02.17.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Julia73','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Georgina','Ladaille','349646507','EStevenson@mymail.gov','2019-01-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Esther0','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jill','Hardoon','314753765','Richard.Symms5@mail.cc','02.17.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Paula','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jessica','Raines','349296287','VPaul2@mymail.it','2019-01-30 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Frederik9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mathilde','Ward	','270347380','Franky.Grote4@excite.dk','02.17.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Diego5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Martien','Johnson','041354256','BillMcCrary5@mymail.gov','2019-01-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tobias901','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Niek','Robertson','927390921','WPekaban2@gawab.org','02.17.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alvaro7','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sergio','Zurich','209277892','V.Schubert3@kpn.com','2019-01-30 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nerea33','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sylvia','Jones','478935186','HMitchell@libero.org','02.23.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Leah751','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Pip','Grote','019774990','John.van Dijk3@libero.cn','2019-01-30 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Elzbieta852','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Niklas','Slater','894454583','Rick.Spensley@msn.com','02.23.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rando83','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Callum','Trainor','957163375','PetraPoole@web.ca','2019-02-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lu2','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Will','Kuehn','780196992','J.Cappello5@mymail.us','02.23.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Richard','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sofia','Wargula','198686004','KGrote@aol.de','2019-02-05 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sally8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Andrew','Brown','332137197','Emma.DeBuck1@freeweb.gov','02.23.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alejandro972','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cameron','Cohen','349946469','R.Aldritch4@freeweb.net','2019-02-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Erin433','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sherman','White','244920633','Bas.Hollman1@msn.fr','02.23.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Alva','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ron','Vanderoever','766329755','Nigel.Roche@weboffice.nl','2019-02-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Michel6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ike','Zapetis','757326643','TreesMorgan5@lycos.ca','03.01.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mike6','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Henk','Lezniak','085033450','Roy.Nelson4@gawab.dk','2019-02-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lea7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Vincent','Herrin','105191295','Pete.Pensec2@telfort.be','03.01.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jan581','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Philip','Jackson','553964976','FransLinton1@lycos.fr','2019-02-05 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Peg1','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rogier','Griffioen','585634691','Hans.Paddock3@telfort.nl','03.01.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Agnieszka72','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Christopher','Arnold','002543605','Y.Lee@mobileme.co.uk','2019-02-05 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lia','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jaap','Depew','159680340','TonNadalin3@yahoo.be','03.01.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Hugo3','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Talitha','Hoogbandt','374825917','TonRaines@kpn.com','2019-02-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Dave','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Erik','Koch','447114692','GHerrin2@weboffice.no','03.01.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('JanCees','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ciska','Patricelli','367291735','Ron.Howe4@web.co.uk','2019-02-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marie286','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bengie','van het Hof','590874531','LeonVan Toorenbeek@dolfijn.be','03.07.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gabbie4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Fons','LeGrand','845921067','BasHarness2@telefonica.org','2019-02-11 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sally132','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Saskia','Arden','907905431','TonAyers@hotmail.it','03.07.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jody303','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cian','Morton','660144105','Kay.Maribarski3@freeweb.net','2019-02-17 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pablo01','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Matt','Franklin','624994106','Frank.Bruno@mobileme.es','03.07.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Teun75','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Victor','Clarke','477331343','HankMartin@mail.no','2019-02-17 00:00:00',1,1);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Krystyna050','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Louise','Cantere','157725321','RonaldWaldo5@gmail.es','03.07.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ida12','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lars','Otto','670502192','HankMiller1@freeweb.fr','2019-02-17 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Drew9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Milan','Matthew','167406523','John.van Dijk2@hotmail.cc','03.07.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Katharina','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Steph','Lee','040004425','JohanWhite@telfort.es','2019-02-23 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Eleanor45','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ciska','McCrary','099933282','MikeHuffsmitt1@mail.gov','03.07.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sherman','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Amy','Linton','985148427','IAnderson5@myspace.de','2019-02-23 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Henry19','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Katie','Schubert','096926977','TBertelson@mail.co.uk','03.07.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bill8','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Robert','Mcgrew','534171741','GChwatal1@gawab.cn','2019-02-23 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Anna2','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rob','Walker','317687942','T.Wood3@mymail.de','03.13.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Martien086','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lukas','Franklin','219430349','BrentMcCrary2@aol.org','2019-03-01 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Callum747','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leah','Moon','899021089','Paul.Davis3@web.it','03.13.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lizzy622','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lauren','Davis','586847818','Hank.Freeman@myspace.net','2019-03-01 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marco','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Simon','Zia','902294871','Brent.Morgan@excite.dk','03.13.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('George7','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joanne','Hoyt','617386118','Y.Seibel@mobileme.com','2019-03-01 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jaap','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Martin','Wood','070963774','D.Symbouras4@excite.it','03.19.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bertje03','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Harry','Whitehurst','017934608','BobMaribarski3@gawab.no','2019-03-07 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Saskia','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Colin','Crocetti','729518177','S.Arden@yahoo.de','03.19.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Leontien2','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Truus','Pekagnan','420126639','Ronald.Mairy@aol.cn','2019-03-07 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lisa97','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sharon','Katsekes','430794623','TreesSpensley@msn.fr','03.19.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Edwin','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Javier','Botsik','393923026','JennyAlspaugh@kpn.cn','2019-03-07 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Theodore323','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tom','Arden','703640102','VictoriaMatthew@msn.no','03.19.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Juan310','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Callum','Toler','340730366','AmberLannigham@telefonica.cn','2019-03-07 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Cian4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alvaro','Manson','365678876','E.Toler@mail.gov','03.25.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Geoffery77','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Betty','Lejarette','098706809','Frans.Boyer4@kpn.dk','2019-03-07 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Raul113','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Roger','Hoyt','211682790','V.Donatelli@lycos.com','03.25.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Samuel56','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sean','Crocetti','572453329','P.Kingslan@telfort.com','2019-03-07 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Katarzyna3','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Anton','Wargula','957112849','Hank.Huston1@excite.cc','03.25.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Manuel6','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lauren','Whitehurst','098850314','L.Guyer@myspace.net','2019-03-13 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Maximilian103','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Tomas','Herrin','030570748','I.Gerschkow2@myspace.cc','03.31.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jamie871','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rik','Linhart','244164559','Bill.Riegel4@telefonica.cc','2019-03-13 00:00:00',1,1);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Femke36','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Henk','Herrin','165348768','RWaldo@mobileme.net','03.31.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Gillian3','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','JanCees','Esperiza','537884241','I.Swaine@libero.ca','2019-03-13 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Adrian69','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ciska','Kellock','875460454','Brend.Marra4@web.es','03.31.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jack99','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sofia','Nelson','324832640','J.Anderson3@live.de','2019-03-19 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Luca9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Thomas','Gibson','470750927','Sjorsvan der Laar@lycos.nl','03.31.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Vanessa27','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Julie','Blacher','933118906','Fred.Gibson3@myspace.cn','2019-03-19 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nigel4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Giel','Mitchell','337440490','R.Moore3@yahoo.no','03.31.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sydney3','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Helen','Cramer','841202305','FonsFramus@msn.no','2019-03-19 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ricky15','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ron','Cain','091678855','FreddyOrcutt5@aol.com','03.31.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Teddy24','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Luca','Morton','257218127','RogierWeinstein@kpn.us','2019-03-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jo438','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Pauline','Stevens','466926995','BiancaHarder1@hotmail.cc','03.31.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Talitha7','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Leonie','Nadalin','981582082','Nick.Morgan@freeweb.no','2019-03-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rasmus1','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Isaac','Oyler','346473136','RichardWatson@hotmail.org','04.06.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Daniela591','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Adrian','Byrnes','690756494','KylieMoore@gawab.com','2019-03-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rando','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nicolas','Van Toorenbeek','138494353','William.Weaver@web.us','04.06.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bert833','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Oliver','Prior','952739501','Frans.Hoyt@excite.de','2019-03-25 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tommy7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Javier','van het Hof','086970967','B.Beckbau@aol.net','04.06.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jaap66','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bo','Uitergeest','660291829','Bianca.Herzog4@lycos.us','2019-03-31 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Mario8','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Maggie','Stannard','399273713','Fons.Zapetis@gmail.be','04.06.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Patricia974','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lara','Jenssen','236504259','JamesChwatal@kpn.cn','2019-03-31 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('John42','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Emily','Cooper','580229626','K.Freed4@hotmail.net','04.12.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rich020','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Carla','Frega','599900687','Victor.Richter@myspace.cc','2019-03-31 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ted29','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Oliver','Millis','305361681','Fred.Zia@web.gov','04.12.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Liza','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Truus','Cragin','859955037','GretsjIgolavski@excite.cn','2019-03-31 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ruth3','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jules','Zia','344699329','EBoyer1@myspace.no','04.12.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Magnus011','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucy','Hummel','341574473','HansConley@myspace.com','2019-03-31 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Isaac1','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rich','Wood','656781439','KFreeman@lycos.us','04.18.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Niek2','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ashley','Jiminez','810522946','Alice.Huffsmitt5@dolfijn.no','2019-03-31 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Isabelle','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marta','Ladaille','150078610','MikeSimonent@mymail.co.uk','04.18.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Niklas5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mike','Meterson','390352342','WilliamGildersleeve@telfort.gov','2019-03-31 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Thomas2','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lars','Mulders','382834676','W.Marra1@web.net','04.18.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lea','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jan','Knight','788510572','Vincent.Thompson@telefonica.dk','2019-04-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Conor','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Vincent','Blount','854350382','RCohen1@aol.org','04.18.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Nicky','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Liam','Cramer','414081597','SvenEsperiza3@libero.no','2019-04-06 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jessica382','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joanne','Ionescu','924309819','R.Forsberg5@mobileme.it','04.18.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Izzy161','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lukas','Morton','514114334','Rogervan Goes2@aol.no','2019-04-06 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Elin305','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mathilde','Chwatal','112442780','UAlspaugh2@web.net','04.24.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pauline1','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sergio','van Dijk','466636649','EWatson@mail.net','2019-04-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('GertJan24','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sylvia','Crocetti','520337757','Brent.Bruno@aol.com','04.24.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Vanessa717','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gerrit','Olson','403590454','I.Liddle@weboffice.cc','2019-04-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rachael350','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Richard','Brumley','483736680','Ann.Thaler@myspace.co.uk','04.24.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Suzanne212','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jonas','Lawton','293063156','Bill.Pierce2@hotmail.gov','2019-04-06 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Cath','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Dorothy','Wilson','992548442','OttoPekaban@gmail.org','04.30.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kaylee4','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Matt','Kingslan','288530365','HankAnderson@live.cc','2019-04-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sid1','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Magnus','Schubert','371869839','MandyFernandez@hotmail.nl','04.30.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Herman5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Niklas','Fox','049623162','Bas.Queen@myspace.fr','2019-04-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Godfrey','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Peggy','Wesolowski','381550118','Roger.Makelaar@excite.de','04.30.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jacob6','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jolanda','Fernandez','906925247','Jim.Geoppo@weboffice.net','2019-04-12 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rick21','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Albert','Katsekes','393364658','Amber.Pensec4@gawab.com','04.30.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sem145','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Charlotte','Wood','596334302','H.Shapiro3@telfort.de','2019-04-12 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ainhoa99','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Amber','van Dijk','407225801','William.Stewart2@telfort.org','05.06.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jace2','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cees','Liddle','339293729','Hank.Anthony1@weboffice.cn','2019-04-12 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lu','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ron','Symms','435779318','FemkeSanders@mail.us','05.06.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Jace1','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Peggy','Thompson','069890169','Leon.Gua Lima@mobileme.de','2019-04-12 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lizzy89','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kees','Van Toorenbeek','623083875','Brent.Gaskins2@kpn.es','05.06.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Adrian42','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jessica','Jessen','570673431','J.Queen@mail.com','2019-04-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('James','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joop','Archer','515272879','A.Van Toorenbeek2@web.it','05.06.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Charles844','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hannah','Nobles','859044453','P.Clarke@myspace.it','2019-04-18 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Madison488','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marek','Wakefield','901931633','BrentDurso3@excite.net','05.06.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Phil3','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Rogier','Noteboom','835330289','Fred.Hamilton4@yahoo.es','2019-04-18 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Marie24','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marie','Poole','850948836','JamesAnderson@freeweb.net','05.06.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Luka','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Catharine','Howe','207681667','L.Byrnes@web.gov','2019-04-18 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lena','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Joost','Gunter','686653852','WillMitchell@aol.it','05.06.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Netty695','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Herbert','Goodman','834738501','WilliamEvans3@libero.org','2019-04-18 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Rosa81','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alexis','Pengilly','214495349','T.Whitehurst@dolfijn.no','05.12.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bengie10','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Janet','Ecchevarri','527803676','K.Barbee@mymail.nl','2019-04-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Christian22','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Vanessa','Mitchell','782882387','Eric.Poole1@myspace.it','05.12.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Shermie','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Geoff','Daniel','454347313','GRobertson2@msn.es','2019-04-24 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Pawel','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alvaro','Deans','150068150','Geoffry.Guyer@mymail.net','05.12.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Cloe','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Katarzyna','Byrnes','404596209','H.Royal@yahoo.es','2019-04-24 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Kimberly05','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Siska','Bergdahl','586975295','HansJessen5@libero.gov','05.18.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Filip','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gabrielle','Wesolowski','204617026','Geoffry.Nithman2@gmail.no','2019-04-30 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Elin','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sammy','Shapiro','565091631','LNaley@dolfijn.co.uk','05.18.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tim60','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cathy','Leonarda','551241784','Y.Antonucci5@gmail.gov','2019-04-30 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Martina749','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lukas','Toler','833753133','R.Daniel1@telefonica.es','05.18.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Camila250','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ainhoa','McCormick','790929323','Jack.Nelson@gmail.cc','2019-04-30 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Eleanor5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Philip','Chwatal','813993511','Fred.Wong1@hotmail.ca','05.18.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Paula25','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jorge','Heyn','116192487','BrendIgolavski@web.gov','2019-04-30 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Benjamin127','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sjaak','Wood','198708837','RickGibson@gmail.dk','05.18.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sophie','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Erik','Clarke','164270912','Ton.Brady5@hotmail.ca','2019-04-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Will25','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marty','Scheffold','787442631','LToreau1@telefonica.be','05.18.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Herbert760','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jeanette','Goodnight','391334639','JTroher@lycos.fr','2019-04-30 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Filip','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ted','Schlee','834154465','TonMorton@gawab.de','05.18.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Phil8','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Netty','McCrary','084841373','G.Slater5@kpn.de','2019-04-30 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Ron34','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mikkel','Chwatal','809570177','Stein.Duvall@web.cc','05.24.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Sylvia90','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Harry','Sharp','850617563','JLawton3@dolfijn.nl','2019-05-06 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Charles6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ross','Cramer','872392142','L.Leonarda@excite.fr','05.24.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tomasz19','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Martin','Dulisse','843307588','BenDitmanen5@excite.es','2019-05-06 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Femke394','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Karin','Symbouras','842880723','Roger.Mairy@telefonica.us','05.24.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Steve82','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Samuel','Stewart','923467475','V.Botsik@libero.co.uk','2019-05-06 00:00:00',1,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Tonnie','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Truus','Linhart','258682519','FransLiddle@mymail.cc','05.24.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Zofia','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lara','Van Toorenbeek','281090709','VictorIonescu@web.es','2019-05-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Charles968','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Frederik','Arcadi','498448782','Mart.Kepler@excite.be','05.24.19 00:00:00',1,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Bertje5','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Dick','Turk','993826793','Lynn.Cross@yahoo.co.uk','2019-05-06 00:00:00',0,NULL);
  
  
-INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Johnny10','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ricky','Miller','438293984','Sjors.Geoppo@lycos.fr','05.24.19 00:00:00',0,NULL);
+INSERT INTO `uzytkownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`dataRejestracji`,`czyKobieta`,`czyZablowoany`) VALUES ('Lisa0','$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Kaylee','Stannard','063334906','L.Lannigham@dolfijn.be','2019-05-06 00:00:00',1,NULL);
  
 
 

@@ -1,152 +1,152 @@
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Roger403','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gert','Chwatal','535534991','Trees.Mitchell@weboffice.cc',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Christian','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Catherine','Heyn','031877420','TNoteboom@mobileme.co.uk',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Liam','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marieke','van Doorn','855156127','Will.Arcadi@myspace.cn',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Frederik28','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Rosa','Ward	','446564712','RonGrote5@excite.ca',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Elzbieta5','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Carlos','Turk','270612826','OttoGua Lima5@kpn.gov',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Jeanette6','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Conor','Ostanik','505845813','Ben.Bugno2@mail.co.uk',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Koos838','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cameron','Krutkov','001554367','NickAldritch3@hotmail.dk',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Javier','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Lukas','King','849522269','AliceLannigham@msn.org',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Lukas','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Matt','Poole','327396028','HankImhoff@mymail.no',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Jessica0','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Pieter','Noteboom','546347835','Eric.DeBerg@libero.com',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Richard6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gillian','Hendrix','238511052','Nick.Knopp5@aol.gov',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Gerrit9','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Iris','Prior','838050207','TreesMoore1@msn.net',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Annie05','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Scottie','Royal','587952529','Trees.Ionescu4@msn.de',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Lizzy','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Camille','Stockton','331216275','TonPoissant@live.it',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Ryan60','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Manuel','Botsik','657066617','Victor.Nithman@kpn.cn',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Johnny102','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Caroline','Kellock','029996196','DavidMaribarski1@weboffice.es',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Conor526','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marty','Weinstein','873800864','Ciskavan Goes@lycos.de',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Hannah08','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Delphine','Gieske','888118936','IWilson@freeweb.fr',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Fabian376','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Nathan','Byrnes','826797302','MattijsCross@excite.de',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Philippa','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Martina','Stockton','694550635','William.Herzog2@mymail.de',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Mariska','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lu','Hoogbandt','011061906','Ciska.van Goes5@msn.it',2,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Lewis875','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Susan','Hamilton','743601991','PDeans@mymail.cn',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Karen6','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Klaas','Nahay','868940494','E.Morton@hotmail.ca',2,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Isabel3','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Lucia','Daniel','686124785','Gretsj.Baltec@gawab.nl',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Babet69','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Mary','Freed','115616756','FredClarke2@msn.es',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Mike84','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Gill','Blacher','213941694','Brent.Morton@freeweb.it',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Taylor76','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','David','Nelson','524772233','C.Van Toorenbeek@web.be',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Harold','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Hiram','DelRosso','011496028','Martin.Phelps@lycos.co.uk',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Robert85','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lucas','Wooten','031607503','Jack.Hoogbandt4@mymail.cn',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Sanne','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Henry','Swaine','150062008','JohanShapiro1@gmail.net',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Helen577','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Esther','Bernstein','353387996','FemkeDuvall5@yahoo.us',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Ronald','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Lia','Thompson','467754381','Vincent.Phillips@gawab.com',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Martien61','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Milan','Waddell','271331890','Maarten.Francis@gmail.de',2,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Herb2','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Ellie','Nelson','703352520','IAnderson3@mobileme.de',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Alejandro','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sjanie','Thompson','039566142','Johan.Pierce@dolfijn.net',2,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Jorge5','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Sjef','Ward	','513021891','Suzanne.Bertelson@mail.org',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Lucy859','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Marty','Martin','893179539','RickDaughtery@kpn.dk',2,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Truus341','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Simon','Reames','413996088','R.Depew@dolfijn.cc',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('George355','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Camila','Anderson','313181130','SteinArden@mobileme.co.uk',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Jeffery8','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Stanislaw','Storrs','930994783','LiamKrutkov5@telfort.cc',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Barbara7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lia','Kepler','702809837','John.Francis4@web.de',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Krystyna076','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Marie','Cramer','994214875','BrentShapiro@web.nl',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Jeffery02','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Roger','Alspaugh','574030215','NadineHowe@hotmail.org',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Jorge1','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Albert','Weinstein','920239603','GeoffryLee3@telefonica.de',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Sammy','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sherm','Griffith','613378840','R.Guyer@msn.it',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Katharina07','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Syd','Haynes','665730621','V.Nefos@mobileme.ca',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Andrzej','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Juana','Trainor','960307798','AmberVisentini2@lycos.cc',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Lucas68','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Chloe','Suszantor','473881176','Pablo.Maribarski1@telefonica.no',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Saskia995','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Klaas','Wood','890992969','TonWhite@gmail.nl',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Kayleigh6','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Luke','Harder','163041474','Bill.DeWald1@gmail.no',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Co317','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bill','Storrs','437513796','PGriffith1@libero.it',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Ivan77','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Scott','Hankins','210317722','BiancaArcadi@weboffice.us',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Adrian','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jolanda','Keller','274242617','PatrickWood2@mymail.dk',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('HeroZero','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Sammy','Schmidt','225110603','RonAnderson@yahoo.no',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Nigel','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Hank','Moreau','054019784','SGerschkow@telefonica.gov',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Sophia','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Patricia','Bitmacs','053979392','Nick.Hedgecock@myspace.ca',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Isabelle4','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Cath','Bertelson','433309410','Bas.Bergdahl5@mobileme.gov',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Johnny5','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Adrian','Nobles','936309739','M.Langham@mail.co.uk',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Nerea923','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Sergio','Ditmanen','845071917','Ann.Trainor@excite.de',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Ronald179','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Klaas','Hancock','424829976','PaulineSharp1@kpn.org',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Jean981','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Guus','Hancock','960550461','TreesSeibel@yahoo.org',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Lucy70','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Sem','Wilson','847506571','R.Crocetti5@excite.no',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Joost786','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lia','Ecchevarri','132549856','MartinDaniel@mobileme.ca',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Alfons4','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Oliver','Korkovski','725520051','SVisentini3@excite.fr',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Jace7','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Peggy','Imhoff','898812110','VictorCross2@msn.nl',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Ellie79','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Matt','Ratliff','961790372','Bianca.Lamere@yahoo.fr',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Ike9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Ronald','Queen','109659042','WillForsberg5@dolfijn.de',2,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Samuel522','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Harry','Poissant','140131228','MattijsCrocetti3@hotmail.com',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Olivia19','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Jack','Lawton','629573403','DavidJenssen@gmail.cc',2,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Betty2','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Maria','Petterson','925313365','EricDeBerg@telfort.ca',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Thelma521','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Klaas','Stevenson','460995156','V.Botsik@msn.org',2,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Miriam3','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Rosa','Walker','111497553','A.Beckbau1@mobileme.co.uk',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Laura490','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Herbert','Ionescu','788367085','DickMalone@gmail.us',2,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Leo906','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Jo','Gaskins','175731726','Will.Allison@hotmail.gov',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Tomas75','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Co','Miller','041547717','K.Lawton@telefonica.nl',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Marco','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Dirk','Suszantor','097290640','Frans.Riegel4@mymail.es',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Callum31','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Margo','Grote','593201622','BasSirabella@live.com',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Bert','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Jack','Kidd','443606262','Hans.Zia@mobileme.org',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Tony0','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Teddy','Cramer','393462683','BobLeGrand@kpn.nl',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Viktor85','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Marta','Aldritch','024631805','Brent.Durso@dolfijn.ca',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Helen36','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Anne','Herzog','829105741','HGaskins@mail.dk',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Teun82','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Chris','Bernstein','904988128','BillMorgan@mymail.fr',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Marie283','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lars','Little','259243668','C.Toreau@freeweb.org',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Mikkel566','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Sigrid','Uprovski','167948472','D.Polti@msn.no',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Lincoln038','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Eleanor','Conley','331810789','Paul.Chwatal4@myspace.net',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Gill','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Mikkel','Crocetti','636431020','Ton.Kidd2@aol.org',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Aoife','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Gillian','Phillips','839010522','PeterZurich3@libero.be',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Ciara69','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Kimberly','Crocetti','501275179','Bas.Rivers@freeweb.de',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Stephanie71','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Luka','Hulshof','744909602','K.Helfrich@gmail.de',3,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Amy304','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Chuck','Petterson','146393425','Y.Forsberg@msn.cn',2,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Rogier038','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Bill','Muench','583140974','RickWesolowski2@msn.cn',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Delphine780','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Robert','Ayers','389603675','MadeleinLadaille@weboffice.it',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Jolanda9','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alice','Jenssen','587918151','M.Barnett1@kpn.de',1,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Juana396','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Philippa','Zurich','943016442','BasArcher4@myspace.dk',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Maja45','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Juan','Hoyt','597150846','RickKeller1@msn.org',2,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Drew096','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Sjaak','Toreau','265542779','I.Oyler2@mobileme.gov',1,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Tomasz','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Alexis','Pensec','237386375','JohanSeibel5@telefonica.fr',2,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Karin4','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Jordy','Grote','777249876','Fred.Chapman1@telfort.be',3,NULL);
  
  
-INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Ainhoa79','$2$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO','Lotte','Deleo','694039458','Frank.Antonucci@web.no',2,NULL);
+INSERT INTO `pracownicy` (`login`,`haslo`,`imie`,`nazwisko`,`telefon`,`email`,`Role_id`,`ostatniaAktualizacja`) VALUES ('Nate311','$2y$12$S.0eSuzEpmsa2Aa.4eHL.uVuleikTu/SSyoShWWyLLT28OvTC/x7i','Amy','van het Hof','388058201','IKingslan4@myspace.de',3,NULL);
  
 
 
