@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block bodyclass %}bg-secondary{% endblock %}
+{% block body %}
+    {% block navigation %}
+        {% if logged_role is defined %}
+            {% if logged_role == constant("App\\Constans\\Role::ADMIN") %}
+                {% include 'workersApp/inc/adminNav.html.twig' %}
+            {% elseif logged_role == constant("App\\Constans\\Role::MANAGER") %}
+                {% include 'workersApp/inc/managerNav.html.twig' %}
+            {% elseif logged_role == constant("App\\Constans\\Role::WORKER") %}
+                {% include 'workersApp/inc/workerNav.html.twig' %}
+            {% endif %}
+        {% else %}
+            <h1 class="text-center text-white bg-dark pb-2">
+                Witamy w SZOK!
+            </h1>
+        {% endif %}
+
+    {% endblock %}
+    <div class="content jumbotron justify-center mt-4 mx-4 bg-dark text-white">
+        {% block content %}{% endblock %}
+    </div>
+{% endblock %}
+
