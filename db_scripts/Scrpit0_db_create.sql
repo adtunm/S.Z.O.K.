@@ -420,7 +420,7 @@ DROP TABLE IF EXISTS `SZOK`.`Tranzakcje` ;
 CREATE TABLE IF NOT EXISTS `SZOK`.`Tranzakcje` (
   `id` INT(12) UNSIGNED ZEROFILL NOT NULL,
   `data` DATETIME NOT NULL,
-  `czyOdwiedzajacy` TINYINT NOT NULL,,
+  `czyOdwiedzajacy` TINYINT NOT NULL,
   `RodzajePlatnosci_id` INT UNSIGNED NOT NULL,
   `Seanse_id` INT UNSIGNED NOT NULL,
   `Uzytkownicy_id` INT UNSIGNED NULL,
