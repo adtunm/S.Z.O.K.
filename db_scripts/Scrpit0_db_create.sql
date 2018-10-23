@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`KategorieWiekowe` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idKategorieWiekowe_UNIQUE` (`id` ASC),
   UNIQUE INDEX `nazwa_UNIQUE` (`nazwa` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -48,12 +48,12 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Filmy` (
   UNIQUE INDEX `idFilmy_UNIQUE` (`id` ASC),
   INDEX `fk_Filmy_KategorieWiekowe1_idx` (`KategorieWiekowe_id` ASC),
   CONSTRAINT `fk_Filmy_KategorieWiekowe1`
-    FOREIGN KEY (`KategorieWiekowe_id`)
-    REFERENCES `SZOK`.`KategorieWiekowe` (`id`)
+  FOREIGN KEY (`KategorieWiekowe_id`)
+  REFERENCES `SZOK`.`KategorieWiekowe` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB
-COMMENT = '\n\n';
+  ENGINE = InnoDB
+  COMMENT = '\n\n';
 
 
 -- -----------------------------------------------------
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`RodzajeFilmow` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idRodzajFilmu_UNIQUE` (`id` ASC),
   UNIQUE INDEX `nazwa_UNIQUE` (`nazwa` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`WydarzeniaSpecjalne` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idWydarzeniaSpecjalne_UNIQUE` (`id` ASC),
   UNIQUE INDEX `nazwa_UNIQUE` (`nazwa` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`TypySeansow` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idTypySeansow_UNIQUE` (`id` ASC),
   UNIQUE INDEX `nazwa_UNIQUE` (`nazwa` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Sale` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idSale_UNIQUE` (`id` ASC),
   UNIQUE INDEX `numerSali_UNIQUE` (`numerSali` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`PuleBiletow` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idPuleBiletow_UNIQUE` (`id` ASC),
   UNIQUE INDEX `NazwaPuli_UNIQUE` (`nazwa` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -152,26 +152,26 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Seanse` (
   INDEX `fk_Seanse_Sale1_idx` (`Sale_id` ASC),
   INDEX `fk_Seanse_PuleBiletow1_idx` (`PuleBiletow_id` ASC),
   CONSTRAINT `fk_Seanse_WydarzeniaSpecjalne1`
-    FOREIGN KEY (`WydarzeniaSpecjalne_id`)
-    REFERENCES `SZOK`.`WydarzeniaSpecjalne` (`id`)
+  FOREIGN KEY (`WydarzeniaSpecjalne_id`)
+  REFERENCES `SZOK`.`WydarzeniaSpecjalne` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Seanse_TypySeansow1`
-    FOREIGN KEY (`TypySeansow_id`)
-    REFERENCES `SZOK`.`TypySeansow` (`id`)
+  FOREIGN KEY (`TypySeansow_id`)
+  REFERENCES `SZOK`.`TypySeansow` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Seanse_Sale1`
-    FOREIGN KEY (`Sale_id`)
-    REFERENCES `SZOK`.`Sale` (`id`)
+  FOREIGN KEY (`Sale_id`)
+  REFERENCES `SZOK`.`Sale` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Seanse_PuleBiletow1`
-    FOREIGN KEY (`PuleBiletow_id`)
-    REFERENCES `SZOK`.`PuleBiletow` (`id`)
+  FOREIGN KEY (`PuleBiletow_id`)
+  REFERENCES `SZOK`.`PuleBiletow` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -186,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`RodzajeBiletow` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idRodzajBiletow_UNIQUE` (`id` ASC),
   UNIQUE INDEX `NazwaBiletu_UNIQUE` (`nazwa` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Uzytkownicy` (
   UNIQUE INDEX `login_UNIQUE` (`login` ASC),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC),
   UNIQUE INDEX `telefon_UNIQUE` (`telefon` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -225,7 +225,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Role` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idRole_UNIQUE` (`id` ASC),
   UNIQUE INDEX `nazwa_UNIQUE` (`nazwa` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -250,11 +250,11 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Pracownicy` (
   UNIQUE INDEX `telefon_UNIQUE` (`telefon` ASC),
   INDEX `fk_Pracownicy_Role1_idx` (`Role_id` ASC),
   CONSTRAINT `fk_Pracownicy_Role1`
-    FOREIGN KEY (`Role_id`)
-    REFERENCES `SZOK`.`Role` (`id`)
+  FOREIGN KEY (`Role_id`)
+  REFERENCES `SZOK`.`Role` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -269,7 +269,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`TypyRzedow` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idTypyRzedu_UNIQUE` (`id` ASC),
   UNIQUE INDEX `nazwa_UNIQUE` (`nazwa` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -287,16 +287,16 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Rzedy` (
   INDEX `fk_Rzedy_Sale1_idx` (`Sale_id` ASC),
   INDEX `fk_Rzedy_TypyRzedow1_idx` (`TypyRzedow_id` ASC),
   CONSTRAINT `fk_Rzedy_Sale1`
-    FOREIGN KEY (`Sale_id`)
-    REFERENCES `SZOK`.`Sale` (`id`)
+  FOREIGN KEY (`Sale_id`)
+  REFERENCES `SZOK`.`Sale` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Rzedy_TypyRzedow1`
-    FOREIGN KEY (`TypyRzedow_id`)
-    REFERENCES `SZOK`.`TypyRzedow` (`id`)
+  FOREIGN KEY (`TypyRzedow_id`)
+  REFERENCES `SZOK`.`TypyRzedow` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -313,11 +313,11 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Miejsca` (
   UNIQUE INDEX `idMiejsca_UNIQUE` (`id` ASC),
   INDEX `fk_Miejsca_Rzedy1_idx` (`Rzedy_id` ASC),
   CONSTRAINT `fk_Miejsca_Rzedy1`
-    FOREIGN KEY (`Rzedy_id`)
-    REFERENCES `SZOK`.`Rzedy` (`id`)
+  FOREIGN KEY (`Rzedy_id`)
+  REFERENCES `SZOK`.`Rzedy` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -336,7 +336,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Promocje` (
   `staz` DATE NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idPromocje_UNIQUE` (`id` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -356,7 +356,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Vouchery` (
   `czyWykorzystanyy` TINYINT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idVouchery_UNIQUE` (`id` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -381,21 +381,21 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Rezerwacje` (
   INDEX `fk_Rezerwacje_Pracownicy1_idx` (`Pracownicy_id` ASC),
   INDEX `fk_Rezerwacje_Seanse1_idx` (`Seanse_id` ASC),
   CONSTRAINT `fk_Rezerwacje_Uzytkownicy1`
-    FOREIGN KEY (`Uzytkownicy_id`)
-    REFERENCES `SZOK`.`Uzytkownicy` (`id`)
+  FOREIGN KEY (`Uzytkownicy_id`)
+  REFERENCES `SZOK`.`Uzytkownicy` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Rezerwacje_Pracownicy1`
-    FOREIGN KEY (`Pracownicy_id`)
-    REFERENCES `SZOK`.`Pracownicy` (`id`)
+  FOREIGN KEY (`Pracownicy_id`)
+  REFERENCES `SZOK`.`Pracownicy` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Rezerwacje_Seanse1`
-    FOREIGN KEY (`Seanse_id`)
-    REFERENCES `SZOK`.`Seanse` (`id`)
+  FOREIGN KEY (`Seanse_id`)
+  REFERENCES `SZOK`.`Seanse` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -409,7 +409,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`RodzajePlatnosci` (
   `usunieto` TINYINT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idRodzajePlatnosci_UNIQUE` (`id` ASC))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -434,31 +434,31 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Tranzakcje` (
   INDEX `fk_Tranzakcje_Promocje1_idx` (`Promocje_id` ASC),
   INDEX `fk_Tranzakcje_Seanse1_idx` (`Seanse_id` ASC),
   CONSTRAINT `fk_Tranzakcje_RodzajePlatnosci1`
-    FOREIGN KEY (`RodzajePlatnosci_id`)
-    REFERENCES `SZOK`.`RodzajePlatnosci` (`id`)
+  FOREIGN KEY (`RodzajePlatnosci_id`)
+  REFERENCES `SZOK`.`RodzajePlatnosci` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Tranzakcje_Uzytkownicy1`
-    FOREIGN KEY (`Uzytkownicy_id`)
-    REFERENCES `SZOK`.`Uzytkownicy` (`id`)
+  FOREIGN KEY (`Uzytkownicy_id`)
+  REFERENCES `SZOK`.`Uzytkownicy` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Tranzakcje_Pracownicy1`
-    FOREIGN KEY (`Pracownicy_id`)
-    REFERENCES `SZOK`.`Pracownicy` (`id`)
+  FOREIGN KEY (`Pracownicy_id`)
+  REFERENCES `SZOK`.`Pracownicy` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Tranzakcje_Promocje1`
-    FOREIGN KEY (`Promocje_id`)
-    REFERENCES `SZOK`.`Promocje` (`id`)
+  FOREIGN KEY (`Promocje_id`)
+  REFERENCES `SZOK`.`Promocje` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Tranzakcje_Seanse1`
-    FOREIGN KEY (`Seanse_id`)
-    REFERENCES `SZOK`.`Seanse` (`id`)
+  FOREIGN KEY (`Seanse_id`)
+  REFERENCES `SZOK`.`Seanse` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -473,16 +473,16 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Film_ma_RodzajeFilmow` (
   INDEX `fk_Filmy_has_RodzajeFilmow_RodzajeFilmow1_idx` (`RodzajeFilmow_id` ASC),
   INDEX `fk_Filmy_has_RodzajeFilmow_Filmy1_idx` (`Filmy_id` ASC),
   CONSTRAINT `fk_Filmy_has_RodzajeFilmow_Filmy1`
-    FOREIGN KEY (`Filmy_id`)
-    REFERENCES `SZOK`.`Filmy` (`id`)
+  FOREIGN KEY (`Filmy_id`)
+  REFERENCES `SZOK`.`Filmy` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Filmy_has_RodzajeFilmow_RodzajeFilmow1`
-    FOREIGN KEY (`RodzajeFilmow_id`)
-    REFERENCES `SZOK`.`RodzajeFilmow` (`id`)
+  FOREIGN KEY (`RodzajeFilmow_id`)
+  REFERENCES `SZOK`.`RodzajeFilmow` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -508,26 +508,26 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Bilety` (
   UNIQUE INDEX `Biletcol_UNIQUE` (`id` ASC),
   INDEX `fk_Bilety_Vouchery1_idx` (`Vouchery_id` ASC),
   CONSTRAINT `fk_Tranzakcje_has_RodzajeBiletow_Tranzakcje1`
-    FOREIGN KEY (`Tranzakcje_id`)
-    REFERENCES `SZOK`.`Tranzakcje` (`id`)
+  FOREIGN KEY (`Tranzakcje_id`)
+  REFERENCES `SZOK`.`Tranzakcje` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Tranzakcje_has_RodzajeBiletow_RodzajeBiletow1`
-    FOREIGN KEY (`RodzajeBiletow_id`)
-    REFERENCES `SZOK`.`RodzajeBiletow` (`id`)
+  FOREIGN KEY (`RodzajeBiletow_id`)
+  REFERENCES `SZOK`.`RodzajeBiletow` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Tranzakcja_ma_Bilet_Miejsca1`
-    FOREIGN KEY (`Miejsca_id`)
-    REFERENCES `SZOK`.`Miejsca` (`id`)
+  FOREIGN KEY (`Miejsca_id`)
+  REFERENCES `SZOK`.`Miejsca` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Bilety_Vouchery1`
-    FOREIGN KEY (`Vouchery_id`)
-    REFERENCES `SZOK`.`Vouchery` (`id`)
+  FOREIGN KEY (`Vouchery_id`)
+  REFERENCES `SZOK`.`Vouchery` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -542,16 +542,16 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Rezerwacja_ma_Miejsca` (
   INDEX `fk_Rezerwacje_has_Miejsca_Miejsca1_idx` (`Miejsca_id` ASC),
   INDEX `fk_Rezerwacje_has_Miejsca_Rezerwacje1_idx` (`Rezerwacje_id` ASC),
   CONSTRAINT `fk_Rezerwacje_has_Miejsca_Rezerwacje1`
-    FOREIGN KEY (`Rezerwacje_id`)
-    REFERENCES `SZOK`.`Rezerwacje` (`id`)
+  FOREIGN KEY (`Rezerwacje_id`)
+  REFERENCES `SZOK`.`Rezerwacje` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Rezerwacje_has_Miejsca_Miejsca1`
-    FOREIGN KEY (`Miejsca_id`)
-    REFERENCES `SZOK`.`Miejsca` (`id`)
+  FOREIGN KEY (`Miejsca_id`)
+  REFERENCES `SZOK`.`Miejsca` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -566,16 +566,16 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Film_ma_TypySeansow` (
   INDEX `fk_Filmy_has_TypySeansow_TypySeansow1_idx` (`TypySeansow_id` ASC),
   INDEX `fk_Filmy_has_TypySeansow_Filmy1_idx` (`Filmy_id` ASC),
   CONSTRAINT `fk_Filmy_has_TypySeansow_Filmy1`
-    FOREIGN KEY (`Filmy_id`)
-    REFERENCES `SZOK`.`Filmy` (`id`)
+  FOREIGN KEY (`Filmy_id`)
+  REFERENCES `SZOK`.`Filmy` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Filmy_has_TypySeansow_TypySeansow1`
-    FOREIGN KEY (`TypySeansow_id`)
-    REFERENCES `SZOK`.`TypySeansow` (`id`)
+  FOREIGN KEY (`TypySeansow_id`)
+  REFERENCES `SZOK`.`TypySeansow` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -584,7 +584,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `SZOK`.`PulaBiletow_ma_RodzajeBiletow` ;
 
 CREATE TABLE IF NOT EXISTS `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `PuleBiletow_id` INT UNSIGNED NOT NULL,
   `RodzajeBiletow_id` INT UNSIGNED NOT NULL,
   `cena` DECIMAL(5,2) NOT NULL,
@@ -592,16 +592,16 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (
   INDEX `fk_PulaBiletow_ma_RodzajeBiletow_PuleBiletow1_idx` (`PuleBiletow_id` ASC),
   INDEX `fk_PulaBiletow_ma_RodzajeBiletow_RodzajeBiletow1_idx` (`RodzajeBiletow_id` ASC),
   CONSTRAINT `fk_PulaBiletow_ma_RodzajeBiletow_PuleBiletow1`
-    FOREIGN KEY (`PuleBiletow_id`)
-    REFERENCES `SZOK`.`PuleBiletow` (`id`)
+  FOREIGN KEY (`PuleBiletow_id`)
+  REFERENCES `SZOK`.`PuleBiletow` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_PulaBiletow_ma_RodzajeBiletow_RodzajeBiletow1`
-    FOREIGN KEY (`RodzajeBiletow_id`)
-    REFERENCES `SZOK`.`RodzajeBiletow` (`id`)
+  FOREIGN KEY (`RodzajeBiletow_id`)
+  REFERENCES `SZOK`.`RodzajeBiletow` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -610,7 +610,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `SZOK`.`Seans_ma_Filmy` ;
 
 CREATE TABLE IF NOT EXISTS `SZOK`.`Seans_ma_Filmy` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `Seanse_id` INT UNSIGNED NOT NULL,
   `Filmy_id` INT UNSIGNED NOT NULL,
   `kolejnosc` INT NOT NULL,
@@ -619,16 +619,16 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Seans_ma_Filmy` (
   INDEX `fk_Seans_ma_Filmy_Seanse1_idx` (`Seanse_id` ASC),
   INDEX `fk_Seans_ma_Filmy_Filmy1_idx` (`Filmy_id` ASC),
   CONSTRAINT `fk_Seans_ma_Filmy_Seanse1`
-    FOREIGN KEY (`Seanse_id`)
-    REFERENCES `SZOK`.`Seanse` (`id`)
+  FOREIGN KEY (`Seanse_id`)
+  REFERENCES `SZOK`.`Seanse` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Seans_ma_Filmy_Filmy1`
-    FOREIGN KEY (`Filmy_id`)
-    REFERENCES `SZOK`.`Filmy` (`id`)
+  FOREIGN KEY (`Filmy_id`)
+  REFERENCES `SZOK`.`Filmy` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
