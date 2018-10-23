@@ -1,0 +1,105 @@
+{% block navigation %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ path('workers_app/main_page') }}">SZOK</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navbar">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pracownicyDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pracownicy
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="pracownicyDropdown">
+                            <a class="dropdown-item" href="#">Wyświetl listę pracowników</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="biletyDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Bilety
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="biletyDropdown">
+                            <a class="dropdown-item" href="#">Wyświetl pule biletów</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="saleDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sale
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="saleDropdown">
+                            <a class="dropdown-item" href="#">Wyświetl listę sal</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="repertuarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Repertuar
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="repertuarDropdown">
+                            <a class="dropdown-item" href="#">Wyświetl listę filmów</a>
+                            <a class="dropdown-item" href="#">Pokaż seanse wg daty</a>
+                            <a class="dropdown-item" href="#">Pokaż repertuar wg sal</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Dodaj nowy film</a>
+                            <a class="dropdown-item" href="#">Dodaj nowy seans</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="promocjeDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Promocje
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="biletyDropdown">
+                            <a class="dropdown-item" href="#">Wyświetl aktywne promocje</a>
+                            <a class="dropdown-item" href="#">Dodaj nową promocję</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Przeglądaj vouchery</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sprzedazDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sprzedaż
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sprzedazDropdown">
+                            <a class="dropdown-item" href="#">Wyświetl listę rezerwacji</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Przyjmij zwrot biletów</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Weryfikuj bilety</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="raportyDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Raporty
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="raportyDropdown">
+                            <a class="dropdown-item" href="#">Wygeneruj raport sprzedaży</a>
+                            <a class="dropdown-item" href="#">Wygeneruj raport seansów odwołanych</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="loggedDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" aria-hidden="true"></i> Witaj, {{ logged_name }}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="loggedDropdown">
+                            <a class="dropdown-item" href="#">Zmień hasło</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Wyloguj się</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
