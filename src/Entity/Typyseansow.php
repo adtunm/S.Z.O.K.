@@ -13,6 +13,69 @@ use Doctrine\ORM\Mapping as ORM;
 class Typyseansow
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNazwa(): string
+    {
+        return $this->nazwa;
+    }
+
+    /**
+     * @param string $nazwa
+     */
+    public function setNazwa(string $nazwa): void
+    {
+        $this->nazwa = $nazwa;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getUsunieto(): ?bool
+    {
+        return $this->usunieto;
+    }
+
+    /**
+     * @param bool|null $usunieto
+     */
+    public function setUsunieto(?bool $usunieto): void
+    {
+        $this->usunieto = $usunieto;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFilmy(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->filmy;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $filmy
+     */
+    public function setFilmy(\Doctrine\Common\Collections\Collection $filmy): void
+    {
+        $this->filmy = $filmy;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})

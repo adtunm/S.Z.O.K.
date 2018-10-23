@@ -123,7 +123,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `SZOK`.`PuleBiletow` ;
 
 CREATE TABLE IF NOT EXISTS `SZOK`.`PuleBiletow` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nazwa` VARCHAR(45) NOT NULL,
   `usunieto` TINYINT NULL,
   PRIMARY KEY (`id`),
@@ -143,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Seanse` (
   `czyOdwolany` TINYINT NULL,
   `TypySeansow_id` INT UNSIGNED NOT NULL,
   `Sale_id` INT UNSIGNED NOT NULL,
-  `PuleBiletow_id` INT NOT NULL,
+  `PuleBiletow_id` INT UNSIGNED NOT NULL,
   `WydarzeniaSpecjalne_id` INT UNSIGNED NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idSeanse_UNIQUE` (`id` ASC),
@@ -420,7 +420,7 @@ DROP TABLE IF EXISTS `SZOK`.`Tranzakcje` ;
 CREATE TABLE IF NOT EXISTS `SZOK`.`Tranzakcje` (
   `id` INT(12) UNSIGNED ZEROFILL NOT NULL,
   `data` DATETIME NOT NULL,
-  `czyOdwiedzajacy` INT NOT NULL,
+  `czyOdwiedzajacy` TINYINT NOT NULL,,
   `RodzajePlatnosci_id` INT UNSIGNED NOT NULL,
   `Seanse_id` INT UNSIGNED NOT NULL,
   `Uzytkownicy_id` INT UNSIGNED NULL,
@@ -480,31 +480,6 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Film_ma_RodzajeFilmow` (
   CONSTRAINT `fk_Filmy_has_RodzajeFilmow_RodzajeFilmow1`
     FOREIGN KEY (`RodzajeFilmow_id`)
     REFERENCES `SZOK`.`RodzajeFilmow` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `SZOK`.`PulaBiletow_ma_RodzajeBiletow`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `SZOK`.`PulaBiletow_ma_RodzajeBiletow` ;
-
-CREATE TABLE IF NOT EXISTS `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (
-  `PuleBiletow_id` INT NOT NULL,
-  `RodzajeBiletow_id` INT UNSIGNED NOT NULL,
-  `cena` DECIMAL(5,2) NOT NULL,
-  PRIMARY KEY (`PuleBiletow_id`, `RodzajeBiletow_id`),
-  INDEX `fk_PuleBiletow_has_RodzajeBiletow_RodzajeBiletow1_idx` (`RodzajeBiletow_id` ASC),
-  INDEX `fk_PuleBiletow_has_RodzajeBiletow_PuleBiletow1_idx` (`PuleBiletow_id` ASC),
-  CONSTRAINT `fk_PuleBiletow_has_RodzajeBiletow_PuleBiletow1`
-    FOREIGN KEY (`PuleBiletow_id`)
-    REFERENCES `SZOK`.`PuleBiletow` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_PuleBiletow_has_RodzajeBiletow_RodzajeBiletow1`
-    FOREIGN KEY (`RodzajeBiletow_id`)
-    REFERENCES `SZOK`.`RodzajeBiletow` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -580,31 +555,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `SZOK`.`Seans_ma_Filmy`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `SZOK`.`Seans_ma_Filmy` ;
-
-CREATE TABLE IF NOT EXISTS `SZOK`.`Seans_ma_Filmy` (
-  `Seanse_id` INT UNSIGNED NOT NULL,
-  `Filmy_id` INT UNSIGNED NOT NULL,
-  `kolejnosc` TINYINT NOT NULL,
-  PRIMARY KEY (`Seanse_id`, `Filmy_id`),
-  INDEX `fk_Seanse_has_Filmy_Filmy1_idx` (`Filmy_id` ASC),
-  INDEX `fk_Seanse_has_Filmy_Seanse1_idx` (`Seanse_id` ASC),
-  CONSTRAINT `fk_Seanse_has_Filmy_Seanse1`
-    FOREIGN KEY (`Seanse_id`)
-    REFERENCES `SZOK`.`Seanse` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Seanse_has_Filmy_Filmy1`
-    FOREIGN KEY (`Filmy_id`)
-    REFERENCES `SZOK`.`Filmy` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `SZOK`.`Film_ma_TypySeansow`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `SZOK`.`Film_ma_TypySeansow` ;
@@ -623,6 +573,59 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Film_ma_TypySeansow` (
   CONSTRAINT `fk_Filmy_has_TypySeansow_TypySeansow1`
     FOREIGN KEY (`TypySeansow_id`)
     REFERENCES `SZOK`.`TypySeansow` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SZOK`.`PulaBiletow_ma_RodzajeBiletow`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `SZOK`.`PulaBiletow_ma_RodzajeBiletow` ;
+
+CREATE TABLE IF NOT EXISTS `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (
+  `id` INT UNSIGNED NOT NULL,
+  `PuleBiletow_id` INT UNSIGNED NOT NULL,
+  `RodzajeBiletow_id` INT UNSIGNED NOT NULL,
+  `cena` DECIMAL(5,2) NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_PulaBiletow_ma_RodzajeBiletow_PuleBiletow1_idx` (`PuleBiletow_id` ASC),
+  INDEX `fk_PulaBiletow_ma_RodzajeBiletow_RodzajeBiletow1_idx` (`RodzajeBiletow_id` ASC),
+  CONSTRAINT `fk_PulaBiletow_ma_RodzajeBiletow_PuleBiletow1`
+    FOREIGN KEY (`PuleBiletow_id`)
+    REFERENCES `SZOK`.`PuleBiletow` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_PulaBiletow_ma_RodzajeBiletow_RodzajeBiletow1`
+    FOREIGN KEY (`RodzajeBiletow_id`)
+    REFERENCES `SZOK`.`RodzajeBiletow` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SZOK`.`Seans_ma_Filmy`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `SZOK`.`Seans_ma_Filmy` ;
+
+CREATE TABLE IF NOT EXISTS `SZOK`.`Seans_ma_Filmy` (
+  `id` INT UNSIGNED NOT NULL,
+  `Seanse_id` INT UNSIGNED NOT NULL,
+  `Filmy_id` INT UNSIGNED NOT NULL,
+  `kolejnosc` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+  INDEX `fk_Seans_ma_Filmy_Seanse1_idx` (`Seanse_id` ASC),
+  INDEX `fk_Seans_ma_Filmy_Filmy1_idx` (`Filmy_id` ASC),
+  CONSTRAINT `fk_Seans_ma_Filmy_Seanse1`
+    FOREIGN KEY (`Seanse_id`)
+    REFERENCES `SZOK`.`Seanse` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Seans_ma_Filmy_Filmy1`
+    FOREIGN KEY (`Filmy_id`)
+    REFERENCES `SZOK`.`Filmy` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

@@ -13,6 +13,133 @@ use Doctrine\ORM\Mapping as ORM;
 class Tranzakcje
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getData(): \DateTime
+    {
+        return $this->data;
+    }
+
+    /**
+     * @param \DateTime $data
+     */
+    public function setData(\DateTime $data): void
+    {
+        $this->data = $data;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCzyodwiedzajacy(): int
+    {
+        return $this->czyodwiedzajacy;
+    }
+
+    /**
+     * @param int $czyodwiedzajacy
+     */
+    public function setCzyodwiedzajacy(int $czyodwiedzajacy): void
+    {
+        $this->czyodwiedzajacy = $czyodwiedzajacy;
+    }
+
+    /**
+     * @return \Pracownicy
+     */
+    public function getPracownicy(): \Pracownicy
+    {
+        return $this->pracownicy;
+    }
+
+    /**
+     * @param \Pracownicy $pracownicy
+     */
+    public function setPracownicy(\Pracownicy $pracownicy): void
+    {
+        $this->pracownicy = $pracownicy;
+    }
+
+    /**
+     * @return \Promocje
+     */
+    public function getPromocje(): \Promocje
+    {
+        return $this->promocje;
+    }
+
+    /**
+     * @param \Promocje $promocje
+     */
+    public function setPromocje(\Promocje $promocje): void
+    {
+        $this->promocje = $promocje;
+    }
+
+    /**
+     * @return \Rodzajeplatnosci
+     */
+    public function getRodzajeplatnosci(): \Rodzajeplatnosci
+    {
+        return $this->rodzajeplatnosci;
+    }
+
+    /**
+     * @param \Rodzajeplatnosci $rodzajeplatnosci
+     */
+    public function setRodzajeplatnosci(\Rodzajeplatnosci $rodzajeplatnosci): void
+    {
+        $this->rodzajeplatnosci = $rodzajeplatnosci;
+    }
+
+    /**
+     * @return \Seanse
+     */
+    public function getSeanse(): \Seanse
+    {
+        return $this->seanse;
+    }
+
+    /**
+     * @param \Seanse $seanse
+     */
+    public function setSeanse(\Seanse $seanse): void
+    {
+        $this->seanse = $seanse;
+    }
+
+    /**
+     * @return \Uzytkownicy
+     */
+    public function getUzytkownicy(): \Uzytkownicy
+    {
+        return $this->uzytkownicy;
+    }
+
+    /**
+     * @param \Uzytkownicy $uzytkownicy
+     */
+    public function setUzytkownicy(\Uzytkownicy $uzytkownicy): void
+    {
+        $this->uzytkownicy = $uzytkownicy;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})

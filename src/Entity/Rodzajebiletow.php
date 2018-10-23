@@ -13,6 +13,53 @@ use Doctrine\ORM\Mapping as ORM;
 class Rodzajebiletow
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNazwa(): string
+    {
+        return $this->nazwa;
+    }
+
+    /**
+     * @param string $nazwa
+     */
+    public function setNazwa(string $nazwa): void
+    {
+        $this->nazwa = $nazwa;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getUsunieto(): ?bool
+    {
+        return $this->usunieto;
+    }
+
+    /**
+     * @param bool|null $usunieto
+     */
+    public function setUsunieto(?bool $usunieto): void
+    {
+        $this->usunieto = $usunieto;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
@@ -35,19 +82,5 @@ class Rodzajebiletow
      */
     private $usunieto;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Pulebiletow", mappedBy="rodzajebiletow")
-     */
-    private $pulebiletow;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->pulebiletow = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
 }

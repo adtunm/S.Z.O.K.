@@ -13,6 +13,133 @@ use Doctrine\ORM\Mapping as ORM;
 class Promocje
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNazwa(): string
+    {
+        return $this->nazwa;
+    }
+
+    /**
+     * @param string $nazwa
+     */
+    public function setNazwa(string $nazwa): void
+    {
+        $this->nazwa = $nazwa;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isCzykwotowa(): bool
+    {
+        return $this->czykwotowa;
+    }
+
+    /**
+     * @param bool $czykwotowa
+     */
+    public function setCzykwotowa(bool $czykwotowa): void
+    {
+        $this->czykwotowa = $czykwotowa;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWartosc(): string
+    {
+        return $this->wartosc;
+    }
+
+    /**
+     * @param string $wartosc
+     */
+    public function setWartosc(string $wartosc): void
+    {
+        $this->wartosc = $wartosc;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getPoczatekpromocji(): \DateTime
+    {
+        return $this->poczatekpromocji;
+    }
+
+    /**
+     * @param \DateTime $poczatekpromocji
+     */
+    public function setPoczatekpromocji(\DateTime $poczatekpromocji): void
+    {
+        $this->poczatekpromocji = $poczatekpromocji;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getKoniecpromocji(): \DateTime
+    {
+        return $this->koniecpromocji;
+    }
+
+    /**
+     * @param \DateTime $koniecpromocji
+     */
+    public function setKoniecpromocji(\DateTime $koniecpromocji): void
+    {
+        $this->koniecpromocji = $koniecpromocji;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getCzykobieta(): ?bool
+    {
+        return $this->czykobieta;
+    }
+
+    /**
+     * @param bool|null $czykobieta
+     */
+    public function setCzykobieta(?bool $czykobieta): void
+    {
+        $this->czykobieta = $czykobieta;
+    }
+
+    /**
+     * @return \DateTime|null
+     */
+    public function getStaz(): ?\DateTime
+    {
+        return $this->staz;
+    }
+
+    /**
+     * @param \DateTime|null $staz
+     */
+    public function setStaz(?\DateTime $staz): void
+    {
+        $this->staz = $staz;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})

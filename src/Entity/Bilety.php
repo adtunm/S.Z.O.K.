@@ -13,6 +13,165 @@ use Doctrine\ORM\Mapping as ORM;
 class Bilety
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCena(): string
+    {
+        return $this->cena;
+    }
+
+    /**
+     * @param string $cena
+     */
+    public function setCena(string $cena): void
+    {
+        $this->cena = $cena;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLosowecyfry(): string
+    {
+        return $this->losowecyfry;
+    }
+
+    /**
+     * @param string $losowecyfry
+     */
+    public function setLosowecyfry(string $losowecyfry): void
+    {
+        $this->losowecyfry = $losowecyfry;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCyfrakontrolna(): string
+    {
+        return $this->cyfrakontrolna;
+    }
+
+    /**
+     * @param string $cyfrakontrolna
+     */
+    public function setCyfrakontrolna(string $cyfrakontrolna): void
+    {
+        $this->cyfrakontrolna = $cyfrakontrolna;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getCzywykorzystany(): ?bool
+    {
+        return $this->czywykorzystany;
+    }
+
+    /**
+     * @param bool|null $czywykorzystany
+     */
+    public function setCzywykorzystany(?bool $czywykorzystany): void
+    {
+        $this->czywykorzystany = $czywykorzystany;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getCzyanulowany(): ?bool
+    {
+        return $this->czyanulowany;
+    }
+
+    /**
+     * @param bool|null $czyanulowany
+     */
+    public function setCzyanulowany(?bool $czyanulowany): void
+    {
+        $this->czyanulowany = $czyanulowany;
+    }
+
+    /**
+     * @return \Vouchery
+     */
+    public function getVouchery(): \Vouchery
+    {
+        return $this->vouchery;
+    }
+
+    /**
+     * @param \Vouchery $vouchery
+     */
+    public function setVouchery(\Vouchery $vouchery): void
+    {
+        $this->vouchery = $vouchery;
+    }
+
+    /**
+     * @return \Miejsca
+     */
+    public function getMiejsca(): \Miejsca
+    {
+        return $this->miejsca;
+    }
+
+    /**
+     * @param \Miejsca $miejsca
+     */
+    public function setMiejsca(\Miejsca $miejsca): void
+    {
+        $this->miejsca = $miejsca;
+    }
+
+    /**
+     * @return \Rodzajebiletow
+     */
+    public function getRodzajebiletow(): \Rodzajebiletow
+    {
+        return $this->rodzajebiletow;
+    }
+
+    /**
+     * @param \Rodzajebiletow $rodzajebiletow
+     */
+    public function setRodzajebiletow(\Rodzajebiletow $rodzajebiletow): void
+    {
+        $this->rodzajebiletow = $rodzajebiletow;
+    }
+
+    /**
+     * @return \Tranzakcje
+     */
+    public function getTranzakcje(): \Tranzakcje
+    {
+        return $this->tranzakcje;
+    }
+
+    /**
+     * @param \Tranzakcje $tranzakcje
+     */
+    public function setTranzakcje(\Tranzakcje $tranzakcje): void
+    {
+        $this->tranzakcje = $tranzakcje;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})

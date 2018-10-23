@@ -13,6 +13,149 @@ use Doctrine\ORM\Mapping as ORM;
 class Pracownicy
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLogin(): string
+    {
+        return $this->login;
+    }
+
+    /**
+     * @param string $login
+     */
+    public function setLogin(string $login): void
+    {
+        $this->login = $login;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHaslo(): string
+    {
+        return $this->haslo;
+    }
+
+    /**
+     * @param string $haslo
+     */
+    public function setHaslo(string $haslo): void
+    {
+        $this->haslo = $haslo;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImie(): string
+    {
+        return $this->imie;
+    }
+
+    /**
+     * @param string $imie
+     */
+    public function setImie(string $imie): void
+    {
+        $this->imie = $imie;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNazwisko(): string
+    {
+        return $this->nazwisko;
+    }
+
+    /**
+     * @param string $nazwisko
+     */
+    public function setNazwisko(string $nazwisko): void
+    {
+        $this->nazwisko = $nazwisko;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTelefon(): string
+    {
+        return $this->telefon;
+    }
+
+    /**
+     * @param string $telefon
+     */
+    public function setTelefon(string $telefon): void
+    {
+        $this->telefon = $telefon;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return \DateTime|null
+     */
+    public function getOstatniaaktualizacja(): ?\DateTime
+    {
+        return $this->ostatniaaktualizacja;
+    }
+
+    /**
+     * @param \DateTime|null $ostatniaaktualizacja
+     */
+    public function setOstatniaaktualizacja(?\DateTime $ostatniaaktualizacja): void
+    {
+        $this->ostatniaaktualizacja = $ostatniaaktualizacja;
+    }
+
+    /**
+     * @return \Role
+     */
+    public function getRole(): \Role
+    {
+        return $this->role;
+    }
+
+    /**
+     * @param \Role $role
+     */
+    public function setRole(\Role $role): void
+    {
+        $this->role = $role;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})

@@ -13,6 +13,165 @@ use Doctrine\ORM\Mapping as ORM;
 class Uzytkownicy
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLogin(): string
+    {
+        return $this->login;
+    }
+
+    /**
+     * @param string $login
+     */
+    public function setLogin(string $login): void
+    {
+        $this->login = $login;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHaslo(): string
+    {
+        return $this->haslo;
+    }
+
+    /**
+     * @param string $haslo
+     */
+    public function setHaslo(string $haslo): void
+    {
+        $this->haslo = $haslo;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImie(): string
+    {
+        return $this->imie;
+    }
+
+    /**
+     * @param string $imie
+     */
+    public function setImie(string $imie): void
+    {
+        $this->imie = $imie;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNazwisko(): string
+    {
+        return $this->nazwisko;
+    }
+
+    /**
+     * @param string $nazwisko
+     */
+    public function setNazwisko(string $nazwisko): void
+    {
+        $this->nazwisko = $nazwisko;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTelefon(): string
+    {
+        return $this->telefon;
+    }
+
+    /**
+     * @param string $telefon
+     */
+    public function setTelefon(string $telefon): void
+    {
+        $this->telefon = $telefon;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDatarejestracji(): \DateTime
+    {
+        return $this->datarejestracji;
+    }
+
+    /**
+     * @param \DateTime $datarejestracji
+     */
+    public function setDatarejestracji(\DateTime $datarejestracji): void
+    {
+        $this->datarejestracji = $datarejestracji;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isCzykobieta(): bool
+    {
+        return $this->czykobieta;
+    }
+
+    /**
+     * @param bool $czykobieta
+     */
+    public function setCzykobieta(bool $czykobieta): void
+    {
+        $this->czykobieta = $czykobieta;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getCzyzablowoany(): ?bool
+    {
+        return $this->czyzablowoany;
+    }
+
+    /**
+     * @param bool|null $czyzablowoany
+     */
+    public function setCzyzablowoany(?bool $czyzablowoany): void
+    {
+        $this->czyzablowoany = $czyzablowoany;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})

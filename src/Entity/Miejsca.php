@@ -13,6 +13,85 @@ use Doctrine\ORM\Mapping as ORM;
 class Miejsca
 {
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPozycja(): int
+    {
+        return $this->pozycja;
+    }
+
+    /**
+     * @param int $pozycja
+     */
+    public function setPozycja(int $pozycja): void
+    {
+        $this->pozycja = $pozycja;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNumermiejsca(): int
+    {
+        return $this->numermiejsca;
+    }
+
+    /**
+     * @param int $numermiejsca
+     */
+    public function setNumermiejsca(int $numermiejsca): void
+    {
+        $this->numermiejsca = $numermiejsca;
+    }
+
+    /**
+     * @return Rzedy
+     */
+    public function getRzedy(): Rzedy
+    {
+        return $this->rzedy;
+    }
+
+    /**
+     * @param Rzedy $rzedy
+     */
+    public function setRzedy(Rzedy $rzedy): void
+    {
+        $this->rzedy = $rzedy;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getRezerwacje(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->rezerwacje;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $rezerwacje
+     */
+    public function setRezerwacje(\Doctrine\Common\Collections\Collection $rezerwacje): void
+    {
+        $this->rezerwacje = $rezerwacje;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
