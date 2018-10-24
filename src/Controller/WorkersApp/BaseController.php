@@ -8,6 +8,9 @@
 
 namespace App\Controller\WorkersApp;
 
+use App\Controller\LoginController;
+use App\Entity\Pracownicy;
+use http\Env\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,14 +22,10 @@ class BaseController extends Controller
      */
     public function index()
     {
-        //czy zalogowany
-        //tak
-        return $this->render('workersApp/mainPage/mainPage.html.twig', array(
-            'logged_role' => 1,
-            'logged_name' => "Euzebiusz"
-        ));
-
-        //nie
-        //przekieruj na stronę logowania
+        if($this->isGranted('IS_AUTHENTICATED_FULLY'))
+            return $this->render('workersApp/mainPage/mainPage.html.twig');
+        else{
+            return $this->redirectToRoute('app_login');
+        }
     }
 }
