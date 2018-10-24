@@ -68,7 +68,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 
         if (!$user) {
             // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Username could not be found.');
+            throw new CustomUserMessageAuthenticationException('Błędny login lub błędne hasło.');
         }
 
         return $user;
@@ -79,7 +79,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 
         //$this->passwordEncoder->encodePassword($user, "0000");
         //throw new CustomUserMessageAuthenticationException($user->getRoles());
-        return $this->passwordEncoder->isPasswordValid($user, $credentials['password']);;
+        return $this->passwordEncoder->isPasswordValid($user, $credentials['password']);
     }
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
