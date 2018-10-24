@@ -219,7 +219,7 @@ class Pracownicy implements UserInterface
      *
      * @ORM\ManyToOne(targetEntity="Role")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn()
+     *   @ORM\JoinColumn(name="Role_id", referencedColumnName="id")
      * })
      */
     private $role;
@@ -277,10 +277,7 @@ class Pracownicy implements UserInterface
      *
      * @return string|null The salt
      */
-    public function getSalt()
-    {
-        // TODO: Implement getSalt() method.
-    }
+    public function getSalt(){}
 
     /**
      * Returns the username used to authenticate the user.
@@ -298,8 +295,5 @@ class Pracownicy implements UserInterface
      * This is important if, at any given point, sensitive information like
      * the plain-text password is stored on this object.
      */
-    public function eraseCredentials()
-    {
-        // TODO: Implement eraseCredentials() method.
-    }
+    public function eraseCredentials(){}
 }

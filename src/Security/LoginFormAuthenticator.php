@@ -38,7 +38,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 
     public function supports(Request $request)
     {
-        return 'app_login' === $request->attributes->get('_route')
+        return 'workers_app/login_page' === $request->attributes->get('_route')
             && $request->isMethod('POST');
     }
 
@@ -63,22 +63,12 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
         if (!$this->csrfTokenManager->isTokenValid($token)) {
             throw new InvalidCsrfTokenException();
         }
-
         $user = $this->entityManager->getRepository(Pracownicy::class)->findOneBy(['login' => $credentials['login']]);
-
-        if (!$user) {
-            // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Błędny login lub błędne hasło.');
-        }
-
         return $user;
     }
 
     public function checkCredentials($credentials, UserInterface $user)
     {
-
-        //$this->passwordEncoder->encodePassword($user, "0000");
-        //throw new CustomUserMessageAuthenticationException($user->getRoles());
         return $this->passwordEncoder->isPasswordValid($user, $credentials['password']);
     }
 
@@ -88,14 +78,12 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
         if ($targetPath = $this->getTargetPath($request->getSession(), $providerKey)) {
             return new RedirectResponse($targetPath);
         }
-
         return new RedirectResponse($this->router->generate('workers_app/main_page'));
-        throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 
     protected function getLoginUrl()
     {
-        return $this->router->generate('app_login');
+        return $this->router->generate('workers_app/ogin_page');
     }
 }
 

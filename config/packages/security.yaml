@@ -20,8 +20,8 @@ security:
                     - App\Security\LoginFormAuthenticator
 
             logout:
-               path: /logout
-               target: /login
+               path: /workersApp/logout
+               target: /workersApp/login
 
             # activate different ways to authenticate
 
@@ -34,6 +34,6 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-         - { path: ^/admin, roles: ROLE_ADMIN }
-         - { path: ^/worker, roles: ROLE_WORKER }
-         - { path: ^/manager, roles: ROLE_MANAGER }
+         - { path: ^/admin/^, roles: ROLE_ADMIN }
+         - { path: ^/worker/^, roles: ROLE_WORKER }
+         - { path: ^/manager/^, roles: ROLE_MANAGER }

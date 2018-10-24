@@ -25,7 +25,7 @@ class BaseController extends Controller
         if($this->isGranted('IS_AUTHENTICATED_FULLY'))
             return $this->render('workersApp/mainPage/mainPage.html.twig');
         else{
-            return $this->redirectToRoute('app_login');
+            return $this->redirectToRoute('workers_app/login_page');
         }
     }
 }
