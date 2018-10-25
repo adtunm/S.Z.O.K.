@@ -7,11 +7,13 @@
         "ext-iconv": "*",
         "sensio/framework-extra-bundle": "^5.2",
         "symfony/apache-pack": "^1.0",
+        "symfony/asset": "4.1.x-dev",
         "symfony/console": "*",
         "symfony/flex": "^1.1",
         "symfony/framework-bundle": "*",
         "symfony/maker-bundle": "^1.8",
         "symfony/orm-pack": "^1.0",
+        "symfony/security-bundle": "*",
         "symfony/twig-bundle": "^4.1",
         "symfony/yaml": "*"
     },
