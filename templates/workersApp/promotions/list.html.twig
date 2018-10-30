@@ -1,0 +1,66 @@
+{% extends 'workersApp/workerBase.html.twig' %}
+
+{% block content %}
+    <div class="row pb-4 mt-0">
+        <div class="h1 col-md">Promocje</div>
+        {% if is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN') %}
+            <div class="col-md">
+                <a href="" class="btn btn-primary pull-right">Nowa promocja</a>
+            </div>
+        {% endif %}
+    </div>
+    {% if promocje %}
+        <div style="overflow-x: auto;">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th style="width: 15%">Nazwa promocji</th>
+                    <th style="width: 15%">Wysokość promocji</th>
+                    <th style="width: 30%">Specjalne warunki</th>
+                    <th style="width: 20%">Czas trwania promocji</th>
+                    <th style="width: 10%"></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for promocja in promocje %}
+                    <tr>
+                        <td scope="row">{{ promocja.nazwa }}</td>
+                        <td>{{ promocja.wartosc }} {% if promocja.czykwotowa %}zł{% else %}%{% endif %}</td>
+                        <td>
+                            {% if promocja.czykobieta is not null %}
+                                {% if promocja.czykobieta %}
+                                    Tylko dla pań
+                                {% else %}
+                                    Tylko dla panów
+                                {% endif %}
+                                {% if promocja.staz is not null %}
+                                    posiadających konto od {{ promocja.staz|date("d.m.Y") }} lub dłużej
+                                {% endif %}
+                            {% elseif promocja.staz is not null %}
+                                Tylko dla użytkowników z kontem od {{ promocja.staz|date("d.m.Y") }} lub dłużej
+                            {% else %}
+                                Brak
+                            {% endif %}
+                        </td>
+                        <td>
+                            {{ promocja.poczatekPromocji|date("d.m.Y") }} - {{ promocja.koniecPromocji|date("d.m.Y") }}
+                        </td>
+                        <td>
+                            {% if is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN') %}
+                                <a class="btn btn-primary btn-sm">Edytuj</a>
+                                <a class="btn btn-danger btn-sm">Usuń</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        {# remember to set basePath before including pagination #}
+        {% set basePath = path('workers_app/promotions') %}
+        {% include 'workersApp/inc/pagination.html.twig' %}
+    {% else %}
+        <p class="h1">Brak aktualnych promocji</p>
+    {% endif %}
+{% endblock %}
