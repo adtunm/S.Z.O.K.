@@ -1,0 +1,68 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: gnowa
+ * Date: 28.10.2018
+ * Time: 17:33
+ */
+
+namespace App\Repository;
+
+
+use App\Entity\Promocje;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
+use Symfony\Bridge\Doctrine\RegistryInterface;
+
+
+class PromocjeRepository extends ServiceEntityRepository
+{
+
+    /**
+     * PromocjeRepository constructor.
+     */
+    public function __construct(RegistryInterface $registry)
+    {
+        parent::__construct($registry, Promocje::class);
+    }
+
+    public function findActual($page = 1, $pageLimit = 10)
+    {
+        $query = $this->createQueryBuilder('p')
+            ->andWhere('p.koniecpromocji >= :currentDate')
+            ->setParameter('currentDate', date("Y-m-d"))
+            ->orderBy('p.poczatekpromocji', 'ASC')
+            ->getQuery();
+
+        $result = new Paginator($query);
+
+        $result->getQuery()
+            ->setFirstResult($pageLimit * ($page - 1))
+            ->setMaxResults($pageLimit);
+
+        return $result;
+    }
+
+    public function getPageCountOfActual($pageLimit = 10)
+    {
+        $query = $this->createQueryBuilder('p')
+            ->select('count(p.id)')
+            ->andWhere('p.koniecpromocji >= :currentDate')
+            ->setParameter('currentDate', date("Y-m-d"))
+            ->orderBy('p.poczatekpromocji', 'ASC')
+            ->getQuery();
+
+        $count = $query->getSingleScalarResult();
+
+        $div = floor($count / $pageLimit);
+        $rest = $count % $pageLimit;
+        if($rest != 0) {
+            $pageCount = $div + 1;
+        } else {
+            $pageCount = $div;
+        }
+
+        return $pageCount;
+    }
+
+}

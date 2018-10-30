@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Promocje
  *
  * @ORM\Table(name="promocje", uniqueConstraints={@ORM\UniqueConstraint(name="idPromocje_UNIQUE", columns={"id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\PromocjeRepository")
  */
 class Promocje
 {
@@ -139,6 +139,7 @@ class Promocje
     {
         $this->staz = $staz;
     }
+
     /**
      * @var int
      *
