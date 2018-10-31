@@ -1,0 +1,44 @@
+{% extends 'workersApp/workerBase.html.twig' %}
+
+{% block content %}
+    <h1>{{ worker.imie }} {{ worker.nazwisko }}</h1>
+    {% if worker %}
+        <table id="articles" class="table table-hover">
+            <tbody>
+        <tr>
+            <td>Login:</td> <td>{{ worker.login }}</td>
+        </tr>
+        <tr>
+            <td>Imię:</td> <td>{{ worker.imie }}</td>
+        </tr>
+        <tr>
+            <td>Nazwisko:</td> <td>{{ worker.nazwisko }}</td>
+        </tr>
+        <tr>
+            <td>E-mail:</td> <td>{{ worker.email }}</td>
+        </tr>
+        <tr>
+            <td>Numer telefonu:</td> <td>{{ worker.telefon }}</td>
+        </tr>
+        <tr>
+            <td>Rola:</td> <td>{{ worker.role.nazwa }}</td>
+        </tr>
+            </tbody>
+        </table>
+        {% set x=worker.id %}
+        {%  set x = x//10 %}
+        {% if x == 0 %}
+            {% set x = null %}
+        {% endif %}
+        <a class="btn btn-primary" href="{{ path('worker_app/pracownicy/list',{"page":x+1}) }}" role="button">Wróć</a>
+        {% if is_granted('ROLE_ADMIN') %}
+            <a class="btn btn-primary float-right"  href="{{ path('workers_app/pracownicy/change_password',{"id":worker.id}) }}" role="button">Resetuj hasło</a>
+            <a class="btn btn-primary float-right" style="margin-left: 2px; margin-right: 2px" href="{{ path('workers_app/pracownicy/edit',{"id":worker.id}) }}" role="button">Edytuj</a>
+            <a class="btn btn-primary float-right"  href="{{ path('workers_app/pracownicy/delete',{"id":worker.id}) }}" role="button">Usuń</a>
+        {% endif %}
+    {% else %}
+        <h1>Brak danych</h1>
+    {% endif %}
+
+
+{% endblock %}

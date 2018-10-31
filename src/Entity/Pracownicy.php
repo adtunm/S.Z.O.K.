@@ -4,15 +4,34 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Pracownicy
  *
  * @ORM\Table(name="pracownicy", uniqueConstraints={@ORM\UniqueConstraint(name="idPracownicy_UNIQUE", columns={"id"}), @ORM\UniqueConstraint(name="login_UNIQUE", columns={"login"}), @ORM\UniqueConstraint(name="email_UNIQUE", columns={"email"}), @ORM\UniqueConstraint(name="telefon_UNIQUE", columns={"telefon"})}, indexes={@ORM\Index(name="fk_Pracownicy_Role1_idx", columns={"Role_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\PracownicyRepository")
+ *
  */
+
 class Pracownicy implements UserInterface
 {
+    /**
+     * @return bool|null
+     */
+    public function getCzyaktywny(): ?bool
+    {
+        return $this->czyaktywny;
+    }
+
+    /**
+     * @param bool|null $czyaktywny
+     */
+    public function setCzyaktywny(?bool $czyaktywny): void
+    {
+        $this->czyaktywny = $czyaktywny;
+    }
     /**
      * @return int
      */
@@ -125,26 +144,11 @@ class Pracownicy implements UserInterface
         $this->email = $email;
     }
 
-    /**
-     * @return \DateTime|null
-     */
-    public function getOstatniaaktualizacja(): ?\DateTime
-    {
-        return $this->ostatniaaktualizacja;
-    }
-
-    /**
-     * @param \DateTime|null $ostatniaaktualizacja
-     */
-    public function setOstatniaaktualizacja(?\DateTime $ostatniaaktualizacja): void
-    {
-        $this->ostatniaaktualizacja = $ostatniaaktualizacja;
-    }
 
     /**
      * @return \Role
      */
-    public function getRole(): \Role
+    public function getRole(): ?Role
     {
         return $this->role;
     }
@@ -152,7 +156,7 @@ class Pracownicy implements UserInterface
     /**
      * @param \Role $role
      */
-    public function setRole(\Role $role): void
+    public function setRole(?Role $role): void
     {
         $this->role = $role;
     }
@@ -208,11 +212,11 @@ class Pracownicy implements UserInterface
     private $email;
 
     /**
-     * @var \DateTime|null
+     * @var \bool|null
      *
-     * @ORM\Column(name="ostatniaAktualizacja", type="datetime", nullable=true)
+     * @ORM\Column(name="czyAktywny", type="boolean", nullable=true)
      */
-    private $ostatniaaktualizacja;
+    private $czyaktywny;
 
     /**
      * @var \Role
@@ -297,3 +301,4 @@ class Pracownicy implements UserInterface
      */
     public function eraseCredentials(){}
 }
+
