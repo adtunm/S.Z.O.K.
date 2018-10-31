@@ -34,13 +34,13 @@ class PromocjeRepository extends ServiceEntityRepository
             ->orderBy('p.poczatekpromocji', 'ASC')
             ->getQuery();
 
-        $result = new Paginator($query);
+        $requestedPage = new Paginator($query);
 
-        $result->getQuery()
+        $requestedPage->getQuery()
             ->setFirstResult($pageLimit * ($page - 1))
             ->setMaxResults($pageLimit);
 
-        return $result;
+        return $requestedPage;
     }
 
     public function getPageCountOfActual($pageLimit = 10)
@@ -54,12 +54,10 @@ class PromocjeRepository extends ServiceEntityRepository
 
         $count = $query->getSingleScalarResult();
 
-        $div = floor($count / $pageLimit);
+        $pageCount = floor($count / $pageLimit);
         $rest = $count % $pageLimit;
         if($rest != 0) {
-            $pageCount = $div + 1;
-        } else {
-            $pageCount = $div;
+            $pageCount = $pageCount + 1;
         }
 
         return $pageCount;
