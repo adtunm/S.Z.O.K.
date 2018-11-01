@@ -42,7 +42,10 @@ class WorkersController extends AbstractController
                 ))
                 ->add('login', TextType::class, array(
                     'label' => 'Login:',
-                    'attr' => array('class' => 'form-control', "pattern" => "[A-Za-z0-9]{3,45}", 'title' => 'Wprowadź login(wymagane od 3 do 45 znaków bez poslkich liter)', 'autocomplete' => "off"),
+                    'attr' => array('class' => 'form-control',
+                        "pattern" => "[A-Za-z0-9]{3,45}",
+                        'title' => 'Wprowadź login(wymagane od 3 do 45 znaków bez poslkich liter)',
+                        'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
                 ->add('haslo', TextType::class, array(
@@ -52,12 +55,18 @@ class WorkersController extends AbstractController
                 ))
                 ->add('imie', TextType::class, array(
                     'label' => 'Imię:',
-                    'attr' => array('class' => 'form-control', "pattern" => "[A-ZŁŚ]{1}+[a-ząęółśżźćń]{2,44}", 'title' => 'Wprowadź Imie,(wymagane od 3 do 45 znaków i 1-sza duża litera)', 'autocomplete' => "off"),
+                    'attr' => array('class' => 'form-control',
+                        "pattern" => "[A-ZŁŚ]{1}+[a-ząęółśżźćń]{2,44}",
+                        'title' => 'Wprowadź Imie,(wymagane od 3 do 45 znaków i 1-sza duża litera)',
+                        'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
                 ->add('nazwisko', TextType::class, array(
                     'label' => 'Nazwisko:',
-                    'attr' => array('class' => 'form-control', "pattern" => "[A-ZĄĘÓŁŚŻŹĆŃ]{1}+[a-ząęółśżźćń-]{2,44}", 'title' => 'Wprowadź Nazwisko,(wymagane od 3 do 45 znaków i 1-sza duża litera)', 'autocomplete' => "off"),
+                    'attr' => array('class' => 'form-control',
+                        "pattern" => "[A-ZĄĘÓŁŚŻŹĆŃ]{1}+[a-ząęółśżźćń-]{2,44}",
+                        'title' => 'Wprowadź Nazwisko,(wymagane od 3 do 45 znaków i 1-sza duża litera)',
+                        'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
                 ->add('email', EmailType::class, array(
@@ -67,7 +76,10 @@ class WorkersController extends AbstractController
                 ))
                 ->add('telefon', TextType::class, array(
                     'label' => 'Telefon:',
-                    'attr' => array("class" => "form-control", "pattern" => "[0-9]{1,9}", "title" => "Wprowadź numer telefonu(wymagane do 9 cyfr) ", 'autocomplete' => "off"),
+                    'attr' => array("class" => "form-control",
+                        "pattern" => "[0-9]{1,9}",
+                        "title" => "Wprowadź numer telefonu(wymagane do 9 cyfr) ",
+                        'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
                 ->add('save', SubmitType::class, array(
@@ -110,23 +122,34 @@ class WorkersController extends AbstractController
                 'form' => $form->createView(), 'errors' => $errors
             ));
         } else {
-            return $this->render('workersApp/manage/permission.html.twig');
+            if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
+                return $this->render('workersApp/manage/permission.html.twig');
+            else
+                return $this->redirectToRoute('workers_app/login_page');
         }
     }
 
     /**
-     * @Route("/workersApp/pracownicy/{page?1}", name="worker_app/pracownicy/list", requirements={"page"="\d+"} )
+     * @Route("/workersApp/pracownicy/{page<[1-9]\d*>?1}", name="worker_app/pracownicy/list", requirements={"page"="\d+"}, methods={"GET"} )
      */
     public function list($page)
     {
         if ($this->isGranted('ROLE_ADMIN') || $this->isGranted('ROLE_MANAGER')) {
-            $workerList = $this->getDoctrine()->getRepository(Pracownicy::class)->findAll();
-            return $this->render('workersApp/manage/list.html.twig', array('workerList' => $workerList, 'page' => $page - 1));
+            $pageLimit = $this->getParameter('page_limit');
+            $pageCount = $this->getDoctrine()->getRepository(Pracownicy::class)->getPageCountOfActual($pageLimit);
+            if ($page > $pageCount)
+                return $this->redirectToRoute('worker_app/pracownicy/list');
+            else {
+                $workerList = $this->getDoctrine()->getRepository(Pracownicy::class)->findActual($page, $pageLimit);
+                return $this->render('workersApp/manage/list.html.twig', array('workerList' => $workerList, 'currentPage' => $page, 'pageCount' => $pageCount));
+            }
         } else {
-            return $this->render('workersApp/manage/permission.html.twig');
+            if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
+                return $this->render('workersApp/manage/permission.html.twig');
+            else
+                return $this->redirectToRoute('workers_app/login_page');
         }
     }
-
     /**
      * @Route("/workersApp/pracownicy/show/{id}", name="workers_app/pracownicy/show", methods={"GET"})
      */
@@ -136,7 +159,10 @@ class WorkersController extends AbstractController
             $worker = $this->getDoctrine()->getRepository(Pracownicy::class)->find($id);
             return $this->render('workersApp/manage/show.html.twig', array('worker' => $worker));
         } else {
-            return $this->render('workersApp/manage/permission.html.twig');
+            if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
+                return $this->render('workersApp/manage/permission.html.twig');
+            else
+                return $this->redirectToRoute('workers_app/login_page');
         }
     }
 
@@ -225,7 +251,10 @@ class WorkersController extends AbstractController
                 'form' => $form->createView(), 'id' => $id, 'errors' => $errors
             ));
         } else {
-            return $this->render('workersApp/manage/permission.html.twig');
+            if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
+                return $this->render('workersApp/manage/permission.html.twig');
+            else
+                return $this->redirectToRoute('workers_app/login_page');
         }
     }
 
@@ -242,7 +271,10 @@ class WorkersController extends AbstractController
             $entityManager->flush();
             return $this->redirectToRoute('worker_app/pracownicy/list');
         } else {
-            return $this->render('workersApp/manage/permission.html.twig');
+            if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
+                return $this->render('workersApp/manage/permission.html.twig');
+            else
+                return $this->redirectToRoute('workers_app/login_page');
         }
     }
 
@@ -281,8 +313,10 @@ class WorkersController extends AbstractController
                 'form' => $form->createView(), 'id' => $id
             ));
         } else {
-            return $this->render('workersApp/manage/permission.html.twig'
-            );
+            if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
+                return $this->render('workersApp/manage/permission.html.twig');
+            else
+                return $this->redirectToRoute('workers_app/login_page');
         }
     }
 }
