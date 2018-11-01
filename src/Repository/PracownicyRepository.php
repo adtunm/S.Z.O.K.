@@ -71,8 +71,7 @@ class PracownicyRepository extends ServiceEntityRepository
     {
         $query = $this->createQueryBuilder('p')
             ->select('count(p.id)')
-           // ->andWhere('p.czyaktywny != :val')
-           // ->setParameter('val', '0')
+            ->andWhere('p.czyaktywny IS NULL')
             ->orderBy('p.id', 'ASC')
             ->getQuery();
 
@@ -90,8 +89,7 @@ class PracownicyRepository extends ServiceEntityRepository
     public function findActual($page = 1, $pageLimit = 10)
     {
         $query = $this->createQueryBuilder('p')
-           // ->andWhere('p.czyaktywny != :val')
-           // ->setParameter('val', '0')
+            ->andWhere('p.czyaktywny IS NULL')
             ->orderBy('p.id', 'ASC')
             ->getQuery();
 
