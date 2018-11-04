@@ -1,0 +1,29 @@
+.room_view{
+    min-width: 500px;
+    overflow-x: auto;
+}
+
+.seat{
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.seat_normal{
+    background-color: lightseagreen;
+}
+
+.seat_buying_only{
+    background-color: blueviolet;
+}
+
+.seat_inactive{
+    background-color: transparent;
+    border: 2px solid grey;
+    color: gray;
+}
