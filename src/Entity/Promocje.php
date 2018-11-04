@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Promocje
@@ -31,7 +32,7 @@ class Promocje
     /**
      * @return string
      */
-    public function getNazwa(): string
+    public function getNazwa(): ?string
     {
         return $this->nazwa;
     }
@@ -47,7 +48,7 @@ class Promocje
     /**
      * @return bool
      */
-    public function isCzykwotowa(): bool
+    public function isCzykwotowa(): ?bool
     {
         return $this->czykwotowa;
     }
@@ -63,7 +64,7 @@ class Promocje
     /**
      * @return string
      */
-    public function getWartosc(): string
+    public function getWartosc(): ?string
     {
         return $this->wartosc;
     }
@@ -79,7 +80,7 @@ class Promocje
     /**
      * @return \DateTime
      */
-    public function getPoczatekpromocji(): \DateTime
+    public function getPoczatekpromocji(): ?\DateTime
     {
         return $this->poczatekpromocji;
     }
@@ -95,7 +96,7 @@ class Promocje
     /**
      * @return \DateTime
      */
-    public function getKoniecpromocji(): \DateTime
+    public function getKoniecpromocji(): ?\DateTime
     {
         return $this->koniecpromocji;
     }
@@ -151,8 +152,17 @@ class Promocje
 
     /**
      * @var string
-     *
      * @ORM\Column(name="nazwa", type="string", length=45, nullable=false)
+     * @Assert\Regex(
+     *     pattern="/^[\p{L}\d\s\-]+$/u",
+     *     message="Nazwa powinna się składać tylko z liter, spacji, myślników i cyfr."
+     * )
+     * @Assert\Length(
+     *     max = 45,
+     *     min = 5,
+     *     maxMessage = "Nazwa może zawierać maksymalnie 45 znaków.",
+     *     minMessage = "Nazwa musi zawierać minimum 5 znaków."
+     * )
      */
     private $nazwa;
 
@@ -167,6 +177,12 @@ class Promocje
      * @var string
      *
      * @ORM\Column(name="wartosc", type="decimal", precision=5, scale=2, nullable=false)
+     * @Assert\Range(
+     *     min="0.01",
+     *     max="100.00",
+     *     minMessage="Wartość promocji musi być większa od zera.",
+     *     maxMessage="Wartość promocji nie powinna przekraczać 100.00."
+     * )
      */
     private $wartosc;
 
@@ -174,6 +190,10 @@ class Promocje
      * @var \DateTime
      *
      * @ORM\Column(name="poczatekPromocji", type="date", nullable=false)
+     * @Assert\GreaterThan(
+     *     value="today",
+     *     message="Promocja powinna rozpoczynać się najwcześniej w dniu jutrzejszym."
+     *     )
      */
     private $poczatekpromocji;
 
@@ -181,6 +201,10 @@ class Promocje
      * @var \DateTime
      *
      * @ORM\Column(name="koniecPromocji", type="date", nullable=false)
+     * @Assert\Expression(
+     *     expression="value >= this.getPoczatekpromocji()",
+     *     message="Koniec promocji nie może być wcześniej niż jej początek."
+     * )
      */
     private $koniecpromocji;
 
@@ -195,6 +219,10 @@ class Promocje
      * @var \DateTime|null
      *
      * @ORM\Column(name="staz", type="date", nullable=true)
+     * @Assert\Expression(
+     *     expression="value <= this.getPoczatekpromocji() or value == null",
+     *     message="Staż powinien wskazywać co najmniej początek promocji lub wcześniej."
+     * )
      */
     private $staz;
 
