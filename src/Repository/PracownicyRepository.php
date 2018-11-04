@@ -26,48 +26,7 @@ class PracownicyRepository extends ServiceEntityRepository
         parent::__construct($registry, Pracownicy::class);
     }
 
-    public function checkEmail($email)
-    {
-
-        $query = $this->createQueryBuilder('p')
-            ->where('p.email = :email')
-            ->setParameter('email', $email)
-            ->getQuery();
-
-        if (count($query->execute()) == 1) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public function checkTelefon($telefon)
-    {
-        $query = $this->createQueryBuilder('p')
-            ->andWhere('p.telefon LIKE :telefon')
-            ->setParameter('telefon', $telefon)
-            ->getQuery();
-        if (count($query->execute()) == 1) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public function checkLogin($login)
-    {
-        $query = $this->createQueryBuilder('p')
-            ->andWhere('p.login LIKE :login')
-            ->setParameter('login', $login)
-            ->getQuery();
-        if (count($query->execute()) == 1) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public function getPageCountOfActual($pageLimit = 10)
+    public function getPageCountOfActive($pageLimit = 10)
     {
         $query = $this->createQueryBuilder('p')
             ->select('count(p.id)')
