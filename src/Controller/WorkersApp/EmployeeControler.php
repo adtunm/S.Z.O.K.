@@ -18,7 +18,7 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 class EmployeeControler extends AbstractController
 {
     /**
-     * @Route("/workersApp/employees/dodaj", name="workers_app/employees/new")
+     * @Route("/workersApp/employees/new", name="workers_app/employees/new")
      */
 
     public function addEmployee(Request $request, UserPasswordEncoderInterface $passwordEncoder, ValidatorInterface $validator)

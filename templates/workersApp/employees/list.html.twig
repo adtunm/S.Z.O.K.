@@ -5,7 +5,7 @@
     <div class="h1 col-md">Lista Pracowników</div>
         {% if is_granted('ROLE_ADMIN') %}
             <div class="col-md">
-                <a href="{{ path("workers_app/employee/new") }}" class="btn btn-primary pull-right">Dodaj nowego
+                <a href="{{ path("workers_app/employees/new") }}" class="btn btn-primary pull-right">Dodaj nowego
                     pracownika</a>
             </div>
         {% endif %}
@@ -32,7 +32,7 @@
                         <td>{{ worker.nazwisko }}</td>
                         <td>{{ worker.role.nazwa }}  </td>
                         <td>
-                            <a href="{{ path('workers_app/employee/show',{"id":worker.id}) }}"
+                            <a href="{{ path('workers_app/employees/show',{"id":worker.id}) }}"
                                class="btn btn-primary float-right btn-sm">Pokaż</a>
                         </td>
                     </tr>
@@ -43,7 +43,7 @@
             </table>
         </div>
 
-        {% set basePath = path('worker_app/employee/list') %}
+        {% set basePath = path('worker_app/employees/list') %}
         {% include 'workersApp/inc/pagination.html.twig' %}
 
     {% else %}

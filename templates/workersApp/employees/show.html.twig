@@ -32,13 +32,13 @@
             </tbody>
         </table>
         <div id = "options">
-            <a class="btn btn-primary" href="{{ path('worker_app/employee/list') }}" role="button">Wróć</a>
+            <a class="btn btn-primary" href="{{ path('worker_app/employees/list') }}" role="button">Wróć</a>
             {% if is_granted('ROLE_ADMIN') %}
                 <a class="btn btn-primary float-right"
-                   href="{{ path('workers_app/employee/change_password',{"id":worker.id}) }}" role="button">Resetuj
+                   href="{{ path('workers_app/employees/change_password',{"id":worker.id}) }}" role="button">Resetuj
                     hasło</a>
                 <a class="btn btn-primary float-right" style="margin-left: 2px; margin-right: 2px"
-                   href="{{ path('workers_app/employee/edit',{"id":worker.id}) }}" role="button">Edytuj</a>
+                   href="{{ path('workers_app/employees/edit',{"id":worker.id}) }}" role="button">Edytuj</a>
                 {#<a class="btn btn-primary float-right"  href="{{ path('workers_app/pracownicy/delete',{"id":worker.id}) }}" role="button">Usuń</a>#}
                 <button type="button" id="worker" class="btn btn-danger float-right" data-toggle="modal"
                         data-target="#employeeId{{ worker.id }}">
@@ -104,10 +104,10 @@
                             e.target.setAttribute('disabled', 'true');
                             document.getElementById('spinner' + id).setAttribute('class', 'fa fa-spinner fa-spin');
 
-                            fetch(`{{ path('workers_app/employee/delete') }}/${id}`,
+                            fetch(`{{ path('workers_app/employees/delete') }}/${id}`,
                                 {method: 'DELETE'}
                             ).then(res => window.location.reload());
-                            location.href = "{{ path('worker_app/employee/list') }}";
+                            location.href = "{{ path('worker_app/employees/list') }}";
                         }
                     })
                 }
