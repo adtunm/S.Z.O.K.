@@ -140,6 +140,9 @@
     "symfony/event-dispatcher": {
         "version": "v4.1.6"
     },
+    "symfony/expression-language": {
+        "version": "v4.1.6"
+    },
     "symfony/filesystem": {
         "version": "v4.1.6"
     },
@@ -195,7 +198,7 @@
         "version": "v1.0.5"
     },
     "symfony/polyfill-intl-icu": {
-        "version": "v1.9.0"
+        "version": "v1.10.0"
     },
     "symfony/polyfill-mbstring": {
         "version": "v1.9.0"
