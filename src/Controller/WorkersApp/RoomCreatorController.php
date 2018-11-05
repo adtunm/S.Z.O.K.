@@ -26,4 +26,20 @@ class RoomCreatorController extends Controller
             return $this->redirectToRoute('workers_app/login_page');
         }
     }
+
+    /**
+     * @Route("/workersApp/roomCreator/roomNumberVerification",
+     *     methods={"GET"},
+     *     options={"expose" = true},
+     *     name="workers_app/room_creator_page/room_number_verification")
+     */
+    public function roomNumberVerification($roomNumber): bool
+    {
+        if ($roomNumber == 1){
+            $result = false;
+        }else{
+            $result = true;
+        }
+        return $result;
+    }
 }

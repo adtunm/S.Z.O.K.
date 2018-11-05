@@ -2,19 +2,36 @@ var roomContentContener;
 var row;
 var seat;
 var seatTable;
-
+// import Routing from '../../vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.min.js';
 var test;
 
-function f() {
-    $.ajax({
-        url: "saveToDatabase.php",
-        type: "post", //typ połączenia
-        dataType: 'json', //typ danych jakich oczekujemy w odpowiedzi
-        data: { //dane do wysyłki
-            name: 'Marcin',
-            country: 'Polska'
+
+function dataVerification() {
+    //
+    // const routes = require('../../public/js/fos_js_routes.json');
+    // Routing.setRoutingData(routes);
+
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var result = this.responseText;
+            if(result){
+                dataPull();
+            }else{
+                document.getElementById("demo").innerHTML = "222222222!";
+            }
         }
-    });
+        else{
+            document.getElementById("demo").innerHTML = "1111111111!";
+        }
+    };
+
+    // var url = Routing.generate('workers_app/room_creator_page/room_number_verification', {roomNumber: 2});
+
+    // var url = "{{ path('workers_app/room_creator_page/room_number_verification', {'roomNumber': '2'}) }}";
+    xmlhttp.open("GET", "../dataVerification.php?roomNumber=2" , true);
+    xmlhttp.send();
 }
 
 
