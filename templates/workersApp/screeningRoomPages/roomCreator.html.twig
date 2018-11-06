@@ -1,8 +1,8 @@
 {% extends 'workersApp/workerBase.html.twig' %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{asset('css/room_view.css')}}" type="text/css">
-{% endblock%}
+    <link rel="stylesheet" href="{{ asset('css/room_view.css') }}" type="text/css">
+{% endblock %}
 
 {% block javascripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -14,7 +14,6 @@
         <div class="">
             <h1 class="mb-3 font-weight-normal">Nowa sala</h1>
         </div>
-
         <div class="">
             <form method="" class="form-inline">
 
@@ -28,7 +27,7 @@
 
                 <label for="inputRowNumber" class="mx-sm-2">Liczba pozycji w rzędzie:</label>
                 <input type="number" min="5" max="99" step="1" value="10" name="roomnumber" id="inputSeatNumber"
-                       class="form-control" >
+                       class="form-control">
 
                 <button class="btn btn-primary ml-sm-2" onclick="createRoom()" type="button">
                     Zmień
@@ -36,7 +35,9 @@
             </form>
         </div>
     </div>
-
+    {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
     <div class="content panel justify-center mt-2 mx-0 p-5 bg-light">
         <div class="row justify-content-between px-3">
             <div class="room_view" id="roomContent">
@@ -76,11 +77,19 @@
                 Anuluj
             </button>
         </div>
-        <div class="">
-            <button class="btn btn-primary ml-sm-2" type="submit">
-                Zapisz
-            </button>
+        <div class="" onload="createRoom(myData)">
+            <form method="post">
+                <input type="text" id="roomNumber" name="roomNumber" value="{{ error }}">
+                <input type="text" id="rowCount" name="rowCount" value="{{ error }}">
+                <input type="text" id="seatCount" name="seatCount" value="{{ error }}">
+                <input type="text" id="rowCode" name="rowCode" value="{{ error }}">
+                <input type="text" id="seatCode" name="seatCode" value="{{ error }}">
+                <button class="btn btn-primary ml-sm-2" onclick="setData()" type="submit">
+                    Zapisz
+                </button>
+            </form>
         </div>
     </div>
 
+    {#hidden="false"#}
 {% endblock %}

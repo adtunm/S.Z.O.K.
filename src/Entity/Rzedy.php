@@ -45,33 +45,33 @@ class Rzedy
     }
 
     /**
-     * @return \Sale
+     * @return ?Sale
      */
-    public function getSale(): \Sale
+    public function getSale(): ?Sale
     {
         return $this->sale;
     }
 
     /**
-     * @param \Sale $sale
+     * @param Sale $sale
      */
-    public function setSale(\Sale $sale): void
+    public function setSale(Sale $sale): void
     {
         $this->sale = $sale;
     }
 
     /**
-     * @return \Typyrzedow
+     * @return ?Typyrzedow
      */
-    public function getTypyrzedow(): \Typyrzedow
+    public function getTypyrzedow(): ?Typyrzedow
     {
         return $this->typyrzedow;
     }
 
     /**
-     * @param \Typyrzedow $typyrzedow
+     * @param Typyrzedow $typyrzedow
      */
-    public function setTypyrzedow(\Typyrzedow $typyrzedow): void
+    public function setTypyrzedow(Typyrzedow $typyrzedow): void
     {
         $this->typyrzedow = $typyrzedow;
     }
