@@ -245,7 +245,7 @@ class Pracownicy implements UserInterface
      *
      * @ORM\Column(name="nazwisko", type="string", length=45, nullable=false)
      * @Assert\Regex(
-     *     pattern="/^\p{Lu}[\p{L}\d\s]+$/u",
+     *     pattern="/^\p{Lu}[\p{L}\d\s\-]+$/u",
      *     message="Nazwisko powinno się składać tylko z liter, spacji oraz myślników i zaczyynać się wielką literą."
      * )
      * @Assert\Length(

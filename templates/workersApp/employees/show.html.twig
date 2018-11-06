@@ -31,86 +31,78 @@
             </tr>
             </tbody>
         </table>
-        <div id = "options">
-            <a class="btn btn-primary" href="{{ path('worker_app/employees/list') }}" role="button">Wróć</a>
-            {% if is_granted('ROLE_ADMIN') %}
-                <a class="btn btn-primary float-right"
-                   href="{{ path('workers_app/employees/change_password',{"id":worker.id}) }}" role="button">Resetuj
-                    hasło</a>
-                <a class="btn btn-primary float-right" style="margin-left: 2px; margin-right: 2px"
-                   href="{{ path('workers_app/employees/edit',{"id":worker.id}) }}" role="button">Edytuj</a>
-                {#<a class="btn btn-primary float-right"  href="{{ path('workers_app/pracownicy/delete',{"id":worker.id}) }}" role="button">Usuń</a>#}
-                <button type="button" id="worker" class="btn btn-danger float-right" data-toggle="modal"
-                        data-target="#employeeId{{ worker.id }}">
-                    Usuń
-                </button>
 
-                <div class="modal fade" id="employeeId{{ worker.id }}" tabindex="-1" role="dialog"
-                     aria-labelledby="modelTitleId" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content bg-dark text-light text-left">
-                            <div class="modal-header">
-                                <h4 class="modal-title" id="modelTitleId">
-                                    <i class="fa fa-trash" aria-hidden="true"></i>
-                                    Usuwanie pracownika
-                                </h4>
-                                <button type="button" class="close text-light" data-dismiss="modal"
-                                        aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                Czy napewno chcesz usunąć tego pracownika?
-                                <ul>
-                                    <li>
-                                        Rola: {{ worker.role.nazwa }}
-                                    </li>
-                                    <li>
-                                        Login: {{ worker.login }}
-                                    </li>
-                                    <li>
-                                        Imie: {{ worker.imie }}
-                                    </li>
-                                    <li>
-                                        Nazwisko:{{ worker.nazwisko }}
-                                    </li>
+        <a class="btn btn-primary" href="{{ path('worker_app/employees/list') }}" role="button">Wróć</a>
+        {% if is_granted('ROLE_ADMIN') %}
+            <a class="btn btn-primary float-right"
+               href="{{ path('workers_app/employees/change_password',{"id":worker.id}) }}" role="button">Resetuj
+                hasło</a>
+            <a class="btn btn-primary float-right" style="margin-left: 2px; margin-right: 2px"
+               href="{{ path('workers_app/employees/edit',{"id":worker.id}) }}" role="button">Edytuj</a>
+            <button type="button" id="worker" class="btn btn-danger float-right" data-toggle="modal"
+                    data-target="#employee">
+                Usuń
+            </button>
 
-                                </ul>
-                                Akcji tej nie da sie odwrócić.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                    Anuluj
-                                </button>
-                                <button type="button" class="btn btn-danger delete-employee"
-                                        data-id="{{ worker.id }}">
-                                    <i id="spinner{{ worker.id }}"></i> Usuń
-                                </button>
-                            </div>
+            <div class="modal fade" id="employee" tabindex="-1" role="dialog"
+                 aria-labelledby="modelTitleId" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content bg-dark text-light text-left">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="modelTitleId">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                Usuwanie pracownika
+                            </h4>
+                            <button type="button" class="close text-light" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Czy napewno chcesz usunąć tego pracownika?
+                            <ul>
+                                <li>
+                                    Rola: {{ worker.role.nazwa }}
+                                </li>
+                                <li>
+                                    Login: {{ worker.login }}
+                                </li>
+                                <li>
+                                    Imie: {{ worker.imie }}
+                                </li>
+                                <li>
+                                    Nazwisko:{{ worker.nazwisko }}
+                                </li>
+
+                            </ul>
+                            Akcji tej nie da sie odwrócić.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Anuluj
+                            </button>
+                            <button type="button" id="delete-employee" class="btn btn-danger"
+                                    data-id="{{ worker.id }}">
+                                <i id="spinner{{ worker.id }}"></i> Usuń
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-    {% endif %}
+
+        {% endif %}
 
         {% if is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN') %}
             <script>
-                const employee = document.getElementById('options');
-                if (employee) {
-                    console.log(employee);
-                    employee.addEventListener('click', e => {
-                        if (e.target.className === 'btn btn-danger delete-employee') {
-                            const id = e.target.getAttribute('data-id');
-                            e.target.setAttribute('disabled', 'true');
-                            document.getElementById('spinner' + id).setAttribute('class', 'fa fa-spinner fa-spin');
-
-                            fetch(`{{ path('workers_app/employees/delete') }}/${id}`,
-                                {method: 'DELETE'}
-                            ).then(res => window.location.reload());
-                            location.href = "{{ path('worker_app/employees/list') }}";
-                        }
-                    })
-                }
+                const employee = document.getElementById('delete-employee');
+                employee.addEventListener('click', e => {
+                    const id = e.target.getAttribute('data-id');
+                    e.target.setAttribute('disabled', 'true');
+                    document.getElementById('spinner' + id).setAttribute('class', 'fa fa-spinner fa-spin');
+                    fetch(`{{ path('workers_app/employees/delete') }}/${id}`,
+                        {method: 'DELETE'}
+                    ).then(res => window.location.href = "{{ path('worker_app/employees/list') }}");
+                })
             </script>
         {% endif %}
     {% else %}

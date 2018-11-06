@@ -21,7 +21,7 @@ class EmployeeControler extends AbstractController
      * @Route("/workersApp/employees/new", name="workers_app/employees/new")
      */
 
-    public function addEmployee(Request $request, UserPasswordEncoderInterface $passwordEncoder, ValidatorInterface $validator)
+    public function addEmployee(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         if ($this->isGranted('ROLE_ADMIN')) {
             $pracownik = new Pracownicy();
@@ -232,7 +232,6 @@ class EmployeeControler extends AbstractController
                     $entityManager->merge($pracownik);
                     $entityManager->flush();
                     return $this->redirectToRoute('worker_app/employees/list');
-
             }
             return $this->render('workersApp/employees/edit.html.twig', array('form' => $form->createView(), 'id' => $id));
         } else {
@@ -246,14 +245,13 @@ class EmployeeControler extends AbstractController
     /**
      * @Route("/workersApp/employees/delete/{id?}", name="workers_app/employees/delete", methods={"DELETE"})
      */
-    public function delete(Request $request, $id)
+    public function delete($id)
     {
         if ($this->isGranted('ROLE_ADMIN')) {
             $pracownik = $this->getDoctrine()->getRepository(Pracownicy::class)->find($id);
             $pracownik->setczyAktywny(0);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->merge($pracownik);
-            var_dump("asd");
             $entityManager->flush();
             return $this->redirectToRoute('worker_app/employees/list');
         } else {
@@ -274,7 +272,11 @@ class EmployeeControler extends AbstractController
             $form = $this->createFormBuilder($pracownik)
                 ->add('haslo', TextType::class, array(
                     'label' => 'Hasło: ',
-                    'attr' => array('class' => 'form-control', "pattern" => "[A-Za-z0-9]{3,45}", 'title' => 'Wprowadź hasło(wymagane od 3 do 45 znaków bez poslkich liter)', 'value' => "", 'autocomplete' => "off"),
+                    'attr' => array('class' => 'form-control',
+                        "pattern" => "[A-Za-z0-9]{3,45}",
+                        'title' => 'Wprowadź hasło(wymagane od 3 do 45 znaków bez poslkich liter)',
+                        'value' => "",
+                        'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
                 ->add('save', SubmitType::class, array(
