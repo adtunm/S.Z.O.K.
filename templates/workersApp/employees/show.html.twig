@@ -5,29 +5,29 @@
     {% if worker %}
         <div class="container">
             <div class="justify-content-center ">
-                <div class="row border-bottom" style="padding-bottom: 12px; padding-top: 12px">
-                    <div class="col-6">Login:</div>
-                    <div class="col-6 ">{{ worker.login }}</div>
+                <div class="row mb-3">
+                    <div class="col-sm-2">Login:</div>
+                    <div class="col-sm-10 pl-sm-2">{{ worker.login }}</div>
                 </div>
-                <div class="row border-bottom" style="padding-bottom: 12px; padding-top: 12px">
-                    <div class="col-6">Imię:</div>
-                    <div class="col-6">{{ worker.imie }}</div>
+                <div class="row mb-3">
+                    <div class="col-sm-2">Imię:</div>
+                    <div class="col-sm-10 pl-sm-2">{{ worker.imie }}</div>
                 </div>
-                <div class="row border-bottom" style="padding-bottom: 12px; padding-top: 12px">
-                    <div class="col-6 ">Nazwisko:</div>
-                    <div class="col-6">{{ worker.nazwisko }}</div>
+                <div class="row mb-3">
+                    <div class="col-sm-2">Nazwisko:</div>
+                    <div class="col-sm-10 pl-sm-2">{{ worker.nazwisko }}</div>
                 </div>
-                <div class="row border-bottom" style="padding-bottom: 12px; padding-top: 12px">
-                    <div class="col-6 ">Mail::</div>
-                    <div class="col-6">{{ worker.email }}</div>
+                <div class="row mb-3">
+                    <div class="col-sm-2">Email:</div>
+                    <div class="col-sm-10 pl-sm-2">{{ worker.email }}</div>
                 </div>
-                <div class="row border-bottom" style="padding-bottom: 12px; padding-top: 12px">
-                    <div class="col-6 ">Numer telefonu:</div>
-                    <div class="col-6">{{ worker.telefon }}</div>
+                <div class="row mb-3" >
+                    <div class="col-sm-2">Numer telefonu:</div>
+                    <div class="col-sm-10 pl-sm-2">{{ worker.telefon }}</div>
                 </div>
-                <div class="row" style="padding-bottom: 12px; padding-top: 12px">
-                    <div class="col-6 ">Rola:</div>
-                    <div class="col-6">{{ worker.role.nazwa }}</div>
+                <div class="row mb-3" >
+                    <div class="col-sm-2">Rola:</div>
+                    <div class="col-sm-10 pl-sm-2">{{ worker.role.nazwa }}</div>
                 </div>
             </div>
         </div>
