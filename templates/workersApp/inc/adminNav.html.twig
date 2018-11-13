@@ -17,8 +17,8 @@
                             Pracownicy
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="pracownicyDropdown">
-                            <a class="dropdown-item" href="#">Wyświetl listę pracowników</a>
-                            <a class="dropdown-item" href="#">Dodaj nowego pracownika</a>
+                            <a class="dropdown-item" href="{{ path('worker_app/employees/list') }}">Wyświetl listę pracowników</a>
+                            <a class="dropdown-item" href="{{ path("workers_app/employees/new") }}">Dodaj nowego pracownika</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -116,7 +116,7 @@
                             <i class="fa fa-user" aria-hidden="true"></i> Witaj, {{ app.user.Imie }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="loggedDropdown">
-                            <a class="dropdown-item" href="#">Zmień hasło</a>
+                            <a class="dropdown-item" href="{{ path('workers_app/employees/change_password',{"id":app.user.Id}) }}">Zmień hasło</a>
                             <div class="dropdown-divider"></div>
                             <!-- Button trigger modal -->
                             <button type="button" class="dropdown-item btn" data-toggle="modal"
