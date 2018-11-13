@@ -117,7 +117,7 @@ class EmployeesControler extends AbstractController
         if ($this->isGranted('ROLE_ADMIN') || $this->isGranted('ROLE_MANAGER')) {
             $pageLimit = $this->getParameter('page_limit');
             $pageCount = $this->getDoctrine()->getRepository(Pracownicy::class)->getPageCountOfActive($pageLimit);
-            if ($page > $pageCount)
+            if ($page > $pageCount or ($page==1 and $pageCount==0))
                 return $this->redirectToRoute('worker_app/employees/list');
             else {
                 $workerList = $this->getDoctrine()->getRepository(Pracownicy::class)->findActive($page, $pageLimit);
@@ -266,6 +266,7 @@ class EmployeesControler extends AbstractController
                         "pattern" => "\S{8,64}",
                         'title' => 'Dowolne znaki bez znaków białych, od 8 do 64 znaków.',
                         'value' => "",
+                        'placeholder' => "Wprowadź hasło..",
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
