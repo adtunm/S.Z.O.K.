@@ -12,10 +12,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
 
-
-class EmployeeControler extends AbstractController
+class EmployeesControler extends AbstractController
 {
     /**
      * @Route("/workersApp/employees/new", name="workers_app/employees/new")
@@ -25,12 +23,6 @@ class EmployeeControler extends AbstractController
     {
         if ($this->isGranted('ROLE_ADMIN')) {
             $pracownik = new Pracownicy();
-            $pracownik->setLogin("");
-            $pracownik->setHaslo("");
-            $pracownik->setImie("");
-            $pracownik->setNazwisko("");
-            $pracownik->setEmail("");
-            $pracownik->setTelefon("");
             $form = $this->createFormBuilder($pracownik)
                 ->add('role', EntityType::class, array(
                     'class' => Role::class,
@@ -45,15 +37,15 @@ class EmployeeControler extends AbstractController
                     'attr' => array('class' => 'form-control',
                         "pattern" => "[A-Za-z0-9-_]{5,45}",
                         "placeholder" => "Wprowadź login..",
-                        'title' => 'Wymagane od 3 do 45 dużych/małych liter lub cyfr.',
+                        'title' => 'Polskie litery, cyfry, myślniki, podkreślenia, od 5 do 45 znaków.',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
                 ->add('haslo', TextType::class, array(
                     'label' => 'Hasło:',
                     'attr' => array('class' => 'form-control',
-                        "pattern" => "[A-Za-z0-9-_]{3,45}",
-                        'title' => 'Wymagane od 3 do 45 dużych/małych liter lub cyfr.',
+                        "pattern" => "\S{8,64}",
+                        'title' => 'Dowolne znaki bez znaków białych, od 8 do 64 znaków.',
                         'placeholder' => 'Wprowadź hasło..',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
@@ -61,8 +53,8 @@ class EmployeeControler extends AbstractController
                 ->add('imie', TextType::class, array(
                     'label' => 'Imię:',
                     'attr' => array('class' => 'form-control',
-                        "pattern" => "[A-ZŁŚ]+[a-ząęółśżźćń\s-_]{2,44}",
-                        'title' => 'Wymagane od 3 do 45 liter i 1-sza duża litera',
+                        "pattern" => "^[A-ZĄĘÓŁŚŻŹĆŃ][a-zA-ZĄĘÓŁŚŻŹĆŃąęółśżźćń ]{2,44}",
+                        'title' => 'Polskie znaki, spacja, pierwsza duża litera, od 3 do 45 znaków',
                         'placeholder' => 'Wprowadź imię..',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
@@ -70,8 +62,8 @@ class EmployeeControler extends AbstractController
                 ->add('nazwisko', TextType::class, array(
                     'label' => 'Nazwisko:',
                     'attr' => array('class' => 'form-control',
-                        "pattern" => "[A-ZĄĘÓŁŚŻŹĆŃ]+[a-zA-ZĄĘÓŁŚŻŹĆŃąęółśżźćń\-\s_]{2,44}",
-                        'title' => 'Wprowadź Nazwisko,(wymagane od 3 do 45 znaków i 1-sza duża litera)',
+                        "pattern" => "[A-ZĄĘÓŁŚŻŹĆŃ][a-zA-ZĄĘÓŁŚŻŹĆŃąęółśżźćń -]{2,44}",
+                        'title' => 'Polskie znaki, spacja, myślnik, pierwsza duża litera, od 3 do 45 znaków',
                         'placeholder' => 'Wprwadź nazwisko..',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
@@ -79,7 +71,7 @@ class EmployeeControler extends AbstractController
                 ->add('email', EmailType::class, array(
                     'label' => 'E-mail:',
                     'attr' => array('class' => 'form-control',
-                        "placeholder"=>"Wprowdź email..",
+                        "placeholder" => "Wprowdź email..",
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
@@ -87,7 +79,7 @@ class EmployeeControler extends AbstractController
                     'label' => 'Telefon:',
                     'attr' => array("class" => "form-control",
                         "pattern" => "[0-9]{9}",
-                        "title" => "Wprowadź numer telefonu(wymagane do 9 cyfr) ",
+                        "title" => "9 cyfr",
                         "placeholder" => 'Wprowadź numer telefonu..',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
@@ -99,26 +91,24 @@ class EmployeeControler extends AbstractController
                 ->getForm();
             $form->handleRequest($request);
 
-                if ($form->isSubmitted() && $form->isValid()) {
-                    $var = $form->get('haslo')->getData();
-                    $password = $passwordEncoder->encodePassword($pracownik, $var);
-                    $pracownik->setHaslo($password);
-                    $entityManager = $this->getDoctrine()->getManager();
-                    $entityManager->persist($pracownik);
-                    $entityManager->flush();
+            if ($form->isSubmitted() && $form->isValid()) {
+                $var = $form->get('haslo')->getData();
+                $password = $passwordEncoder->encodePassword($pracownik, $var);
+                $pracownik->setHaslo($password);
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($pracownik);
+                $entityManager->flush();
 
-                    return $this->redirectToRoute('worker_app/employees/list');
-                }
-
+                return $this->redirectToRoute('worker_app/employees/list');
+            }
             return $this->render('workersApp/employees/new.html.twig', array('form' => $form->createView()));
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->render('workersApp/employees/permission.html.twig');
+                return $this->redirectToRoute('workers_app/no_permission');
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }
     }
-
     /**
      * @Route("/workersApp/employees/{page?1}", name="worker_app/employees/list", requirements={"page"="\d+"}, methods={"GET"} )
      */
@@ -130,17 +120,16 @@ class EmployeeControler extends AbstractController
             if ($page > $pageCount)
                 return $this->redirectToRoute('worker_app/employees/list');
             else {
-                $workerList = $this->getDoctrine()->getRepository(Pracownicy::class)->findActual($page, $pageLimit);
+                $workerList = $this->getDoctrine()->getRepository(Pracownicy::class)->findActive($page, $pageLimit);
                 return $this->render('workersApp/employees/list.html.twig', array('workerList' => $workerList, 'currentPage' => $page, 'pageCount' => $pageCount));
             }
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->render('workersApp/employees/permission.html.twig');
+                return $this->redirectToRoute('workers_app/no_permission');
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }
     }
-
     /**
      * @Route("/workersApp/employees/show/{id}", name="workers_app/employees/show", methods={"GET"})
      */
@@ -151,18 +140,19 @@ class EmployeeControler extends AbstractController
             return $this->render('workersApp/employees/show.html.twig', array('worker' => $worker));
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->render('workersApp/employees/permission.html.twig');
+                return $this->redirectToRoute('workers_app/no_permission');
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }
     }
-
     /**
      * @Route("/workersApp/employees/edit/{id}", name="workers_app/employees/edit")
      */
     public function edit(Request $request, $id)
     {
         if ($this->isGranted('ROLE_ADMIN')) {
+            $user = $this->getUser();
+
             $pracownik = $this->getDoctrine()->getRepository(Pracownicy::class)->find($id);
             $form = $this->createFormBuilder($pracownik)
                 ->remove('haslo')
@@ -177,9 +167,9 @@ class EmployeeControler extends AbstractController
                 ->add('login', TextType::class, array(
                     'label' => 'Login:',
                     'attr' => array('class' => 'form-control',
-                        "pattern" => "[A-Za-z0-9\-]{5,45}",
+                        "pattern" => "[A-Za-z0-9_-]{5,45}",
                         "placeholder" => "Wprowadź login..",
-                        'title' => 'Wymagane od 3 do 45 dużych/małych liter lub cyfr.',
+                        'title' => 'Polskie litery, cyfry, myślniki, podkreślenia, od 5 do 45 znaków.',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
@@ -187,7 +177,7 @@ class EmployeeControler extends AbstractController
                     'label' => 'Imię:',
                     'attr' => array('class' => 'form-control',
                         "pattern" => "[A-ZŁŚ]{1}+[a-ząęółśżźćń]{2,44}",
-                        'title' => 'Wymagane od 3 do 45 liter i 1-sza duża litera',
+                        'title' => 'Polskie znaki, spacja, pierwsza duża litera, od 3 do 45 znaków',
                         'placeholder' => 'Wprowadź imię..',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
@@ -196,7 +186,7 @@ class EmployeeControler extends AbstractController
                     'label' => 'Nazwisko:',
                     'attr' => array('class' => 'form-control',
                         "pattern" => "[A-ZĄĘÓŁŚŻŹĆŃ]{1}+[a-ząęółśżźćń\-\s]{2,44}",
-                        'title' => 'Wprowadź Nazwisko,(wymagane od 3 do 45 znaków i 1-sza duża litera)',
+                        'title' => 'Polskie znaki, spacja, myślnik, pierwsza duża litera, od 3 do 45 znaków',
                         'placeholder' => 'Wprwadź nazwisko..',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
@@ -204,7 +194,7 @@ class EmployeeControler extends AbstractController
                 ->add('email', EmailType::class, array(
                     'label' => 'E-mail:',
                     'attr' => array('class' => 'form-control',
-                        "placeholder"=>"Wprowdź email..",
+                        "placeholder" => "Wprowdź email..",
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
@@ -212,36 +202,35 @@ class EmployeeControler extends AbstractController
                     'label' => 'Telefon:',
                     'attr' => array("class" => "form-control",
                         "pattern" => "[0-9]{9}",
-                        "title" => "Wprowadź numer telefonu(wymagane do 9 cyfr) ",
+                        "title" => "9 cyfr",
                         "placeholder" => 'Wprowadź numer telefonu..',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
                 ->add('save', SubmitType::class, array(
                     'label' => 'Edytuj pracownika',
-                    'attr' => array('class' => "btn btn-primary float-right")
+                    'attr' => array('class' => "btn btn-primary float-right", 'style' => 'margin-right:-15px')
                 ))
                 ->getForm();
-
+            if ($user->getId() == $pracownik->getId())
+                $form->remove("role");
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()) {
-
-                    $pracownik = $form->getData();
-                    $entityManager = $this->getDoctrine()->getManager();
-                    $entityManager->merge($pracownik);
-                    $entityManager->flush();
-                    return $this->redirectToRoute('worker_app/employees/list');
+                $pracownik = $form->getData();
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->merge($pracownik);
+                $entityManager->flush();
+                return $this->redirectToRoute('worker_app/employees/list');
             }
             return $this->render('workersApp/employees/edit.html.twig', array('form' => $form->createView(), 'id' => $id));
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->render('workersApp/employees/permission.html.twig');
+                return $this->redirectToRoute('workers_app/no_permission');
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }
     }
-
     /**
      * @Route("/workersApp/employees/delete/{id?}", name="workers_app/employees/delete", methods={"DELETE"})
      */
@@ -256,35 +245,35 @@ class EmployeeControler extends AbstractController
             return $this->redirectToRoute('worker_app/employees/list');
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->render('workersApp/employees/permission.html.twig');
+                return $this->redirectToRoute('workers_app/no_permission');
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }
     }
-
     /**
-     * @Route("/workersApp/employees/changePassword/{id}", name="workers_app/employees/change_password")
+     * @Route("/workersApp/employees/resetPassword/{id}", name="workers_app/employees/reset_password")
      */
-    public function changePassword(Request $request, $id, UserPasswordEncoderInterface $passwordEncoder)
+    public function resetPassword(Request $request, $id, UserPasswordEncoderInterface $passwordEncoder)
     {
         if ($this->isGranted('ROLE_ADMIN')) {
             $pracownik = $this->getDoctrine()->getRepository(Pracownicy::class)->find($id);
+            if ($this->getUser()->getId() == $pracownik->getId())
+                return $this->redirectToRoute('workers_app/no_permission');
             $form = $this->createFormBuilder($pracownik)
                 ->add('haslo', TextType::class, array(
                     'label' => 'Hasło: ',
                     'attr' => array('class' => 'form-control',
-                        "pattern" => "[A-Za-z0-9]{3,45}",
-                        'title' => 'Wprowadź hasło(wymagane od 3 do 45 znaków bez poslkich liter)',
+                        "pattern" => "\S{8,64}",
+                        'title' => 'Dowolne znaki bez znaków białych, od 8 do 64 znaków.',
                         'value' => "",
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
                 ->add('save', SubmitType::class, array(
-                    'label' => 'Zmień hasło',
-                    'attr' => array('class' => "btn btn-primary float-right")
+                    'label' => 'Resetuj hasło',
+                    'attr' => array('class' => "btn btn-primary float-right", 'style' => "margin-right: -15px;")
                 ))
                 ->getForm();
-
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()) {
@@ -294,15 +283,55 @@ class EmployeeControler extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($pracownik);
                 $entityManager->flush();
-
                 return $this->redirectToRoute('worker_app/employees/list');
             }
-            return $this->render('workersApp/employees/changePassword.html.twig', array(
+            return $this->render('workersApp/employees/resetPassword.html.twig', array(
                 'form' => $form->createView(), 'id' => $id
             ));
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->render('workersApp/employees/permission.html.twig');
+                return $this->redirectToRoute('workers_app/no_permission');
+            else
+                return $this->redirectToRoute('workers_app/login_page');
+        }
+    }
+    /**
+     * @Route("/workersApp/employees/changePassword/{id}", name="workers_app/employees/change_password")
+     */
+    public function changePassword($id, UserPasswordEncoderInterface $passwordEncoder)
+    {
+        if ($this->isGranted('ROLE_ADMIN')) {
+            $pracownik = $this->getDoctrine()->getRepository(Pracownicy::class)->find($id);
+            if ($this->getUser()->getId() != $pracownik->getId())
+                return $this->redirectToRoute('workers_app/no_permission');
+            $error = "";
+            if ($_POST) {
+                $oldPassword = $_POST['oldPassword'];
+                $newPassword = $_POST['newPassword'];
+                $confirmPassword = $_POST['confirmPassword'];
+                if (!preg_match("/^[\S]+$/u", $newPassword)) {
+                    $error = 'Hasło może składać się ze wszystkich znaków z wyłączeniem znaków białych';
+                } elseif ($passwordEncoder->isPasswordValid($pracownik, $oldPassword)) {
+                    if ($newPassword == $confirmPassword) {
+                        $newPassword = $passwordEncoder->encodePassword($pracownik, $newPassword);
+                        $pracownik->setHaslo($newPassword);
+                        $entityManager = $this->getDoctrine()->getManager();
+                        $entityManager->persist($pracownik);
+                        $entityManager->flush();
+                        return $this->redirectToRoute('worker_app/employees/list');
+                    } else {
+                        $error = "Podane hasła nie są identyczne";
+                    }
+                } else {
+                    $error = "Aktualne hasło jest błędne";
+                }
+            }
+            return $this->render('workersApp/employees/changePassword.html.twig', array(
+                'id' => $id, 'error' => $error
+            ));
+        } else {
+            if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
+                return $this->redirectToRoute('workers_app/no_permission');
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }

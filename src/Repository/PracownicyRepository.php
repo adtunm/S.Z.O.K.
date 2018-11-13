@@ -35,17 +35,15 @@ class PracownicyRepository extends ServiceEntityRepository
             ->getQuery();
 
         $count = $query->getSingleScalarResult();
-
         $pageCount = floor($count / $pageLimit);
         $rest = $count % $pageLimit;
         if($rest != 0) {
             $pageCount = $pageCount + 1;
         }
-
         return $pageCount;
     }
 
-    public function findActual($page = 1, $pageLimit = 10)
+    public function findActive($page = 1, $pageLimit = 10)
     {
         $query = $this->createQueryBuilder('p')
             ->andWhere('p.czyaktywny IS NULL')
@@ -53,12 +51,10 @@ class PracownicyRepository extends ServiceEntityRepository
             ->getQuery();
 
         $requestedPage = new Paginator($query);
-
         $requestedPage->getQuery()
             ->setFirstResult($pageLimit * ($page - 1))
             ->setMaxResults($pageLimit);
 
         return $requestedPage;
     }
-
 }

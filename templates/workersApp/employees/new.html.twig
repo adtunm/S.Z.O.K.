@@ -1,12 +1,13 @@
 {% extends 'workersApp/workerBase.html.twig' %}
 {% block content %}
-    <div class="row justify-content-center">
-        <div class="col-md-9 ">
-            <div class="h1 col-md">Dodaj nowego pracownika<br><br></div>
-            {{ form_start(form) }}
+    <div class="pb-4 mt-0">
+    <div class="h1 pb-3">Dodaj nowego pracownika</div>
+    {{ form_start(form) }}
+    <div class="mx-3">
+        <div class="mx-3">
             <div class="form-group row">
                 {{ form_label(form.role) }}
-                <div class="col-sm-10 px-0"">
+                <div class="col-sm-10 px-0">
                     {{ form_widget(form.role) }}
                 </div>
             </div>
@@ -88,7 +89,18 @@
                     </div>
                 </div>
             </div>
+            <div class="pull-right" style="margin-right: -15px">
+                {{ form_widget(form.save) }}
+            </div>
             {{ form_end(form) }}
+            <a class="btn btn-secondary float-left" href="{{ path('worker_app/employees/list') }}"
+               role="button">Wróć</a>
         </div>
     </div>
+
+
+
+
+
+
 {% endblock %}

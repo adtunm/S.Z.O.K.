@@ -68,7 +68,7 @@ class Pracownicy implements UserInterface
     /**
      * @return string
      */
-    public function getLogin(): string
+    public function getLogin(): ?string
     {
         return $this->login;
     }
@@ -84,7 +84,7 @@ class Pracownicy implements UserInterface
     /**
      * @return string
      */
-    public function getHaslo(): string
+    public function getHaslo(): ?string
     {
         return $this->haslo;
     }
@@ -100,7 +100,7 @@ class Pracownicy implements UserInterface
     /**
      * @return string
      */
-    public function getImie(): string
+    public function getImie(): ?string
     {
         return $this->imie;
     }
@@ -116,7 +116,7 @@ class Pracownicy implements UserInterface
     /**
      * @return string
      */
-    public function getNazwisko(): string
+    public function getNazwisko(): ?string
     {
         return $this->nazwisko;
     }
@@ -132,7 +132,7 @@ class Pracownicy implements UserInterface
     /**
      * @return string
      */
-    public function getTelefon(): string
+    public function getTelefon(): ?string
     {
         return $this->telefon;
     }
@@ -148,7 +148,7 @@ class Pracownicy implements UserInterface
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
@@ -173,7 +173,7 @@ class Pracownicy implements UserInterface
     /**
      * @param \Role $role
      */
-    public function setRole(?Role $role): void
+    public function setRole(Role $role): void
     {
         $this->role = $role;
     }
@@ -193,7 +193,8 @@ class Pracownicy implements UserInterface
      * @ORM\Column(name="login", type="string", length=50, nullable=false)
      *
      * @Assert\Regex(
-     *     pattern="/^[\p{L}\d\-]+$/u"
+     *     pattern="/^[\p{L}\d\-\_]+$/u",
+     *     message="Wymagane od 5 do 45 dużych/małych liter lub cyfr(dozwolone \'-\' oraz \'_\')."
      *
      * )
      * @Assert\Length(
@@ -209,8 +210,8 @@ class Pracownicy implements UserInterface
      * @var string
      * @ORM\Column(name="haslo", type="string", length=64, nullable=false)
      * @Assert\Regex(
-     *     pattern="/^[\p{L}\d\-\/\$\.]+$/u",
-     *     message="Hasło powinno składać się tylko z liter, myślników i cyfr."
+     *     pattern="/^[\S]+$/u",
+     *     message="Hasło może składać się ze wszystkich znaków z wyłączeniem znaków białych"
      * )
      * @Assert\Length(
      *     max = 64,
@@ -231,10 +232,10 @@ class Pracownicy implements UserInterface
      *     message="Imię powinno składać się tylko z liter lub spacji i rozpoczynać się wielką literą."
      * )
      * @Assert\Length(
-     *     max = 64,
+     *     max = 45,
      *     min = 3,
-     *     maxMessage = "Hasło może zawierać maksymalnie 64 znaków.",
-     *     minMessage = "Hasło musi zawierać minimum 3 znaków."
+     *     maxMessage = "Imię może zawierać maksymalnie 45 znaków.",
+     *     minMessage = "Imię musi zawierać minimum 3 znaki."
      * )
      *
      */
@@ -246,13 +247,13 @@ class Pracownicy implements UserInterface
      * @ORM\Column(name="nazwisko", type="string", length=45, nullable=false)
      * @Assert\Regex(
      *     pattern="/^\p{Lu}[\p{L}\d\s\-]+$/u",
-     *     message="Nazwisko powinno się składać tylko z liter, spacji oraz myślników i zaczyynać się wielką literą."
+     *     message="Nazwisko powinno się składać tylko z liter, spacji oraz myślników i zaczynać się wielką literą."
      * )
      * @Assert\Length(
      *     max = 45,
      *     min = 2,
      *     maxMessage = "Nazwisko może zawierać maksymalnie 45 znaków.",
-     *     minMessage = "Nazwisko musi zawierać minimum 2 znaków."
+     *     minMessage = "Nazwisko musi zawierać minimum 2 znaki."
      * )
      *
      */
@@ -265,7 +266,7 @@ class Pracownicy implements UserInterface
      *
      * * @Assert\Regex(
      *     pattern="/^\d{9}$/u",
-     *     message="Numer telefony powinien składac się z 9 cyfr."
+     *     message="Numer telefonu powinien składac się z 9 cyfr."
      * )
      */
     private $telefon;
@@ -279,8 +280,8 @@ class Pracownicy implements UserInterface
      * @Assert\Length(
      *     max = 255,
      *     min = 5,
-     *     maxMessage = "Nazwa może zawierać maksymalnie 255 znaków.",
-     *     minMessage = "Nazwa musi zawierać minimum 5 znaków."
+     *     maxMessage = "Email może zawierać maksymalnie 255 znaków.",
+     *     minMessage = "Email musi zawierać minimum 5 znaków."
      * )
      *
      *  /**
