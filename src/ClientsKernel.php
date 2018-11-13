@@ -27,7 +27,7 @@ class ClientsKernel extends BaseKernel
 
     public function registerBundles()
     {
-        $contents = require $this->getProjectDir().'/config/client_app/bundles.php';
+        $contents = require $this->getProjectDir().'/config_client/bundles.php';
         foreach ($contents as $class => $envs) {
             if (isset($envs['all']) || isset($envs[$this->environment])) {
                 yield new $class();
@@ -37,12 +37,12 @@ class ClientsKernel extends BaseKernel
 
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)
     {
-        $container->addResource(new FileResource($this->getProjectDir().'/config/client_app/bundles.php'));
+        $container->addResource(new FileResource($this->getProjectDir().'/config_client/bundles.php'));
         // Feel free to remove the "container.autowiring.strict_mode" parameter
         // if you are using symfony/dependency-injection 4.0+ as it's the default behavior
         $container->setParameter('container.autowiring.strict_mode', true);
         $container->setParameter('container.dumper.inline_class_loader', true);
-        $confDir = $this->getProjectDir().'/config/client_app';
+        $confDir = $this->getProjectDir().'/config_client';
 
         $loader->load($confDir.'/{packages}/*'.self::CONFIG_EXTS, 'glob');
         $loader->load($confDir.'/{packages}/'.$this->environment.'/**/*'.self::CONFIG_EXTS, 'glob');
@@ -52,7 +52,7 @@ class ClientsKernel extends BaseKernel
 
     protected function configureRoutes(RouteCollectionBuilder $routes)
     {
-        $confDir = $this->getProjectDir().'/config/client_app';
+        $confDir = $this->getProjectDir().'/config_client';
 
         $routes->import($confDir.'/{routes}/*'.self::CONFIG_EXTS, '/', 'glob');
         $routes->import($confDir.'/{routes}/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');
