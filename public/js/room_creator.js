@@ -1,20 +1,49 @@
-var roomContentContener = document.getElementById("roomContent");
 var row;
 var seat;
 var seatTable;
 var rowTable;
+//var roomNumber;
+
 const ROW_BUYING_ONLY = 2;
 const ROW_NORMAL = 1;
 const SEAT_NORMAL = 1;
 const SEAT_INACTIVE = 0;
+// var pushInputRowCount = document.getElementById("pushInputRowCount");
+// var pushInputSeatCount = document.getElementById("pushInputSeatCount");
+// var pushInputSeatCode = document.getElementById("pushInputSeatCode");
+// var pushInputRowCode = document.getElementById("pushInputRowCode");
+// var pushInputRoomNumber = document.getElementById("pushInputRoomNumber");
+// var roomNumber = pushInputRoomNumber.value;
+// row = pushInputRowCount.value;
+// seat = pushInputSeatCount.value;
+// rowCode = pushInputRowCode.value.toString();
+// seatCode = pushInputSeatCode.value.toString();
 
 window.onload = function () {
-    createRoom();
+    row = document.getElementById("rowCount").value;
+    seat = document.getElementById("seatCount").value;
+    var rowCode = document.getElementById("rowCode").value.toString();
+    var seatCode = document.getElementById("seatCode").value.toString();
+    document.getElementById("inputRowNumber").value = row;
+    document.getElementById("inputSeatNumber").value = seat;
+    document.getElementById("inputRoomNumber").value = document.getElementById("roomNumber").value;
+    createTables(rowCode, seatCode.split(","));
+    createView();
+};
+
+function createTables(rowCode ,seatCode) {
+    seatTable = [];
+    rowTable = [];
+    for (var i = 0; i < row; i++) {
+        rowTable[i] = Number(rowCode[i]);
+        seatTable[i] = [];
+        for (var j = 0; j < seat; j++) {
+            seatTable[i][j] = Number(seatCode[i][j]);
+        }
+    }
 }
 
-function createTables() {
-    row = document.getElementById("inputRowNumber").value;
-    seat = document.getElementById("inputSeatNumber").value;
+function createNewTables(row ,seat, rowCode, seatCode) {
     seatTable = [];
     rowTable = [];
     for (var i = 0; i < row; i++) {
@@ -27,87 +56,134 @@ function createTables() {
 }
 
 function createRoom() {
-    createTables();
-    createView();
-}
-
-
-// function createRoom() {
-//     row = document.getElementById("inputRowNumber").value;
-//     seat = document.getElementById("inputSeatNumber").value;
-//     roomContentContener = document.getElementById("roomContent");
-//     var rowValue;
-//     var seatValue;
-//     seatTable = [];
-//
-//     var text = "<form method=\"post\" class=\"form-horizontal\">";
-//     for (var i = 0; i < row; i++) {
-//         seatTable[i] = [];
-//         text += "<div class=\" mb-2\">";
-//         rowValue = i + 1;
-//         text += "<button class=\"btn btn-link mr-1\" style=\"width: 50px\" id=\"buttonRow" + rowValue + "\" name=\"" + rowValue + "\" onClick=\"changeTypeOfRow(this)\" type=\"button\">" + rowValue + "</button>";
-//         for (var j = 0; j < seat; j++) {
-//             seatTable[i][j] = 1;
-//             seatValue = j + 1;
-//             text += "<button class=\"seat seat_normal mr-1\" id=\"" + rowValue + "_" + seatValue + "\" name=\"" + rowValue + "\"  onClick=\"changeTypeOfSeat(this)\" type=\"button\">" + seatValue + "</button>";
-//         }
-//         seatTable[i][seat] = 1;
-//         text += "</div>";
-//     }
-//     text += "</form>";
-//     roomContentContener.innerHTML = text;
-//
-//     var seatTableString = '';
-//     for (var i = 0; i < row; i++) {
-//         for (var j = 0; j < seat; j++) {
-//             seatTableString += seatTable[i][j];
-//         }
-//     }
-//     // document.getElementById("demo").innerHTML = myData;
-// }
-
-function setData(){
-
-    seatTableString = '';
-    rowTableString = '';
-    for (var i = 0; i < row; i++) {
-        rowTableString += rowTable[i];
-        for (var j = 0; j < seat; j++) {
-            seatTableString += seatTable[i][j];
-        }
+    var newRow = document.getElementById("inputRowNumber").value;
+    var newSeat = document.getElementById("inputSeatNumber").value;
+    if(validRowAndSeat(newRow, newSeat)) {
+        row = newRow;
+        seat = newSeat;
+        createNewTables(row, seat);
+        createView();
+    //document.getElementById("demo").textContent = "ru";
     }
-    document.getElementById("roomNumber").value = document.getElementById("inputRoomNumber").value;
-    document.getElementById("rowCount").value = row;
-    document.getElementById("seatCount").value = seat;
-    document.getElementById("rowCode").value = rowTableString;
-    document.getElementById("seatCode").value = seatTableString;
-    //document.getElementById("demo").innerHTML = seatTableString;
 }
+
+function validRowAndSeat(row, seat){
+
+    var inputRowNumber = document.getElementById("inputRowNumber");
+    var inputSeatNumber = document.getElementById("inputSeatNumber");
+    var validErrorAlert = document.getElementById("validErrorAlert");
+    var validErrorAlertMessage = document.getElementById("validErrorAlertMessage");
+    inputRowNumber.classList.remove("is-invalid");
+    inputSeatNumber.classList.remove("is-invalid");
+    var isInvalid = false;
+    var error = "";
+    const reg = new RegExp("[0-9]{1,2}");
+    if(row === "" || !reg.test(row.toString()) || row < 5 || row > 40){
+        error += "Błędna liczba rzędów. Należy podać liczbę od 5 do 40.";
+        isInvalid = true;
+        inputRowNumber.classList.add("is-invalid")
+    }
+    if(seat === "" || !reg.test(seat.toString()) || seat < 5 || seat > 40){
+        if(isInvalid)
+            error += "\n";
+        error += "Błędna liczba miejsc. Należy podać liczbę od 5 do 40.";
+        isInvalid = true;
+        inputSeatNumber.classList.add("is-invalid");
+    }
+    if(isInvalid){
+
+        var text = "<div class=\"alert alert-danger fade show\" id='alertMessage'>" + error + "</div>";
+        document.getElementById('validErrorAlert').innerHTML = text;
+        setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove();
+            });
+        }, 4000);
+
+        return false;
+    }else {
+        return true;
+    }
+}
+
+
+function validRoomNumber(roomNumber) {
+    var inputRoomNumber = document.getElementById("inputRoomNumber");
+    inputRoomNumber.classList.remove("is-invalid");
+    const reg = new RegExp("[a-zA-Z0-9]{1,3}");
+    var error = "";
+    if (roomNumber.toString().length > 3 || roomNumber.toString().length < 1 || roomNumber.toString() === "" || !reg.test(roomNumber)) {
+        error = "Błędny numer sali. Możliwe jest użycie tylko i wyłącznie cyfr lub liter. Maksymalnie trzy znaki.";
+
+        var text = "<div class=\"alert alert-danger fade show\" id='alertMessage'>" + error + "</div>";
+        document.getElementById('validErrorAlert').innerHTML = text;
+        setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove();
+            });
+        }, 4000);
+
+        inputRoomNumber.classList.add("is-invalid");
+
+        return false;
+    }
+    return true;
+}
+
+
+
+function setData() {
+    var roomNumber = document.getElementById("inputRoomNumber").value;
+    if(validRoomNumber(roomNumber)) {
+        var seatTableString = '';
+        var rowTableString = '';
+        for (var i = 0; i < row; i++) {
+            rowTableString += rowTable[i];
+            if (i != 0)
+                seatTableString += ",";
+            for (var j = 0; j < seat; j++) {
+                seatTableString += seatTable[i][j];
+            }
+        }
+        document.getElementById("roomNumber").value = roomNumber;
+        document.getElementById("rowCount").value = row;
+        document.getElementById("seatCount").value = seat;
+        document.getElementById("rowCode").value = rowTableString;
+        document.getElementById("seatCode").value = seatTableString;
+        //document.getElementById("demo").innerHTML = seatTableString;
+        return true;
+    }
+    else{
+        //document.getElementById("demo").textContent = "111111";
+        return false;
+    }
+}
+
 
 
 function changeTypeOfSeat(button) {
-    var seat_number = button.textContent-1;
+    var seat_number = button.textContent - 1;
     var row_number = button.name - 1;
     var seat_type = seatTable[row_number][seat_number];
     var row_type = rowTable[row_number];
-    if (seat_type === SEAT_NORMAL) {
+    if (seat_type == SEAT_NORMAL) {
         seatTable[row_number][seat_number] = SEAT_INACTIVE;
-        if(row_type === ROW_NORMAL){
+        if (row_type == ROW_NORMAL) {
             button.classList.remove("seat_normal");
             button.classList.add("seat_inactive");
         }
-        else{
+        else {
             button.classList.remove("seat_buying_only");
             button.classList.add("seat_inactive");
         }
     }
     else {
         seatTable[row_number][seat_number] = SEAT_NORMAL;
-        if(row_type === ROW_NORMAL){
+        if (row_type == ROW_NORMAL) {
             button.classList.remove("seat_inactive");
             button.classList.add("seat_normal");
         }
-        else{
+        else {
             button.classList.remove("seat_inactive");
             button.classList.add("seat_buying_only");
         }
@@ -117,15 +193,15 @@ function changeTypeOfSeat(button) {
 function createButton(rowType, seatType, rowValue, seatValue) {
     var text = "";
 
-    if (seatType === SEAT_INACTIVE) {
-        text = "<button class=\"seat seat_inactive mr-1\" id=\"" + rowValue + "_" + seatValue + "\" name=\"" + rowValue + "\"  onClick=\"changeTypeOfSeat(this)\" type=\"button\">" + seatValue + "</button>";
+    if (seatType == SEAT_INACTIVE) {
+        text = "<button class=\"seat seat_inactive mr-2 pointer\" id=\"" + rowValue + "_" + seatValue + "\" name=\"" + rowValue + "\"  onClick=\"changeTypeOfSeat(this)\" type=\"button\">" + seatValue + "</button>";
     }
     else {
-        if (rowType === ROW_BUYING_ONLY) {
-            text = "<button class=\"seat seat_buying_only mr-1\" id=\"" + rowValue + "_" + seatValue + "\" name=\"" + rowValue + "\"  onClick=\"changeTypeOfSeat(this)\" type=\"button\">" + seatValue + "</button>";
+        if (rowType == ROW_BUYING_ONLY) {
+            text = "<button class=\"seat seat_buying_only mr-2 pointer\" id=\"" + rowValue + "_" + seatValue + "\" name=\"" + rowValue + "\"  onClick=\"changeTypeOfSeat(this)\" type=\"button\">" + seatValue + "</button>";
         }
         else {
-            text = "<button class=\"seat seat_normal mr-1\" id=\"" + rowValue + "_" + seatValue + "\" name=\"" + rowValue + "\"  onClick=\"changeTypeOfSeat(this)\" type=\"button\">" + seatValue + "</button>";
+            text = "<button class=\"seat seat_normal mr-2 pointer\" id=\"" + rowValue + "_" + seatValue + "\" name=\"" + rowValue + "\"  onClick=\"changeTypeOfSeat(this)\" type=\"button\">" + seatValue + "</button>";
 
         }
     }
@@ -137,11 +213,12 @@ function createView() {
     var rowValue;
     var seatValue;
     var text_2;
-    var text = "<form method=\"post\" class=\"form-horizontal\">";
+    var text = "";
+    text += "<div class=\"mb-3\"><div class=\"text_center screen\" style=\"width: " + (seat*38-8) + "px\">EKRAN</div></div>";
     for (var i = 0; i < row; i++) {
-        text += "<div class=\" mb-2\">";
+        text += "<div class=\"inline mb-2\">";
         rowValue = i + 1;
-        text += "<button class=\"btn btn-link mr-1\" style=\"width: 50px\" id=\"buttonRow" + rowValue + "\" name=\"" + rowValue + "\" onClick=\"changeTypeOfRow(this)\" type=\"button\">" + rowValue + "</button>";
+        text += "<a class=\"text-primary mr-3 rowNumber pointer\" id=\"buttonRow" + rowValue + "\" name=\"" + rowValue + "\" onClick=\"changeTypeOfRow(this)\">" + rowValue + "</a>";
         for (var j = 0; j < seat; j++) {
             seatValue = j + 1;
             text_2 = createButton(rowTable[i], seatTable[i][j], rowValue, seatValue);
@@ -149,15 +226,14 @@ function createView() {
         }
         text += "</div>";
     }
-    text += "</form>";
-    roomContentContener.innerHTML = text;
+    document.getElementById("roomContent").innerHTML = text;
 }
 
 function changeTypeOfRow(button) {
     var row_number = button.textContent - 1;
     var row_type = rowTable[row_number];
 
-    if (row_type === ROW_NORMAL) {
+    if (row_type == ROW_NORMAL) {
         rowTable[row_number] = ROW_BUYING_ONLY;
     }
     else {
