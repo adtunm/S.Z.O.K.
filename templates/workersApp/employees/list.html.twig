@@ -5,8 +5,7 @@
     <div class="h1 col-md">Lista Pracowników</div>
         {% if is_granted('ROLE_ADMIN') %}
             <div class="col-md">
-                <a href="{{ path("workers_app/employees/new") }}" class="btn btn-primary pull-right">Dodaj nowego
-                    pracownika</a>
+                <a href="{{ path("workers_app/employees/new") }}" class="btn btn-primary pull-right">Dodaj nowego pracownika</a>
             </div>
         {% endif %}
         </div>
@@ -23,9 +22,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% set x=0 %}
                 {% for worker in workerList  %}
-
                     <tr>
                         <td>{{ worker.id }}</td>
                         <td>{{ worker.imie }}</td>
@@ -36,17 +33,13 @@
                                class="btn btn-primary float-right btn-sm">Pokaż</a>
                         </td>
                     </tr>
-
                 {% endfor %}
-
                 </tbody>
             </table>
         </div>
-
         {% set basePath = path('worker_app/employees/list') %}
         {% include 'workersApp/inc/pagination.html.twig' %}
-
     {% else %}
-        <p>Brak Pracowników</p>
+        <p><h1>Brak pracowników</h1></p>
     {% endif %}
 {% endblock %}
