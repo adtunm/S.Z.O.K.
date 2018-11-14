@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Seanse
  *
  * @ORM\Table(name="seanse", uniqueConstraints={@ORM\UniqueConstraint(name="idSeanse_UNIQUE", columns={"id"})}, indexes={@ORM\Index(name="fk_Seanse_WydarzeniaSpecjalne1_idx", columns={"WydarzeniaSpecjalne_id"}), @ORM\Index(name="fk_Seanse_TypySeansow1_idx", columns={"TypySeansow_id"}), @ORM\Index(name="fk_Seanse_Sale1_idx", columns={"Sale_id"}), @ORM\Index(name="fk_Seanse_PuleBiletow1_idx", columns={"PuleBiletow_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\SeanseRepository")
  */
 class Seanse
 {
@@ -77,9 +77,9 @@ class Seanse
     }
 
     /**
-     * @return \Sale
+     * @return Sale
      */
-    public function getSale(): \Sale
+    public function getSale(): Sale
     {
         return $this->sale;
     }
