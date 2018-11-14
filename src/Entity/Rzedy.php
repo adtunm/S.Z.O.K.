@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Rzedy
  *
  * @ORM\Table(name="rzedy", uniqueConstraints={@ORM\UniqueConstraint(name="idRzedy_UNIQUE", columns={"id"})}, indexes={@ORM\Index(name="fk_Rzedy_Sale1_idx", columns={"Sale_id"}), @ORM\Index(name="fk_Rzedy_TypyRzedow1_idx", columns={"TypyRzedow_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\RzedyRepository")
  */
 class Rzedy
 {
@@ -45,33 +45,33 @@ class Rzedy
     }
 
     /**
-     * @return \Sale
+     * @return ?Sale
      */
-    public function getSale(): \Sale
+    public function getSale(): ?Sale
     {
         return $this->sale;
     }
 
     /**
-     * @param \Sale $sale
+     * @param Sale $sale
      */
-    public function setSale(\Sale $sale): void
+    public function setSale(Sale $sale): void
     {
         $this->sale = $sale;
     }
 
     /**
-     * @return \Typyrzedow
+     * @return ?Typyrzedow
      */
-    public function getTypyrzedow(): \Typyrzedow
+    public function getTypyrzedow(): ?Typyrzedow
     {
         return $this->typyrzedow;
     }
 
     /**
-     * @param \Typyrzedow $typyrzedow
+     * @param Typyrzedow $typyrzedow
      */
-    public function setTypyrzedow(\Typyrzedow $typyrzedow): void
+    public function setTypyrzedow(Typyrzedow $typyrzedow): void
     {
         $this->typyrzedow = $typyrzedow;
     }

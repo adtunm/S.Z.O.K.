@@ -1,4 +1,4 @@
- 
+
 INSERT INTO `miejsca` (`id`,`pozycja`,`numerMiejsca`,`Rzedy_id`) VALUES (1,1,1,1);
  
  
