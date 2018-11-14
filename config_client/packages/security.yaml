@@ -20,8 +20,8 @@ security:
                     - App\Security\LoginFormAuthenticator
 
             logout:
-               path:
-               target:
+                path: workers_app/logout_page
+                target: workers_app/login_page
 
             # activate different ways to authenticate
 
