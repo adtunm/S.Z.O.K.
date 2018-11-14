@@ -27,7 +27,7 @@ class BaseController extends Controller
     }
 
     /**
-     * @Route("/workersApp/no-permission", name="workers_app/no_permission", methods={"GET"})
+     * @Route("/no-permission", name="workers_app/no_permission", methods={"GET"})
      */
     public function noPermission()
     {
