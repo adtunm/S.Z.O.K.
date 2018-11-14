@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Symfony\Component\Routing\Annotation\Route;
 
-class BaseController extends Controller
+class AppController extends Controller
 {
     /**
      * @Route("/", name="clients_app/main_page", methods={"GET"})

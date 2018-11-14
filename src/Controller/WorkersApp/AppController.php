@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
-class LoginController extends AbstractController
+class AppController extends AbstractController
 {
     /**
      * @Route("/login", name="workers_app/login_page")
@@ -28,4 +28,27 @@ class LoginController extends AbstractController
     {
     }
 
+    /**
+     * @Route("/", name="workers_app/main_page", methods={"GET"})
+     */
+    public function index()
+    {
+        if($this->isGranted('IS_AUTHENTICATED_FULLY'))
+            return $this->render('workersApp/mainPage/mainPage.html.twig');
+        else {
+            return $this->redirectToRoute('workers_app/login_page');
+        }
+    }
+
+    /**
+     * @Route("/no-permission", name="workers_app/no_permission", methods={"GET"})
+     */
+    public function noPermission()
+    {
+        if($this->isGranted('IS_AUTHENTICATED_FULLY'))
+            return $this->render('workersApp/mainPage/noPermission.html.twig');
+        else {
+            return $this->redirectToRoute('workers_app/login_page');
+        }
+    }
 }
