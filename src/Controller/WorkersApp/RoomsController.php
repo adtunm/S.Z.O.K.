@@ -141,6 +141,7 @@ class RoomsController extends Controller
 
     private function pushRoom($rowCount, $seatCount, $rowCode, $seatCodeArray, $roomNumber)
     {
+        set_time_limit(300);
         $entityManager = $this->getDoctrine()->getManager();
         $room = new Sale();
         $room->setNumersali($roomNumber);
@@ -340,7 +341,7 @@ class RoomsController extends Controller
 
     private function updateRoom($id, $rowCount, $seatCount, $rowCode, $seatCodeArray, $roomNumber)
     {
-
+        set_time_limit(300);
         $entityManager = $this->getDoctrine()->getManager();
         $room = $this->getDoctrine()->getRepository(Sale::class)->find($id);
         $room->setDlugoscsali($rowCount);
