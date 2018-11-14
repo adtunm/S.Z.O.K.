@@ -23,7 +23,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 class PromotionsController extends Controller
 {
     /**
-     * @Route("/worekrsApp/promotions/{page<[1-9]\d*>?1}", name="workers_app/promotions", methods={"GET"})
+     * @Route("/promotions/{page<[1-9]\d*>?1}", name="workers_app/promotions", methods={"GET"})
      */
     public function index($page)
     {
@@ -31,7 +31,7 @@ class PromotionsController extends Controller
             $pageLimit = $this->getParameter('page_limit');
             $pageCount = $this->getDoctrine()->getRepository(Promocje::class)->getPageCountOfActual($pageLimit);
 
-            if($page > $pageCount)
+            if($page > $pageCount and $pageCount != 0)
                 return $this->redirectToRoute('workers_app/promotions');
             else {
                 $promotions = $this->getDoctrine()->getRepository(Promocje::class)->findActual($page, $pageLimit);
@@ -43,7 +43,7 @@ class PromotionsController extends Controller
     }
 
     /**
-     * @Route("/worekrsApp/promotions/add", name="workers_app/promotions/add", methods={"GET", "POST"})
+     * @Route("/promotions/add", name="workers_app/promotions/add", methods={"GET", "POST"})
      */
     public function add(Request $request)
     {
@@ -73,7 +73,7 @@ class PromotionsController extends Controller
     }
 
     /**
-     * @Route("/worekrsApp/promotions/edit/{id<[1-9]\d*>?}", name="workers_app/promotions/edit", methods={"GET", "POST"})
+     * @Route("/promotions/edit/{id<[1-9]\d*>?}", name="workers_app/promotions/edit", methods={"GET", "POST"})
      */
     public function edit(Request $request, $id)
     {
@@ -109,7 +109,6 @@ class PromotionsController extends Controller
      * @param Promocje $promotion
      * @return \Symfony\Component\Form\FormInterface
      */
-
     private function getForm(Promocje $promotion)
     {
         return $this->createFormBuilder($promotion)
@@ -189,9 +188,8 @@ class PromotionsController extends Controller
     }
 
     /**
-     * @Route("/worekrsApp/promotions/delete/{id<[1-9]\d*>?}", name="workers_app/promotions/delete", methods={"DELETE"})
+     * @Route("/promotions/delete/{id<[1-9]\d*>?}", name="workers_app/promotions/delete", methods={"DELETE"})
      */
-
     public function delete(Request $request, $id)
     {
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {

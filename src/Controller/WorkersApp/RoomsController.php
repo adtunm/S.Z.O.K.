@@ -25,7 +25,7 @@ use App\Repository\SaleRepository;
 class RoomsController extends Controller
 {
     /**
-     * @Route("/workersApp/screeningRooms/{page<[1-9]\d*>?1}", name="workers_app/rooms_page", methods={"GET", "POST"})
+     * @Route("/screeningRooms/{page<[1-9]\d*>?1}", name="workers_app/rooms_page", methods={"GET", "POST"})
      */
     public function index($page)
     {
@@ -47,7 +47,7 @@ class RoomsController extends Controller
     }
 
     /**
-     * @Route("/workersApp/screeningRooms/new", name="workers_app/rooms_page/room_creator_page", methods={"GET", "POST"})
+     * @Route("/screeningRooms/new", name="workers_app/rooms_page/room_creator_page", methods={"GET", "POST"})
      */
     public function new(Request $request)
     {
@@ -141,6 +141,7 @@ class RoomsController extends Controller
 
     private function pushRoom($rowCount, $seatCount, $rowCode, $seatCodeArray, $roomNumber)
     {
+        set_time_limit(300);
         $entityManager = $this->getDoctrine()->getManager();
         $room = new Sale();
         $room->setNumersali($roomNumber);
@@ -183,7 +184,7 @@ class RoomsController extends Controller
     }
 
     /**
-     * @Route("/worekrsApp/screeningRooms/view/{id<[1-9]\d*>?}", name="workers_app/rooms_page/view", methods={"GET", "POST"})
+     * @Route("/screeningRooms/view/{id<[1-9]\d*>?}", name="workers_app/rooms_page/view", methods={"GET", "POST"})
      */
     public function view($id)
     {
@@ -340,7 +341,7 @@ class RoomsController extends Controller
 
     private function updateRoom($id, $rowCount, $seatCount, $rowCode, $seatCodeArray, $roomNumber)
     {
-
+        set_time_limit(300);
         $entityManager = $this->getDoctrine()->getManager();
         $room = $this->getDoctrine()->getRepository(Sale::class)->find($id);
         $room->setDlugoscsali($rowCount);
@@ -375,7 +376,7 @@ class RoomsController extends Controller
     }
 
     /**
-     * @Route("/workersApp/screeningRooms/delete/{id<[1-9]\d*>?}", name="workers_app/rooms_page/delete", methods={"DELETE"})
+     * @Route("/screeningRooms/delete/{id<[1-9]\d*>?}", name="workers_app/rooms_page/delete", methods={"DELETE"})
      */
     public function delete($id)
     {

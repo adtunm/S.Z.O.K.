@@ -16,9 +16,8 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class EmployeesControler extends AbstractController
 {
     /**
-     * @Route("/workersApp/employees/new", name="workers_app/employees/new")
+     * @Route("/employees/new", name="workers_app/employees/new")
      */
-
     public function addEmployee(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         if ($this->isGranted('ROLE_ADMIN')) {
@@ -109,15 +108,16 @@ class EmployeesControler extends AbstractController
                 return $this->redirectToRoute('workers_app/login_page');
         }
     }
+
     /**
-     * @Route("/workersApp/employees/{page?1}", name="worker_app/employees/list", requirements={"page"="\d+"}, methods={"GET"} )
+     * @Route("/employees/{page<[1-9]\d*>?1}", name="worker_app/employees/list", methods={"GET"} )
      */
     public function list($page)
     {
         if ($this->isGranted('ROLE_ADMIN') || $this->isGranted('ROLE_MANAGER')) {
             $pageLimit = $this->getParameter('page_limit');
             $pageCount = $this->getDoctrine()->getRepository(Pracownicy::class)->getPageCountOfActive($pageLimit);
-            if ($page > $pageCount or ($page==1 and $pageCount==0))
+            if ($page > $pageCount and $pageCount != 0)
                 return $this->redirectToRoute('worker_app/employees/list');
             else {
                 $workerList = $this->getDoctrine()->getRepository(Pracownicy::class)->findActive($page, $pageLimit);
@@ -130,8 +130,9 @@ class EmployeesControler extends AbstractController
                 return $this->redirectToRoute('workers_app/login_page');
         }
     }
+
     /**
-     * @Route("/workersApp/employees/show/{id}", name="workers_app/employees/show", methods={"GET"})
+     * @Route("/employees/show/{id<[1-9]\d*>}", name="workers_app/employees/show", methods={"GET"})
      */
     public function show($id)
     {
@@ -145,8 +146,9 @@ class EmployeesControler extends AbstractController
                 return $this->redirectToRoute('workers_app/login_page');
         }
     }
+
     /**
-     * @Route("/workersApp/employees/edit/{id}", name="workers_app/employees/edit")
+     * @Route("/employees/edit/{id<[1-9]\d*>}", name="workers_app/employees/edit")
      */
     public function edit(Request $request, $id)
     {
@@ -221,7 +223,7 @@ class EmployeesControler extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->merge($pracownik);
                 $entityManager->flush();
-                return $this->redirectToRoute('worker_app/employees/list');
+                return $this->redirectToRoute('workers_app/employees/show', array('id' => $id));
             }
             return $this->render('workersApp/employees/edit.html.twig', array('form' => $form->createView(), 'id' => $id));
         } else {
@@ -231,8 +233,9 @@ class EmployeesControler extends AbstractController
                 return $this->redirectToRoute('workers_app/login_page');
         }
     }
+
     /**
-     * @Route("/workersApp/employees/delete/{id?}", name="workers_app/employees/delete", methods={"DELETE"})
+     * @Route("/employees/delete/{id?<[1-9]\d*>}", name="workers_app/employees/delete", methods={"DELETE"})
      */
     public function delete($id)
     {
@@ -250,8 +253,9 @@ class EmployeesControler extends AbstractController
                 return $this->redirectToRoute('workers_app/login_page');
         }
     }
+
     /**
-     * @Route("/workersApp/employees/resetPassword/{id}", name="workers_app/employees/reset_password")
+     * @Route("/employees/resetPassword/{id}", name="workers_app/employees/reset_password")
      */
     public function resetPassword(Request $request, $id, UserPasswordEncoderInterface $passwordEncoder)
     {
@@ -284,7 +288,7 @@ class EmployeesControler extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($pracownik);
                 $entityManager->flush();
-                return $this->redirectToRoute('worker_app/employees/list');
+                return $this->redirectToRoute('worker_app/employees/show', array('id' => $id));
             }
             return $this->render('workersApp/employees/resetPassword.html.twig', array(
                 'form' => $form->createView(), 'id' => $id
@@ -296,8 +300,9 @@ class EmployeesControler extends AbstractController
                 return $this->redirectToRoute('workers_app/login_page');
         }
     }
+
     /**
-     * @Route("/workersApp/employees/changePassword/{id}", name="workers_app/employees/change_password")
+     * @Route("/employees/changePassword/{id}", name="workers_app/employees/change_password")
      */
     public function changePassword($id, UserPasswordEncoderInterface $passwordEncoder)
     {
