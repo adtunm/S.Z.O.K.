@@ -306,40 +306,41 @@ class EmployeesControler extends AbstractController
      */
     public function changePassword($id, UserPasswordEncoderInterface $passwordEncoder)
     {
-        if ($this->isGranted('ROLE_ADMIN')) {
-            $pracownik = $this->getDoctrine()->getRepository(Pracownicy::class)->find($id);
-            if ($this->getUser()->getId() != $pracownik->getId())
-                return $this->redirectToRoute('workers_app/no_permission');
-            $error = "";
-            if ($_POST) {
-                $oldPassword = $_POST['oldPassword'];
-                $newPassword = $_POST['newPassword'];
-                $confirmPassword = $_POST['confirmPassword'];
-                if (!preg_match("/^[\S]+$/u", $newPassword)) {
-                    $error = 'Hasło może składać się ze wszystkich znaków z wyłączeniem znaków białych';
-                } elseif ($passwordEncoder->isPasswordValid($pracownik, $oldPassword)) {
-                    if ($newPassword == $confirmPassword) {
-                        $newPassword = $passwordEncoder->encodePassword($pracownik, $newPassword);
-                        $pracownik->setHaslo($newPassword);
-                        $entityManager = $this->getDoctrine()->getManager();
-                        $entityManager->persist($pracownik);
-                        $entityManager->flush();
-                        return $this->redirectToRoute('worker_app/employees/list');
+        if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
+            if ($id == $this->getUser()->getId()) {
+                $pracownik = $this->getDoctrine()->getRepository(Pracownicy::class)->find($id);
+                if(!$pracownik)
+                    return $this->redirectToRoute('workers_app/no_permission');
+                $error = "";
+                if($_POST) {
+                    $oldPassword = $_POST['oldPassword'];
+                    $newPassword = $_POST['newPassword'];
+                    $confirmPassword = $_POST['confirmPassword'];
+                    if(!preg_match("/^[\S]+$/u", $newPassword)) {
+                        $error = 'Hasło może składać się ze wszystkich znaków z wyłączeniem znaków białych';
+                    } else if($passwordEncoder->isPasswordValid($pracownik, $oldPassword)) {
+                        if($newPassword == $confirmPassword) {
+                            $newPassword = $passwordEncoder->encodePassword($pracownik, $newPassword);
+                            $pracownik->setHaslo($newPassword);
+                            $entityManager = $this->getDoctrine()->getManager();
+                            $entityManager->persist($pracownik);
+                            $entityManager->flush();
+                            return $this->redirectToRoute('workers_app/main_page');
+                        } else {
+                            $error = "Podane hasła nie są identyczne";
+                        }
                     } else {
-                        $error = "Podane hasła nie są identyczne";
+                        $error = "Aktualne hasło jest błędne";
                     }
-                } else {
-                    $error = "Aktualne hasło jest błędne";
                 }
-            }
-            return $this->render('workersApp/employees/changePassword.html.twig', array(
-                'id' => $id, 'error' => $error
-            ));
-        } else {
-            if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
+                return $this->render('workersApp/employees/changePassword.html.twig', array(
+                    'id' => $id, 'error' => $error
+                ));
+            } else {
                 return $this->redirectToRoute('workers_app/no_permission');
-            else
-                return $this->redirectToRoute('workers_app/login_page');
+            }
+        } else {
+            return $this->redirectToRoute('workers_app/login_page');
         }
     }
 }
