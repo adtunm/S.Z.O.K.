@@ -55,12 +55,12 @@
         </div>
         <div onload="createRoom(myData)">
             <form method="post" onsubmit="return setData()">
-                <input type="text" id="roomId" name="roomId" value="{{ id }}">
-                <input type="text" id="roomNumber" name="roomNumber" value="{{ values.roomNumber }}">
-                <input type="text" id="rowCount" name="rowCount" value="{{ values.rowCount }}">
-                <input type="text" id="seatCount" name="seatCount" value="{{ values.seatCount }}">
-                <input type="text" id="rowCode" name="rowCode" value="{{ values.rowCode }}">
-                <input type="text" id="seatCode" name="seatCode" value="{{ values.seatCode }}">
+                <input type="text" hidden id="roomId" name="roomId" value="{{ id }}">
+                <input type="text" hidden id="roomNumber" name="roomNumber" value="{{ values.roomNumber }}">
+                <input type="text" hidden id="rowCount" name="rowCount" value="{{ values.rowCount }}">
+                <input type="text" hidden id="seatCount" name="seatCount" value="{{ values.seatCount }}">
+                <input type="text" hidden id="rowCode" name="rowCode" value="{{ values.rowCode }}">
+                <input type="text" hidden id="seatCode" name="seatCode" value="{{ values.seatCode }}">
                 <button class="btn btn-primary ml-sm-2" id="saveButton" type="submit">
                     Zapisz
                 </button>
