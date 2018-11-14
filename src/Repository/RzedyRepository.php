@@ -20,21 +20,21 @@ class RzedyRepository extends ServiceEntityRepository
         parent::__construct($registry, Rzedy::class);
     }
 
-    public function getRows($id)
+    public function getRows($saleId)
     {
         $query = $this->createQueryBuilder('r')
-            ->where('r.sale = '.$id)
+            ->where('r.sale = '.$saleId)
             ->orderBy('r.numerrzedu', 'ASC')
             ->getQuery();
 
         return $query->execute();
     }
 
-    public function deleteRow($id)
+    public function deleteRows($saleId)
     {
         $query = $this->createQueryBuilder('r')
             ->delete()
-            ->where('r.sale = '.$id)
+            ->where('r.sale = '.$saleId)
             ->getQuery();
 
         $query->execute();

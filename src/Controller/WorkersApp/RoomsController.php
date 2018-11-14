@@ -22,13 +22,34 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use App\Repository\SaleRepository;
 
 
-class RoomCreatorController extends Controller
+class RoomsController extends Controller
 {
+    /**
+     * @Route("/workersApp/screeningRooms/{page<[1-9]\d*>?1}", name="workers_app/rooms_page", methods={"GET", "POST"})
+     */
+    public function index($page)
+    {
+        if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
+            $pageLimit = $this->getParameter('page_limit');
+            $pageCount = $this->getDoctrine()->getRepository(Sale::class)->getPageCount($pageLimit);
+
+            if ($page > $pageCount and $pageCount != 0)
+                return $this->redirectToRoute('workers_app/rooms_page');
+            else {
+                $rooms = $this->getDoctrine()->getRepository(Sale::class)->findRooms($page, $pageLimit);
+                $seatCount = $this->getDoctrine()->getRepository(Miejsca::class)->getSeatsCount($page, $pageLimit);
+                $checkRooms = $this->getDoctrine()->getRepository(Seanse::class)->checkSeancesForRooms($rooms);
+                return $this->render('workersApp/screeningRoomPages/list.html.twig', array('rooms' => $rooms, 'seatCounts' => $seatCount, 'checkRooms' => $checkRooms, 'currentPage' => $page, 'pageCount' => $pageCount));
+            }
+        } else {
+            return $this->redirectToRoute('workers_app/login_page');
+        }
+    }
 
     /**
-     * @Route("/workersApp/screeningRooms/create", name="workers_app/rooms_page/room_creator_page", methods={"GET", "POST"})
+     * @Route("/workersApp/screeningRooms/new", name="workers_app/rooms_page/room_creator_page", methods={"GET", "POST"})
      */
-    public function index(AuthenticationUtils $authenticationUtils, Request $request)
+    public function new(Request $request)
     {
         if ($this->isGranted('ROLE_ADMIN')) {
             $entityManager = $this->getDoctrine()->getManager();
@@ -73,7 +94,7 @@ class RoomCreatorController extends Controller
                 );
                 $error = "";
             }
-            return $this->render('workersApp/screeningRoomPages/roomCreator.html.twig', ['error' => $error, 'values' => $values]);
+            return $this->render('workersApp/screeningRoomPages/new.html.twig', ['error' => $error, 'values' => $values]);
 
         } else if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             return $this->redirectToRoute('workers_app/no_permission');
@@ -84,13 +105,13 @@ class RoomCreatorController extends Controller
 
     private function ifRoomViewExist(Request $request)
     {
-        if ($request->request->has("rowCount"))
-            if ($request->request->has("seatCount"))
-                if ($request->request->has("rowCode"))
-                    if ($request->request->has("seatCode"))
-                        if ($request->request->has("roomNumber")) {
-                            return true;
-                        }
+        if ($request->request->has("rowCount")
+            and $request->request->has("seatCount")
+            and $request->request->has("rowCode")
+            and $request->request->has("seatCode")
+            and $request->request->has("roomNumber")) {
+            return true;
+        }
         return false;
     }
 
@@ -162,43 +183,21 @@ class RoomCreatorController extends Controller
     }
 
     /**
-     * @Route("/workersApp/screeningRooms/{page<[1-9]\d*>?1}", name="workers_app/rooms_page", methods={"GET", "POST"})
-     */
-    public function roomsList($page)
-    {
-        if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
-            $pageLimit = $this->getParameter('page_limit');
-            $pageCount = $this->getDoctrine()->getRepository(Sale::class)->getPageCount($pageLimit);
-
-            if ($page > $pageCount)
-                return $this->redirectToRoute('workers_app/rooms_page');
-            else {
-                $rooms = $this->getDoctrine()->getRepository(Sale::class)->findRooms($page, $pageLimit);
-                $seatCount = $this->getDoctrine()->getRepository(Miejsca::class)->getSeatsCount($page, $pageLimit);
-                $checkRooms = $this->getDoctrine()->getRepository(Seanse::class)->checkSeancesForRooms($rooms);
-                return $this->render('workersApp/screeningRoomPages/roomsList.html.twig', array('rooms' => $rooms, 'seatCounts' => $seatCount, 'checkRooms' => $checkRooms , 'currentPage' => $page, 'pageCount' => $pageCount));
-            }
-        } else {
-            return $this->redirectToRoute('workers_app/login_page');
-        }
-    }
-
-    /**
      * @Route("/worekrsApp/screeningRooms/view/{id<[1-9]\d*>?}", name="workers_app/rooms_page/view", methods={"GET", "POST"})
      */
-    public function view(Request $request, $id)
+    public function view($id)
     {
         $entityManager = $this->getDoctrine()->getManager();
         if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             if ($room = $this->getDoctrine()->getRepository(Sale::class)->find($id)) {
                 $values = $this->getRoomView($id);
                 $seatCount = $this->getDoctrine()->getRepository(Miejsca::class)->getSeatsCountOfCurrent($id);
-                if($entityManager->getRepository(Seanse::class)->findOneBy(array('sale' => $id))){
+                if ($entityManager->getRepository(Seanse::class)->findOneBy(array('sale' => $id))) {
                     $checkRoom = false;
-                }else{
+                } else {
                     $checkRoom = true;
                 }
-                return $this->render('workersApp/screeningRoomPages/roomView.html.twig', ['id' => $id, 'seatCount' => $seatCount, 'checkRoom' => $checkRoom , 'values' => $values]);
+                return $this->render('workersApp/screeningRoomPages/view.html.twig', ['id' => $id, 'seatCount' => $seatCount, 'checkRoom' => $checkRoom, 'values' => $values]);
             } else {
                 return $this->redirectToRoute('workers_app/rooms_page');
             }
@@ -210,7 +209,6 @@ class RoomCreatorController extends Controller
     private function getRoomView($id)
     {
         $room = $this->getDoctrine()->getRepository(Sale::class)->find($id);
-        //$room = new Sale();
         $rowCount = $room->getDlugoscsali();
         $seatCount = $room->getSzerokoscsali();
         $roomNumber = $room->getNumersali();
@@ -219,8 +217,6 @@ class RoomCreatorController extends Controller
         $seatCode = "";
         $rows = $this->getDoctrine()->getRepository(Rzedy::class)->getRows($id);
         for ($i = 0; $i < $rowCount; $i++) {
-
-            //$row = new Rzedy();
 
             $rowType = $rows[$i]->getTypyrzedow();
             $rowCode .= (string)$rowType->getId();
@@ -255,9 +251,6 @@ class RoomCreatorController extends Controller
     public function edit(Request $request, $id)
     {
         $entityManager = $this->getDoctrine()->getManager();
-        if($entityManager->getRepository(Seanse::class)->findOneBy(array('sale' => $id))){
-            return $this->redirectToRoute('workers_app/rooms_page');
-        }
         if ($this->isGranted('ROLE_ADMIN')) {
             if ($this->ifRoomViewExist($request)) {
                 $rowCount = $request->get('rowCount');
@@ -292,13 +285,13 @@ class RoomCreatorController extends Controller
                     return $this->redirectToRoute('workers_app/rooms_page');
                 }
             }
-            return $this->render('workersApp/screeningRoomPages/roomEditor.html.twig', ['error' => $error, 'id' => $id, 'values' => $values]);
+            return $this->render('workersApp/screeningRoomPages/edit.html.twig', ['error' => $error, 'id' => $id, 'values' => $values]);
 
         } else if ($this->isGranted('ROLE_MANAGER')) {
             if ($this->ifRoomViewExist($request)) {
                 $rowCode = $request->get('rowCode');
-                if ($this->checkChangedRow($id, $rowCode)) {
-                    $this->updateRoomRow($id, $rowCode);
+                if ($this->checkChangedRows($id, $rowCode)) {
+                    $this->updateRoomRows($id, $rowCode);
                     return $this->redirectToRoute('workers_app/rooms_page/view', ['id' => $id]);
                 }
             }
@@ -309,7 +302,7 @@ class RoomCreatorController extends Controller
             } else {
                 return $this->redirectToRoute('workers_app/rooms_page');
             }
-            return $this->render('workersApp/screeningRoomPages/managersRoomEditor.html.twig', ['error' => $error, 'id' => $id, 'values' => $values]);
+            return $this->render('workersApp/screeningRoomPages/editManager.html.twig', ['error' => $error, 'id' => $id, 'values' => $values]);
 
         } else if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             return $this->redirectToRoute('workers_app/no_permission');
@@ -318,7 +311,7 @@ class RoomCreatorController extends Controller
         }
     }
 
-    private function updateRoomRow($id, $rowCode)
+    private function updateRoomRows($id, $rowCode)
     {
         $entityManager = $this->getDoctrine()->getManager();
         $room = $this->getDoctrine()->getRepository(Sale::class)->find($id);
@@ -331,10 +324,9 @@ class RoomCreatorController extends Controller
         $entityManager->flush();
     }
 
-    private function checkChangedRow($id, $rowCode)
+    private function checkChangedRows($id, $rowCode)
     {
         $room = $this->getDoctrine()->getRepository(Sale::class)->find($id);
-        //$room = new Sale();
         $rowCount = $room->getDlugoscsali();
         if ($rowCount != strlen($rowCode))
             return false;
@@ -351,7 +343,6 @@ class RoomCreatorController extends Controller
 
         $entityManager = $this->getDoctrine()->getManager();
         $room = $this->getDoctrine()->getRepository(Sale::class)->find($id);
-        //$room = new Sale();
         $room->setDlugoscsali($rowCount);
         $room->setSzerokoscsali($seatCount);
         $room->setNumersali($roomNumber);
@@ -360,7 +351,6 @@ class RoomCreatorController extends Controller
         for ($i = 0; $i < $rowCount; $i++) {
 
             $rowType = $entityManager->getRepository(Typyrzedow::class)->find($rowCode[$i]);
-            //$row = new Rzedy();
             $rows[$i]->setTypyrzedow($rowType);
             $rows[$i]->setNumerrzedu($i + 1);
 
@@ -379,7 +369,6 @@ class RoomCreatorController extends Controller
 
                 $seats[$j]->setRzedy($rows[$i]);
 
-
             }
         }
         $entityManager->flush();
@@ -388,24 +377,22 @@ class RoomCreatorController extends Controller
     /**
      * @Route("/workersApp/screeningRooms/delete/{id<[1-9]\d*>?}", name="workers_app/rooms_page/delete", methods={"DELETE"})
      */
-    public function delete(Request $request, $id)
+    public function delete($id)
     {
         if ($this->isGranted('ROLE_ADMIN')) {
             $entityManager = $this->getDoctrine()->getManager();
-            if(!$entityManager->getRepository(Seanse::class)->findOneBy(array('sale' => $id))) {
+            if (!$entityManager->getRepository(Seanse::class)->findOneBy(array('sale' => $id))) {
                 $entityManager = $this->getDoctrine()->getManager();
                 $room = $this->getDoctrine()->getRepository(Sale::class)->find($id);
-                //$room = new Sale();
                 $rowCount = $room->getDlugoscsali();
 
                 $rows = $this->getDoctrine()->getRepository(Rzedy::class)->getRows($id);
 
                 for ($i = 0; $i < $rowCount; $i++) {
-                    //$row = new Rzedy();
                     $rowId = $rows[$i]->getId();
                     $this->getDoctrine()->getRepository(Miejsca::class)->deleteSeat($rowId);
                 }
-                $this->getDoctrine()->getRepository(Rzedy::class)->deleteRow($id);
+                $this->getDoctrine()->getRepository(Rzedy::class)->deleteRows($id);
                 $entityManager->remove($room);
                 $entityManager->flush();
             }

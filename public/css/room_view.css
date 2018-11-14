@@ -64,19 +64,6 @@
     color: black;
 }
 
-.my_alert{
-    padding-bottom: 15px;
-    padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    /*border: 0.1px solid #7d1f1c;*/
-    border-radius: 4px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    background-color: #f6d6d5;
-    color: #7d1f1c;
-}
-
 .screen{
     background-color: black;
     color: white;

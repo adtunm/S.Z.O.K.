@@ -21,21 +21,21 @@ class MiejscaRepository extends ServiceEntityRepository
         parent::__construct($registry, Miejsca::class);
     }
 
-    public function getSeats($id)
+    public function getSeats($rowId)
     {
         $query = $this->createQueryBuilder('m')
-            ->where('m.rzedy = '.$id)
+            ->where('m.rzedy = '.$rowId)
             ->orderBy('m.pozycja', 'ASC')
             ->getQuery();
 
         return $query->execute();
     }
 
-    public function deleteSeat($id)
+    public function deleteSeat($rowId)
     {
         $query = $this->createQueryBuilder('m')
             ->delete()
-            ->where('m.rzedy = '.$id)
+            ->where('m.rzedy = '.$rowId)
             ->getQuery();
 
         $query->execute();
@@ -58,7 +58,7 @@ class MiejscaRepository extends ServiceEntityRepository
         return $query->execute();
     }
 
-    public function getSeatsCountOfCurrent($id){
+    public function getSeatsCountOfCurrent($roomId){
         $entityManager = $this->getEntityManager();
         $query = $entityManager->createQuery(
             'SELECT COUNT(m.id)
@@ -68,7 +68,7 @@ class MiejscaRepository extends ServiceEntityRepository
             JOIN r.sale s
             WHERE m.numermiejsca != 0
             AND s.id = :id'
-        )->setParameter('id', $id);
+        )->setParameter('id', $roomId);
 
         return $query->getSingleScalarResult();
     }

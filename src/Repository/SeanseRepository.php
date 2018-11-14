@@ -39,19 +39,4 @@ class SeanseRepository extends ServiceEntityRepository
         return $checkRooms;
     }
 
-    public function checkSeancesForCurrentRoom($id)
-    {
-        $entityManager = $this->getEntityManager();
-        $query = $entityManager->createQuery(
-            'SELECT sa.id, se.id
-            AS seanse
-            FROM App\Entity\Seanse se
-            LEFT JOIN se.sale sa
-            WHERE sa.id = :id
-            GROUP BY sa.id
-            ORDER BY sa.numersali ASC'
-        )->setParameter('id', $id);
-
-        return $query->getSingleScalarResult();
-    }
 }

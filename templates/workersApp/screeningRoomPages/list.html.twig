@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="row justify-content-between px-3">
-        <div class="">
+        <div>
             <h1 class="mb-3 font-weight-normal">Lista sal</h1>
         </div>
         <div class="col-md">
@@ -31,10 +31,10 @@
                         <td>{{ seatCounts[loop.index0].liczba }}</td>
                         <td>
                             <div class="pull-right">
-                                {% if ((is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN')) and checkRooms[loop.index0] )%}
+                                {% if (is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN'))%}
                                     <a class="btn btn-primary btn-sm"
                                        href="{{ path('workers_app/rooms_page/edit', {'id': room.id}) }}"> Edytuj</a>
-                                    {% if (is_granted('ROLE_ADMIN') ) %}
+                                    {% if (is_granted('ROLE_ADMIN')  and checkRooms[loop.index0] ) %}
                                         <!-- Button trigger modal -->
                                         <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
                                                 data-target="#roomId{{ room.id }}">
@@ -88,7 +88,6 @@
                                 <a class="btn btn-primary btn-sm"
                                    href="{{ path('workers_app/rooms_page/view', {'id': room.id}) }}">Pokaż
                                     podgląd</a>
-                                {#{{ path('workers_app/rooms_page/room_creator_page', {'id': room.id}) }}#}
                                 <a class="btn btn-primary btn-sm"
                                    href="#">Pokaż seanse</a>
                             </div>
@@ -103,7 +102,7 @@
         {% set basePath = path('workers_app/rooms_page') %}
         {% include 'workersApp/inc/pagination.html.twig' %}
 
-        {% if is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN') %}
+        {% if is_granted('ROLE_ADMIN')%}
             <script>
                 const room = document.getElementById('rooms');
                 if (room) {

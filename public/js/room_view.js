@@ -3,8 +3,8 @@ var seat;
 var seatTable;
 var rowTable;
 
-const ROW_BUYING_ONLY = 2;
 const ROW_NORMAL = 1;
+const ROW_BUYING_ONLY = 2;
 const SEAT_NORMAL = 1;
 const SEAT_INACTIVE = 0;
 
@@ -16,7 +16,6 @@ window.onload = function () {
     createTables(rowCode, seatCode.split(","));
     createView();
 };
-
 
 function createTables(rowCode ,seatCode) {
     seatTable = [];
@@ -67,8 +66,3 @@ function createView() {
     }
     document.getElementById("roomContent").innerHTML = text;
 }
-
-
-
-
-

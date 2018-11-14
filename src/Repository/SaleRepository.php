@@ -26,14 +26,13 @@ class SaleRepository extends ServiceEntityRepository
             ->orderBy('s.numersali', 'ASC')
             ->getQuery();
 
-
         $requestedPage = new Paginator($query);
 
         $requestedPage->getQuery()
             ->setFirstResult($pageLimit * ($page - 1))
             ->setMaxResults($pageLimit);
 
-        return $query->execute();
+        return $requestedPage;
     }
 
     public function getPageCount($pageLimit = 10)

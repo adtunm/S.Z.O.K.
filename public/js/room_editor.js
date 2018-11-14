@@ -2,22 +2,11 @@ var row;
 var seat;
 var seatTable;
 var rowTable;
-//var roomNumber;
 
-const ROW_BUYING_ONLY = 2;
 const ROW_NORMAL = 1;
+const ROW_BUYING_ONLY = 2;
 const SEAT_NORMAL = 1;
 const SEAT_INACTIVE = 0;
-// var pushInputRowCount = document.getElementById("pushInputRowCount");
-// var pushInputSeatCount = document.getElementById("pushInputSeatCount");
-// var pushInputSeatCode = document.getElementById("pushInputSeatCode");
-// var pushInputRowCode = document.getElementById("pushInputRowCode");
-// var pushInputRoomNumber = document.getElementById("pushInputRoomNumber");
-// var roomNumber = pushInputRoomNumber.value;
-// row = pushInputRowCount.value;
-// seat = pushInputSeatCount.value;
-// rowCode = pushInputRowCode.value.toString();
-// seatCode = pushInputSeatCode.value.toString();
 
 window.onload = function () {
     row = document.getElementById("rowCount").value;
@@ -31,7 +20,6 @@ window.onload = function () {
     createView();
 };
 
-
 function createTables(rowCode ,seatCode) {
     seatTable = [];
     rowTable = [];
@@ -44,7 +32,7 @@ function createTables(rowCode ,seatCode) {
     }
 }
 
-function createNewTables(row ,seat, rowCode, seatCode) {
+function createNewTables(row ,seat) {
     seatTable = [];
     rowTable = [];
     for (var i = 0; i < row; i++) {
@@ -59,7 +47,7 @@ function createNewTables(row ,seat, rowCode, seatCode) {
 function createRoom() {
     var newRow = document.getElementById("inputRowNumber").value;
     var newSeat = document.getElementById("inputSeatNumber").value;
-    if(validRowAndSeat(newRow, newSeat)) {
+    if(validateRowAndSeat(newRow, newSeat)) {
         row = newRow;
         seat = newSeat;
         createNewTables(row, seat);
@@ -67,12 +55,10 @@ function createRoom() {
     }
 }
 
-function validRowAndSeat(row, seat){
+function validateRowAndSeat(row, seat){
 
     var inputRowNumber = document.getElementById("inputRowNumber");
     var inputSeatNumber = document.getElementById("inputSeatNumber");
-    var validErrorAlert = document.getElementById("validErrorAlert");
-    var validErrorAlertMessage = document.getElementById("validErrorAlertMessage");
     inputRowNumber.classList.remove("is-invalid");
     inputSeatNumber.classList.remove("is-invalid");
     var isInvalid = false;
@@ -104,7 +90,7 @@ function validRowAndSeat(row, seat){
     }
 }
 
-function validRoomNumber(roomNumber) {
+function validateRoomNumber(roomNumber) {
     var inputRoomNumber = document.getElementById("inputRoomNumber");
     inputRoomNumber.classList.remove("is-invalid");
     const reg = new RegExp("^[a-zA-Z0-9]{1,3}$");
@@ -121,11 +107,9 @@ function validRoomNumber(roomNumber) {
     return true;
 }
 
-
-
 function setData() {
     var roomNumber = document.getElementById("inputRoomNumber").value;
-    if(validRoomNumber(roomNumber)) {
+    if(validateRoomNumber(roomNumber)) {
         var seatTableString = '';
         var rowTableString = '';
         for (var i = 0; i < row; i++) {
@@ -141,16 +125,12 @@ function setData() {
         document.getElementById("seatCount").value = seat;
         document.getElementById("rowCode").value = rowTableString;
         document.getElementById("seatCode").value = seatTableString;
-        //document.getElementById("demo").innerHTML = seatTableString;
         return true;
     }
     else{
-        //document.getElementById("demo").textContent = "111111";
         return false;
     }
 }
-
-
 
 function changeTypeOfSeat(button) {
     var seat_number = button.textContent - 1;
@@ -231,6 +211,3 @@ function changeTypeOfRow(button) {
     }
     createView();
 }
-
-
-
