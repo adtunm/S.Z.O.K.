@@ -14,8 +14,8 @@
             <table id="promotions" class="table">
                 <thead>
                 <tr>
-                    <th style="width: 15%">Nazwa promocji</th>
-                    <th style="width: 15%">Wysokość promocji</th>
+                    <th style="width: 20%">Nazwa promocji</th>
+                    <th style="width: 20%">Wysokość promocji</th>
                     <th style="width: 30%">Specjalne warunki</th>
                     <th style="width: 20%">Czas trwania promocji</th>
                     <th style="width: 10%"></th>
@@ -49,13 +49,15 @@
                         <td>
                             {% if (is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN') )
                                 and promotion.poczatekPromocji|date('Y-m-d') > "now"|date('Y-m-d') %}
-                                <a class="btn btn-primary btn-sm"
-                                   href="{{ path('workers_app/promotions/edit', {'id': promotion.id}) }}">Edytuj</a>
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                                        data-target="#promoctionId{{ promotion.id }}">
-                                    Usuń
-                                </button>
+                                <div class="pull-right">
+                                    <a class="btn btn-primary btn-sm"
+                                       href="{{ path('workers_app/promotions/edit', {'id': promotion.id}) }}">Edytuj</a>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                                            data-target="#promoctionId{{ promotion.id }}">
+                                        Usuń
+                                    </button>
+                                </div>
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="promoctionId{{ promotion.id }}" tabindex="-1" role="dialog"

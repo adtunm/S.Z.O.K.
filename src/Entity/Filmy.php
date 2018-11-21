@@ -3,12 +3,13 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Filmy
  *
  * @ORM\Table(name="filmy", uniqueConstraints={@ORM\UniqueConstraint(name="idFilmy_UNIQUE", columns={"id"})}, indexes={@ORM\Index(name="fk_Filmy_KategorieWiekowe1_idx", columns={"KategorieWiekowe_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\FilmyRepository")
  */
 class Filmy
 {
@@ -31,7 +32,7 @@ class Filmy
     /**
      * @return string
      */
-    public function getTytul(): string
+    public function getTytul(): ?string
     {
         return $this->tytul;
     }
@@ -63,7 +64,7 @@ class Filmy
     /**
      * @return \DateTime
      */
-    public function getDatapremiery(): \DateTime
+    public function getDatapremiery(): ?\DateTime
     {
         return $this->datapremiery;
     }
@@ -79,7 +80,7 @@ class Filmy
     /**
      * @return int
      */
-    public function getCzastrwania(): int
+    public function getCzastrwania(): ?int
     {
         return $this->czastrwania;
     }
@@ -95,7 +96,7 @@ class Filmy
     /**
      * @return int
      */
-    public function getCzasreklam(): int
+    public function getCzasreklam(): ?int
     {
         return $this->czasreklam;
     }
@@ -141,17 +142,17 @@ class Filmy
     }
 
     /**
-     * @return \Kategoriewiekowe
+     * @return Kategoriewiekowe|null
      */
-    public function getKategoriewiekowe(): \Kategoriewiekowe
+    public function getKategoriewiekowe(): ?Kategoriewiekowe
     {
         return $this->kategoriewiekowe;
     }
 
     /**
-     * @param \Kategoriewiekowe $kategoriewiekowe
+     * @param Kategoriewiekowe $kategoriewiekowe
      */
-    public function setKategoriewiekowe(\Kategoriewiekowe $kategoriewiekowe): void
+    public function setKategoriewiekowe(Kategoriewiekowe $kategoriewiekowe): void
     {
         $this->kategoriewiekowe = $kategoriewiekowe;
     }
@@ -200,6 +201,19 @@ class Filmy
      * @var string
      *
      * @ORM\Column(name="tytul", type="string", length=127, nullable=false)
+     * @Assert\Regex(
+     *     pattern="/^[^\<\>]+$/u",
+     *     message="Tytuł nie może zawierać następujących znaków: '<', '>'."
+     * )
+     * @Assert\Length(
+     *     max = 127,
+     *     min = 5,
+     *     maxMessage = "Tytuł może zawierać maksymalnie 127 znaków.",
+     *     minMessage = "Tytuł musi zawierać minimum 5 znaków."
+     * )
+     * @Assert\NotBlank(
+     *     message="Tytuł nie może być pusty."
+     * )
      */
     private $tytul;
 
@@ -207,6 +221,10 @@ class Filmy
      * @var string|null
      *
      * @ORM\Column(name="opis", type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max = 255,
+     *     maxMessage = "Opis może zawierać maksymalnie 255 znaków."
+     * )
      */
     private $opis;
 
@@ -214,6 +232,12 @@ class Filmy
      * @var \DateTime
      *
      * @ORM\Column(name="dataPremiery", type="date", nullable=false)
+     * @Assert\NotBlank(
+     *     message="Data premiery nie może być pusta."
+     * )
+     * @Assert\Date(
+     *     message="Podana wartość nie jest datą"
+     * )
      */
     private $datapremiery;
 
@@ -221,6 +245,14 @@ class Filmy
      * @var int
      *
      * @ORM\Column(name="czasTrwania", type="integer", nullable=false)
+     * @Assert\GreaterThan(
+     *     value="0",
+     *     message="Czas trwania musi być większy od 0"
+     * )
+     * @Assert\LessThan(
+     *     value="720",
+     *     message="Długość filmu nie może przekraczać 720 minut."
+     * )
      */
     private $czastrwania;
 
@@ -228,6 +260,14 @@ class Filmy
      * @var int
      *
      * @ORM\Column(name="czasReklam", type="integer", nullable=false)
+     * @Assert\GreaterThanOrEqual(
+     *     value="0",
+     *     message="Czas reklam mnie może być ujemny."
+     * )
+     * @Assert\LessThan(
+     *     value="30",
+     *     message="Czas reklam nie może przekraczać 30 minut."
+     * )
      */
     private $czasreklam;
 
@@ -235,6 +275,12 @@ class Filmy
      * @var string|null
      *
      * @ORM\Column(name="plakat", type="string", length=255, nullable=true)
+     * @Assert\Image(
+     *     mimeTypes="image/*",
+     *     mimeTypesMessage="Załączony plik nie jest obrazem.",
+     *     maxSize="2M",
+     *     maxSizeMessage="Twój plik przekracza dopuszczalny rozmiar 2MB."
+     * )
      */
     private $plakat;
 
@@ -242,16 +288,23 @@ class Filmy
      * @var string|null
      *
      * @ORM\Column(name="zwiastun", type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *     max="255",
+     *     maxMessage="Link do zwiastuna może zawierać maksymalnie 255 znaków."
+     * )
      */
     private $zwiastun;
 
     /**
-     * @var \Kategoriewiekowe
+     * @var Kategoriewiekowe
      *
      * @ORM\ManyToOne(targetEntity="Kategoriewiekowe")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="KategorieWiekowe_id", referencedColumnName="id")
      * })
+     * @Assert\NotBlank(
+     *     message="Kategoria wiekowa jest wymagana"
+     * )
      */
     private $kategoriewiekowe;
 
@@ -267,6 +320,10 @@ class Filmy
      *     @ORM\JoinColumn(name="RodzajeFilmow_id", referencedColumnName="id")
      *   }
      * )
+     * @Assert\Count(
+     *     min="1",
+     *     minMessage="Musisz wybrać przynajmniej jeden gatunek filmowy."
+     * )
      */
     private $rodzajefilmow;
 
@@ -281,6 +338,10 @@ class Filmy
      *   inverseJoinColumns={
      *     @ORM\JoinColumn(name="TypySeansow_id", referencedColumnName="id")
      *   }
+     * )
+     * @Assert\Count(
+     *     min="1",
+     *     minMessage="Musisz wybrać przynajmniej jeden format filmu"
      * )
      */
     private $typyseansow;

@@ -1,4 +1,13 @@
 {% extends 'workersApp/workerBase.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/error_messages.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/form_invalid_func.js') }}"></script>
+{% endblock %}
+
 {% block content %}
     <div class="pb-4 mt-0">
     <div class="h1 pb-3">Dodaj nowego pracownika</div>
@@ -97,10 +106,4 @@
                role="button">Wróć</a>
         </div>
     </div>
-
-
-
-
-
-
 {% endblock %}

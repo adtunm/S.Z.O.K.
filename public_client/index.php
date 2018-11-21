@@ -32,6 +32,9 @@ if ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? $_ENV['TRUSTED_HOSTS'] ?? false
     Request::setTrustedHosts(explode(',', $trustedHosts));
 }
 
+$filesystem = new Symfony\Component\Filesystem\Filesystem();
+$filesystem->symlink('../images/', 'img/', true);
+
 $kernel = new ClientsKernel($env, $debug);
 $request = Request::createFromGlobals();
 $response = $kernel->handle($request);

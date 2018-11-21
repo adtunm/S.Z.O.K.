@@ -12,3 +12,7 @@
     border-bottom-right-radius: 0.25rem !important;
     border-top-right-radius: 0.25rem !important;
 }
+
+.is-invalid.form-control-file{
+    border: 1px solid #dc3545;
+}

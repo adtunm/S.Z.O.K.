@@ -25,6 +25,10 @@ class EmployeesControler extends AbstractController
             $form = $this->createFormBuilder($pracownik)
                 ->add('role', EntityType::class, array(
                     'class' => Role::class,
+                    'query_builder' => function (\Doctrine\ORM\EntityRepository $er) {
+                        return $er->createQueryBuilder('d')
+                            ->andWhere('d.usunieto = 0 OR d.usunieto IS NULL');
+                    },
                     'label' => "Rola: ",
                     'expanded' => false,
                     'multiple' => false,
@@ -160,6 +164,10 @@ class EmployeesControler extends AbstractController
                 ->remove('haslo')
                 ->add('role', EntityType::class, array(
                     'class' => Role::class,
+                    'query_builder' => function (\Doctrine\ORM\EntityRepository $er) {
+                        return $er->createQueryBuilder('d')
+                            ->andWhere('d.usunieto = 0 OR d.usunieto IS NULL');
+                    },
                     'label' => "Rola: ",
                     'expanded' => false,
                     'multiple' => false,
@@ -288,7 +296,7 @@ class EmployeesControler extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($pracownik);
                 $entityManager->flush();
-                return $this->redirectToRoute('worker_app/employees/show', array('id' => $id));
+                return $this->redirectToRoute('workers_app/employees/show', array('id' => $id));
             }
             return $this->render('workersApp/employees/resetPassword.html.twig', array(
                 'form' => $form->createView(), 'id' => $id
