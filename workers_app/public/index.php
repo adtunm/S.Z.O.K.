@@ -34,6 +34,8 @@ if ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? $_ENV['TRUSTED_HOSTS'] ?? false
 
 $filesystem = new Symfony\Component\Filesystem\Filesystem();
 $filesystem->symlink('../../images/', 'img/', true);
+$filesystem->symlink('../../database/Entity', '../src/Entity', true);
+$filesystem->symlink('../../database/Repository', '../src/Repository', true);
 
 $kernel = new Kernel($env, $debug);
 $request = Request::createFromGlobals();
