@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Bilety
  *
  * @ORM\Table(name="bilety", uniqueConstraints={@ORM\UniqueConstraint(name="Biletcol_UNIQUE", columns={"id"})}, indexes={@ORM\Index(name="fk_Tranzakcje_has_RodzajeBiletow_RodzajeBiletow1_idx", columns={"RodzajeBiletow_id"}), @ORM\Index(name="fk_Tranzakcje_has_RodzajeBiletow_Tranzakcje1_idx", columns={"Tranzakcje_id"}), @ORM\Index(name="fk_Tranzakcja_ma_Bilet_Miejsca1_idx", columns={"Miejsca_id"}), @ORM\Index(name="fk_Bilety_Vouchery1_idx", columns={"Vouchery_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\BiletyRepository")
  */
 class Bilety
 {

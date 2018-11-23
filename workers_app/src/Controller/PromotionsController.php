@@ -27,6 +27,9 @@ class PromotionsController extends Controller
      */
     public function index($page)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             $pageLimit = $this->getParameter('page_limit');
             $pageCount = $this->getDoctrine()->getRepository(Promocje::class)->getPageCountOfActual($pageLimit);
@@ -47,6 +50,9 @@ class PromotionsController extends Controller
      */
     public function add(Request $request)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $promotion = new Promocje();
 
@@ -77,6 +83,9 @@ class PromotionsController extends Controller
      */
     public function edit(Request $request, $id)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $promotion = $this->getDoctrine()->getRepository(Promocje::class)->find($id);
 
@@ -111,6 +120,9 @@ class PromotionsController extends Controller
      */
     private function getForm(Promocje $promotion)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         return $this->createFormBuilder($promotion)
             ->add('nazwa', TextType::class, array(
                 'label' => 'Nazwa promocji:',
@@ -192,6 +204,9 @@ class PromotionsController extends Controller
      */
     public function delete(Request $request, $id)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $promotion = $this->getDoctrine()->getRepository(Promocje::class)->find($id);
             if($promotion->getPoczatekpromocji()->format("Y-m-d") > date("Y-m-d")) {

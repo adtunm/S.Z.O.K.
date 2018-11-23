@@ -20,6 +20,9 @@ class EmployeesControler extends AbstractController
      */
     public function addEmployee(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if ($this->isGranted('ROLE_ADMIN')) {
             $pracownik = new Pracownicy();
             $form = $this->createFormBuilder($pracownik)
@@ -118,6 +121,9 @@ class EmployeesControler extends AbstractController
      */
     public function list($page)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if ($this->isGranted('ROLE_ADMIN') || $this->isGranted('ROLE_MANAGER')) {
             $pageLimit = $this->getParameter('page_limit');
             $pageCount = $this->getDoctrine()->getRepository(Pracownicy::class)->getPageCountOfActive($pageLimit);
@@ -140,6 +146,9 @@ class EmployeesControler extends AbstractController
      */
     public function show($id)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if ($this->isGranted('ROLE_ADMIN') || $this->isGranted('ROLE_MANAGER')) {
             $worker = $this->getDoctrine()->getRepository(Pracownicy::class)->find($id);
             return $this->render('workersApp/employees/show.html.twig', array('worker' => $worker));
@@ -156,6 +165,9 @@ class EmployeesControler extends AbstractController
      */
     public function edit(Request $request, $id)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if ($this->isGranted('ROLE_ADMIN')) {
             $user = $this->getUser();
 
@@ -247,6 +259,9 @@ class EmployeesControler extends AbstractController
      */
     public function delete($id)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if ($this->isGranted('ROLE_ADMIN')) {
             $pracownik = $this->getDoctrine()->getRepository(Pracownicy::class)->find($id);
             $pracownik->setczyAktywny(0);
@@ -267,6 +282,9 @@ class EmployeesControler extends AbstractController
      */
     public function resetPassword(Request $request, $id, UserPasswordEncoderInterface $passwordEncoder)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if ($this->isGranted('ROLE_ADMIN')) {
             $pracownik = $this->getDoctrine()->getRepository(Pracownicy::class)->find($id);
             if ($this->getUser()->getId() == $pracownik->getId())
@@ -314,6 +332,9 @@ class EmployeesControler extends AbstractController
      */
     public function changePassword($id, UserPasswordEncoderInterface $passwordEncoder)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             if ($id == $this->getUser()->getId()) {
                 $pracownik = $this->getDoctrine()->getRepository(Pracownicy::class)->find($id);

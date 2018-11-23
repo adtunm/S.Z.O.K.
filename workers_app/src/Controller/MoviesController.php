@@ -30,6 +30,9 @@ class MoviesController extends Controller
      */
     public function index($page)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             $pageLimit = $this->getParameter('page_limit');
             $pageCount = $this->getDoctrine()->getRepository(Filmy::class)->getPageCount($pageLimit);
@@ -50,6 +53,9 @@ class MoviesController extends Controller
      */
     public function new(Request $request)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $movie = new Filmy();
 
@@ -81,6 +87,9 @@ class MoviesController extends Controller
      */
     private function getForm(Filmy $movie)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         return $this->createFormBuilder($movie)
             ->add('tytul', TextType::class, array(
                 'label' => 'Tytuł:',

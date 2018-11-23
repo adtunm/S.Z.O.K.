@@ -33,11 +33,11 @@
                     <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle" href="#" id="loggedDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-user" aria-hidden="true"></i> Witaj, Jan
+                            <i class="fa fa-user" aria-hidden="true"></i> Witaj, {{ app.user.Imie }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="loggedDropdown">
-                            <a class="dropdown-item" href="#">Edytuj mój profil</a>
-                            <a class="dropdown-item" href="#">Zmień hasło</a>
+                            <a class="dropdown-item" href="{{ path("clients_app/user/edit") }}">Edytuj mój profil</a>
+                            <a class="dropdown-item" href="{{ path("clients_app/user/password_edit") }}">Zmień hasło</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Pokaż moje rezerwacje</a>
                             <a class="dropdown-item" href="#">Pokaż moje transakcje</a>
@@ -70,7 +70,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj
                     </button>
-                    <a class="btn btn-primary" href="#">Wyloguj się</a>
+                    <a class="btn btn-primary" href="{{ path("clients_app/logout_page") }}">Wyloguj się</a>
                 </div>
             </div>
         </div>

@@ -204,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Uzytkownicy` (
   `email` VARCHAR(255) NOT NULL,
   `dataRejestracji` DATE NOT NULL,
   `czyKobieta` TINYINT NOT NULL,
-  `czyZablowoany` TINYINT NULL,
+  `czyZablokowany` TINYINT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idUzytkownicy_UNIQUE` (`id` ASC),
   UNIQUE INDEX `login_UNIQUE` (`login` ASC),

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
@@ -33,6 +34,9 @@ class AppController extends AbstractController
      */
     public function index()
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('IS_AUTHENTICATED_FULLY'))
             return $this->render('workersApp/mainPage/mainPage.html.twig');
         else {
@@ -45,10 +49,24 @@ class AppController extends AbstractController
      */
     public function noPermission()
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('IS_AUTHENTICATED_FULLY'))
             return $this->render('workersApp/mainPage/noPermission.html.twig');
         else {
             return $this->redirectToRoute('workers_app/login_page');
+        }
+    }
+
+    public static function logoutOnSessionLifetimeEnd(Session $session){
+        if ((time() - strtotime($session->get('lifetime'))) > 30) {
+            return true;
+        }else{
+            $session->set(
+                'lifetime',
+                date("Y-m-d H:i:s"));
+            return false;
         }
     }
 }
