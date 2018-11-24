@@ -80,7 +80,7 @@ class PromotionsController extends Controller
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $promotion = $this->getDoctrine()->getRepository(Promocje::class)->find($id);
 
-            if($promotion->getPoczatekpromocji()->format("Y-m-d") <= date("Y-m-d"))
+            if($promotion == null or $promotion->getPoczatekpromocji()->format("Y-m-d") <= date("Y-m-d"))
                 throw new NotFoundHttpException();
 
             $form = $this->getForm($promotion);
@@ -194,7 +194,7 @@ class PromotionsController extends Controller
     {
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $promotion = $this->getDoctrine()->getRepository(Promocje::class)->find($id);
-            if($promotion->getPoczatekpromocji()->format("Y-m-d") > date("Y-m-d")) {
+            if($promotion != null and $promotion->getPoczatekpromocji()->format("Y-m-d") > date("Y-m-d")) {
                 $entityManager = $this->getDoctrine()->getManager();
 
                 $entityManager->remove($promotion);

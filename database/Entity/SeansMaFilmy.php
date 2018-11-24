@@ -94,7 +94,7 @@ class SeansMaFilmy
     /**
      * @var \Filmy
      *
-     * @ORM\ManyToOne(targetEntity="Filmy")
+     * @ORM\ManyToOne(targetEntity="Filmy", inversedBy="seansMaFilmy")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="Filmy_id", referencedColumnName="id")
      * })
@@ -104,7 +104,7 @@ class SeansMaFilmy
     /**
      * @var \Seanse
      *
-     * @ORM\ManyToOne(targetEntity="Seanse")
+     * @ORM\ManyToOne(targetEntity="Seanse", inversedBy="seansMaFilmy")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="Seanse_id", referencedColumnName="id")
      * })
