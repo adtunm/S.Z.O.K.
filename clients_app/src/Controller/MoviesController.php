@@ -9,24 +9,10 @@
 namespace App\Controller;
 
 use App\Entity\Filmy;
-use App\Entity\Kategoriewiekowe;
-use App\Entity\Rodzajefilmow;
 use App\Entity\Seanse;
-use App\Entity\SeansMaFilmy;
-use App\Entity\Typyseansow;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Filesystem\Filesystem;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
 
 class MoviesController extends Controller
 {
@@ -70,8 +56,7 @@ class MoviesController extends Controller
     {
         $movie = $this->getDoctrine()->getRepository(Filmy::class)->find($id);
         if(!$movie)
-            return $this->redirectToRoute('workers_app/no_permission');
-
+            return new NotFoundHttpException();
         if($_POST and isset($_POST['form_date'])) {
             if(\DateTime::createFromFormat('Y-m-d', $_POST['form_date'])) {
                 $date = $_POST['form_date'];
