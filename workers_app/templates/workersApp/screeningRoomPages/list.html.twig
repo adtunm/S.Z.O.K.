@@ -14,7 +14,7 @@
                 sal</a>
         </div>
     </div>
-    {% if rooms %}
+    {% if pageCount > 0 %}
         <div style="overflow-x: auto;">
             <table id="rooms" class="table">
                 <thead>
@@ -121,6 +121,9 @@
             </script>
         {% endif %}
     {% else %}
-        <p class="h1">Brak sal</p>
+        <h1 class="text-center">Brak sal</h1>
+        <div class="text-center display-1">
+            <i class="fa fa-th" aria-hidden="true"></i>
+        </div>
     {% endif %}
 {% endblock %}

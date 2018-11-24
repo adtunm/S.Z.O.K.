@@ -9,7 +9,7 @@
             </div>
         {% endif %}
     </div>
-    {% if movies %}
+    {% if pageCount >0 %}
         <div style="overflow-x: auto;">
             <table id="movies" class="table">
                 <thead>
@@ -44,6 +44,9 @@
         {% set basePath = path('workers_app/movies') %}
         {% include 'workersApp/inc/pagination.html.twig' %}
     {% else %}
-        <p class="h1">Brak aktualnych promocji</p>
+        <h1 class="text-center">Brak filmów</h1>
+        <div class="text-center display-1">
+            <i class="fa fa-movie" aria-hidden="true"></i>
+        </div>
     {% endif %}
 {% endblock %}

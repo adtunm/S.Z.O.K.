@@ -43,6 +43,26 @@ class PromotionsController extends Controller
     }
 
     /**
+     * @Route("/promotions/old/{page<[1-9]\d*>?1}", name="workers_app/promotions/old", methods={"GET"})
+     */
+    public function old($page)
+    {
+        if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
+            $pageLimit = $this->getParameter('page_limit');
+            $pageCount = $this->getDoctrine()->getRepository(Promocje::class)->getPageCountOfOld($pageLimit);
+
+            if($page > $pageCount and $pageCount != 0)
+                return $this->redirectToRoute('workers_app/promotions/old');
+            else {
+                $promotions = $this->getDoctrine()->getRepository(Promocje::class)->findOld($page, $pageLimit);
+                return $this->render('workersApp/promotions/listOld.html.twig', array('promotions' => $promotions, 'currentPage' => $page, 'pageCount' => $pageCount));
+            }
+        } else {
+            return $this->redirectToRoute('workers_app/login_page');
+        }
+    }
+
+    /**
      * @Route("/promotions/add", name="workers_app/promotions/add", methods={"GET", "POST"})
      */
     public function add(Request $request)
