@@ -19,6 +19,9 @@ class PromotionsController extends Controller
      */
     public function index($page)
     {
+        if ($this->isGranted('ROLE_USER') and AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('clients_app/logout_page');
+        }
         $pageLimit = $this->getParameter('page_limit');
         $pageCount = $this->getDoctrine()->getRepository(Promocje::class)->getPageCountOfActual($pageLimit);
 
@@ -35,6 +38,9 @@ class PromotionsController extends Controller
      */
     public function old($page)
     {
+        if ($this->isGranted('ROLE_USER') and AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('clients_app/logout_page');
+        }
         $pageLimit = $this->getParameter('page_limit');
         $pageCount = $this->getDoctrine()->getRepository(Promocje::class)->getPageCountOfOld($pageLimit);
 

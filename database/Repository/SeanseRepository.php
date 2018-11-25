@@ -39,6 +39,29 @@ class SeanseRepository extends ServiceEntityRepository
         return $checkRooms;
     }
 
+    public function getSeance($id)
+    {
+        $entityManager = $this->getEntityManager();
+        $query = $entityManager->createQuery(
+            'SELECT DISTINCT
+                se.id,
+                f.tytul, 
+                DATE_FORMAT(se.poczatekseansu, \'%d.%m.%Y\') AS data,
+                DATE_FORMAT(se.poczatekseansu, \'%H:%i\') AS godzina,
+                sa.id AS salaid,
+                sa.numersali,
+                ts.nazwa
+            FROM App\Entity\Seanse se
+            JOIN se.sale sa
+            JOIN se.typyseansow ts
+            JOIN App\Entity\SeansMaFilmy smf
+            JOIN smf.filmy f
+            WHERE se.id = :id AND smf.seanse = se.id')
+        ->setParameter('id', $id);
+
+        return $query->execute();
+    }
+
     public function findSeancesForMovie(\App\Entity\Filmy $movie, $date, $page = 1, $pageLimit = 5){
         $from = new \DateTime($date." 00:00:00");
         $to   = new \DateTime($date." 23:59:59");

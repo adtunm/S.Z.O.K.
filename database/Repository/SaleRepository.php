@@ -46,7 +46,7 @@ class SaleRepository extends ServiceEntityRepository
 
         $pageCount = floor($count / $pageLimit);
         $rest = $count % $pageLimit;
-        if($rest != 0) {
+        if ($rest != 0) {
             $pageCount = $pageCount + 1;
         }
 

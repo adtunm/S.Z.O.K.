@@ -29,6 +29,9 @@ class RoomsController extends Controller
      */
     public function index($page)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             $pageLimit = $this->getParameter('page_limit');
             $pageCount = $this->getDoctrine()->getRepository(Sale::class)->getPageCount($pageLimit);
@@ -51,6 +54,9 @@ class RoomsController extends Controller
      */
     public function new(Request $request)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if ($this->isGranted('ROLE_ADMIN')) {
             $entityManager = $this->getDoctrine()->getManager();
             if ($this->ifRoomViewExist($request)) {
@@ -188,6 +194,9 @@ class RoomsController extends Controller
      */
     public function view($id)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         $entityManager = $this->getDoctrine()->getManager();
         if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             if ($room = $this->getDoctrine()->getRepository(Sale::class)->find($id)) {
@@ -207,7 +216,7 @@ class RoomsController extends Controller
         }
     }
 
-    private function getRoomView($id)
+    public function getRoomView($id)
     {
         $room = $this->getDoctrine()->getRepository(Sale::class)->find($id);
         $rowCount = $room->getDlugoscsali();
@@ -251,6 +260,9 @@ class RoomsController extends Controller
      */
     public function edit(Request $request, $id)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         $entityManager = $this->getDoctrine()->getManager();
         if ($this->isGranted('ROLE_ADMIN')) {
             if ($this->ifRoomViewExist($request)) {
@@ -380,6 +392,9 @@ class RoomsController extends Controller
      */
     public function delete($id)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if ($this->isGranted('ROLE_ADMIN')) {
             $entityManager = $this->getDoctrine()->getManager();
             if (!$entityManager->getRepository(Seanse::class)->findOneBy(array('sale' => $id))) {

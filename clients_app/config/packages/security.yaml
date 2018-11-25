@@ -1,27 +1,28 @@
 security:
     encoders:
-        App\Entity\Pracownicy:
+        App\Entity\Uzytkownicy:
             algorithm: bcrypt
             cost: 12
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         app_user_provider:
             entity:
-                class: App\Entity\Pracownicy
+                class: App\Entity\Uzytkownicy
                 property: login
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-        main:
+        client:
             anonymous: true
             guard:
                 authenticators:
-                    - App\Security\LoginFormAuthenticator
+                - App\Security\LoginFormAuthenticator
 
             logout:
-               path: workers_app/logout_page
-               target: workers_app/login_page
+                path: clients_app/logout_page
+                target: clients_app/login_page
+
 
             # activate different ways to authenticate
 
@@ -34,6 +35,4 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-         - { path: ^/admin/^, roles: ROLE_ADMIN }
-         - { path: ^/worker/^, roles: ROLE_WORKER }
-         - { path: ^/manager/^, roles: ROLE_MANAGER }
+    - { path: ^/users/^, roles: ROLE_USER }

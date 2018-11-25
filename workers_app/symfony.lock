@@ -1,4 +1,10 @@
 {
+    "bacon/bacon-qr-code": {
+        "version": "1.0.3"
+    },
+    "beberlei/doctrineextensions": {
+        "version": "v1.1.5"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -65,8 +71,41 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "endroid/installer": {
+        "version": "1.0.7"
+    },
+    "endroid/qr-code": {
+        "version": "3.4.7"
+    },
+    "endroid/qr-code-bundle": {
+        "version": "3.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "3.0",
+            "ref": "b9fcbe18b537c63bf61d3c3be8116a00a85c8e2e"
+        }
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
+    },
+    "khanamiryan/qrcode-detector-decoder": {
+        "version": "1.0.2"
+    },
+    "knplabs/knp-snappy": {
+        "version": "v1.0.4"
+    },
+    "knplabs/knp-snappy-bundle": {
+        "version": "1.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.5",
+            "ref": "c81bdcf4a9d4e7b1959071457f9608631865d381"
+        }
+    },
+    "myclabs/php-enum": {
+        "version": "1.6.4"
     },
     "nikic/php-parser": {
         "version": "v4.1.0"
@@ -203,6 +242,9 @@
     "symfony/polyfill-mbstring": {
         "version": "v1.9.0"
     },
+    "symfony/process": {
+        "version": "v4.1.7"
+    },
     "symfony/property-access": {
         "version": "v4.1.6"
     },
@@ -262,6 +304,9 @@
     },
     "twig/twig": {
         "version": "v2.5.0"
+    },
+    "wemersonjanuario/wkhtmltopdf-windows": {
+        "version": "0.12.2.3"
     },
     "zendframework/zend-code": {
         "version": "3.3.1"

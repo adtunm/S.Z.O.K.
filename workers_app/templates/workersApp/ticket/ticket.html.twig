@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bilety</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        td {
+            font-size: large;
+        }
+
+        .page {
+            overflow: hidden;
+            page-break-after: always;
+        }
+    </style>
+</head>
+<body>
+
+{% for bilet in bilety %}
+    <table style="width:100%">
+        <tr>
+            <td><h1 style="text-align: center;">SZOK</h1></td>
+            <td colspan="3"><h3>Tytuł filmu: {{ bilet.tytul }}</h3></td>
+        </tr>
+        <tr>
+            <td rowspan="5" style="text-align: center;"><img
+                        src="{{ qr_code_data_uri(bilet.kodbiletu, { writer: 'svg', size: 150 }) }}"/></td>
+        </tr>
+        <tr>
+            <td>Sala: {{ bilet.numersali }}</td>
+            <td>Rząd: {{ bilet.numerrzedu }}</td>
+            <td>Miejsce: {{ bilet.numermiejsca }}</td>
+        </tr>
+        <tr>
+            <td>Data: {{ bilet.data }}</td>
+            <td colspan="2">Godzina: {{ bilet.godzina }}</td>
+        </tr>
+        <tr>
+            <td>Cena: {{ bilet.cena }}zł</td>
+            <td colspan="2">Rodzaj: {{ bilet.nazwa }}</td>
+        </tr>
+        <tr>
+            <td colspan="3">{{ bilet.kodbiletu }}</td>
+        </tr>
+    </table>
+    <br>
+    {% if loop.index is divisible by(4) %}
+        <div class="page">
+        </div>
+    {% endif %}
+{% endfor %}
+
+</body>
+</html>

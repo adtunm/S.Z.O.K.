@@ -11,6 +11,7 @@ namespace App\Controller;
 use App\Entity\Filmy;
 use App\Entity\Seanse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -22,6 +23,9 @@ class MoviesController extends Controller
      */
     public function index($page = 1)
     {
+        if ($this->isGranted('ROLE_USER') and AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('clients_app/logout_page');
+        }
         $pageLimit = 8;
         $pageCount = $this->getDoctrine()->getRepository(Filmy::class)->getPageCountOfActual($pageLimit);
 
@@ -38,6 +42,9 @@ class MoviesController extends Controller
      */
     public function listAll($page)
     {
+        if ($this->isGranted('ROLE_USER') and AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('clients_app/logout_page');
+        }
         $pageLimit = 8;
         $pageCount = $this->getDoctrine()->getRepository(Filmy::class)->getPageCount($pageLimit);
 
@@ -52,14 +59,17 @@ class MoviesController extends Controller
     /**
      * @Route("/movies/show/{id<[1-9]\d*>}/{page<[1-9]\d*>?1}", name="workers_app/movies/show", methods={"GET", "POST"})
      */
-    public function show($id, $page)
+    public function show(Request $request, $id, $page)
     {
+        if ($this->isGranted('ROLE_USER') and AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('clients_app/logout_page');
+        }
         $movie = $this->getDoctrine()->getRepository(Filmy::class)->find($id);
         if(!$movie)
             return new NotFoundHttpException();
-        if($_POST and isset($_POST['form_date'])) {
-            if(\DateTime::createFromFormat('Y-m-d', $_POST['form_date'])) {
-                $date = $_POST['form_date'];
+        if($request->get('form_date')) {
+            if(\DateTime::createFromFormat('Y-m-d', $request->get('form_date'))) {
+                $date = $request->get('form_date');
             } else {
                 $date = date('Y-m-d');
             }

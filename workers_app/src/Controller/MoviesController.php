@@ -34,6 +34,9 @@ class MoviesController extends Controller
      */
     public function index($page)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             $pageLimit = $this->getParameter('page_limit');
             $pageCount = $this->getDoctrine()->getRepository(Filmy::class)->getPageCount($pageLimit);
@@ -54,6 +57,9 @@ class MoviesController extends Controller
      */
     public function new(Request $request)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $movie = new Filmy();
 
@@ -91,6 +97,9 @@ class MoviesController extends Controller
      */
     public function edit(Request $request, $id)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $movie = $this->getDoctrine()->getRepository(Filmy::class)->find($id);
             if(!$movie)
@@ -142,16 +151,19 @@ class MoviesController extends Controller
     /**
      * @Route("/movies/show/{id<[1-9]\d*>}/{page<[1-9]\d*>?1}", name="workers_app/movies/show", methods={"GET", "POST"})
      */
-    public function show($id, $page)
+    public function show(Request $request, $id, $page)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             $movie = $this->getDoctrine()->getRepository(Filmy::class)->find($id);
             if(!$movie)
                 return $this->redirectToRoute('workers_app/no_permission');
 
-            if($_POST and isset($_POST['form_date'])) {
-                if(\DateTime::createFromFormat('Y-m-d', $_POST['form_date'])) {
-                    $date = $_POST['form_date'];
+            if($request->get('form_date')) {
+                if(\DateTime::createFromFormat('Y-m-d', $request->get('form_date'))) {
+                    $date = $request->get('form_date');
                 } else {
                     $date = date('Y-m-d');
                 }
@@ -191,6 +203,9 @@ class MoviesController extends Controller
      */
     public function delete(Request $request, $id)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $movie = $this->getDoctrine()->getRepository(Filmy::class)->find($id);
             if($movie != null and $this->getDoctrine()->getRepository(Seanse::class)->checkSeancesForMovie($movie)) {
