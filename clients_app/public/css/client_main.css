@@ -9,3 +9,11 @@
 .bg-background{
     background-color: #ebebeb;
 }
+
+
+table.table > thead > tr > th{
+    border-color: black;
+}
+table.table > tbody > tr > td{
+    border-color: black;
+}

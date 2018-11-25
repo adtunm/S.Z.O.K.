@@ -9,9 +9,9 @@
             </div>
         {% endif %}
         </div>
-    {% if workerList %}
+    {% if pageCount > 0 %}
         <div style="overflow-x: auto ">
-            <table id="articles" class="table">
+            <table id="employees" class="table">
                 <thead>
                 <tr>
                     <th style="width: 10%">Id</th>
@@ -40,6 +40,9 @@
         {% set basePath = path('worker_app/employees/list') %}
         {% include 'workersApp/inc/pagination.html.twig' %}
     {% else %}
-        <p><h1>Brak pracowników</h1></p>
+        <h1 class="text-center">Brak pracowników</h1>
+        <div class="text-center display-1">
+            <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
     {% endif %}
 {% endblock %}

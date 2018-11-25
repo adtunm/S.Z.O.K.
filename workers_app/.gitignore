@@ -4,7 +4,7 @@
 /public/bundles/
 /var/
 /vendor/
-/src/Entity/
-/src/Repository/
-/public/img/
+/src/Entity/*
+/src/Repository/*
+/public/img/*
 ###< symfony/framework-bundle ###

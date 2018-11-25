@@ -6,12 +6,12 @@
             {% set nextPage = currentPage + 1 %}
             <div class="d-block d-sm-none">
                 {% if currentPage > 1 %}
-                    <a href="{{ basePath~"/"~previousPage }}" class="btn btn-primary">
+                    <a href="{{ basePath~"/"~previousPage }}" class="btn btn-primary btn-sm">
                         <i class="fa fa-angle-left" aria-hidden="true"></i> Wstecz
                     </a>
                 {% endif %}
                 {% if currentPage < pageCount %}
-                    <a href="{{ basePath~"/"~nextPage }}" class="btn btn-primary pull-right">
+                    <a href="{{ basePath~"/"~nextPage }}" class="btn btn-primary btn-sm pull-right">
                         Dalej <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
                 {% endif %}

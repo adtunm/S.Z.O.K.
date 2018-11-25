@@ -9,7 +9,7 @@
             </div>
         {% endif %}
     </div>
-    {% if movies %}
+    {% if pageCount >0 %}
         <div style="overflow-x: auto;">
             <table id="movies" class="table">
                 <thead>
@@ -24,16 +24,16 @@
                 <tbody>
                 {% for movie in movies %}
                     <tr>
-                        <td scope="row">{{ movie.tytul }}</td>
+                        <td scope="row">{{ movie.tytul }} ({{ movie.datapremiery|date("Y") }})</td>
                         <td>{{ movie.czastrwania }} min</td>
                         <td>{{ movie.czasreklam }} min</td>
                         <td>
-                            {% for formats in movie.typyseansow %}
-                                {{ formats.nazwa }}{% if not loop.last %}, {% endif %}
+                            {% for format in movie.typyseansow %}
+                                {{ format.nazwa }}{% if not loop.last %}, {% endif %}
                             {% endfor %}
                         </td>
                         <td>
-                            <a class="btn btn-primary btn-sm pull-right" href="#">Pokaż</a>
+                            <a class="btn btn-primary btn-sm pull-right" href="{{ path('workers_app/movies/show', {'id': movie.id }) }}">Pokaż</a>
                         </td>
                     </tr>
                 {% endfor %}
@@ -44,6 +44,9 @@
         {% set basePath = path('workers_app/movies') %}
         {% include 'workersApp/inc/pagination.html.twig' %}
     {% else %}
-        <p class="h1">Brak aktualnych promocji</p>
+        <h1 class="text-center">Brak filmów</h1>
+        <div class="text-center display-1">
+            <i class="fa fa-movie" aria-hidden="true"></i>
+        </div>
     {% endif %}
 {% endblock %}

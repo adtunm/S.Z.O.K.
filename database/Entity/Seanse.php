@@ -61,65 +61,65 @@ class Seanse
     }
 
     /**
-     * @return \Pulebiletow
+     * @return Pulebiletow
      */
-    public function getPulebiletow(): \Pulebiletow
+    public function getPulebiletow(): Pulebiletow
     {
         return $this->pulebiletow;
     }
 
     /**
-     * @param \Pulebiletow $pulebiletow
+     * @param Pulebiletow $pulebiletow
      */
-    public function setPulebiletow(\Pulebiletow $pulebiletow): void
+    public function setPulebiletow(Pulebiletow $pulebiletow): void
     {
         $this->pulebiletow = $pulebiletow;
     }
 
     /**
-     * @return Sale
+     * @return Sale|null
      */
-    public function getSale(): Sale
+    public function getSale(): ?Sale
     {
         return $this->sale;
     }
 
     /**
-     * @param \Sale $sale
+     * @param Sale $sale
      */
-    public function setSale(\Sale $sale): void
+    public function setSale(Sale $sale): void
     {
         $this->sale = $sale;
     }
 
     /**
-     * @return \Typyseansow
+     * @return Typyseansow|null
      */
-    public function getTypyseansow(): \Typyseansow
+    public function getTypyseansow(): ?Typyseansow
     {
         return $this->typyseansow;
     }
 
     /**
-     * @param \Typyseansow $typyseansow
+     * @param Typyseansow $typyseansow
      */
-    public function setTypyseansow(\Typyseansow $typyseansow): void
+    public function setTypyseansow(Typyseansow $typyseansow): void
     {
         $this->typyseansow = $typyseansow;
     }
 
     /**
-     * @return \Wydarzeniaspecjalne
+     * @return Wydarzeniaspecjalne|null
      */
-    public function getWydarzeniaspecjalne(): \Wydarzeniaspecjalne
+    public function getWydarzeniaspecjalne(): ?Wydarzeniaspecjalne
     {
         return $this->wydarzeniaspecjalne;
     }
 
     /**
-     * @param \Wydarzeniaspecjalne $wydarzeniaspecjalne
+     * @param Wydarzeniaspecjalne $wydarzeniaspecjalne
      */
-    public function setWydarzeniaspecjalne(\Wydarzeniaspecjalne $wydarzeniaspecjalne): void
+    public function setWydarzeniaspecjalne(Wydarzeniaspecjalne $wydarzeniaspecjalne): void
     {
         $this->wydarzeniaspecjalne = $wydarzeniaspecjalne;
     }
@@ -187,4 +187,26 @@ class Seanse
     private $wydarzeniaspecjalne;
 
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="SeansMaFilmy", mappedBy="seanse")
+     */
+    private $seansMaFilmy;
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSeansMaFilmy(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->seansMaFilmy;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $seansMaFilmy
+     */
+    public function setSeansMaFilmy(\Doctrine\Common\Collections\Collection $seansMaFilmy): void
+    {
+        $this->seansMaFilmy = $seansMaFilmy;
+    }
 }
