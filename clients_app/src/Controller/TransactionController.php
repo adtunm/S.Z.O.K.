@@ -21,20 +21,19 @@ class TransactionController extends Controller
      * @Route("/ticket/{id<[1-9]\d*>?}", name="ticket", methods={"GET", "POST"})
      */
     function createTicket($id, Request $request){
-        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+        if ($this->isGranted('ROLE_USER') and AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
             return $this->redirectToRoute('clients_app/logout_page');
         }
         $entityManager = $this->getDoctrine()->getManager();
         $tickets = $entityManager->getRepository(Bilety::class)->getTickets(4704);
         $snappy = $this->get('knp_snappy.pdf');
         $html = $this->renderView('clientsApp/ticket/ticket.html.twig', ['bilety' => $tickets]);
-        $this->get('kernel')->getRootDir();
-        $output = $this->get('kernel')->getRootDir().'/../../images/ticket.pdf';
+        $output = '../../ticket.pdf';
         $snappy->generateFromHtml($html, $output);
+        // insert mailing here
         if(file_exists($output)){
             unlink($output);
         }
-        //return $this->render('workersApp/ticket/ticket.html.twig', ['bilety' => $tickets]);
         return new Response(
             $snappy->getOutputFromHtml($html),
             200,

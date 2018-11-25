@@ -18,17 +18,6 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class AppController extends Controller
 {
     /**
-     * @Route("/", name="clients_app/main_page", methods={"GET"})
-     */
-    public function index()
-    {
-        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
-            return $this->redirectToRoute('clients_app/logout_page');
-        }
-        return $this->render('clientsApp/mainPage/mainPage.html.twig');
-    }
-
-    /**
      * @Route("/login", name="clients_app/login_page")
      * @param AuthenticationUtils $authenticationUtils
      * @return Response

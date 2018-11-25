@@ -186,7 +186,7 @@ class Uzytkownicy implements UserInterface
      * @var string
      * @ORM\Column(name="login", type="string", length=50, nullable=false)
      * @Assert\Regex(
-     *     pattern="/^[\p{L}\d\-\_]+$/u",
+     *     pattern="/^[a-zA-Z\d\-\_]+$/u",
      *     message="Wymagane od 5 do 45 dużych/małych liter lub cyfr(dozwolone \'-\' oraz \'_\')."
      *
      * )
@@ -208,9 +208,9 @@ class Uzytkownicy implements UserInterface
      * )
      * @Assert\Length(
      *     max = 64,
-     *     min = 3,
-     *     maxMessage = "Hasło może zawierać maksymalnie 45 znaków.",
-     *     minMessage = "Hasło musi zawierać minimum 5 znaków."
+     *     min = 8,
+     *     maxMessage = "Hasło może zawierać maksymalnie 64 znaków.",
+     *     minMessage = "Hasło musi zawierać minimum 8 znaków."
      * )
      */
     private $haslo;

@@ -216,7 +216,7 @@ class RoomsController extends Controller
         }
     }
 
-    private function getRoomView($id)
+    public function getRoomView($id)
     {
         $room = $this->getDoctrine()->getRepository(Sale::class)->find($id);
         $rowCount = $room->getDlugoscsali();

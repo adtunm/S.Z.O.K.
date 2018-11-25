@@ -50,6 +50,9 @@ class PromotionsController extends Controller
      */
     public function old($page)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             $pageLimit = $this->getParameter('page_limit');
             $pageCount = $this->getDoctrine()->getRepository(Promocje::class)->getPageCountOfOld($pageLimit);

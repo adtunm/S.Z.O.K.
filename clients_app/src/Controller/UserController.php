@@ -31,7 +31,7 @@ class UserController extends Controller
      */
     public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
-        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+        if ($this->isGranted('ROLE_USER') and AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
             return $this->redirectToRoute('clients_app/logout_page');
         }
         if (!$this->isGranted('ROLE_USER')) {
@@ -40,8 +40,8 @@ class UserController extends Controller
                 ->add('login', TextType::class, array(
                     'label' => 'Login:',
                     'attr' => array('class' => 'form-control',
-                        "pattern" => "[A-Za-z0-9-_]{5,45}",
-                        "placeholder" => "Wprowadź login..",
+                        "pattern" => "[A-Za-z0-9\-_]{5,45}",
+                        "placeholder" => "Wprowadź login...",
                         'title' => 'Polskie litery, cyfry, myślniki, podkreślenia, od 5 do 45 znaków.',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
@@ -53,7 +53,7 @@ class UserController extends Controller
                         'attr' => array('class' => 'form-control',
                             "pattern" => "\S{8,64}",
                             'title' => 'Dowolne znaki bez znaków białych, od 8 do 64 znaków.',
-                            'placeholder' => 'Wprowadź hasło..',
+                            'placeholder' => 'Wprowadź hasło...',
                             'autocomplete' => "off"),
                         'label_attr' => array('class' => "col-sm-2 col-form-label")),
                     'second_options' => array(
@@ -61,7 +61,7 @@ class UserController extends Controller
                         'attr' => array('class' => 'form-control',
                             "pattern" => "\S{8,64}",
                             'title' => 'Dowolne znaki bez znaków białych, od 8 do 64 znaków.',
-                            'placeholder' => 'Powtórz hasło..',
+                            'placeholder' => 'Powtórz hasło...',
                             'autocomplete' => "off"),
                         'label_attr' => array('class' => "col-sm-2 col-form-label")),
                     'invalid_message' => 'Hasła są nie zgodne.',
@@ -72,23 +72,23 @@ class UserController extends Controller
                     'attr' => array('class' => 'form-control',
                         "pattern" => "^[A-ZĄĘÓŁŚŻŹĆŃ][a-zA-ZĄĘÓŁŚŻŹĆŃąęółśżźćń ]{2,44}",
                         'title' => 'Polskie znaki, spacja, pierwsza duża litera, od 3 do 45 znaków',
-                        'placeholder' => 'Wprowadź imię..',
+                        'placeholder' => 'Wprowadź imię...',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
                 ->add('nazwisko', TextType::class, array(
                     'label' => 'Nazwisko:',
                     'attr' => array('class' => 'form-control',
-                        "pattern" => "[A-ZĄĘÓŁŚŻŹĆŃ][a-zA-ZĄĘÓŁŚŻŹĆŃąęółśżźćń -]{2,44}",
+                        "pattern" => "[A-ZĄĘÓŁŚŻŹĆŃ][a-zA-ZĄĘÓŁŚŻŹĆŃąęółśżźćń \-]{2,44}",
                         'title' => 'Polskie znaki, spacja, myślnik, pierwsza duża litera, od 3 do 45 znaków',
-                        'placeholder' => 'Wprwadź nazwisko..',
+                        'placeholder' => 'Wprwadź nazwisko...',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
                 ->add('email', EmailType::class, array(
                     'label' => 'E-mail:',
                     'attr' => array('class' => 'form-control',
-                        "placeholder" => "Wprowdź email..",
+                        "placeholder" => "Wprowdź email...",
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
@@ -97,7 +97,7 @@ class UserController extends Controller
                     'attr' => array("class" => "form-control",
                         "pattern" => "[0-9]{9}",
                         "title" => "9 cyfr",
-                        "placeholder" => 'Wprowadź numer telefonu..',
+                        "placeholder" => 'Wprowadź numer telefonu...',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
@@ -146,23 +146,23 @@ class UserController extends Controller
                     'attr' => array('class' => 'form-control',
                         "pattern" => "^[A-ZĄĘÓŁŚŻŹĆŃ][a-zA-ZĄĘÓŁŚŻŹĆŃąęółśżźćń ]{2,44}",
                         'title' => 'Polskie znaki, spacja, pierwsza duża litera, od 3 do 45 znaków',
-                        'placeholder' => 'Wprowadź imię..',
+                        'placeholder' => 'Wprowadź imię...',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
                 ->add('nazwisko', TextType::class, array(
                     'label' => 'Nazwisko:',
                     'attr' => array('class' => 'form-control',
-                        "pattern" => "[A-ZĄĘÓŁŚŻŹĆŃ][a-zA-ZĄĘÓŁŚŻŹĆŃąęółśżźćń -]{2,44}",
+                        "pattern" => "[A-ZĄĘÓŁŚŻŹĆŃ][a-zA-ZĄĘÓŁŚŻŹĆŃąęółśżźćń \-]{2,44}",
                         'title' => 'Polskie znaki, spacja, myślnik, pierwsza duża litera, od 3 do 45 znaków',
-                        'placeholder' => 'Wprwadź nazwisko..',
+                        'placeholder' => 'Wprwadź nazwisko...',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
                 ->add('email', EmailType::class, array(
                     'label' => 'E-mail:',
                     'attr' => array('class' => 'form-control',
-                        "placeholder" => "Wprowdź email..",
+                        "placeholder" => "Wprowdź email...",
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
@@ -171,7 +171,7 @@ class UserController extends Controller
                     'attr' => array("class" => "form-control",
                         "pattern" => "[0-9]{9}",
                         "title" => "9 cyfr",
-                        "placeholder" => 'Wprowadź numer telefonu..',
+                        "placeholder" => 'Wprowadź numer telefonu...',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
                 ))
@@ -219,7 +219,7 @@ class UserController extends Controller
                         'attr' => array('class' => 'form-control',
                             "pattern" => "\S{8,64}",
                             'title' => 'Dowolne znaki bez znaków białych, od 8 do 64 znaków.',
-                            'placeholder' => 'Wprowadź nowe hasło..',
+                            'placeholder' => 'Wprowadź nowe hasło...',
                             'autocomplete' => "off"),
                         'label_attr' => array('class' => "col-sm-2 col-form-label")),
                     'second_options' => array(
@@ -227,7 +227,7 @@ class UserController extends Controller
                         'attr' => array('class' => 'form-control',
                             "pattern" => "\S{8,64}",
                             'title' => 'Dowolne znaki bez znaków białych, od 8 do 64 znaków.',
-                            'placeholder' => 'Powtórz nowe hasło..',
+                            'placeholder' => 'Powtórz nowe hasło...',
                             'autocomplete' => "off"),
                         'label_attr' => array('class' => "col-sm-2 col-form-label")),
                     'invalid_message' => 'Hasła są nie zgodne.',

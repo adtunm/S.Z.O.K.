@@ -60,7 +60,7 @@ class AppController extends AbstractController
     }
 
     public static function logoutOnSessionLifetimeEnd(Session $session){
-        if ((time() - strtotime($session->get('lifetime'))) > 30) {
+        if ((time() - strtotime($session->get('lifetime'))) > 60*30) {
             return true;
         }else{
             $session->set(
