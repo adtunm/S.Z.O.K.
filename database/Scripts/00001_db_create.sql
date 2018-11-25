@@ -37,7 +37,7 @@ DROP TABLE IF EXISTS `SZOK`.`Filmy` ;
 CREATE TABLE IF NOT EXISTS `SZOK`.`Filmy` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `tytul` VARCHAR(127) NOT NULL,
-  `opis` VARCHAR(255) NULL,
+  `opis` VARCHAR(512) NULL,
   `dataPremiery` DATE NOT NULL,
   `czasTrwania` INT NOT NULL,
   `czasReklam` INT NOT NULL,
