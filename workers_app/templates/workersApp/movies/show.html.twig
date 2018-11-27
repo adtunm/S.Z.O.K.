@@ -149,7 +149,7 @@
                                         <a href="#" class="btn btn-primary" style="vertical-align: center">Pokaż
                                             salę</a>
                                         {% if (is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN') ) %}
-                                            <a href="#" class="btn btn-primary"
+                                            <a href="{{ path('workers_app/seances/show', {'id': seance.id}) }}" class="btn btn-primary"
                                                style="vertical-align: center">Przejdź</a>
                                         {% endif %}
                                     </div>

@@ -82,5 +82,8 @@ class Wydarzeniaspecjalne
      */
     private $usunieto;
 
-
+    public function __toString()
+    {
+        return $this->nazwa;
+    }
 }

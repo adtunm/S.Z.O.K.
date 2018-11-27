@@ -1,4 +1,4 @@
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`, `RodzajeFilmow_id`) VALUES
+INSERT INTO `szok`.`film_ma_rodzajefilmow` (`Filmy_id`, `RodzajeFilmow_id`) VALUES
 (1, 3),
 (2, 3),
 (2, 4),
