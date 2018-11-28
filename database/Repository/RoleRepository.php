@@ -2,36 +2,31 @@
 /**
  * Created by PhpStorm.
  * User: Piotr
- * Date: 29.10.2018
- * Time: 21:21
+ * Date: 17.11.2018
+ * Time: 22:33
  */
 
 namespace App\Repository;
 
 
-use App\Entity\Pracownicy;
+use App\Entity\Role;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\Tools\Pagination\Paginator;
 use Symfony\Bridge\Doctrine\RegistryInterface;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
-
-class PracownicyRepository extends ServiceEntityRepository
+class RoleRepository  extends ServiceEntityRepository
 {
-
-    /**
-     * PracownicyRepository constructor.
-     */
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, Pracownicy::class);
+        parent::__construct($registry, Role::class);
     }
 
     public function getPageCountOfActive($pageLimit = 10)
     {
-        $query = $this->createQueryBuilder('p')
-            ->select('count(p.id)')
-            ->andWhere('p.czyaktywny IS NULL')
-            ->orderBy('p.id', 'ASC')
+        $query = $this->createQueryBuilder('d')
+            ->select('count(d.id)')
+            ->andWhere('d.usunieto IS NULL')
+            ->orderBy('d.id', 'ASC')
             ->getQuery();
 
         $count = $query->getSingleScalarResult();
@@ -45,9 +40,9 @@ class PracownicyRepository extends ServiceEntityRepository
 
     public function findActive($page = 1, $pageLimit = 10)
     {
-        $query = $this->createQueryBuilder('p')
-            ->andWhere('p.czyaktywny IS NULL')
-            ->orderBy('p.id', 'ASC')
+        $query = $this->createQueryBuilder('d')
+            ->andWhere('d.usunieto IS NULL')
+            ->orderBy('d.id', 'ASC')
             ->getQuery();
 
         $requestedPage = new Paginator($query);

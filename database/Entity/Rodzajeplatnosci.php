@@ -3,12 +3,19 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Rodzajeplatnosci
  *
  * @ORM\Table(name="rodzajeplatnosci", uniqueConstraints={@ORM\UniqueConstraint(name="idRodzajePlatnosci_UNIQUE", columns={"id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\RodzajePlatnosciRepository")
+ * @UniqueEntity(
+ *     fields={"nazwa"},
+ *     errorPath="nazwa",
+ *     message="Ta instancja jest juz w bazie. Jeżeli chcesz ją użyć przywróć ją z tabeli usuniętych wartości."
+ * )
  */
 class Rodzajeplatnosci
 {
@@ -79,6 +86,16 @@ class Rodzajeplatnosci
      * @var bool|null
      *
      * @ORM\Column(name="usunieto", type="boolean", nullable=true)
+     * @Assert\Regex(
+     *     pattern="/^[\p{L}\d\s\-]+$/u",
+     *     message="Nazwa powinna się składać tylko z liter, spacji, myślników i cyfr."
+     * )
+     * @Assert\Length(
+     *     max = 45,
+     *     min = 3,
+     *     maxMessage = "Nazwa instancji może zawierać maksymalnie 45 znaków.",
+     *     minMessage = "Nazwa instancji musi zawierać minimum 3 znaki."
+     * )
      */
     private $usunieto;
 

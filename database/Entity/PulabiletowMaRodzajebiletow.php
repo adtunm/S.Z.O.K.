@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * PulabiletowMaRodzajebiletow
  *
  * @ORM\Table(name="pulabiletow_ma_rodzajebiletow", indexes={@ORM\Index(name="fk_PulaBiletow_ma_RodzajeBiletow_PuleBiletow1_idx", columns={"PuleBiletow_id"}), @ORM\Index(name="fk_PulaBiletow_ma_RodzajeBiletow_RodzajeBiletow1_idx", columns={"RodzajeBiletow_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\PulabiletowMaRodzajebiletowRepository")
  */
 class PulabiletowMaRodzajebiletow
 {
@@ -45,33 +45,33 @@ class PulabiletowMaRodzajebiletow
     }
 
     /**
-     * @return \Pulebiletow
+     * @return Pulebiletow
      */
-    public function getPulebiletow(): \Pulebiletow
+    public function getPulebiletow(): Pulebiletow
     {
         return $this->pulebiletow;
     }
 
     /**
-     * @param \Pulebiletow $pulebiletow
+     * @param Pulebiletow $pulebiletow
      */
-    public function setPulebiletow(\Pulebiletow $pulebiletow): void
+    public function setPulebiletow(Pulebiletow $pulebiletow): void
     {
         $this->pulebiletow = $pulebiletow;
     }
 
     /**
-     * @return \Rodzajebiletow
+     * @return Rodzajebiletow
      */
-    public function getRodzajebiletow(): \Rodzajebiletow
+    public function getRodzajebiletow(): Rodzajebiletow
     {
         return $this->rodzajebiletow;
     }
 
     /**
-     * @param \Rodzajebiletow $rodzajebiletow
+     * @param Rodzajebiletow $rodzajebiletow
      */
-    public function setRodzajebiletow(\Rodzajebiletow $rodzajebiletow): void
+    public function setRodzajebiletow(Rodzajebiletow $rodzajebiletow): void
     {
         $this->rodzajebiletow = $rodzajebiletow;
     }
@@ -92,7 +92,7 @@ class PulabiletowMaRodzajebiletow
     private $cena;
 
     /**
-     * @var \Pulebiletow
+     * @var Pulebiletow
      *
      * @ORM\ManyToOne(targetEntity="Pulebiletow")
      * @ORM\JoinColumns({
@@ -102,7 +102,7 @@ class PulabiletowMaRodzajebiletow
     private $pulebiletow;
 
     /**
-     * @var \Rodzajebiletow
+     * @var Rodzajebiletow
      *
      * @ORM\ManyToOne(targetEntity="Rodzajebiletow")
      * @ORM\JoinColumns({

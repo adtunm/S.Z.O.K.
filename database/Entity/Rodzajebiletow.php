@@ -2,13 +2,14 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Rodzajebiletow
  *
  * @ORM\Table(name="rodzajebiletow", uniqueConstraints={@ORM\UniqueConstraint(name="idRodzajBiletow_UNIQUE", columns={"id"}), @ORM\UniqueConstraint(name="NazwaBiletu_UNIQUE", columns={"nazwa"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\RodzajeBiletowRepository")
  */
 class Rodzajebiletow
 {
@@ -31,7 +32,7 @@ class Rodzajebiletow
     /**
      * @return string
      */
-    public function getNazwa(): string
+    public function getNazwa(): ?string
     {
         return $this->nazwa;
     }
@@ -81,6 +82,14 @@ class Rodzajebiletow
      * @ORM\Column(name="usunieto", type="boolean", nullable=true)
      */
     private $usunieto;
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->nazwa;
+    }
 
 
 }

@@ -3,12 +3,19 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Typyseansow
  *
  * @ORM\Table(name="typyseansow", uniqueConstraints={@ORM\UniqueConstraint(name="idTypySeansow_UNIQUE", columns={"id"}), @ORM\UniqueConstraint(name="nazwa_UNIQUE", columns={"nazwa"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\TypySeansowRepository")
+ * * @UniqueEntity(
+ *     fields={"nazwa"},
+ *     errorPath="nazwa",
+ *     message="Ta instancja jest juz w bazie. Jeżeli chcesz ją użyć przywróć ją z tabeli usuniętych wartości."
+ * )
  */
 class Typyseansow
 {
@@ -31,7 +38,7 @@ class Typyseansow
     /**
      * @return string
      */
-    public function getNazwa(): string
+    public function getNazwa(): ?string
     {
         return $this->nazwa;
     }
@@ -75,7 +82,6 @@ class Typyseansow
     {
         $this->filmy = $filmy;
     }
-
     /**
      * @var int
      *
@@ -89,6 +95,17 @@ class Typyseansow
      * @var string
      *
      * @ORM\Column(name="nazwa", type="string", length=45, nullable=false)
+     *
+     * @Assert\Regex(
+     *     pattern="/^[\p{L}\d\s\-]+$/u",
+     *     message="Nazwa powinna się składać tylko z liter, spacji, myślników i cyfr."
+     * )
+     * @Assert\Length(
+     *     max = 45,
+     *     min = 3,
+     *     maxMessage = "Nazwa instancji może zawierać maksymalnie 45 znaków.",
+     *     minMessage = "Nazwa instancji musi zawierać minimum 3 znaki."
+     * )
      */
     private $nazwa;
 
@@ -114,11 +131,4 @@ class Typyseansow
         $this->filmy = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-    /**
-     * @return string
-     */
-    public function __toString()
-    {
-        return $this->nazwa;
-    }
 }
