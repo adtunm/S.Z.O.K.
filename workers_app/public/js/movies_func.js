@@ -105,6 +105,10 @@ function deleteMovieForm($collectionHolder) {
     $collectionHolder.data('index', index - 1);
     $collectionHolder.children('.movieCollection').last().remove();
 
+
+    $collectionHolder.append($addMovieButton);
+    $addMovieButton.attr('hidden', false);
+
     $collectionHolder.append($addMovieButton);
     if (index == 2) {
         $('#form_wydarzeniaspecjalne').attr('disabled', true);
@@ -115,8 +119,6 @@ function deleteMovieForm($collectionHolder) {
     else {
         $collectionHolder.append($deleteLastMovieButton);
     }
-    $collectionHolder.append($addMovieButton);
-    $addMovieButton.attr('hidden', false);
 
     var string = $collectionValues.val();
     var values = string.split("/");
