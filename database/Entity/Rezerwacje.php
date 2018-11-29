@@ -3,12 +3,13 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Rezerwacje
  *
  * @ORM\Table(name="rezerwacje", uniqueConstraints={@ORM\UniqueConstraint(name="idRezerwacje_UNIQUE", columns={"id"})}, indexes={@ORM\Index(name="fk_Rezerwacje_Uzytkownicy1_idx", columns={"Uzytkownicy_id"}), @ORM\Index(name="fk_Rezerwacje_Pracownicy1_idx", columns={"Pracownicy_id"}), @ORM\Index(name="fk_Rezerwacje_Seanse1_idx", columns={"Seanse_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\RezerwacjeRepository")
  */
 class Rezerwacje
 {
@@ -31,7 +32,7 @@ class Rezerwacje
     /**
      * @return string
      */
-    public function getImie(): string
+    public function getImie(): ?string
     {
         return $this->imie;
     }
@@ -47,7 +48,7 @@ class Rezerwacje
     /**
      * @return string
      */
-    public function getNazwisko(): string
+    public function getNazwisko(): ?string
     {
         return $this->nazwisko;
     }
@@ -63,7 +64,7 @@ class Rezerwacje
     /**
      * @return string
      */
-    public function getTelefon(): string
+    public function getTelefon(): ?string
     {
         return $this->telefon;
     }
@@ -79,7 +80,7 @@ class Rezerwacje
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
@@ -133,9 +134,9 @@ class Rezerwacje
     }
 
     /**
-     * @param \Pracownicy $pracownicy
+     * @param Pracownicy $pracownicy
      */
-    public function setPracownicy(\Pracownicy $pracownicy): void
+    public function setPracownicy(Pracownicy $pracownicy): void
     {
         $this->pracownicy = $pracownicy;
     }
@@ -149,9 +150,9 @@ class Rezerwacje
     }
 
     /**
-     * @param \Seanse $seanse
+     * @param Seanse $seanse
      */
-    public function setSeanse(\Seanse $seanse): void
+    public function setSeanse(Seanse $seanse): void
     {
         $this->seanse = $seanse;
     }
@@ -165,9 +166,9 @@ class Rezerwacje
     }
 
     /**
-     * @param \Uzytkownicy $uzytkownicy
+     * @param Uzytkownicy $uzytkownicy
      */
-    public function setUzytkownicy(\Uzytkownicy $uzytkownicy): void
+    public function setUzytkownicy(Uzytkownicy $uzytkownicy): void
     {
         $this->uzytkownicy = $uzytkownicy;
     }
@@ -198,8 +199,17 @@ class Rezerwacje
 
     /**
      * @var string
-     *
      * @ORM\Column(name="imie", type="string", length=45, nullable=false)
+     * @Assert\Regex(
+     *     pattern="/^\p{Lu}[\p{L}\s]+$/u",
+     *     message="Imię powinno składać się tylko z liter lub spacji i rozpoczynać się wielką literą."
+     * )
+     * @Assert\Length(
+     *     max = 45,
+     *     min = 3,
+     *     maxMessage = "Imię może zawierać maksymalnie 45 znaków.",
+     *     minMessage = "Imię musi zawierać minimum 3 znaki."
+     * )
      */
     private $imie;
 
@@ -207,20 +217,42 @@ class Rezerwacje
      * @var string
      *
      * @ORM\Column(name="nazwisko", type="string", length=45, nullable=false)
+     * @Assert\Regex(
+     *     pattern="/^\p{Lu}[\p{L}\d\s\-]+$/u",
+     *     message="Nazwisko powinno się składać tylko z liter, spacji oraz myślników i zaczynać się wielką literą."
+     * )
+     * @Assert\Length(
+     *     max = 45,
+     *     min = 2,
+     *     maxMessage = "Nazwisko może zawierać maksymalnie 45 znaków.",
+     *     minMessage = "Nazwisko musi zawierać minimum 2 znaki."
+     * )
      */
     private $nazwisko;
 
     /**
      * @var string
-     *
      * @ORM\Column(name="telefon", type="string", length=9, nullable=false)
+     * @Assert\Regex(
+     *     pattern="/^\d{9}$/u",
+     *     message="Numer telefonu powinien składac się z 9 cyfr."
+     * )
      */
     private $telefon;
 
     /**
      * @var string
-     *
      * @ORM\Column(name="email", type="string", length=255, nullable=false)
+     * @Assert\Length(
+     *     max = 255,
+     *     min = 5,
+     *     maxMessage = "Email może zawierać maksymalnie 255 znaków.",
+     *     minMessage = "Email musi zawierać minimum 5 znaków."
+     * )
+     * @Assert\Email(
+     *     message = "Ten mail nie jest poprawny.",
+     *     mode="loose"
+     * )
      */
     private $email;
 

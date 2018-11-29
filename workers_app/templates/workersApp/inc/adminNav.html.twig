@@ -84,11 +84,11 @@
                             Sprzedaż
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sprzedazDropdown">
-                            <a class="dropdown-item" href="#">Wyświetl listę rezerwacji</a>
+                            <a class="dropdown-item" href="{{ path('workers_app/reservations') }}">Wyświetl listę rezerwacji</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Przyjmij zwrot biletów</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Weryfikuj bilety</a>
+                            <a class="dropdown-item" href="{{ path('workers_app/reservations/add') }}">Weryfikuj bilety</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
