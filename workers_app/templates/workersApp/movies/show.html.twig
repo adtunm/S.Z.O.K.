@@ -163,7 +163,10 @@
                 {% set basePath = path('workers_app/movies/show', {'id': movie.id }) %}
                 {% include 'workersApp/inc/pagination.html.twig' %}
             {% else %}
-                <p><h3>Brak seansów</h3></p>
+                <h1 class="text-center">Brak seansów</h1>
+                <div class="text-center display-1">
+                    <i class="fa fa-calendar"></i>
+                </div>
             {% endif %}
         </div>
         <a href="{{ path('workers_app/movies') }}" class="btn btn-secondary mt-3 ml-3">
