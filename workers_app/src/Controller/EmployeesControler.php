@@ -97,6 +97,9 @@ class EmployeesControler extends AbstractController
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()) {
+                $var = $form->get('haslo')->getData();
+                $password = $passwordEncoder->encodePassword($pracownik, $var);
+                $pracownik->setHaslo($password);
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($pracownik);
                 $entityManager->flush();
