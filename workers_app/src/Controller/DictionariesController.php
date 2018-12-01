@@ -34,38 +34,38 @@ class DictionariesController extends AbstractController
     public function index()
     {
         if ($this->isGranted('ROLE_ADMIN')) {
-            $list['roles']=array(
-                'name'=>'Role',
-                'dictionaryName'=> 'roles',
+            $list['roles'] = array(
+                'name' => 'Role',
+                'dictionaryName' => 'roles',
                 'isCritical' => false);
-            $list['typesOfRows']=array(
-                'name'=>'Typy Rzędów',
-                'dictionaryName'=> 'typesOfRows',
+            $list['typesOfRows'] = array(
+                'name' => 'Typy Rzędów',
+                'dictionaryName' => 'typesOfRows',
                 'isCritical' => false);
-            $list['ageCategories']=array(
-                'name'=>'Kategorie wiekowe',
-                'dictionaryName'=> 'ageCategories',
+            $list['ageCategories'] = array(
+                'name' => 'Kategorie wiekowe',
+                'dictionaryName' => 'ageCategories',
                 'isCritical' => true);
-            $list['typesOfFilms']=array(
-                'name'=>'Rodzaje filmów',
-                'dictionaryName'=> 'typesOfFilms',
+            $list['typesOfFilms'] = array(
+                'name' => 'Rodzaje filmów',
+                'dictionaryName' => 'typesOfFilms',
                 'isCritical' => true);
-            $list['typesOfShows']=array(
-                'name'=>'Typy seansów',
-                'dictionaryName'=> 'typesOfShows',
+            $list['typesOfShows'] = array(
+                'name' => 'Typy seansów',
+                'dictionaryName' => 'typesOfShows',
                 'isCritical' => true);
-            $list['specialEvents']=array(
-                'name'=>'Wydarzenie specjalne',
-                'dictionaryName'=> 'specialEvents',
+            $list['specialEvents'] = array(
+                'name' => 'Wydarzenie specjalne',
+                'dictionaryName' => 'specialEvents',
                 'isCritical' => true);
-            $list['typesOfPayments']=array(
-                'name'=>'Rodzaje płatności',
-                'dictionaryName'=> 'typesOfPayments',
+            $list['typesOfPayments'] = array(
+                'name' => 'Rodzaje płatności',
+                'dictionaryName' => 'typesOfPayments',
                 'isCritical' => false);
-            return $this->render('workersApp/dictionaries/list.html.twig', array( 'list' => $list));
+            return $this->render('workersApp/dictionaries/list.html.twig', array('list' => $list));
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->render('workersApp/employees/permission.html.twig');
+                return $this->render('workersApp/mainPage/noPermission.html.twig');
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }
@@ -86,7 +86,7 @@ class DictionariesController extends AbstractController
      */
     public function list($dictionaryName, $currentPage, Request $request)
     {
-        if ($this->isGranted('ROLE_ADMIN')) {
+        if ($this->isGranted('ROLE_ADMIN') OR ($this->isGranted('ROLE_MANAGER') AND $dictionaryName == 'pools')) {
             $var = $this->dictionary($dictionaryName);
             $slownik = $var['class'];
             $krytyczny = $var['isCritical'];
@@ -107,7 +107,8 @@ class DictionariesController extends AbstractController
             }
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->render('workersApp/employees/permission.html.twig');
+                return $this->render('workersApp/mainPage/noPermission.html.twig');
+
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }
@@ -116,11 +117,12 @@ class DictionariesController extends AbstractController
     /**
      * @Route("/tickets/{dictionaryName}/add",
      *     name="workers_app/tickets/add",
-     *     requirements={"dictionaryName":"types|pools"},
+     *     requirements={"dictionaryName":"types"},
      *     methods={"GET|POST"})
      *
      * @Route("/dictionaries/{dictionaryName}/add",
      *     name="workers_app/dictionaries/add",
+     *     requirements={"dictionaryName":"roles|typesOfRows|ageCategories|typesOfFilms|typesOfShows|specialEvents|typesOfPayments"},
      *     methods={"GET|POST"})
      */
     public function add($dictionaryName, Request $request)
@@ -148,16 +150,16 @@ class DictionariesController extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($type);
                 $entityManager->flush();
-                if ( $this->chceckTickets($dictionaryName))
+                if ($this->chceckTickets($dictionaryName))
                     return $this->redirectToRoute('workers_app/tickets/dictionaryName', array('dictionaryName' => $dictionaryName));
                 else
                     return $this->redirectToRoute('workers_app/dictionaries/dictionaryName', array('dictionaryName' => $dictionaryName));
             }
-            return $this->render('workersApp/dictionaries/add.html.twig', array(
+            return $this->render('workersApp/dictionaries/add_edit.html.twig', array(
                 'krytyczny' => $krytyczny, 'form' => $form->createView(), 'page' => $dictionaryName, 'rodzaj' => $rodzaj));
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->render('workersApp/employees/permission.html.twig');
+                return $this->render('workersApp/mainPage/noPermission.html.twig');
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }
@@ -172,6 +174,7 @@ class DictionariesController extends AbstractController
      *
      * @Route("/dictionaries/{dictionaryName}/deleted/{currentPage?1}",
      *     name="workers_app/dictionaries/deleted",
+     *     requirements={"dictionaryName":"roles|typesOfRows|ageCategories|typesOfFilms|typesOfShows|specialEvents|typesOfPayments"},
      *     methods={"GET"})
      */
     public function deletedlist($dictionaryName, $currentPage, Request $request)
@@ -195,6 +198,11 @@ class DictionariesController extends AbstractController
                     'currentPage' => $currentPage, 'pageCount' => $pageCount,
                     'deleted' => true));
             }
+        } else {
+            if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
+                return $this->render('workersApp/mainPage/noPermission.html.twig');
+            else
+                return $this->redirectToRoute('workers_app/login_page');
         }
     }
 
@@ -206,6 +214,7 @@ class DictionariesController extends AbstractController
      *
      * @Route("/dictionaries/{dictionaryName}/edit/{currentPage?1}/{id<[1-9]\d*>?}",
      *     name="workers_app/dictionaries/edit",
+     *     requirements={"dictionaryName":"roles|typesOfRows|ageCategories|typesOfFilms|typesOfShows|specialEvents|typesOfPayments"},
      *     methods={"GET|POST"})
      */
     public function edit(Request $request, $dictionaryName, $id, $currentPage)
@@ -244,7 +253,7 @@ class DictionariesController extends AbstractController
                     $entityManager = $this->getDoctrine()->getManager();
                     $entityManager->persist($wartosc);
                     $entityManager->flush();
-                    if ($this->chceckTickets($dictionaryName) )
+                    if ($this->chceckTickets($dictionaryName))
                         return $this->redirectToRoute("workers_app/tickets/dictionaryName", array('dictionaryName' => $dictionaryName, 'currentPage' => $currentPage));
                     else
                         return $this->redirectToRoute("workers_app/dictionaries/dictionaryName", array('dictionaryName' => $dictionaryName, 'currentPage' => $currentPage));
@@ -256,7 +265,7 @@ class DictionariesController extends AbstractController
             }
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->render('workersApp/permission.html.twig');
+                return $this->render('workersApp/mainPage/noPermission.html.twig');
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }
@@ -270,6 +279,7 @@ class DictionariesController extends AbstractController
      *
      * @Route("/dictionaries/{dictionaryName}/delete/{id<[1-9]\d*>?}",
      *     name="workers_app/dictionaries/delete"),
+     *     requirements={"dictionaryName":"roles|typesOfRows|ageCategories|typesOfFilms|typesOfShows|specialEvents|typesOfPayments"},
      * methods={"DELETE"})
      */
     public function delete($id, $dictionaryName)
@@ -286,7 +296,7 @@ class DictionariesController extends AbstractController
             return $this->redirectToRoute('workers_app/main_page');
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->redirectToRoute('workers_app/no_permission');
+                return $this->redirectToRoute('workersApp/mainPage/noPermission.html.twig');
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }
@@ -300,6 +310,7 @@ class DictionariesController extends AbstractController
      *
      * @Route("/dictionaries/{dictionaryName}/restore/{id<[1-9]\d*>?}",
      *     name="workers_app/dictionaries/restore",
+     *     requirements={"dictionaryName":"roles|typesOfRows|ageCategories|typesOfFilms|typesOfShows|specialEvents|typesOfPayments"},
      *     methods={"GET|POST"})
      */
     public function restore($id, $dictionaryName)
@@ -318,7 +329,7 @@ class DictionariesController extends AbstractController
                 return $this->redirectToRoute("workers_app/dictionaries/dictionaryName", array('dictionaryName' => $dictionaryName));
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->redirectToRoute('workers_app/no_permission');
+                return $this->redirectToRoute('workersApp/mainPage/noPermission.html.twig');
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }
@@ -326,7 +337,7 @@ class DictionariesController extends AbstractController
 
     public function chceckTickets(string $dictionaryName)
     {
-        if($dictionaryName == 'types' || $dictionaryName == 'pools')
+        if ($dictionaryName == 'types' || $dictionaryName == 'pools')
             return true;
         else
             return false;

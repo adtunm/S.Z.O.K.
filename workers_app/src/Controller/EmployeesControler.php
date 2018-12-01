@@ -92,12 +92,11 @@ class EmployeesControler extends AbstractController
                     'attr' => array('class' => "btn btn-primary float-right")
                 ))
                 ->getForm();
+
+
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()) {
-                $var = $form->get('haslo')->getData();
-                $password = $passwordEncoder->encodePassword($pracownik, $var);
-                $pracownik->setHaslo($password);
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($pracownik);
                 $entityManager->flush();
@@ -224,6 +223,8 @@ class EmployeesControler extends AbstractController
                 ->getForm();
             if ($user->getId() == $pracownik->getId())
                 $form->remove("role");
+
+
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()) {
@@ -231,6 +232,8 @@ class EmployeesControler extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->merge($pracownik);
                 $entityManager->flush();
+
+
                 return $this->redirectToRoute('workers_app/employees/show', array('id' => $id));
             }
             return $this->render('workersApp/employees/edit.html.twig', array('form' => $form->createView(), 'id' => $id));

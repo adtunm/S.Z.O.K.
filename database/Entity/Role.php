@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @UniqueEntity(
  *     fields={"nazwa"},
  *     errorPath="nazwa",
- *     message="Ta instancja jest juz w bazie. Jeżeli chcesz ją użyć przywróć ją z tabeli usuniętych wartości."
+ *     message="Ta wartość jest juz w bazie. Może być usunięta, wówczas wystarczy ją przywrócić."
  * )
  */
 class Role
@@ -87,8 +87,8 @@ class Role
      * @Assert\Length(
      *     max = 45,
      *     min = 3,
-     *     maxMessage = "Nazwa instancji może zawierać maksymalnie 45 znaków.",
-     *     minMessage = "Nazwa instancji musi zawierać minimum 3 znaki."
+     *     maxMessage = "Nazwa może zawierać maksymalnie 45 znaków.",
+     *     minMessage = "Nazwa musi zawierać minimum 3 znaki."
      * )
      *
      */

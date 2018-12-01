@@ -83,24 +83,4 @@ class PuleBiletowRepository extends ServiceEntityRepository
 
         return $requestedPage;
     }
-
-    public function findPools()
-    {
-//        $query = $this->createQueryBuilder('p')
-//            ->from('App\Entity\PulabiletowMaRodzajebiletow', 'pmr')
-//            ->from('App\Entity\Rodzajebiletow', 'r')
-//            ->where('pmr.PuleBiletow_id LIKE p.id')
-//            ->andWhere( 'pmr.RodzajeBiletow_id LIKE r.id')
-//            ->andWhere('p.id LIKE 1')
-//            ->getQuery()
-//            ->getSingleScalarResult();
-//        return $query;
-
-        $query = $this->getEntityManager()
-        ->createQuery('SELECT r.nazwa, pmr.cena  
-                FROM pulabiletow_ma_rodzajebiletow pmr, pulebiletow p, rodzajebiletow r
-                WHERE pmr.PuleBiletow_id LIKE p.id
-                AND   pmr.RodzajeBiletow_id LIKE r.id
-                AND p.id LIKE 1');
-    }
 }

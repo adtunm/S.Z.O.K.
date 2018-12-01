@@ -2,14 +2,22 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
+
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Rodzajebiletow
  *
  * @ORM\Table(name="rodzajebiletow", uniqueConstraints={@ORM\UniqueConstraint(name="idRodzajBiletow_UNIQUE", columns={"id"}), @ORM\UniqueConstraint(name="NazwaBiletu_UNIQUE", columns={"nazwa"})})
  * @ORM\Entity(repositoryClass="App\Repository\RodzajeBiletowRepository")
+ * @UniqueEntity(
+ *     fields={"nazwa"},
+ *     errorPath="nazwa",
+ *     message="Ta wartość jest juz w bazie. Może być usunięta, wówczas wystarczy ją przywrócić."
+ * )
  */
 class Rodzajebiletow
 {
@@ -73,6 +81,16 @@ class Rodzajebiletow
      * @var string
      *
      * @ORM\Column(name="nazwa", type="string", length=45, nullable=false)
+     * @Assert\Regex(
+     *     pattern="/^[\p{L}\d\s\-]+$/u",
+     *     message="Nazwa powinna się składać tylko z liter, spacji, myślników i cyfr."
+     * )
+     * @Assert\Length(
+     *     max = 45,
+     *     min = 3,
+     *     maxMessage = "Nazwa może zawierać maksymalnie 45 znaków.",
+     *     minMessage = "Nazwa musi zawierać minimum 3 znaki."
+     * )
      */
     private $nazwa;
 

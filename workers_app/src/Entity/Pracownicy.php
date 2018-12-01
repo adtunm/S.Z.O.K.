@@ -68,22 +68,6 @@ class Pracownicy implements UserInterface
     /**
      * @return string
      */
-    public function getLogin(): ?string
-    {
-        return $this->login;
-    }
-
-    /**
-     * @param string $login
-     */
-    public function setLogin(string $login): void
-    {
-        $this->login = $login;
-    }
-
-    /**
-     * @return string
-     */
     public function getHaslo(): ?string
     {
         return $this->haslo;
@@ -161,6 +145,21 @@ class Pracownicy implements UserInterface
         $this->email = $email;
     }
 
+    /**
+     * @return string
+     */
+    public function getLogin(): ?string
+    {
+        return $this->login;
+    }
+
+    /**
+     * @param string $login
+     */
+    public function setLogin(string $login): void
+    {
+        $this->login = $login;
+    }
 
     /**
      * @return \Role
@@ -179,23 +178,14 @@ class Pracownicy implements UserInterface
     }
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $id;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="login", type="string", length=50, nullable=false)
      *
      * @Assert\Regex(
      *     pattern="/^[\p{L}\d\-\_]+$/u",
-     *     message="Wymagane od 5 do 45 dużych/małych liter lub cyfr(dozwolone \'-\' oraz \'_\')."
-     *
+     *     message="Wymagane od 5 do 45 dużych/małych liter
+     *              lub cyfr(dozwolone \'-\' oraz \'_\')."
      * )
      * @Assert\Length(
      *     max = 45,
@@ -204,7 +194,27 @@ class Pracownicy implements UserInterface
      *     minMessage = "Login musi zawierać minimum 5 znaków."
      * )
      */
+
     private $login;
+
+    /**
+     * @var \Role
+     *
+     * @ORM\ManyToOne(targetEntity="Role")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="Role_id", referencedColumnName="id")
+     * })
+     */
+    private $role;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
 
     /**
      * @var string
@@ -299,15 +309,7 @@ class Pracownicy implements UserInterface
      */
     private $czyaktywny;
 
-    /**
-     * @var \Role
-     *
-     * @ORM\ManyToOne(targetEntity="Role")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Role_id", referencedColumnName="id")
-     * })
-     */
-    private $role;
+
 
 
     /**

@@ -8,8 +8,18 @@
         <script src="{{ asset('js/form_add_pools.js') }}"></script>
     {% endblock %}
     <div class="pb-4 mt-0">
-        <div class="h1 pb-3">Dodaj nową wartość</div>
+        {% if edit %}
+            <div class="h1 pb-3">Edytuj pulę</div>
+        {% else %}
+            <div class="h1 pb-3">Dodaj nową pulę</div>
+        {% endif %}
         <div class="mx-md-5">
+            {% if empty %}
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    {{ empty }}
+                </div>
+            {% endif %}
             {{ form_start(form, {'attr':{'id': 'form'}}) }}
             <div class="mx-3">
                 <div class="mx-3">
@@ -37,14 +47,13 @@
                             </tr>
                             </thead>
                             <tbody>
-
                             {% for wartosc in wartosci %}
-
                                 <tr>
                                     <td>{{ wartosc.nazwa }}</td>
                                     <td>
-
-                                        <input type="text" class="form-control" style="width: 5rem;"
+                                        <input type="text"
+                                               class="form-control {% for error in errors %}{% if error.id == wartosc.idRodzajBiletu %}is-invalid {% endif %}{% endfor %}"
+                                               style="width: 5rem;"
                                                name="form_price[{{ wartosc.idRodzajBiletu }}]"
                                                id="form_price[{{ wartosc.idRodzajBiletu }}]"
                                                pattern="\d+(\.\d{1,2})?" placeholder="000.00"
@@ -56,15 +65,12 @@
                                             disabled
                                                 {% endif %}>
                                         {% for error in errors %}
-                                            {% if error.id == wartosc.idRodzajBiletu %}<br>
-                                                {#<div class="invalid-feedback">#}
-                                                {{ error.wartosc }}
-                                                {{ error.pattern }}
-                                                {#</div>#}
+                                            {% if error.id == wartosc.idRodzajBiletu %}
+                                                <div class="invalid-feedback">
+                                                    {{ error.error }}
+                                                </div>
                                             {% endif %}
                                         {% endfor %}
-
-
                                     </td>
                                     <td>
                                         <input type="checkbox" name="form_keep[{{ wartosc.idRodzajBiletu }}]"
@@ -72,28 +78,28 @@
                                                onclick="myFunction('form_price[{{ wartosc.idRodzajBiletu }}]', 'form_keep[{{ wartosc.idRodzajBiletu }}]')"
                                                 {% if wartosc.cena %}
                                                     checked
-                                                {% endif %}
-                                        >
+                                                {% endif %}>
                                     </td>
                                 </tr>
                             {% endfor %}
                             </tbody>
                         </table>
                     </div>
+                    {{ form_widget(form.save) }}
+                    {{ form_end(form) }}
+                </div>
+                <div class="row">
+                    <a class="btn btn-secondary"
+                            {% if edit %}
+                                href="{{ path("workers_app/tickets/pools/show", {'id':id}) }}"
+                            {% else %}
+                                href="{{ path("workers_app/tickets/dictionaryName", {'dictionaryName':'pools'}) }}"
+                            {% endif %}
+                       role="button">Wróć</a>
                 </div>
             </div>
-            {{ form_widget(form.save) }}
-            {{ form_end(form) }}
-            <div class="row">
-                <a class="btn btn-secondary"
-                   href="{{ path("workers_app/tickets/dictionaryName", {'dictionaryName':'pools'}) }}"
-                   role="button">Wróć</a>
-            </div>
         </div>
-
     </div>
-
-
 {% endblock %}
 
 

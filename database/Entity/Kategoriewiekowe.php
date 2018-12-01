@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @UniqueEntity(
  *     fields={"nazwa"},
  *     errorPath="nazwa",
- *     message="Ta instancja jest juz w bazie. Jeżeli chcesz ją użyć przywróć ją z tabeli usuniętych wartości."
+ *     message="Ta wartość jest juz w bazie. Może być usunięta, wówczas wystarczy ją przywrócić."
  * )
  */
 class Kategoriewiekowe
@@ -81,14 +81,14 @@ class Kategoriewiekowe
      * @ORM\Column(name="nazwa", type="string", length=3, nullable=false)
      *
      * @Assert\Regex(
-     *     pattern="/^[\p{L}\d\s\-]+$/u",
+     *     pattern="/^[\p{L}\d\s\-\/]+$/u",
      *     message="Nazwa powinna się składać tylko z liter, spacji, myślników i cyfr."
      * )
      * @Assert\Length(
      *     max = 45,
-     *     min = 1,
-     *     maxMessage = "Nazwa instancji może zawierać maksymalnie 45 znaków.",
-     *     minMessage = "Nazwa instancji musi zawierać minimum 3 znaki."
+     *     min = 2,
+     *     maxMessage = "Nazwa może zawierać maksymalnie 45 znaków.",
+     *     minMessage = "Nazwa musi zawierać minimum 2 znaki."
      * )
      */
     private $nazwa;

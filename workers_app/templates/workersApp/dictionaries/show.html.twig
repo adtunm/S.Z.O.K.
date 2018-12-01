@@ -4,6 +4,7 @@
     <div class="row pb-4 mt-0">
     <div class="h1 col-md">{{ rodzaj }}</div>
     {% if slownik %}
+    {% if is_granted('ROLE_ADMIN') %}
         {% if krytyczny %}
             {% if page == 'types' or page == 'pools' %}
                 {% if  page == 'types' %}
@@ -12,7 +13,7 @@
                class="btn btn-primary pull-right" style="margin-left: 4px;">Dodaj nową wartość</a>
                 {% elseif page == 'pools' %}
             <div class="col-md">
-                <a href="#"
+                <a href="{{ path("workers_app/tickets/pools/add") }}"
                    class="btn btn-primary pull-right" style="margin-left: 4px;">Dodaj nową wartość</a>
                 {% endif %}
                 {% if deleted %}
@@ -35,6 +36,7 @@
                 {% endif %}
             {% endif %}
                      </div>
+                {% endif %}
         {% endif %}
                 </div>
                 <table id="dictionary" class="table table-hover">
@@ -55,9 +57,11 @@
                             <td>
             {% if krytyczny %}
                 {% if not(deleted) %}
+                    {% if is_granted('ROLE_ADMIN') %}
                                 <button type="button" class="btn btn-danger btn-sm float-right" data-toggle="modal"
                                         data-target="#instanceId{{ slownikWiersz.id }}">Usuń
                                 </button>
+                        {% endif %}
                 {% else %}
                     {% if page == 'types' or page == 'pools' %}
                         <a class="btn btn-primary float-right btn-sm" style="margin-right: 4px"
@@ -85,6 +89,7 @@
                            role="button">Edytuj</a>
                 {% endif %}
             {% endif %}
+                                {% if is_granted('ROLE_ADMIN') %}
                         <!-- Modal -->
                         <div class="modal fade" id="instanceId{{ slownikWiersz.id }}" tabindex="-1" role="dialog"
                              aria-labelledby="modelTitleId" aria-hidden="true">
@@ -127,6 +132,7 @@
                             </div>
                         </div>
                         <!-- End of Modal -->
+                                {% endif %}
                     </td>
                 </tr>
             {% endfor %}
@@ -153,9 +159,9 @@
             {% include 'workersApp/inc/pagination.html.twig' %}
 
             {% if not(deleted) %}
-                {% if is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN') %}
+                {% if is_granted('ROLE_ADMIN') %}
         <script>
-            const promotions = document.getElementById('dictionary');
+            const dictionary = document.getElementById('dictionary');
             if (dictionary) {
                 dictionary.addEventListener('click', e => {
                     if (e.target.className === 'btn btn-danger delete-instance') {

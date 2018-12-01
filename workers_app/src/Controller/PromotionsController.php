@@ -63,7 +63,7 @@ class PromotionsController extends Controller
                 return $this->redirectToRoute('workers_app/promotions');
             } else {
 
-                return $this->render('workersApp/promotions/add.html.twig', array('form' => $form->createView()));
+                return $this->render('workersApp/promotions/add_edit.html.twig', array('form' => $form->createView()));
             }
         } else if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             return $this->redirectToRoute('workers_app/no_permission');

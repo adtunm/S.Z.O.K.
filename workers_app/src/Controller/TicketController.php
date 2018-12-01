@@ -27,8 +27,8 @@ class TicketController extends AbstractController
      */
     public function poolsHaveTypesOfTickets($id)
     {
-
-        $pmr = $this->getDoctrine()->getRepository(PulabiletowMaRodzajebiletow::class)->findBy(array('pulebiletow' => $id));
+        if ($this->isGranted('ROLE_ADMIN') OR ($this->isGranted('ROLE_MANAGER'))) {
+        $pmr = $this->getDoctrine()->getRepository(PulabiletowMaRodzajebiletow::class)->findBy(array('pulebiletow' => $id),array('rodzajebiletow' => 'ASC'));
         $query = $this->getDoctrine()->getRepository(Pulebiletow::class)->find($id);
         $pula['nazwa'] = $query->getNazwa();
         $pula['status'] = $query->getUsunieto();
@@ -36,10 +36,16 @@ class TicketController extends AbstractController
         if ($pula['status'] == null)
             $pula['status'] = true;
         return $this->render('workersApp\tickets\list.html.twig', array('query' => $pmr, 'pula' => $pula));
+        } else {
+            if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
+                return $this->render('workersApp/mainPage/noPermission.html.twig');
+            else
+                return $this->redirectToRoute('workers_app/login_page');
+        }
     }
 
     /**
-     * @Route("/t/pools/add",
+     * @Route("/tickets/pools/add",
      *      name="workers_app/tickets/pools/add",
      *      methods={"GET|POST"})
      */
@@ -65,10 +71,9 @@ class TicketController extends AbstractController
                 ->getForm();
 
             $form->handleRequest($request);
-
-
             $error = array();
             $wartosci = array();
+            $empty='';
 
             foreach ($rodzajeBiletow as $id => $nazwa) {
                 if (!isset($wartosci[$id])) {
@@ -79,60 +84,73 @@ class TicketController extends AbstractController
                 }
             }
             if ($form->isSubmitted()) {
-                $prizes = $request->get('form_price');
-                foreach ($prizes as $key => $value) {
-                    $wartosci[$key] = array(
-                        'idRodzajBiletu' => $key,
-                        'nazwa' => $wartosci[$key]['nazwa'],
-                        'cena' => $value);
+                $prices = $request->get('form_price');
+                foreach ($rodzajeBiletow as $id => $nazwa) {
+                    if (!isset($prices[$nazwa->getId()])) {
+                        $prices[$nazwa->getId()] = '';
+                    }
                 }
-            }
-
-            if ($form->isSubmitted() && $form->isValid()) {
-                if ($prizes and $keep = $request->get('form_keep')) {
-                    foreach ($prizes as $key => $value) {
+                foreach ($rodzajeBiletow as $id => $nazwa) {
+                    foreach ($prices as $key => $value) {
+                        if ($wartosci[$id]['idRodzajBiletu'] == $key) {
+                            $wartosci[$id] = array_replace($wartosci[$id], array('cena' => $value));
+                        }
+                    }
+                }
+                foreach ($prices as $key => $value) {
+                    if ($value != '') {
                         if (!preg_match('/^\d+(?:\.\d{2})?$/', $value)) {
-                            array_push($error, array('pattern' => 'Podana wartość jest nieprawidłowa.', 'id' => $key));
-                        } else if ($value <= 0) {
-                            array_push($error, array('wartosc' => 'Podana wartość musi być liczbą większą od 0', 'id' => $key));
+                            array_push($error, array('error' => 'Podana wartość jest nieprawidłowa.', 'id' => $key));
+                        }
+                        if ($value <= 0) {
+                            array_push($error, array('error' => 'Podana wartość musi być liczbą większą od 0', 'id' => $key));
                         }
                     }
-                    if (!$error) {
-                        $entityManager = $this->getDoctrine()->getManager();
-                        $entityManager->persist($nowaPula);
-                        $entityManager->flush();
-                        foreach ($keep as $key => $value) {
-                            $pulaMaRodzaj = new PulabiletowMaRodzajebiletow();
-                            $pulaMaRodzaj->setCena($prizes[$key]);
-                            $pulaMaRodzaj->setRodzajebiletow($this->getDoctrine()->getRepository(Rodzajebiletow::class)->find($key));
-                            $pulaMaRodzaj->setPulebiletow($nowaPula);
+                }
+
+                if ($form->isValid()) {
+                    if ($prices and $keep = $request->get('form_keep')) {
+                        if (!$error) {
                             $entityManager = $this->getDoctrine()->getManager();
-                            $entityManager->persist($pulaMaRodzaj);
+                            $entityManager->persist($nowaPula);
                             $entityManager->flush();
+                            foreach ($keep as $key => $value) {
+                                $pulaMaRodzaj = new PulabiletowMaRodzajebiletow();
+                                $pulaMaRodzaj->setCena($prices[$key]);
+                                $pulaMaRodzaj->setRodzajebiletow($this->getDoctrine()->getRepository(Rodzajebiletow::class)->find($key));
+                                $pulaMaRodzaj->setPulebiletow($nowaPula);
+                                $entityManager = $this->getDoctrine()->getManager();
+                                $entityManager->persist($pulaMaRodzaj);
+                                $entityManager->flush();
+                            }
+                            return $this->redirectToRoute('workers_app/tickets/pools/show', array('id' => $nowaPula->getId()));
                         }
-                        return $this->redirectToRoute('workers_app/tickets/dictionaryName', array('dictionaryName' => 'pools'));
+                        return $this->render('workersApp/tickets/add_edit.html.twig', array(
+                            'form' => $form->createView(),
+                            'errors' => $error,
+                            'wartosci' => $wartosci,
+                            'edit' => false,
+                            'empty'=>$empty));
                     }
-                    return $this->render('workersApp/tickets/add.html.twig', array(
-                        'form' => $form->createView(),
-                        'errors' => $error,
-                        'wartosci' => $wartosci));
+                    $empty = 'Przynajmniej jeden rodzaj biletu musi być wybrany';
                 }
             }
-
-            return $this->render('workersApp/tickets/add.html.twig', array(
+            return $this->render('workersApp/tickets/add_edit.html.twig', array(
                 'form' => $form->createView(),
                 'errors' => $error,
-                'wartosci' => $wartosci));
-        } else {
+                'wartosci' => $wartosci,
+                'edit' => false,
+                'empty'=>$empty));
+        }else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->redirectToRoute('workers_app/no_permission');
+                return $this->render('workersApp/mainPage/noPermission.html.twig');
             else
                 return $this->redirectToRoute('workers_app/login_page');
         }
     }
 
     /**
-     * @Route("/t/pools/edit/{id}",
+     * @Route("/tickets/pools/edit/{id}",
      *      name="workers_app/tickets/pools/edit",
      *      methods={"GET|POST"})
      */
@@ -142,7 +160,7 @@ class TicketController extends AbstractController
         {
             if ($this->isGranted('ROLE_ADMIN')) {
                 $rodzajeBiletow = $this->getDoctrine()->getRepository(Rodzajebiletow::class)->findAllActive();
-                $Pula = $this->getDoctrine()->getRepository(Pulebiletow::class)->find($id);
+                $Pula = $this->getDoctrine()->getRepository(Pulebiletow::class)->find($pulaId=$id);
 
                 $form = $this->createFormBuilder($Pula)
                     ->add('nazwa', TextType::class, array(
@@ -161,82 +179,124 @@ class TicketController extends AbstractController
                 $prices = array();
                 $wartosci = array();
                 $error = array();
+                $empty='';
                 $bilety = $this->getDoctrine()->getRepository(PulabiletowMaRodzajebiletow::class)->findBy(array('pulebiletow' => $id));
                 foreach ($bilety as $id => $nazwa) {
-                    if (!isset($wartosci[$id])) {
-                        array_push($wartosci, array(
+                    if (!isset($wartosci[ $nazwa->getRodzajebiletow()->getId()])) {
+                       $wartosci[ $nazwa->getRodzajebiletow()->getId()] = array(
                             'idRodzajBiletu' => $nazwa->getRodzajebiletow()->getId(),
                             'nazwa' => $nazwa->getRodzajebiletow()->getNazwa(),
                             'cena' => $nazwa->getCena(),
-                            'idPMR' => $nazwa->getId()));
+                            'idPMR' => $nazwa->getId());
                     }
                 }
                 foreach ($rodzajeBiletow as $id => $nazwa) {
-                    if (!isset($wartosci[$id])) {
-                        array_push($wartosci, array(
+                    if (!isset($wartosci[$nazwa->getId()])) {
+                        $wartosci[$nazwa->getId()] = array(
                             'idRodzajBiletu' => $nazwa->getId(),
                             'nazwa' => $nazwa->getNazwa(),
-                            'cena' => '',
-                            'idPMR' => ''));
+                            'cena' => null,
+                            'idPMR' => null);
                     }
-                    if (!isset($prices[$id])) {
-                        array_push($prices, array(
-                            $id => ''));
+                    if (!isset($prices[$nazwa->getId()])) {
+                        $prices[$nazwa->getId()] = null;
                     }
                 }
+                sort($wartosci);
 
                 $form->handleRequest($request);
-
                 if ($form->isSubmitted()) {
                     $prices = $request->get('form_price');
+                    //var_dump($prices);
                     foreach ($rodzajeBiletow as $id => $nazwa) {
                         if (!isset($prices[$nazwa->getId()])) {
-                            $prices[$nazwa->getId()]='';
+                            $prices[$nazwa->getId()] = null;
                         }
                     }
                     foreach ($rodzajeBiletow as $id => $nazwa) {
                         foreach ($prices as $key => $value) {
                             if ($wartosci[$id]['idRodzajBiletu'] == $key) {
-                                $wartosci[$id]=array_replace($wartosci[$id], array('cena' => $value));
+                                $wartosci[$id] = array_replace($wartosci[$id], array('cena' => $value));
                             }
                         }
                     }
-                }
-
-
-
-                if ($form->isSubmitted() && $form->isValid()) {
-                    if ($prices and $keep = $request->get('form_keep')) {
-                        foreach ($prices as $key => $value) {
+                    foreach ($prices as $key => $value) {
+                        if ($value != '') {
                             if (!preg_match('/^\d+(?:\.\d{2})?$/', $value)) {
-                                array_push($error, array('pattern' => 'Podana wartość jest nieprawidłowa.', 'id' => $key));
-                            } else if ($value <= 0) {
-                                array_push($error, array('wartosc' => 'Podana wartość musi być liczbą większą od 0', 'id' => $key));
+                                array_push($error, array('error' => 'Podana wartość jest nieprawidłowa.', 'id' => $key));
+                            }
+                            if ($value <= 0) {
+                                array_push($error, array('error' => 'Podana wartość musi być liczbą większą od 0', 'id' => $key));
                             }
                         }
-                        if (!$error) {
-                            $entityManager = $this->getDoctrine()->getManager();
-                            $entityManager->persist($Pula);
-                            $entityManager->flush();
-                            foreach ($keep as $key => $value) {
-                                $pulaMaRodzaj = new PulabiletowMaRodzajebiletow();
-                                $pulaMaRodzaj->setCena($prices[$key]);
-                                $pulaMaRodzaj->setRodzajebiletow($this->getDoctrine()->getRepository(Rodzajebiletow::class)->find($key));
-                                $pulaMaRodzaj->setPulebiletow($Pula);
+                    }
+                    if ($form->isValid()) {
+                        if ($prices and $keep = $request->get('form_keep')) {
+                            var_dump(isset($keep));
+                            if (!$error) {
                                 $entityManager = $this->getDoctrine()->getManager();
-                                $entityManager->persist($pulaMaRodzaj);
+                                $entityManager->persist($Pula);
                                 $entityManager->flush();
+                                foreach ($wartosci as $key => $value) {
+                                    if(!is_null($wartosci[$key]['cena']) && !is_null($wartosci[$key]['idPMR']))
+                                    {
+                                        $pmr=$this->getDoctrine()->getRepository(PulabiletowMaRodzajebiletow::class)->find($wartosci[$key]['idPMR']);
+                                        $pmr->setCena($wartosci[$key]['cena']);
+
+                                        $entityManager = $this->getDoctrine()->getManager();
+                                        $entityManager->merge($pmr);
+                                        $entityManager->flush();
+                                    }
+                                    elseif(!is_null($wartosci[$key]['cena']) && is_null($wartosci[$key]['idPMR']))
+                                    {
+                                        $pmr=new PulabiletowMaRodzajebiletow();
+                                        $pmr->setCena($wartosci[$key]['cena']);
+                                        $pmr->setRodzajebiletow($this->getDoctrine()->getRepository(Rodzajebiletow::class)->find($wartosci[$key]['idRodzajBiletu']));
+                                        $pmr->setPulebiletow($Pula);
+
+                                        $entityManager = $this->getDoctrine()->getManager();
+                                        $entityManager->persist($pmr);
+                                        $entityManager->flush();
+                                    }
+                                    elseif(is_null($wartosci[$key]['cena']) && !is_null($wartosci[$key]['idPMR']))
+                                    {
+                                        $pmr=$this->getDoctrine()->getRepository(PulabiletowMaRodzajebiletow::class)->find($wartosci[$key]['idPMR']);
+
+                                        $entityManager = $this->getDoctrine()->getManager();
+                                        $entityManager->remove($pmr);
+                                        $entityManager->flush();
+                                    }
+                                    elseif(is_null($wartosci[$key]['cena']) && is_null($wartosci[$key]['idPMR']))
+                                    {
+
+                                    }
+                                }
+                                return $this->redirectToRoute('workers_app/tickets/pools/show', array('id' => $pulaId));
                             }
-                            return $this->redirectToRoute('workers_app/tickets/dictionaryName', array('dictionaryName' => 'pools'));
+                            return $this->render('workersApp/tickets/add_edit.html.twig', array(
+                                'form' => $form->createView(),
+                                'ticketTypes' => $rodzajeBiletow,
+                                'errors' => $error,
+                                'wartosci' => $wartosci,
+                                'edit' => true,
+                                'id'=>$pulaId,
+                                'empty'=>$empty));
                         }
-                        return $this->render('workersApp/tickets/add.html.twig', array('form' => $form->createView(), 'ticketTypes' => $rodzajeBiletow, 'errors' => $error, 'wartosci' => $wartosci));
+                        $empty = 'Przynajmniej jeden rodzaj biletu musi być wybrany';
                     }
                 }
-
-                return $this->render('workersApp/tickets/add.html.twig', array('form' => $form->createView(), 'ticketTypes' => $rodzajeBiletow, 'errors' => $error, 'wartosci' => $wartosci));
+                return $this->render('workersApp/tickets/add_edit.html.twig', array(
+                    'form' => $form->createView(),
+                    'ticketTypes' => $rodzajeBiletow,
+                    'errors' => $error,
+                    'wartosci' => $wartosci,
+                    'edit' => true,
+                    'id'=>$pulaId,
+                    'empty'=>$empty
+                ));
             } else {
                 if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                    return $this->redirectToRoute('workers_app/no_permission');
+                    return $this->render('workersApp/mainPage/noPermission.html.twig');
                 else
                     return $this->redirectToRoute('workers_app/login_page');
             }
