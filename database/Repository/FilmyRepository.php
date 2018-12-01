@@ -63,7 +63,7 @@ class FilmyRepository extends ServiceEntityRepository
             ->select('DISTINCT f')
             ->leftJoin('f.seansMaFilmy', 'smf')
             ->leftJoin('smf.seanse', 's')
-            ->andWhere('smf.id IS NULL OR s.poczatekseansu > :date')
+            ->andWhere('smf.id IS NULL OR s.poczatekseansu >= :date')
             ->setParameter('date', date('Y-m-d'))
             ->orderBy('f.datapremiery', 'DESC')
             ->getQuery();
@@ -83,7 +83,7 @@ class FilmyRepository extends ServiceEntityRepository
             ->select('count(DISTINCT f.id)')
             ->leftJoin('f.seansMaFilmy', 'smf')
             ->leftJoin('smf.seanse', 's')
-            ->andWhere('smf.id IS NULL OR s.poczatekseansu > :date')
+            ->andWhere('smf.id IS NULL OR s.poczatekseansu >= :date')
             ->setParameter('date', date('Y-m-d'))
             ->orderBy('f.datapremiery', 'DESC')
             ->getQuery();

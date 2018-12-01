@@ -127,9 +127,9 @@ class Seanse
     }
 
     /**
-     * @param Wydarzeniaspecjalne $wydarzeniaspecjalne
+     * @param Wydarzeniaspecjalne|null $wydarzeniaspecjalne
      */
-    public function setWydarzeniaspecjalne(Wydarzeniaspecjalne $wydarzeniaspecjalne): void
+    public function setWydarzeniaspecjalne(?Wydarzeniaspecjalne $wydarzeniaspecjalne): void
     {
         $this->wydarzeniaspecjalne = $wydarzeniaspecjalne;
     }

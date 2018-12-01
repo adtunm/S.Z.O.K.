@@ -38,7 +38,7 @@ class SeancesControler extends AbstractController
             $wsError = NULL;
             $psError = NULL;
 
-            $ws=NULL;
+            $ws = NULL;
 
             $form->handleRequest($request);
 
@@ -50,7 +50,7 @@ class SeancesControler extends AbstractController
                     $filmy_id = $request->get('form')['seansMaFilmy'];
                     if(count($filmy_id) != count(array_unique($filmy_id))) {
                         $smfError = "Nie możesz umieścić 2 takich samych filmów w wydarzeniu specjalnym.";
-                    } else if (count($filmy_id) > 6){
+                    } else if(count($filmy_id) > 6) {
                         $smfError = "Wydarzenie specjalne nie może mieć więcej niż 6 filmów.";
                     } else {
                         foreach($filmy_id as $value) {
@@ -62,10 +62,10 @@ class SeancesControler extends AbstractController
                             }
                         }
 
-                        if(array_key_exists('poczatekseansu', $request->get('form'))){
+                        if(array_key_exists('poczatekseansu', $request->get('form'))) {
                             $ps = $request->get('form')['poczatekseansu']['date'];
-                            foreach($filmy AS $film){
-                                if($film->getDataPremiery()->format("Y-m-d") > $ps){
+                            foreach($filmy AS $film) {
+                                if($film->getDataPremiery()->format("Y-m-d") > $ps) {
                                     $psError = "Seans nie może się rozpoczynać wcześniej niż w dniu premiery filmu.";
                                 }
                             }
@@ -91,12 +91,12 @@ class SeancesControler extends AbstractController
                     $entityManager->persist($seance);
                     $entityManager->flush();
 
-                    foreach($filmy AS $key => $film){
+                    foreach($filmy AS $key => $film) {
                         $seansMaFilmy = new SeansMaFilmy();
 
                         $seansMaFilmy->setFilmy($film);
                         $seansMaFilmy->setSeanse($seance);
-                        $seansMaFilmy->setKolejnosc($key+1);
+                        $seansMaFilmy->setKolejnosc($key + 1);
 
                         $entityManager->persist($seansMaFilmy);
                         $entityManager->flush();
@@ -142,7 +142,7 @@ class SeancesControler extends AbstractController
             $wsError = NULL;
             $psError = NULL;
 
-            $ws=NULL;
+            $ws = NULL;
 
             $form->handleRequest($request);
 
@@ -154,7 +154,7 @@ class SeancesControler extends AbstractController
                     $filmy_id = $request->get('form')['seansMaFilmy'];
                     if(count($filmy_id) != count(array_unique($filmy_id))) {
                         $smfError = "Nie możesz umieścić 2 takich samych filmów w wydarzeniu specjalnym.";
-                    } else if (count($filmy_id) > 6){
+                    } else if(count($filmy_id) > 6) {
                         $smfError = "Wydarzenie specjalne nie może mieć więcej niż 6 filmów.";
                     } else {
                         foreach($filmy_id as $value) {
@@ -166,10 +166,10 @@ class SeancesControler extends AbstractController
                             }
                         }
 
-                        if(array_key_exists('poczatekseansu', $request->get('form'))){
+                        if(array_key_exists('poczatekseansu', $request->get('form'))) {
                             $ps = $request->get('form')['poczatekseansu']['date'];
-                            foreach($filmy AS $film){
-                                if($film->getDataPremiery()->format("Y-m-d") > $ps){
+                            foreach($filmy AS $film) {
+                                if($film->getDataPremiery()->format("Y-m-d") > $ps) {
                                     $psError = "Seans nie może się rozpoczynać wcześniej niż w dniu premiery filmu.";
                                 }
                             }
@@ -179,6 +179,7 @@ class SeancesControler extends AbstractController
                                 $wsError = "Wskazanie rodzaju wydarzenia jest wymagane, gdy wybrano więcej niż jeden film.";
                             } else {
                                 $ws = $request->get('form')['wydarzeniaspecjalne'];
+                                $request->request->add(array('form[wydarzeniaspecjalne]', $ws));
                             }
                         }
                         $collectionValues = implode($filmy_id, '/');
@@ -189,9 +190,11 @@ class SeancesControler extends AbstractController
                 if($form->isValid() and !$smfError and !$wsError and !$psError and count($filmy)) {
                     $seance = $form->getData();
                     $seance->setSeansMaFilmy(new ArrayCollection());
+                    if(count($filmy) == 1)
+                        $seance->setWydarzeniaspecjalne(NULL);
                     $entityManager = $this->getDoctrine()->getManager();
 
-                    foreach($smfsToRemove as $smf){
+                    foreach($smfsToRemove as $smf) {
                         $smfToRemove = $this->getDoctrine()->getRepository(SeansMaFilmy::class)->find($smf->getId());
                         var_dump(get_class($smfToRemove));
                         $entityManager->remove($smfToRemove);
@@ -202,12 +205,12 @@ class SeancesControler extends AbstractController
                     $entityManager->merge($seance);
                     $entityManager->flush();
 
-                    foreach($filmy AS $key => $film){
+                    foreach($filmy AS $key => $film) {
                         $seansMaFilmy = new SeansMaFilmy();
 
                         $seansMaFilmy->setFilmy($film);
                         $seansMaFilmy->setSeanse($seance);
-                        $seansMaFilmy->setKolejnosc($key+1);
+                        $seansMaFilmy->setKolejnosc($key + 1);
 
                         $entityManager->persist($seansMaFilmy);
                         $entityManager->flush();
