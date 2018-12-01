@@ -254,4 +254,27 @@ class Seanse
 
         return $Time;
     }
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Tranzakcje", mappedBy="seanse")
+     */
+    private $tranzakcje;
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTranzakcje(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->tranzakcje;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $tranzakcje
+     */
+    public function setTranzakcje(\Doctrine\Common\Collections\Collection $tranzakcje): void
+    {
+        $this->tranzakcje = $tranzakcje;
+    }
 }

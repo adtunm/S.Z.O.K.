@@ -195,7 +195,7 @@ class Tranzakcje
     /**
      * @var \Seanse
      *
-     * @ORM\ManyToOne(targetEntity="Seanse")
+     * @ORM\ManyToOne(targetEntity="Seanse", inversedBy="tranzakcje")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="Seanse_id", referencedColumnName="id")
      * })
@@ -212,5 +212,26 @@ class Tranzakcje
      */
     private $uzytkownicy;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Bilety", mappedBy="tranzakcje")
+     */
+    private $bilety;
 
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getBilety(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->bilety;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $bilety
+     */
+    public function setBilety(\Doctrine\Common\Collections\Collection $bilety): void
+    {
+        $this->bilety = $bilety;
+    }
 }

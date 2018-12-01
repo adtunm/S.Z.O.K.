@@ -75,77 +75,52 @@ class MiejscaRepository extends ServiceEntityRepository
         return $query->getSingleScalarResult();
     }
 
-    public function getRoom($id, $idSeance)
+    public function getRoom($idRoom, $idSeance)
     {
-        $entityManager = $this->getEntityManager();
-//        $query = $entityManager->createQuery(
-//            'SELECT m
-//            FROM App\Entity\Miejsca m
-//            JOIN m.rzedy r
-//            JOIN r.sale s
-//            LEFT JOIN m.rezerwacje re
-//            LEFT JOIN m.bilety b
-//            JOIN b.tranzakcje t
-//            WHERE s.id = :id
-//                AND m.rezerwacje is NULL AND re.seanse = :idSeance
-//                AND m.bilety is NULL AND t.seanse = :idSeance
-//            GROUP BY m.id
-//            ORDER BY r.numerrzedu, m.pozycja')
-//            ->setParameter('id', $id)
-//            ->setParameter('idSeance', $idSeance);
-
-
-
         $query = $this->createQueryBuilder('m')
-            ->select('COUNT(DISTINCT m.id)')
-            ->join('m.rzedy','r')
-            ->join('r.sale','s')
+            ->select('m AS miejsca, 
+                            SUM(CASE WHEN se.id != :idSeance THEN 0 ELSE re.id END) AS rezerwacje,
+                            SUM(CASE WHEN se2.id != :idSeance THEN 0 ELSE t.id END) AS tranzakcje')
+            ->join('m.rzedy', 'r')
+            ->join('r.sale', 's')
             ->leftJoin('m.rezerwacje', 're')
             ->leftJoin('re.seanse', 'se')
-            //->leftJoin('m.bilety', 'b')
-            //->leftjoin('b.tranzakcje','t')
-            ->andWhere('s.id = :id')
-            ->andWhere('re.id IS NULL OR se.id = :idSeance')
-            //->andWhere('b.id IS NULL OR t.seanse = :idSeance')
-            ->setParameter('id', $id)
-            ->setParameter('idSeance', 10)
-            ->orderBy('r.numerrzedu, m.pozycja', 'DESC')
+            ->leftJoin('m.bilety', 'b')
+            ->leftjoin('b.tranzakcje', 't')
+            ->leftJoin('t.seanse', 'se2')
+            ->andWhere('s.id = :idRoom')
+            ->setParameter('idRoom', $idRoom)
+            ->setParameter('idSeance', $idSeance)
+            ->orderBy('r.numerrzedu, m.pozycja', 'ASC')
+            ->groupBy('m')
             ->getQuery();
 
+        return $query->execute();
+    }
 
-
-
-
-
-
-
-
-        $query->execute();
-
-
-
-//        $entityManager = $this->getEntityManager();
-//        $query = $entityManager->createQuery(
-//            'SELECT r
-//            FROM App\Entity\Miejsca m
-//            JOIN m.rzedy r
-//            JOIN r.sale s
-//            LEFT JOIN m.rezerwacje re
-//            WHERE s.id = :id  AND re.seanse = :idSeance
-//            GROUP BY m.id
-//            ORDER BY r.numerrzedu, m.pozycja')
-//            ->setParameter('id', $id)
-//            ->setParameter('idSeance', $idSeance);
-//
-//        $query->execute();
-
-//        $query = $entityManager->createQuery(
-//            'SELECT m.id AS miejsce, b.id AS bilet
-//            FROM App\Entity\Bilety b
-//            LEFT JOIN b.miejsca m
-//            WITH b.miejsca = m.id
-//            ');
-
+    public function getSeatToCheck($idRoom, $idSeance, $idSeat)
+    {
+        $query = $this->createQueryBuilder('m')
+            ->select('tr.id AS typrzedu,
+                            SUM(CASE WHEN se.id != :idSeance THEN 0 ELSE re.id END) AS rezerwacje,
+                            SUM(CASE WHEN se2.id != :idSeance THEN 0 ELSE t.id END) AS tranzakcje')
+            ->join('m.rzedy', 'r')
+            ->join('r.sale', 's')
+            ->join('r.typyrzedow', 'tr')
+            ->leftJoin('m.rezerwacje', 're')
+            ->leftJoin('re.seanse', 'se')
+            ->leftJoin('m.bilety', 'b')
+            ->leftjoin('b.tranzakcje', 't')
+            ->leftJoin('t.seanse', 'se2')
+            ->andWhere('s.id = :idRoom')
+            ->andWhere('m.id = :idSeat')
+            //->andWhere('b.id IS NULL OR t.seanse = :idSeance')
+            ->setParameter('idSeat', $idSeat)
+            ->setParameter('idRoom', $idRoom)
+            ->setParameter('idSeance', $idSeance)
+            ->orderBy('r.numerrzedu, m.pozycja', 'ASC')
+            ->groupBy('m')
+            ->getQuery();
 
         return $query->execute();
     }

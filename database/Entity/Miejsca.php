@@ -91,6 +91,23 @@ class Miejsca
     {
         $this->rezerwacje = $rezerwacje;
     }
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getBilety(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->bilety;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $bilety
+     */
+    public function setBilety(\Doctrine\Common\Collections\Collection $bilety): void
+    {
+        $this->bilety = $bilety;
+    }
+
     /**
      * @var int
      *
@@ -130,6 +147,13 @@ class Miejsca
      * @ORM\ManyToMany(targetEntity="Rezerwacje", mappedBy="miejsca")
      */
     private $rezerwacje;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Bilety", mappedBy="miejsca")
+     */
+    private $bilety;
 
     /**
      * Constructor

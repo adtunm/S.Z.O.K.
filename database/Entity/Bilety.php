@@ -228,7 +228,7 @@ class Bilety
     /**
      * @var \Miejsca
      *
-     * @ORM\ManyToOne(targetEntity="Miejsca")
+     * @ORM\ManyToOne(targetEntity="Miejsca", inversedBy="bilety")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="Miejsca_id", referencedColumnName="id")
      * })
@@ -238,7 +238,7 @@ class Bilety
     /**
      * @var \Rodzajebiletow
      *
-     * @ORM\ManyToOne(targetEntity="Rodzajebiletow")
+     * @ORM\ManyToOne(targetEntity="Rodzajebiletow", inversedBy="bilety")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="RodzajeBiletow_id", referencedColumnName="id")
      * })
@@ -248,7 +248,7 @@ class Bilety
     /**
      * @var \Tranzakcje
      *
-     * @ORM\ManyToOne(targetEntity="Tranzakcje")
+     * @ORM\ManyToOne(targetEntity="Tranzakcje", inversedBy="bilety")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="Tranzakcje_id", referencedColumnName="id")
      * })

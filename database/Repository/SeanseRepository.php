@@ -45,7 +45,8 @@ class SeanseRepository extends ServiceEntityRepository
         $query = $entityManager->createQuery(
             'SELECT DISTINCT
                 se.id,
-                f.tytul, 
+                f.tytul,
+                f.datapremiery, 
                 DATE_FORMAT(se.poczatekseansu, \'%d.%m.%Y\') AS data,
                 DATE_FORMAT(se.poczatekseansu, \'%H:%i\') AS godzina,
                 sa.id AS salaid,
