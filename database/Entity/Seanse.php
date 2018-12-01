@@ -15,11 +15,105 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Seanse
 {
     /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="poczatekSeansu", type="datetime", nullable=false)
+     * @Assert\NotNull(message="Początek seansu jest wymagany.")
+     * @Assert\GreaterThan(
+     *     value="today",
+     *     message="Seans nie może rozpoczynacz się wcześniej niż jutro."
+     *     )
+     */
+    private $poczatekseansu;
+
+    /**
+     * @var bool|null
+     *
+     * @ORM\Column(name="czyOdwolany", type="boolean", nullable=true)
+     */
+    private $czyodwolany;
+
+    /**
+     * @var \Pulebiletow
+     *
+     * @ORM\ManyToOne(targetEntity="Pulebiletow")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="PuleBiletow_id", referencedColumnName="id")
+     * })
+     * @Assert\NotNull(message="Pula biletów jest wymagana.")
+     */
+    private $pulebiletow;
+
+    /**
+     * @var \Sale
+     *
+     * @ORM\ManyToOne(targetEntity="Sale")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="Sale_id", referencedColumnName="id")
+     * })
+     * @Assert\NotNull(message="Sala jest wymagana.")
+     */
+    private $sale;
+
+    /**
+     * @var \Typyseansow
+     *
+     * @ORM\ManyToOne(targetEntity="Typyseansow")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="TypySeansow_id", referencedColumnName="id")
+     * })
+     * @Assert\NotNull(message="Format jest wymagany.")
+     */
+    private $typyseansow;
+
+    /**
+     * @var \Wydarzeniaspecjalne
+     *
+     * @ORM\ManyToOne(targetEntity="Wydarzeniaspecjalne")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="WydarzeniaSpecjalne_id", referencedColumnName="id")
+     * })
+     */
+    private $wydarzeniaspecjalne;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="SeansMaFilmy", mappedBy="seanse")
+     */
+    private $seansMaFilmy;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Tranzakcje", mappedBy="seanse")
+     */
+    private $tranzakcje;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Rezerwacje", mappedBy="seanse")
+     */
+    private $rezerwacje;
+
+    /**
      * Seanse constructor.
      */
     public function __construct()
     {
         $this->seansMaFilmy = new ArrayCollection();
+        $this->rezerwacje = new ArrayCollection();
+        $this->tranzakcje = new ArrayCollection();
     }
 
     /**
@@ -135,85 +229,6 @@ class Seanse
     }
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $id;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="poczatekSeansu", type="datetime", nullable=false)
-     * @Assert\NotNull(message="Początek seansu jest wymagany.")
-     * @Assert\GreaterThan(
-     *     value="today",
-     *     message="Seans nie może rozpoczynacz się wcześniej niż jutro."
-     *     )
-     */
-    private $poczatekseansu;
-
-    /**
-     * @var bool|null
-     *
-     * @ORM\Column(name="czyOdwolany", type="boolean", nullable=true)
-     */
-    private $czyodwolany;
-
-    /**
-     * @var \Pulebiletow
-     *
-     * @ORM\ManyToOne(targetEntity="Pulebiletow")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="PuleBiletow_id", referencedColumnName="id")
-     * })
-     * @Assert\NotNull(message="Pula biletów jest wymagana.")
-     */
-    private $pulebiletow;
-
-    /**
-     * @var \Sale
-     *
-     * @ORM\ManyToOne(targetEntity="Sale")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="Sale_id", referencedColumnName="id")
-     * })
-     * @Assert\NotNull(message="Sala jest wymagana.")
-     */
-    private $sale;
-
-    /**
-     * @var \Typyseansow
-     *
-     * @ORM\ManyToOne(targetEntity="Typyseansow")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="TypySeansow_id", referencedColumnName="id")
-     * })
-     * @Assert\NotNull(message="Format jest wymagany.")
-     */
-    private $typyseansow;
-
-    /**
-     * @var \Wydarzeniaspecjalne
-     *
-     * @ORM\ManyToOne(targetEntity="Wydarzeniaspecjalne")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="WydarzeniaSpecjalne_id", referencedColumnName="id")
-     * })
-     */
-    private $wydarzeniaspecjalne;
-
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\OneToMany(targetEntity="SeansMaFilmy", mappedBy="seanse")
-     */
-    private $seansMaFilmy;
-
-    /**
      * @return \Doctrine\Common\Collections\Collection|null
      */
     public function getSeansMaFilmy(): ?\Doctrine\Common\Collections\Collection
@@ -256,13 +271,6 @@ class Seanse
     }
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\OneToMany(targetEntity="Tranzakcje", mappedBy="seanse")
-     */
-    private $tranzakcje;
-
-    /**
      * @return \Doctrine\Common\Collections\Collection
      */
     public function getTranzakcje(): \Doctrine\Common\Collections\Collection
@@ -276,5 +284,21 @@ class Seanse
     public function setTranzakcje(\Doctrine\Common\Collections\Collection $tranzakcje): void
     {
         $this->tranzakcje = $tranzakcje;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getRezerwacje(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->rezerwacje;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $rezerwacje
+     */
+    public function setRezerwacje(\Doctrine\Common\Collections\Collection $rezerwacje): void
+    {
+        $this->rezerwacje = $rezerwacje;
     }
 }

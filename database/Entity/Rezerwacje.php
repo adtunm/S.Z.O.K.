@@ -283,7 +283,7 @@ class Rezerwacje
     /**
      * @var \Seanse
      *
-     * @ORM\ManyToOne(targetEntity="Seanse")
+     * @ORM\ManyToOne(targetEntity="Seanse", inversedBy="rezerwacje")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="Seanse_id", referencedColumnName="id")
      * })

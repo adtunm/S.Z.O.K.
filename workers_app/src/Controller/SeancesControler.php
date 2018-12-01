@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Filmy;
 use App\Entity\Pulebiletow;
+use App\Entity\Rezerwacje;
 use App\Entity\Sale;
 use App\Entity\Seanse;
 use App\Entity\SeansMaFilmy;
@@ -130,7 +131,8 @@ class SeancesControler extends AbstractController
         }
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $seance = $this->getDoctrine()->getRepository(Seanse::class)->find($id);
-            if(!$seance)
+
+            if(!$seance or $seance->getRezerwacje()->count() or $seance->getTranzakcje()->count())
                 return $this->redirectToRoute('workers_app/no_permission');
 
             $collectionValues = $seance->getInitialCollectionsValues();
@@ -196,7 +198,6 @@ class SeancesControler extends AbstractController
 
                     foreach($smfsToRemove as $smf) {
                         $smfToRemove = $this->getDoctrine()->getRepository(SeansMaFilmy::class)->find($smf->getId());
-                        var_dump(get_class($smfToRemove));
                         $entityManager->remove($smfToRemove);
                         $entityManager->flush();
                     }
@@ -248,17 +249,55 @@ class SeancesControler extends AbstractController
             if(!$seance)
                 return $this->redirectToRoute('workers_app/no_permission');
 
-            $endTime = $seance->getSeanceEndTime();
+            $booking = $this->getDoctrine()->getRepository(Rezerwacje::class)->findBookingNotFinalized($seance);
 
             return $this->render('workersApp/seances/show.html.twig', array(
                 'seance' => $seance,
-                'endTime' => $endTime
+                'booking' => $booking
             ));
 
         } else if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             return $this->redirectToRoute('workers_app/no_permission');
         } else {
             return $this->redirectToRoute('workers_app/login_page');
+        }
+    }
+
+    /**
+     * @Route("/seances/rmRev/{id<[1-9]\d*>?}", name="workers_app/seances/rmRev", methods={"DELETE"})
+     */
+    public function removeReservations($id)
+    {
+        if(($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN'))
+            and $seance = $this->getDoctrine()->getRepository(Seanse::class)->find($id)
+            and $bookings = $this->getDoctrine()->getRepository(Rezerwacje::class)->findBookingNotFinalized($seance)
+        ) {
+            $entityManager = $this->getDoctrine()->getManager();
+            foreach($bookings as $booking) {
+                $entityManager->remove($booking);
+                $entityManager->flush();
+            }
+        }
+    }
+
+    /**
+     * @Route("/seances/rmS/{id<[1-9]\d*>?}", name="workers_app/seances/rmSeance", methods={"DELETE"})
+     */
+    public function removeSeance($id)
+    {
+        if(($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN'))
+            and $seance = $this->getDoctrine()->getRepository(Seanse::class)->find($id)
+            and $seance->getRezerwacje()->isEmpty()
+            and $seance->getTranzakcje()->isEmpty()
+        ) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $smfsToRemove = $seance->getSeansMaFilmy()->getValues();
+            foreach($smfsToRemove as $smf){
+                $entityManager->remove($smf);
+                $entityManager->flush();
+            }
+            $entityManager->remove($seance);
+            $entityManager->flush();
         }
     }
 

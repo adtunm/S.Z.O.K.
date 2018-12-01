@@ -10,6 +10,7 @@ namespace App\Repository;
 
 
 use App\Entity\Rezerwacje;
+use App\Entity\Seanse;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
@@ -80,4 +81,13 @@ class RezerwacjeRepository extends ServiceEntityRepository
         return $pageCount;
     }
 
+    public function findBookingNotFinalized(Seanse $seance){
+        $query = $this->createQueryBuilder('r')
+            ->select('r')
+            ->andWhere('r.sfinalizowana = false')
+            ->andWhere('r.seanse = :seance')
+            ->setParameter('seance', $seance)
+            ->getQuery();
+        return $query->execute();
+    }
 }

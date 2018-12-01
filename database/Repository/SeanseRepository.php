@@ -31,9 +31,9 @@ class SeanseRepository extends ServiceEntityRepository
             GROUP BY sa.id
             ORDER BY sa.numersali ASC'
         );
-        $roomsInSeances =  $query->execute();
+        $roomsInSeances = $query->execute();
         $checkRooms = array();
-        foreach($rooms as $key => $room){
+        foreach($rooms as $key => $room) {
             $checkRooms[$key] = !in_array(array('seanse' => $room->getId()), $roomsInSeances);
         }
         return $checkRooms;
@@ -58,14 +58,15 @@ class SeanseRepository extends ServiceEntityRepository
             JOIN App\Entity\SeansMaFilmy smf
             JOIN smf.filmy f
             WHERE se.id = :id AND smf.seanse = se.id')
-        ->setParameter('id', $id);
+            ->setParameter('id', $id);
 
         return $query->execute();
     }
 
-    public function findSeancesForMovie(\App\Entity\Filmy $movie, $date, $page = 1, $pageLimit = 5){
-        $from = new \DateTime($date." 00:00:00");
-        $to   = new \DateTime($date." 23:59:59");
+    public function findSeancesForMovie(\App\Entity\Filmy $movie, $date, $page = 1, $pageLimit = 5)
+    {
+        $from = new \DateTime($date . " 00:00:00");
+        $to = new \DateTime($date . " 23:59:59");
 
         $query = $this->createQueryBuilder('s')
             ->select('s')
@@ -73,7 +74,7 @@ class SeanseRepository extends ServiceEntityRepository
             ->andWhere('smf.filmy = :movie')
             ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
             ->setParameter('movie', $movie)
-            ->setParameter('from', $from )
+            ->setParameter('from', $from)
             ->setParameter('to', $to)
             ->getQuery();
 
@@ -86,9 +87,10 @@ class SeanseRepository extends ServiceEntityRepository
         return $requestedPage;
     }
 
-    public function getPageCountForMovie(\App\Entity\Filmy $movie, $date, $pageLimit = 5){
-        $from = new \DateTime($date." 00:00:00");
-        $to   = new \DateTime($date." 23:59:59");
+    public function getPageCountForMovie(\App\Entity\Filmy $movie, $date, $pageLimit = 5)
+    {
+        $from = new \DateTime($date . " 00:00:00");
+        $to = new \DateTime($date . " 23:59:59");
 
         $query = $this->createQueryBuilder('s')
             ->select('count(s.id)')
@@ -96,7 +98,7 @@ class SeanseRepository extends ServiceEntityRepository
             ->andWhere('smf.filmy = :movie')
             ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
             ->setParameter('movie', $movie)
-            ->setParameter('from', $from )
+            ->setParameter('from', $from)
             ->setParameter('to', $to)
             ->getQuery();
 
@@ -111,8 +113,8 @@ class SeanseRepository extends ServiceEntityRepository
         return $pageCount;
     }
 
-    public function checkSeancesForMovie(\App\Entity\Filmy $movie){
-
+    public function checkSeancesForMovie(\App\Entity\Filmy $movie)
+    {
         $query = $this->createQueryBuilder('s')
             ->select('count(s.id)')
             ->join('s.seansMaFilmy', 'smf')
@@ -122,7 +124,7 @@ class SeanseRepository extends ServiceEntityRepository
 
         $count = $query->getSingleScalarResult();
 
-        if($count>0) return false;
+        if($count > 0) return false;
         else return true;
     }
 }
