@@ -30,7 +30,7 @@ class Seanse
      * @Assert\NotNull(message="Początek seansu jest wymagany.")
      * @Assert\GreaterThan(
      *     value="today",
-     *     message="Seans nie może rozpoczynacz się wcześniej niż jutro."
+     *     message="Seans nie może rozpoczynać się wcześniej niż jutro."
      *     )
      */
     private $poczatekseansu;

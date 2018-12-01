@@ -4,7 +4,7 @@
         {{ seance.wydarzeniaspecjalne }} {{ seance.typyseansow }}
     {% else %}
         {% for smf in seance.seansMaFilmy|slice(0,1) %}
-            {{ smf.filmy }} {{ seance.typyseansow }}
+            {{ smf }} {{ seance.typyseansow }}
         {% endfor %}
     {% endif %}
 {% endblock %}

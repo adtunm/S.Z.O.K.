@@ -111,5 +111,8 @@ class SeansMaFilmy
      */
     private $seanse;
 
-
+    public function __toString()
+    {
+        return (string) $this->filmy;
+    }
 }

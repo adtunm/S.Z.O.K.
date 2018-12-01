@@ -18,6 +18,7 @@ use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 class SeancesControler extends AbstractController
 {
@@ -38,6 +39,7 @@ class SeancesControler extends AbstractController
             $smfError = NULL;
             $wsError = NULL;
             $psError = NULL;
+            $psError2 = NULL;
 
             $ws = NULL;
 
@@ -79,11 +81,24 @@ class SeancesControler extends AbstractController
                             }
                         }
                         $collectionValues = implode($filmy_id, '/');
+
+                        $seanceStartDate = new \DateTime($_POST['form']['poczatekseansu']['date'] . ' ' . $_POST['form']['poczatekseansu']['time']['hour'] . ':' . $_POST['form']['poczatekseansu']['time']['minute']);
+                        $seanceEndDate = $this->getEndTime($seanceStartDate,$collectionValues);
+                        $room = $this->getDoctrine()->getRepository(\App\Entity\Sale::class)->find($_POST['form']['sale']);
+
+                        if($qSeance = $this->getDoctrine()->getRepository(Seanse::class)->endTimeIsInvalid($seanceStartDate, $seanceEndDate, $room))
+                        {
+                            $psError2 = "W sali " . $room->getNumersali() . " zaplanowany jest już seans w godzinach "
+                                . $qSeance->getPoczatekseansu()->format("H:i") . " - " . $qSeance->getSeanceEndTime()->format("H:i")
+                                . ". Obecnie konfigurowany seans odbywałby się w godzinach "
+                                . $seanceStartDate->format("H:i")  . " - " . $seanceEndDate->format("H:i")
+                                . ".";
+                        }
                     }
                 } else {
                     $smfError = "Należy wybrać przynajmniej jeden film.";
                 }
-                if($form->isValid() and !$smfError and !$wsError and !$psError and count($filmy)) {
+                if($form->isValid() and !$smfError and !$wsError and !$psError and !$psError2 and count($filmy)) {
                     $seance = $form->getData();
 
                     $seance->setSeansMaFilmy(new ArrayCollection());
@@ -112,7 +127,8 @@ class SeancesControler extends AbstractController
                 'collectionValues' => $collectionValues,
                 'smfError' => $smfError,
                 'wsError' => $wsError,
-                'psError' => $psError
+                'psError' => $psError,
+                'psError2' => $psError2
             ));
         } else if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             return $this->redirectToRoute('workers_app/no_permission');
@@ -143,6 +159,7 @@ class SeancesControler extends AbstractController
             $smfError = NULL;
             $wsError = NULL;
             $psError = NULL;
+            $psError2 = NULL;
 
             $ws = NULL;
 
@@ -185,11 +202,25 @@ class SeancesControler extends AbstractController
                             }
                         }
                         $collectionValues = implode($filmy_id, '/');
+
+                        $seanceStartDate = new \DateTime($_POST['form']['poczatekseansu']['date'] . ' ' . $_POST['form']['poczatekseansu']['time']['hour'] . ':' . $_POST['form']['poczatekseansu']['time']['minute']);
+                        $seanceEndDate = $this->getEndTime($seanceStartDate,$collectionValues);
+                        $room = $this->getDoctrine()->getRepository(\App\Entity\Sale::class)->find($_POST['form']['sale']);
+
+                        if($qSeance = $this->getDoctrine()->getRepository(Seanse::class)->endTimeIsInvalid($seanceStartDate, $seanceEndDate, $room, $id))
+                        {
+                            $psError2 = "W sali " . $room->getNumersali() . " zaplanowany jest już seans w godzinach "
+                                . $qSeance->getPoczatekseansu()->format("H:i") . " - " . $qSeance->getSeanceEndTime()->format("H:i")
+                                . ". Obecnie konfigurowany seans odbywałby się w godzinach "
+                                . $seanceStartDate->format("H:i")  . " - " . $seanceEndDate->format("H:i")
+                                . ".";
+                        }
                     }
                 } else {
                     $smfError = "Należy wybrać przynajmniej jeden film.";
                 }
-                if($form->isValid() and !$smfError and !$wsError and !$psError and count($filmy)) {
+
+                if($form->isValid() and !$smfError and !$wsError and !$psError and !$psError2 and count($filmy)) {
                     $seance = $form->getData();
                     $seance->setSeansMaFilmy(new ArrayCollection());
                     if(count($filmy) == 1)
@@ -227,7 +258,8 @@ class SeancesControler extends AbstractController
                 'smfError' => $smfError,
                 'wsError' => $wsError,
                 'psError' => $psError,
-                'seance' => $seance
+                'seance' => $seance,
+                'psError2' => $psError2
             ));
         } else if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             return $this->redirectToRoute('workers_app/no_permission');
@@ -292,7 +324,7 @@ class SeancesControler extends AbstractController
         ) {
             $entityManager = $this->getDoctrine()->getManager();
             $smfsToRemove = $seance->getSeansMaFilmy()->getValues();
-            foreach($smfsToRemove as $smf){
+            foreach($smfsToRemove as $smf) {
                 $entityManager->remove($smf);
                 $entityManager->flush();
             }
@@ -397,5 +429,16 @@ class SeancesControler extends AbstractController
                 'attr' => array('class' => 'btn btn-primary pull-right')
             ))
             ->getForm();
+    }
+
+    private function getEndTime(\DateTime $seanceStartDate, string $collectionValues)
+    {
+        $beginning = clone $seanceStartDate;
+        $collectionArray = explode('/', $collectionValues);
+        foreach($collectionArray AS $movieId) {
+            $movie = $this->getDoctrine()->getRepository(Filmy::class)->find($movieId);
+            $beginning->add(new \DateInterval('PT' . ($movie->getCzastrwania() + $movie->getCzasreklam()) . 'M'));
+        }
+        return $beginning;
     }
 }

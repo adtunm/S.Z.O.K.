@@ -15,14 +15,21 @@
                 <div class="form-group row">
                     <label class="col-sm-2">Data seansu:</label>
                     <div class="col-sm-10">
-                        {% if form.poczatekseansu.vars.errors|length > 0 or psError %}
+                        {% if form.poczatekseansu.vars.errors|length > 0 or psError or psError2 %}
                             {{ form_widget(form.poczatekseansu.date, {'attr': {'class': 'is-invalid form-control'}}) }}
                         {% else %}
                             {{ form_widget(form.poczatekseansu.date, {'attr': {'class': 'form-control'}}) }}
                         {% endif %}
                         <div class="invalid-feedback">
                             {{ form_errors(form.poczatekseansu) }}
-                            {{ psError }}
+                            <ul>
+                                <li>
+                                    {{ psError }}
+                                </li>
+                                <li>
+                                    {{ psError2 }}
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

@@ -127,4 +127,38 @@ class SeanseRepository extends ServiceEntityRepository
         if($count > 0) return false;
         else return true;
     }
+
+    public function endTimeIsInvalid(\DateTime $seanceStartDate, \DateTime $seanceEndDate, \App\Entity\Sale $room, $editedId = NULL)
+    {
+        $from = clone $seanceStartDate->setTime(0,0,0);
+        $to = clone $seanceStartDate->setTime(0,0,0);
+
+        $query = $this->createQueryBuilder('s')
+            ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
+            ->andWhere('s.sale = :room')
+            ->setParameter('from', $from->sub(new \DateInterval('P1D')))
+            ->setParameter('to', $to->add(new \DateInterval('P2D')))
+            ->setParameter('room', $room)
+            ->getQuery();
+
+        var_dump($query->getSQL(), $from, $to);
+
+        $result = $query->getResult();
+
+        var_dump(count($result));
+        if(!count($result)) return false;
+
+        foreach($result AS $qSeance) {
+            if ($editedId and $editedId == $qSeance->getId()) continue;
+            $qStart = $qSeance->getPoczatekseansu();
+            var_dump($qSeance->getSeansMaFilmy()->isEmpty(), $qSeance->getId());
+            $qEnd = $qSeance->getSeanceEndTime();
+            if(
+                ($seanceStartDate <= $qEnd and $seanceStartDate >= $qStart)
+                or ($seanceEndDate <= $qEnd and $seanceEndDate >= $qStart)
+                or ($seanceStartDate <= $qStart and $seanceEndDate >= $qEnd)
+            ) return $qSeance;
+        }
+        return false;
+    }
 }
