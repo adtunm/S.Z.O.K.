@@ -135,7 +135,7 @@ class DictionariesController extends AbstractController
             $form = $this->createFormBuilder($type)
                 ->add('nazwa', TextType::class, array(
                     'attr' => array("class" => "form-control ",
-                        'pattern' => '[A-Za-z0-9\-ĘÓĄŚŁŻŹĆŃęąśłżźćń ]{3,45}',
+                        'pattern' => '[A-Za-z0-9\-\/\+ĘÓĄŚŁŻŹĆŃęąśłżźćń ]{2,45}',
                         'title' => 'Polskie litery, cyfry, spacje i myślniki, od 3 do 45 znaków',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
@@ -155,7 +155,7 @@ class DictionariesController extends AbstractController
                 else
                     return $this->redirectToRoute('workers_app/dictionaries/dictionaryName', array('dictionaryName' => $dictionaryName));
             }
-            return $this->render('workersApp/dictionaries/add_edit.html.twig', array(
+            return $this->render('workersApp/dictionaries/add.html.twig', array(
                 'krytyczny' => $krytyczny, 'form' => $form->createView(), 'page' => $dictionaryName, 'rodzaj' => $rodzaj));
         } else {
             if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
@@ -238,8 +238,8 @@ class DictionariesController extends AbstractController
                 $form = $this->createFormBuilder($wartosc)
                     ->add('nazwa', TextType::class, array(
                         'attr' => array("class" => "form-control ",
-                            'pattern' => '[A-Za-z0-9\-ĘÓĄŚŁŻŹĆŃęąśłżźćń ]{3,45}',
-                            'title' => 'Polskie litery, cyfry, spacje i myślniki, od 3 do 45 znaków',
+                            'pattern' => '[A-Za-z0-9\/\+\-ĘÓĄŚŁŻŹĆŃęąśłżźćń ]{2,45}',
+                            'title' => 'Polskie litery, cyfry, spacje i myślniki, od 2 do 45 znaków',
                             'autocomplete' => "off"),
                     ))
                     ->add('save', SubmitType::class, array(
@@ -289,7 +289,7 @@ class DictionariesController extends AbstractController
             $slownik = $var['class'];
 
             $wartosc = $this->getDoctrine()->getRepository($slownik)->find($id);
-            $wartosc->setUsunieto(0);
+            $wartosc->setUsunieto(1);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($wartosc);
             $entityManager->flush();

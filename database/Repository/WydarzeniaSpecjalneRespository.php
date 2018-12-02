@@ -29,7 +29,7 @@ class WydarzeniaSpecjalneRespository extends ServiceEntityRepository
     {
         $query = $this->createQueryBuilder('d')
             ->select('count(d.id)')
-            ->andWhere('d.usunieto IS NULL')
+            ->andWhere('d.usunieto IS NULL OR d.usunieto = 0')
             ->orderBy('d.id', 'ASC')
             ->getQuery();
 
@@ -45,7 +45,7 @@ class WydarzeniaSpecjalneRespository extends ServiceEntityRepository
     public function findActive($page = 1, $pageLimit = 10)
     {
         $query = $this->createQueryBuilder('d')
-            ->andWhere('d.usunieto IS NULL')
+            ->andWhere('d.usunieto IS NULL OR d.usunieto = 0')
             ->orderBy('d.id', 'ASC')
             ->getQuery();
 
@@ -56,11 +56,12 @@ class WydarzeniaSpecjalneRespository extends ServiceEntityRepository
 
         return $requestedPage;
     }
+
     public function getPageCountOfDeleted($pageLimit = 10)
     {
         $query = $this->createQueryBuilder('d')
             ->select('count(d.id)')
-            ->andWhere('d.usunieto = 0')
+            ->andWhere('d.usunieto = 1')
             ->orderBy('d.id', 'ASC')
             ->getQuery();
 
@@ -76,7 +77,7 @@ class WydarzeniaSpecjalneRespository extends ServiceEntityRepository
     public function findDeleted($page = 1, $pageLimit = 10)
     {
         $query = $this->createQueryBuilder('d')
-            ->andWhere('d.usunieto = 0')
+            ->andWhere('d.usunieto = 1')
             ->orderBy('d.id', 'ASC')
             ->getQuery();
 

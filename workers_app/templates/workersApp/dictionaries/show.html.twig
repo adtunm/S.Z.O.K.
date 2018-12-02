@@ -3,7 +3,6 @@
 {% block content %}
     <div class="row pb-4 mt-0">
     <div class="h1 col-md">{{ rodzaj }}</div>
-    {% if slownik %}
     {% if is_granted('ROLE_ADMIN') %}
         {% if krytyczny %}
             {% if page == 'types' or page == 'pools' %}
@@ -38,15 +37,14 @@
                      </div>
                 {% endif %}
         {% endif %}
+    {% if pageCount %}
                 </div>
                 <table id="dictionary" class="table table-hover">
                     <thead>
                         <tr>
                             <th style="width: 10%">Klucz</th>
-                            <th style="width: 30%">Nazwa instancji</th>
+                            <th style="width: 30%">Wartość</th>
                             <th style="width: 30%"></th>
-                            {#<th style="width: 30%"></th>#}
-                            {#<th style="width: 10%"></th>#}
                         </tr>
                     </thead>
                     <tbody>
@@ -98,7 +96,7 @@
                                     <div class="modal-header">
                                         <h4 class="modal-title" id="modelTitleId">
                                             <i class="fa fa-trash" aria-hidden="true"></i>
-                                            Usuwanie instancji
+                                            Usuwanie wartości
                                         </h4>
                                         <button type="button" class="close text-light" data-dismiss="modal"
                                                 aria-label="Close">
@@ -106,13 +104,13 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        Czy napewno chcesz usunąć tą instancję?
+                                        Czy napewno chcesz usunąć tą wartość?
                                         <ul>
                                             <li>
                                                 Słownik: {{ rodzaj }}
                                             </li>
                                             <li>
-                                                Id: {{ slownikWiersz.id }}
+                                                Klucz: {{ slownikWiersz.id }}
                                             </li>
                                             <li>
                                                 Wartosć: {{ slownikWiersz.nazwa }}
@@ -138,6 +136,7 @@
             {% endfor %}
             </tbody>
         </table>
+
             {% if page == 'types' or page == 'pools' %}
         <a class="btn btn-secondary" href="{{ path('workers_app/main_page') }}">Wróć</a>
             {% else %}
@@ -183,7 +182,17 @@
             {% endif %}
 
         {% else %}
-        <h1>Brak danych</h1>
+            <div class="col-sm-12 mt-0">
+            <h1 class="text-center">Brak wartości</h1>
+            <div class="text-center display-1">
+                <i class="fa fa-th-list" aria-hidden="true"></i>
+            </div>
+                <div>
+                    {% if page == 'types' or page == 'pools' %}
+                        <a class="btn btn-secondary" href="{{ path('workers_app/main_page') }}">Wróć</a>
+                    {% else %}
+                        <a class="btn btn-secondary" href="{{ path('workers_app/dictionaries') }}">Wróć</a>
+                    {% endif %}
         {% endif %}
 
 {% endblock %}

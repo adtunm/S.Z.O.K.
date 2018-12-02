@@ -1,4 +1,4 @@
-function myFunction(imput, checkbox ) {
+function myFunction(input, checkbox ) {
     var bool = document.getElementById(checkbox).checked;
     if (bool) {
         document.getElementById(imput).required = true;

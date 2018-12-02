@@ -35,10 +35,8 @@
             <thead>
             <tr>
                 <th style="width: 10%">Klucz</th>
-                <th style="width: 30%">Nazwa instancji</th>
+                <th style="width: 30%">Wartość</th>
                 <th style="width: 30%"></th>
-                {#<th style="width: 30%"></th>#}
-                {#<th style="width: 10%"></th>#}
             </tr>
             </thead>
             <tbody>
@@ -72,7 +70,7 @@
                                         <div class="modal-header">
                                             <h4 class="modal-title" id="modelTitleId">
                                                 <i class="fa fa-trash" aria-hidden="true"></i>
-                                                Usuwanie instancji
+                                                Usuwanie wartości
                                             </h4>
                                             <button type="button" class="close text-light" data-dismiss="modal"
                                                     aria-label="Close">
@@ -80,19 +78,18 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            Czy napewno chcesz usunąć tą instancję?
+                                            Czy napewno chcesz usunąć tą wartośc?
                                             <ul>
                                                 <li>
                                                     Słownik: {{ rodzaj }}
                                                 </li>
                                                 <li>
-                                                    Id: {{ slownikWiersz.id }}
+                                                    Klucz: {{ slownikWiersz.id }}
                                                 </li>
                                                 <li>
                                                     Wartosć: {{ slownikWiersz.nazwa }}
                                                 </li>
                                             </ul>
-                                            Akcji tej nie da sie odwrócić.
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">
@@ -161,7 +158,7 @@
         </div>
     {% if is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN') %}
         <script>
-            const promotions = document.getElementById('dictionary');
+            const dictionary = document.getElementById('dictionary');
             if (dictionary) {
                 dictionary.addEventListener('click', e => {
                     if (e.target.className === 'btn btn-danger delete-instance') {

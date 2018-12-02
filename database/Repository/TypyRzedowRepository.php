@@ -25,7 +25,7 @@ class TypyRzedowRepository  extends ServiceEntityRepository
     {
         $query = $this->createQueryBuilder('d')
             ->select('count(d.id)')
-            ->andWhere('d.usunieto IS NULL')
+            ->andWhere('d.usunieto IS NULL OR d.usunieto = 0')
             ->orderBy('d.id', 'ASC')
             ->getQuery();
 
@@ -41,7 +41,7 @@ class TypyRzedowRepository  extends ServiceEntityRepository
     public function findActive($page = 1, $pageLimit = 10)
     {
         $query = $this->createQueryBuilder('d')
-            ->andWhere('d.usunieto IS NULL')
+            ->andWhere('d.usunieto IS NULL OR d.usunieto = 0')
             ->orderBy('d.id', 'ASC')
             ->getQuery();
 

@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @UniqueEntity(
  *     fields={"nazwa"},
  *     errorPath="nazwa",
- *     message="Ta wartość jest juz w bazie. Może być usunięta, wówczas wystarczy ją przywrócić."
+ *     message="Podana wartość już istnieje."
  * )
  */
 class Role

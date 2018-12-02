@@ -266,10 +266,6 @@ class TicketController extends AbstractController
                                         $entityManager->remove($pmr);
                                         $entityManager->flush();
                                     }
-                                    elseif(is_null($wartosci[$key]['cena']) && is_null($wartosci[$key]['idPMR']))
-                                    {
-
-                                    }
                                 }
                                 return $this->redirectToRoute('workers_app/tickets/pools/show', array('id' => $pulaId));
                             }
