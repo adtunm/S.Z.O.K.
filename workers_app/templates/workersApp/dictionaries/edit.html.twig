@@ -120,14 +120,15 @@
                             </div>
                         </td>
                         <td>
+                            {{ form_widget(form) }}
                             {% if page == 'types' %}
                                 <a href="{{ path("workers_app/tickets/dictionaryName", {'dictionaryName':page}) }}"
-                                   class="btn btn-secondary float-right btn-sm" style="margin-left: 3px;">Anuluj</a>
+                                   class="btn btn-secondary float-right btn-sm" style="margin-right: 3px;">Anuluj</a>
                             {% else %}
                                 <a href="{{ path("workers_app/dictionaries/dictionaryName", {'dictionaryName':page}) }}"
-                                   class="btn btn-secondary float-right btn-sm" style="margin-left: 3px;">Anuluj</a>
+                                   class="btn btn-secondary float-right btn-sm" style="margin-right:3px;">Anuluj</a>
                             {% endif %}
-                            {{ form_widget(form) }}
+
                         </td>
                     </tr>
                     {{ form_end(form) }}
