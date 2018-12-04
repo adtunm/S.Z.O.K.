@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * PulabiletowMaRodzajebiletow
  *
  * @ORM\Table(name="pulabiletow_ma_rodzajebiletow", indexes={@ORM\Index(name="fk_PulaBiletow_ma_RodzajeBiletow_PuleBiletow1_idx", columns={"PuleBiletow_id"}), @ORM\Index(name="fk_PulaBiletow_ma_RodzajeBiletow_RodzajeBiletow1_idx", columns={"RodzajeBiletow_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\PulabiletowMaRodzajebiletowRepository")
  */
 class PulabiletowMaRodzajebiletow
 {
@@ -92,7 +92,7 @@ class PulabiletowMaRodzajebiletow
     private $cena;
 
     /**
-     * @var \Pulebiletow
+     * @var Pulebiletow
      *
      * @ORM\ManyToOne(targetEntity="Pulebiletow", inversedBy="pulaMaRodzajeBiletow")
      * @ORM\JoinColumns({
@@ -102,7 +102,7 @@ class PulabiletowMaRodzajebiletow
     private $pulebiletow;
 
     /**
-     * @var \Rodzajebiletow
+     * @var Rodzajebiletow
      *
      * @ORM\ManyToOne(targetEntity="Rodzajebiletow")
      * @ORM\JoinColumns({
