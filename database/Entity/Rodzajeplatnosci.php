@@ -100,5 +100,11 @@ class Rodzajeplatnosci
      */
     private $usunieto;
 
-
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->nazwa;
+    }
 }

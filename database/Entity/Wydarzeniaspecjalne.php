@@ -99,4 +99,12 @@ class Wydarzeniaspecjalne
      * @ORM\Column(name="usunieto", type="boolean", nullable=true)
      */
     private $usunieto;
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->nazwa;
+    }
 }

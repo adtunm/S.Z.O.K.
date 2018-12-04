@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <a class="btn btn-secondary" href="{{ path('worker_app/employees/list') }}" role="button">Wróć</a>
+        <a class="btn btn-secondary" href="{{ path('worker_app/employees/list') }}" role="button"><i class="fa fa-angle-left" aria-hidden="true"></i> Wróć</a>
         {% if is_granted('ROLE_ADMIN') %}
             <div class="float-right">
                 {% if worker.id != app.user.Id %}

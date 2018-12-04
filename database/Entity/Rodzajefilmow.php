@@ -132,5 +132,12 @@ class Rodzajefilmow
     {
         $this->filmy = new \Doctrine\Common\Collections\ArrayCollection();
     }
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->nazwa;
+    }
 
 }

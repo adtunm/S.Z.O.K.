@@ -138,9 +138,9 @@
         </table>
 
             {% if page == 'types' or page == 'pools' %}
-        <a class="btn btn-secondary" href="{{ path('workers_app/main_page') }}">Wróć</a>
+        {#<a class="btn btn-secondary" href="{{ path('workers_app/main_page') }}"><i class="fa fa-angle-left" aria-hidden="true"></i> Wróć</a>#}
             {% else %}
-        <a class="btn btn-secondary" href="{{ path('workers_app/dictionaries') }}">Wróć</a>
+        <a class="btn btn-secondary" href="{{ path('workers_app/dictionaries') }}"><i class="fa fa-angle-left" aria-hidden="true"></i> Wróć</a>
             {% endif %}
             {% if page == 'types' or page == 'pools' %}
                 {% if not(deleted) %}
@@ -189,7 +189,6 @@
             </div>
                 <div>
                     {% if page == 'types' or page == 'pools' %}
-                        <a class="btn btn-secondary" href="{{ path('workers_app/main_page') }}">Wróć</a>
                     {% else %}
                         <a class="btn btn-secondary" href="{{ path('workers_app/dictionaries') }}">Wróć</a>
                     {% endif %}

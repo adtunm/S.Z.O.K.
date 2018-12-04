@@ -100,5 +100,12 @@ class Kategoriewiekowe
      */
     private $usunieto;
 
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->nazwa;
+    }
 
 }
