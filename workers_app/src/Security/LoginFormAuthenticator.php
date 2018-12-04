@@ -27,6 +27,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
     private $router;
     private $csrfTokenManager;
     private $passwordEncoder;
+    private $user;
 
     public function __construct(EntityManagerInterface $entityManager, RouterInterface $router, CsrfTokenManagerInterface $csrfTokenManager, UserPasswordEncoderInterface $passwordEncoder)
     {
@@ -34,6 +35,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
         $this->router = $router;
         $this->csrfTokenManager = $csrfTokenManager;
         $this->passwordEncoder = $passwordEncoder;
+        $this->user = null;
     }
 
     public function supports(Request $request)
@@ -53,7 +55,10 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
             Security::LAST_USERNAME,
             $credentials['login']
         );
-
+        $request->getSession()->set(
+            'lifetime',
+            date("Y-m-d H:i:s")
+        );
         return $credentials;
     }
 
@@ -63,13 +68,27 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
         if (!$this->csrfTokenManager->isTokenValid($token)) {
             throw new InvalidCsrfTokenException();
         }
-        $user = $this->entityManager->getRepository(Pracownicy::class)->findOneBy(['login' => $credentials['login']]);
-        return $user;
+        $this->user = $this->entityManager->getRepository(Pracownicy::class)->findOneBy(['login' => $credentials['login']]);
+
+        if (!$this->user) {
+            // fail authentication with a custom error
+            throw new CustomUserMessageAuthenticationException('Błędy login lub hasło.');
+        }
+        return $this->user;
     }
 
     public function checkCredentials($credentials, UserInterface $user)
     {
-        return $this->passwordEncoder->isPasswordValid($user, $credentials['password']);
+        if (!$this->passwordEncoder->isPasswordValid($user, $credentials['password'])) {
+            throw new CustomUserMessageAuthenticationException('Błędy login lub hasło.');
+            return false;
+        } else {
+            if($this->user->getCzyaktywny() == "0" ){
+                throw new CustomUserMessageAuthenticationException('Pracownik jest nieaktywny.');
+                return false;
+            }
+        }
+        return true;
     }
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)

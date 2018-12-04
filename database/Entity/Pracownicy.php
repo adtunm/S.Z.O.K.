@@ -225,9 +225,9 @@ class Pracownicy implements UserInterface
      * )
      * @Assert\Length(
      *     max = 64,
-     *     min = 3,
-     *     maxMessage = "Hasło może zawierać maksymalnie 45 znaków.",
-     *     minMessage = "Hasło musi zawierać minimum 5 znaków."
+     *     min = 8,
+     *     maxMessage = "Hasło może zawierać maksymalnie 64 znaków.",
+     *     minMessage = "Hasło musi zawierać minimum 8 znaków."
      * )
      *
      */

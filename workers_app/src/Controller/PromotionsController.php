@@ -27,6 +27,9 @@ class PromotionsController extends Controller
      */
     public function index($page)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             $pageLimit = $this->getParameter('page_limit');
             $pageCount = $this->getDoctrine()->getRepository(Promocje::class)->getPageCountOfActual($pageLimit);
@@ -43,10 +46,36 @@ class PromotionsController extends Controller
     }
 
     /**
+     * @Route("/promotions/old/{page<[1-9]\d*>?1}", name="workers_app/promotions/old", methods={"GET"})
+     */
+    public function old($page)
+    {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
+        if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
+            $pageLimit = $this->getParameter('page_limit');
+            $pageCount = $this->getDoctrine()->getRepository(Promocje::class)->getPageCountOfOld($pageLimit);
+
+            if($page > $pageCount and $pageCount != 0)
+                return $this->redirectToRoute('workers_app/promotions/old');
+            else {
+                $promotions = $this->getDoctrine()->getRepository(Promocje::class)->findOld($page, $pageLimit);
+                return $this->render('workersApp/promotions/listOld.html.twig', array('promotions' => $promotions, 'currentPage' => $page, 'pageCount' => $pageCount));
+            }
+        } else {
+            return $this->redirectToRoute('workers_app/login_page');
+        }
+    }
+
+    /**
      * @Route("/promotions/add", name="workers_app/promotions/add", methods={"GET", "POST"})
      */
     public function add(Request $request)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $promotion = new Promocje();
 
@@ -77,10 +106,13 @@ class PromotionsController extends Controller
      */
     public function edit(Request $request, $id)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $promotion = $this->getDoctrine()->getRepository(Promocje::class)->find($id);
 
-            if($promotion->getPoczatekpromocji()->format("Y-m-d") <= date("Y-m-d"))
+            if($promotion == null or $promotion->getPoczatekpromocji()->format("Y-m-d") <= date("Y-m-d"))
                 throw new NotFoundHttpException();
 
             $form = $this->getForm($promotion);
@@ -111,6 +143,9 @@ class PromotionsController extends Controller
      */
     private function getForm(Promocje $promotion)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         return $this->createFormBuilder($promotion)
             ->add('nazwa', TextType::class, array(
                 'label' => 'Nazwa promocji:',
@@ -192,9 +227,12 @@ class PromotionsController extends Controller
      */
     public function delete(Request $request, $id)
     {
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $promotion = $this->getDoctrine()->getRepository(Promocje::class)->find($id);
-            if($promotion->getPoczatekpromocji()->format("Y-m-d") > date("Y-m-d")) {
+            if($promotion != null and $promotion->getPoczatekpromocji()->format("Y-m-d") > date("Y-m-d")) {
                 $entityManager = $this->getDoctrine()->getManager();
 
                 $entityManager->remove($promotion);

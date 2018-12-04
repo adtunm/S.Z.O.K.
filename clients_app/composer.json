@@ -5,7 +5,10 @@
         "php": "^7.2.0",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "beberlei/DoctrineExtensions": "^1.1",
         "doctrine/annotations": "^1.6",
+        "endroid/qr-code-bundle": "^3.3",
+        "knplabs/knp-snappy-bundle": "^1.5",
         "sensio/framework-extra-bundle": "^5.2",
         "symfony/apache-pack": "^1.0",
         "symfony/asset": "4.1.x-dev",
@@ -20,7 +23,8 @@
         "symfony/swiftmailer-bundle": "^3.2",
         "symfony/twig-bundle": "^4.1",
         "symfony/validator": "*",
-        "symfony/yaml": "*"
+        "symfony/yaml": "*",
+        "wemersonjanuario/wkhtmltopdf-windows": "0.12.2.3"
     },
     "require-dev": {
         "symfony/dotenv": "*"

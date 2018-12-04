@@ -1,0 +1,34 @@
+{% extends 'clientsApp/clientBase.html.twig' %}
+
+{% block content %}
+    {% if movies %}
+        <div class="row pb-4 mt-0">
+            <div class="h1 col-md">Filmy w kinie:</div>
+            <div class="col-md">
+                <a href="{{ path('clients_app/main_page') }}" class="btn btn-primary pull-right">
+                    <i class="fa fa-th" aria-hidden="true"></i> Pokaż grane obecnie
+                </a>
+            </div>
+        </div>
+        <div class="row px-5">
+            {% for movie in movies %}
+                <a class="col-lg-3 col-sm-6 mb-2 p-3 text-dark hover"
+                   href="{{ path('workers_app/movies/show', {'id': movie.id}) }}">
+                    <div class="col-12 p-2">
+                        <img src="{% if movie.plakat %}{{ asset('img/'~movie.plakat) }}{% else %}{{ asset('img/no_poster.jpg') }}{% endif %}"
+                             class="img-fluid">
+                    </div>
+                    <div class="col-12 h5">{{ movie.tytul }} ({{ movie.datapremiery|date("Y") }})
+                        {% if not movie.seansMaFilmy|length %} - wkrótce{% endif %}</div>
+                </a>
+            {% endfor %}
+        </div>
+        {% set basePath = path('clients_app/movies/all') %}
+        {% include 'clientsApp/inc/pagination.html.twig' %}
+    {% else %}
+        <h1 class="text-center">Brak filmów w kinie</h1>
+        <div class="text-center display-1">
+            <i class="fa fa-film" aria-hidden="true"></i>
+        </div>
+    {% endif %}
+{% endblock %}

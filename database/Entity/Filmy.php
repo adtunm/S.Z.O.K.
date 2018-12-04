@@ -207,9 +207,9 @@ class Filmy
      * )
      * @Assert\Length(
      *     max = 127,
-     *     min = 5,
+     *     min = 2,
      *     maxMessage = "Tytuł może zawierać maksymalnie 127 znaków.",
-     *     minMessage = "Tytuł musi zawierać minimum 5 znaków."
+     *     minMessage = "Tytuł musi zawierać minimum 2 znaków."
      * )
      * @Assert\NotBlank(
      *     message="Tytuł nie może być pusty."
@@ -220,10 +220,10 @@ class Filmy
     /**
      * @var string|null
      *
-     * @ORM\Column(name="opis", type="string", length=255, nullable=true)
+     * @ORM\Column(name="opis", type="string", length=512, nullable=true)
      * @Assert\Length(
-     *     max = 255,
-     *     maxMessage = "Opis może zawierać maksymalnie 255 znaków."
+     *     max = 512,
+     *     maxMessage = "Opis może zawierać maksymalnie 512 znaków."
      * )
      */
     private $opis;
@@ -276,10 +276,10 @@ class Filmy
      *
      * @ORM\Column(name="plakat", type="string", length=255, nullable=true)
      * @Assert\Image(
-     *     mimeTypes="image/*",
+     *     mimeTypes={"image/jpeg", "image/png", "image/jpg"},
      *     mimeTypesMessage="Załączony plik nie jest obrazem.",
-     *     maxSize="2M",
-     *     maxSizeMessage="Twój plik przekracza dopuszczalny rozmiar 2MB."
+     *     maxSize="1000K",
+     *     maxSizeMessage="Twój plik przekracza dopuszczalny rozmiar 1000KB."
      * )
      */
     private $plakat;
@@ -353,6 +353,29 @@ class Filmy
     {
         $this->rodzajefilmow = new \Doctrine\Common\Collections\ArrayCollection();
         $this->typyseansow = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="SeansMaFilmy", mappedBy="filmy")
+     */
+    private $seansMaFilmy;
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSeansMaFilmy(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->seansMaFilmy;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $seansMaFilmy
+     */
+    public function setSeansMaFilmy(\Doctrine\Common\Collections\Collection $seansMaFilmy): void
+    {
+        $this->seansMaFilmy = $seansMaFilmy;
     }
 
 }

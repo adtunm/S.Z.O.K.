@@ -24,7 +24,7 @@ class MiejscaRepository extends ServiceEntityRepository
     public function getSeats($rowId)
     {
         $query = $this->createQueryBuilder('m')
-            ->where('m.rzedy = '.$rowId)
+            ->where('m.rzedy = ' . $rowId)
             ->orderBy('m.pozycja', 'ASC')
             ->getQuery();
 
@@ -35,13 +35,14 @@ class MiejscaRepository extends ServiceEntityRepository
     {
         $query = $this->createQueryBuilder('m')
             ->delete()
-            ->where('m.rzedy = '.$rowId)
+            ->where('m.rzedy = ' . $rowId)
             ->getQuery();
 
         $query->execute();
     }
 
-    public function getSeatsCount($page = 1, $pageLimit = 10){
+    public function getSeatsCount($page = 1, $pageLimit = 10)
+    {
         $entityManager = $this->getEntityManager();
         $query = $entityManager->createQuery(
             'SELECT COUNT(m.id)
@@ -53,12 +54,13 @@ class MiejscaRepository extends ServiceEntityRepository
             GROUP BY s.id
             ORDER BY s.numersali ASC'
         )->setFirstResult($pageLimit * ($page - 1))
-        ->setMaxResults($pageLimit);
+            ->setMaxResults($pageLimit);
 
         return $query->execute();
     }
 
-    public function getSeatsCountOfCurrent($roomId){
+    public function getSeatsCountOfCurrent($roomId)
+    {
         $entityManager = $this->getEntityManager();
         $query = $entityManager->createQuery(
             'SELECT COUNT(m.id)
@@ -71,5 +73,80 @@ class MiejscaRepository extends ServiceEntityRepository
         )->setParameter('id', $roomId);
 
         return $query->getSingleScalarResult();
+    }
+
+    public function getRoom($id, $idSeance)
+    {
+        $entityManager = $this->getEntityManager();
+//        $query = $entityManager->createQuery(
+//            'SELECT m
+//            FROM App\Entity\Miejsca m
+//            JOIN m.rzedy r
+//            JOIN r.sale s
+//            LEFT JOIN m.rezerwacje re
+//            LEFT JOIN m.bilety b
+//            JOIN b.tranzakcje t
+//            WHERE s.id = :id
+//                AND m.rezerwacje is NULL AND re.seanse = :idSeance
+//                AND m.bilety is NULL AND t.seanse = :idSeance
+//            GROUP BY m.id
+//            ORDER BY r.numerrzedu, m.pozycja')
+//            ->setParameter('id', $id)
+//            ->setParameter('idSeance', $idSeance);
+
+
+
+        $query = $this->createQueryBuilder('m')
+            ->select('COUNT(DISTINCT m.id)')
+            ->join('m.rzedy','r')
+            ->join('r.sale','s')
+            ->leftJoin('m.rezerwacje', 're')
+            ->leftJoin('re.seanse', 'se')
+            //->leftJoin('m.bilety', 'b')
+            //->leftjoin('b.tranzakcje','t')
+            ->andWhere('s.id = :id')
+            ->andWhere('re.id IS NULL OR se.id = :idSeance')
+            //->andWhere('b.id IS NULL OR t.seanse = :idSeance')
+            ->setParameter('id', $id)
+            ->setParameter('idSeance', 10)
+            ->orderBy('r.numerrzedu, m.pozycja', 'DESC')
+            ->getQuery();
+
+
+
+
+
+
+
+
+
+        $query->execute();
+
+
+
+//        $entityManager = $this->getEntityManager();
+//        $query = $entityManager->createQuery(
+//            'SELECT r
+//            FROM App\Entity\Miejsca m
+//            JOIN m.rzedy r
+//            JOIN r.sale s
+//            LEFT JOIN m.rezerwacje re
+//            WHERE s.id = :id  AND re.seanse = :idSeance
+//            GROUP BY m.id
+//            ORDER BY r.numerrzedu, m.pozycja')
+//            ->setParameter('id', $id)
+//            ->setParameter('idSeance', $idSeance);
+//
+//        $query->execute();
+
+//        $query = $entityManager->createQuery(
+//            'SELECT m.id AS miejsce, b.id AS bilet
+//            FROM App\Entity\Bilety b
+//            LEFT JOIN b.miejsca m
+//            WITH b.miejsca = m.id
+//            ');
+
+
+        return $query->execute();
     }
 }

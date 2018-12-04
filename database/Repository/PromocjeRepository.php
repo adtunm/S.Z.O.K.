@@ -63,6 +63,43 @@ class PromocjeRepository extends ServiceEntityRepository
         return $pageCount;
     }
 
+    public function findOld($page = 1, $pageLimit = 10)
+    {
+        $query = $this->createQueryBuilder('p')
+            ->andWhere('p.koniecpromocji < :currentDate')
+            ->setParameter('currentDate', date("Y-m-d"))
+            ->orderBy('p.poczatekpromocji', 'ASC')
+            ->getQuery();
+
+        $requestedPage = new Paginator($query);
+
+        $requestedPage->getQuery()
+            ->setFirstResult($pageLimit * ($page - 1))
+            ->setMaxResults($pageLimit);
+
+        return $requestedPage;
+    }
+
+    public function getPageCountOfOld($pageLimit = 10)
+    {
+        $query = $this->createQueryBuilder('p')
+            ->select('count(p.id)')
+            ->andWhere('p.koniecpromocji < :currentDate')
+            ->setParameter('currentDate', date("Y-m-d"))
+            ->orderBy('p.poczatekpromocji', 'ASC')
+            ->getQuery();
+
+        $count = $query->getSingleScalarResult();
+
+        $pageCount = floor($count / $pageLimit);
+        $rest = $count % $pageLimit;
+        if($rest != 0) {
+            $pageCount = $pageCount + 1;
+        }
+
+        return $pageCount;
+    }
+
     public function findCurrent()
     {
         $query = $this->createQueryBuilder('p')

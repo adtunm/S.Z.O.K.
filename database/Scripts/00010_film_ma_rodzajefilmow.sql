@@ -1,603 +1,189 @@
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (1,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (1,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (2,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (2,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (3,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (3,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (4,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (4,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (5,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (5,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (6,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (6,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (7,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (7,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (8,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (8,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (9,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (9,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (10,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (10,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (11,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (11,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (12,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (12,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (13,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (13,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (14,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (14,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (15,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (15,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (16,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (16,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (17,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (17,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (18,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (18,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (19,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (19,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (20,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (20,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (21,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (21,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (22,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (22,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (23,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (23,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (24,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (24,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (25,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (25,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (26,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (26,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (27,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (27,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (28,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (28,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (29,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (29,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (30,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (30,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (31,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (31,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (32,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (32,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (33,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (33,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (34,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (34,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (35,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (35,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (36,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (36,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (37,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (37,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (38,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (38,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (39,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (39,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (40,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (40,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (41,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (41,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (42,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (42,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (43,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (43,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (44,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (44,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (45,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (45,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (46,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (46,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (47,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (47,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (48,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (48,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (49,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (49,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (50,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (50,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (51,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (51,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (52,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (52,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (53,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (53,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (54,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (54,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (55,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (55,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (56,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (56,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (57,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (57,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (58,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (58,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (59,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (59,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (60,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (60,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (61,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (61,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (62,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (62,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (63,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (63,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (64,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (64,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (65,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (65,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (66,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (66,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (67,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (67,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (68,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (68,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (69,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (69,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (70,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (70,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (71,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (71,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (72,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (72,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (73,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (73,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (74,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (74,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (75,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (75,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (76,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (76,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (77,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (77,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (78,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (78,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (79,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (79,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (80,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (80,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (81,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (81,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (82,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (82,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (83,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (83,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (84,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (84,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (85,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (85,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (86,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (86,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (87,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (87,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (88,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (88,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (89,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (89,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (90,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (90,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (91,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (91,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (92,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (92,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (93,5);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (93,6);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (94,7);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (94,8);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (95,9);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (95,10);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (96,11);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (96,12);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (97,13);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (97,14);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (98,15);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (98,1);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (99,2);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (99,3);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (100,4);
- 
- 
-INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`,`RodzajeFilmow_id`) VALUES (100,5);
- 
-
-
-
+INSERT INTO `film_ma_rodzajefilmow` (`Filmy_id`, `RodzajeFilmow_id`) VALUES
+(1, 3),
+(2, 3),
+(2, 4),
+(3, 4),
+(3, 8),
+(4, 2),
+(4, 4),
+(5, 2),
+(5, 4),
+(6, 1),
+(6, 3),
+(7, 3),
+(7, 8),
+(8, 1),
+(8, 15),
+(9, 9),
+(9, 11),
+(10, 6),
+(10, 9),
+(11, 3),
+(11, 6),
+(12, 8),
+(13, 9),
+(13, 12),
+(14, 2),
+(14, 4),
+(14, 10),
+(15, 9),
+(15, 11),
+(16, 2),
+(16, 3),
+(16, 10),
+(17, 5),
+(18, 1),
+(18, 3),
+(19, 13),
+(20, 9),
+(20, 10),
+(21, 9),
+(21, 11),
+(21, 12),
+(22, 9),
+(23, 2),
+(23, 4),
+(24, 2),
+(25, 4),
+(25, 9),
+(26, 6),
+(26, 7),
+(27, 9),
+(28, 9),
+(28, 11),
+(29, 1),
+(29, 3),
+(30, 2),
+(30, 4),
+(31, 2),
+(31, 4),
+(32, 9),
+(32, 11),
+(32, 12),
+(33, 9),
+(33, 12),
+(34, 1),
+(34, 3),
+(35, 2),
+(35, 4),
+(36, 8),
+(37, 9),
+(38, 1),
+(39, 2),
+(39, 3),
+(40, 5),
+(40, 9),
+(41, 6),
+(41, 7),
+(42, 5),
+(42, 9),
+(43, 8),
+(43, 9),
+(44, 1),
+(44, 3),
+(45, 1),
+(45, 3),
+(46, 1),
+(46, 9),
+(46, 13),
+(47, 10),
+(48, 7),
+(49, 9),
+(50, 1),
+(50, 3),
+(50, 5),
+(51, 2),
+(51, 4),
+(52, 2),
+(52, 4),
+(52, 14),
+(53, 9),
+(53, 12),
+(53, 15),
+(54, 2),
+(54, 4),
+(55, 1),
+(56, 1),
+(56, 8),
+(57, 5),
+(58, 3),
+(58, 8),
+(59, 9),
+(59, 11),
+(60, 5),
+(60, 9),
+(61, 8),
+(61, 9),
+(62, 9),
+(63, 9),
+(63, 14),
+(64, 2),
+(64, 4),
+(65, 2),
+(65, 4),
+(66, 9),
+(66, 11),
+(66, 12),
+(67, 3),
+(67, 8),
+(68, 9),
+(68, 12),
+(69, 4),
+(70, 1),
+(70, 5),
+(71, 9),
+(72, 9),
+(73, 2),
+(73, 4),
+(74, 9),
+(75, 9),
+(75, 11),
+(76, 1),
+(76, 2),
+(77, 2),
+(77, 9),
+(77, 11),
+(78, 9),
+(79, 2),
+(79, 5),
+(79, 10),
+(80, 9),
+(81, 4),
+(81, 5),
+(82, 1),
+(83, 3),
+(84, 2),
+(84, 4),
+(85, 2),
+(86, 2),
+(86, 4),
+(87, 5),
+(87, 11),
+(88, 9),
+(88, 12),
+(89, 3),
+(89, 7),
+(90, 8),
+(90, 9),
+(91, 1),
+(91, 2),
+(92, 3),
+(92, 4),
+(93, 9),
+(94, 3),
+(94, 8),
+(95, 8),
+(96, 5),
+(96, 9),
+(97, 12),
+(97, 14),
+(98, 8),
+(98, 9),
+(99, 3),
+(99, 8),
+(100, 5),
+(101, 1),
+(101, 2),
+(101, 4),
+(102, 1),
+(102, 3);
