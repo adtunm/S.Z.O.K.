@@ -129,10 +129,6 @@ class Pulebiletow
         $this->pulaMaRodzajeBiletow = $pulaMaRodzajeBiletow;
     }
 
-    public function __toString()
-    {
-        return $this->nazwa;
-    }
     /**
      * @return string
      */
