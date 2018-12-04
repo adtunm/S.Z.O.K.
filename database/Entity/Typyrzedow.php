@@ -3,12 +3,19 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Typyrzedow
  *
  * @ORM\Table(name="typyrzedow", uniqueConstraints={@ORM\UniqueConstraint(name="idTypyRzedu_UNIQUE", columns={"id"}), @ORM\UniqueConstraint(name="nazwa_UNIQUE", columns={"nazwa"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\TypyRzedowRepository")
+ * @UniqueEntity(
+ *     fields={"nazwa"},
+ *     errorPath="nazwa",
+ *     message="Podana wartość już istnieje."
+ * )
  */
 class Typyrzedow
 {
@@ -79,8 +86,25 @@ class Typyrzedow
      * @var bool|null
      *
      * @ORM\Column(name="usunieto", type="boolean", nullable=true)
+     *
+     * @Assert\Regex(
+     *     pattern="/^[\p{L}\d\s\-]+$/u",
+     *     message="Nazwa powinna się składać tylko z liter, spacji, myślników i cyfr."
+     * )
+     * @Assert\Length(
+     *     max = 45,
+     *     min = 3,
+     *     maxMessage = "Nazwa może zawierać maksymalnie 45 znaków.",
+     *     minMessage = "Nazwa musi zawierać minimum 3 znaki."
+     * )
      */
     private $usunieto;
-
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->nazwa;
+    }
 
 }
