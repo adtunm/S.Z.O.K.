@@ -126,25 +126,25 @@ class Rezerwacje
     }
 
     /**
-     * @return \Pracownicy
+     * @return Pracownicy|null
      */
-    public function getPracownicy(): \Pracownicy
+    public function getPracownicy(): ?Pracownicy
     {
         return $this->pracownicy;
     }
 
     /**
-     * @param Pracownicy $pracownicy
+     * @param Pracownicy|null $pracownicy
      */
-    public function setPracownicy(Pracownicy $pracownicy): void
+    public function setPracownicy(?Pracownicy $pracownicy): void
     {
         $this->pracownicy = $pracownicy;
     }
 
     /**
-     * @return \Seanse
+     * @return Seanse
      */
-    public function getSeanse(): \Seanse
+    public function getSeanse(): Seanse
     {
         return $this->seanse;
     }
@@ -158,17 +158,17 @@ class Rezerwacje
     }
 
     /**
-     * @return \Uzytkownicy
+     * @return Uzytkownicy|null
      */
-    public function getUzytkownicy(): \Uzytkownicy
+    public function getUzytkownicy(): ?Uzytkownicy
     {
         return $this->uzytkownicy;
     }
 
     /**
-     * @param Uzytkownicy $uzytkownicy
+     * @param Uzytkownicy|null $uzytkownicy
      */
-    public function setUzytkownicy(Uzytkownicy $uzytkownicy): void
+    public function setUzytkownicy(?Uzytkownicy $uzytkownicy): void
     {
         $this->uzytkownicy = $uzytkownicy;
     }
@@ -182,9 +182,9 @@ class Rezerwacje
     }
 
     /**
-     * @param \Doctrine\Common\Collections\Collection $miejsca
+     * @param \Doctrine\Common\Collections\ArrayCollection $miejsca
      */
-    public function setMiejsca(\Doctrine\Common\Collections\Collection $miejsca): void
+    public function setMiejsca(\Doctrine\Common\Collections\ArrayCollection $miejsca): void
     {
         $this->miejsca = $miejsca;
     }

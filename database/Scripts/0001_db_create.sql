@@ -376,7 +376,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Vouchery` (
   `losoweCyfry` DECIMAL(3,0) NOT NULL,
   `cyfraKontrolna` DECIMAL(1,0) NOT NULL,
   `czasWygenerowania` DATETIME NOT NULL,
-  `czyWykorzystanyy` TINYINT NULL,
+  `czyWykorzystany` TINYINT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idVouchery_UNIQUE` (`id` ASC))
   ENGINE = InnoDB;
@@ -441,7 +441,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`RodzajePlatnosci` (
 DROP TABLE IF EXISTS `SZOK`.`Tranzakcje` ;
 
 CREATE TABLE IF NOT EXISTS `SZOK`.`Tranzakcje` (
-  `id` INT(12) UNSIGNED ZEROFILL NOT NULL,
+  `id` INT(12) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT,
   `data` DATETIME NOT NULL,
   `czyOdwiedzajacy` TINYINT NOT NULL,
   `RodzajePlatnosci_id` INT UNSIGNED NOT NULL,
@@ -514,7 +514,7 @@ CREATE TABLE IF NOT EXISTS `SZOK`.`Film_ma_RodzajeFilmow` (
 DROP TABLE IF EXISTS `SZOK`.`Bilety` ;
 
 CREATE TABLE IF NOT EXISTS `SZOK`.`Bilety` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `cena` DECIMAL(5,2) NOT NULL,
   `losoweCyfry` DECIMAL(3,0) NOT NULL,
   `cyfraKontrolna` DECIMAL(1,0) NOT NULL,

@@ -28,6 +28,7 @@ class SeanseRepository extends ServiceEntityRepository
             AS seanse
             FROM App\Entity\Seanse se
             JOIN se.sale sa
+            WHERE se.czyodwolany = 0 OR se.czyodwolany IS NULL
             GROUP BY sa.id
             ORDER BY sa.numersali ASC'
         );
@@ -57,7 +58,8 @@ class SeanseRepository extends ServiceEntityRepository
             JOIN se.typyseansow ts
             JOIN App\Entity\SeansMaFilmy smf
             JOIN smf.filmy f
-            WHERE se.id = :id AND smf.seanse = se.id')
+            WHERE se.id = :id AND smf.seanse = se.id
+            AND se.czyodwolany = 0 OR se.czyodwolany IS NULL')
             ->setParameter('id', $id);
 
         return $query->execute();
@@ -73,6 +75,7 @@ class SeanseRepository extends ServiceEntityRepository
             ->join('s.seansMaFilmy', 'smf')
             ->andWhere('smf.filmy = :movie')
             ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
+            ->andWhere('s.czyodwolany = 0 OR s.czyodwolany IS NULL')
             ->setParameter('movie', $movie)
             ->setParameter('from', $from)
             ->setParameter('to', $to)
@@ -97,6 +100,7 @@ class SeanseRepository extends ServiceEntityRepository
             ->join('s.seansMaFilmy', 'smf')
             ->andWhere('smf.filmy = :movie')
             ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
+            ->andWhere('s.czyodwolany = 0 OR s.czyodwolany IS NULL')
             ->setParameter('movie', $movie)
             ->setParameter('from', $from)
             ->setParameter('to', $to)
@@ -119,6 +123,7 @@ class SeanseRepository extends ServiceEntityRepository
             ->select('count(s.id)')
             ->join('s.seansMaFilmy', 'smf')
             ->andWhere('smf.filmy = :movie')
+            ->andWhere('s.czyodwolany = 0 OR s.czyodwolany IS NULL')
             ->setParameter('movie', $movie)
             ->getQuery();
 
@@ -136,16 +141,14 @@ class SeanseRepository extends ServiceEntityRepository
         $query = $this->createQueryBuilder('s')
             ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
             ->andWhere('s.sale = :room')
+            ->andWhere('s.czyodwolany != true')
             ->setParameter('from', $from->sub(new \DateInterval('P1D')))
             ->setParameter('to', $to->add(new \DateInterval('P2D')))
             ->setParameter('room', $room)
             ->getQuery();
 
-        var_dump($query->getSQL(), $from, $to);
-
         $result = $query->getResult();
 
-        var_dump(count($result));
         if(!count($result)) return false;
 
         foreach($result AS $qSeance) {

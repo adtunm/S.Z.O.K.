@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Vouchery
  *
  * @ORM\Table(name="vouchery", uniqueConstraints={@ORM\UniqueConstraint(name="idVouchery_UNIQUE", columns={"id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\VoucheryRepository")
  */
 class Vouchery
 {
@@ -143,18 +143,19 @@ class Vouchery
     /**
      * @return bool|null
      */
-    public function getCzywykorzystanyy(): ?bool
+    public function getCzywykorzystany(): ?bool
     {
-        return $this->czywykorzystanyy;
+        return $this->czywykorzystany;
     }
 
     /**
-     * @param bool|null $czywykorzystanyy
+     * @param bool|null $czywykorzystany
      */
-    public function setCzywykorzystanyy(?bool $czywykorzystanyy): void
+    public function setCzywykorzystany(?bool $czywykorzystany): void
     {
-        $this->czywykorzystanyy = $czywykorzystanyy;
+        $this->czywykorzystany = $czywykorzystany;
     }
+
     /**
      * @var int
      *
@@ -216,9 +217,41 @@ class Vouchery
     /**
      * @var bool|null
      *
-     * @ORM\Column(name="czyWykorzystanyy", type="boolean", nullable=true)
+     * @ORM\Column(name="czyWykorzystany", type="boolean", nullable=true)
      */
-    private $czywykorzystanyy;
+    private $czywykorzystany;
 
+    public function recalculateControlDigit()
+    {
+        $code = "" . $this->losowecyfry . $this->czaswygenerowania->format("YmdHis") . sprintf("%010d", $this->id);
+        $sum = 0;
+        for($i = 0; $i < strlen($code); $i++) {
+            $sum += (int)$code[$i] * ($i % 3 * 3 + 1);
+        }
+        if($sum % 10 == 0) $this->cyfrakontrolna = 0;
+        else $this->cyfrakontrolna = 10 - $sum % 10;
+    }
 
+    public function getCode()
+    {
+        return "" . $this->losowecyfry . $this->czaswygenerowania->format("YmdHis") . sprintf("%010d", $this->id)
+            . $this->cyfrakontrolna;
+    }
+
+    public static function verifyCode(string $code)
+    {
+        $controlDigitFromCode = substr($code, -1);
+        $code = substr($code, 0, -1);
+
+        $sum = 0;
+        for($i = 0; $i < strlen($code); $i++) {
+            $sum += (int)$code[$i] * ($i % 3 * 3 + 1);
+        }
+
+        if($sum % 10 == 0) $controlDigit = 0;
+        else $controlDigit = 10 - $sum % 10;
+
+        if($controlDigit == $controlDigitFromCode) return true;
+        else return false;
+    }
 }

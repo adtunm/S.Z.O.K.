@@ -148,7 +148,7 @@ class SeancesControler extends AbstractController
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $seance = $this->getDoctrine()->getRepository(Seanse::class)->find($id);
 
-            if(!$seance or $seance->getRezerwacje()->count() or $seance->getTranzakcje()->count())
+            if(!$seance or $seance->getCzyodwolany() or $seance->getRezerwacje()->count() or $seance->getTranzakcje()->count())
                 return $this->redirectToRoute('workers_app/no_permission');
 
             $collectionValues = $seance->getInitialCollectionsValues();
@@ -278,7 +278,7 @@ class SeancesControler extends AbstractController
         }
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $seance = $this->getDoctrine()->getRepository(Seanse::class)->find($id);
-            if(!$seance)
+            if(!$seance or $seance->getCzyodwolany() )
                 return $this->redirectToRoute('workers_app/no_permission');
 
             $booking = $this->getDoctrine()->getRepository(Rezerwacje::class)->findBookingNotFinalized($seance);
@@ -321,6 +321,7 @@ class SeancesControler extends AbstractController
             and $seance = $this->getDoctrine()->getRepository(Seanse::class)->find($id)
             and $seance->getRezerwacje()->isEmpty()
             and $seance->getTranzakcje()->isEmpty()
+            and !$seance->getCzyodwolany()
         ) {
             $entityManager = $this->getDoctrine()->getManager();
             $smfsToRemove = $seance->getSeansMaFilmy()->getValues();
@@ -328,7 +329,8 @@ class SeancesControler extends AbstractController
                 $entityManager->remove($smf);
                 $entityManager->flush();
             }
-            $entityManager->remove($seance);
+            $seance->setCzyodwolany(true);
+            $entityManager->merge($seance);
             $entityManager->flush();
         }
     }
