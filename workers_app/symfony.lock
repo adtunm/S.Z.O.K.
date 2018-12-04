@@ -5,6 +5,9 @@
     "beberlei/doctrineextensions": {
         "version": "v1.1.5"
     },
+    "dasprid/enum": {
+        "version": "1.0.0"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -71,6 +74,9 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "egulias/email-validator": {
+        "version": "2.1.6"
+    },
     "endroid/installer": {
         "version": "1.0.7"
     },
@@ -85,9 +91,6 @@
             "version": "3.0",
             "ref": "b9fcbe18b537c63bf61d3c3be8116a00a85c8e2e"
         }
-    },
-    "egulias/email-validator": {
-        "version": "2.1.6"
     },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
