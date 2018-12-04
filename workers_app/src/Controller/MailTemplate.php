@@ -33,7 +33,7 @@ class MailTemplate extends AbstractController
         $message = (new \Swift_Message());          //nowa wiadomosć
         $message ->setSubject('Temat');       //temet wiadomości
         $message ->setFrom('szok.smtp@gmail.com');  //nadawca
-        $message ->setTo('mail');       //odbiorca
+        $message ->setTo('adtunm');       //odbiorca
         $message ->setBody($this->renderView(       //treść maila jako twig
             'workersApp/mail/mailRegistration.html.twig',
             array('client' => $client)      //przekazywanie wartości do twinga, jakby ktoś nie wiedział
