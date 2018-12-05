@@ -258,7 +258,7 @@ class Bilety
 
     public function recalculateControlDigit()
     {
-        $code = "" . $this->tranzakcje->getData()->format("YmdHis") . $this->losowecyfry . sprintf("%010d", $this->id);
+        $code = "" . $this->tranzakcje->getData()->format("YmdHis") . sprintf("%03d", $this->losowecyfry) . sprintf("%010d", $this->id);
         $sum = 0;
         for($i = 0; $i < strlen($code); $i++) {
             $sum += (int)$code[$i] * ($i % 3 * 3 + 1);
@@ -269,7 +269,7 @@ class Bilety
 
     public function getCode()
     {
-        return "" . $this->tranzakcje->getData()->format("YmdHis") . $this->losowecyfry . sprintf("%010d", $this->id)
+        return "" . $this->tranzakcje->getData()->format("YmdHis") . sprintf("%03d", $this->losowecyfry) . sprintf("%010d", $this->id)
             . $this->cyfrakontrolna;
     }
 
