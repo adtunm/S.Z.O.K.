@@ -25,7 +25,7 @@ class TransactionController extends Controller
             return $this->redirectToRoute('clients_app/logout_page');
         }
         $entityManager = $this->getDoctrine()->getManager();
-        $tickets = $entityManager->getRepository(Bilety::class)->getTickets(4704);
+        $tickets = $entityManager->getRepository(Bilety::class)->getTickets($id);
         $snappy = $this->get('knp_snappy.pdf');
         $html = $this->renderView('clientsApp/ticket/ticket.html.twig', ['bilety' => $tickets]);
         $output = '../../ticket.pdf';

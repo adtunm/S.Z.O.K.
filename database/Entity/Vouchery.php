@@ -223,7 +223,7 @@ class Vouchery
 
     public function recalculateControlDigit()
     {
-        $code = "" . $this->losowecyfry . $this->czaswygenerowania->format("YmdHis") . sprintf("%010d", $this->id);
+        $code = "" . sprintf("%03d", $this->losowecyfry) . $this->czaswygenerowania->format("YmdHis") . sprintf("%010d", $this->id);
         $sum = 0;
         for($i = 0; $i < strlen($code); $i++) {
             $sum += (int)$code[$i] * ($i % 3 * 3 + 1);
@@ -234,7 +234,7 @@ class Vouchery
 
     public function getCode()
     {
-        return "" . $this->losowecyfry . $this->czaswygenerowania->format("YmdHis") . sprintf("%010d", $this->id)
+        return "" . sprintf("%03d", $this->losowecyfry) . $this->czaswygenerowania->format("YmdHis") . sprintf("%010d", $this->id)
             . $this->cyfrakontrolna;
     }
 
