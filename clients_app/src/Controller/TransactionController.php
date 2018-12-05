@@ -8,8 +8,7 @@
 
 namespace App\Controller;
 
-
-use App\Entity\Bilety;
+use App\Entity\Tranzakcje;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -25,9 +24,9 @@ class TransactionController extends Controller
             return $this->redirectToRoute('clients_app/logout_page');
         }
         $entityManager = $this->getDoctrine()->getManager();
-        $tickets = $entityManager->getRepository(Bilety::class)->getTickets($id);
+        $transaction = $entityManager->getRepository(Tranzakcje::class)->find($id);
         $snappy = $this->get('knp_snappy.pdf');
-        $html = $this->renderView('clientsApp/ticket/ticket.html.twig', ['bilety' => $tickets]);
+        $html = $this->renderView('clientsApp/ticket/ticket.html.twig', ['transaction' => $transaction]);
         $output = '../../ticket.pdf';
         $snappy->generateFromHtml($html, $output);
         // insert mailing here
