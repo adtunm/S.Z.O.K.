@@ -31,7 +31,7 @@ use Symfony\Component\Validator\Constraints\DateTime;
 
 class Generator extends AbstractController
 {
-    private $startGeneration = '2017-10-02'; //from when to start generate
+    private $startGeneration = '2018-10-01'; //from when to start generate
     private $endGeneration ='2019-02-01'; //where to end, this day won't be included
 
     private $revLayout = array(
@@ -353,9 +353,9 @@ class Generator extends AbstractController
         return $data;
     }
 
-    /**
-     * @Route("/generator")
-     */
+//    /**
+//     * @Route("/generator")
+//     */
     public function generator()
     {
         set_time_limit(100000000);
