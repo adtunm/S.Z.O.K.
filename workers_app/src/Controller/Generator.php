@@ -31,7 +31,7 @@ use Symfony\Component\Validator\Constraints\DateTime;
 
 class Generator extends AbstractController
 {
-    private $startGeneration = '2018-10-01'; //from when to start generate
+    private $startGeneration = '2018-11-01'; //from when to start generate
     private $endGeneration ='2019-02-01'; //where to end, this day won't be included
 
     private $revLayout = array(
@@ -867,7 +867,7 @@ class Generator extends AbstractController
             }
             $entityManager->merge($transaction);
             $counter2++;
-            if($counter%5000 == 0)
+            if($counter2%5000 == 0)
                 $entityManager->flush();
         }
 
