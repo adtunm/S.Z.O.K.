@@ -31,13 +31,10 @@
         <tr>
             <td><h1 style="text-align: center;">SZOK</h1></td>
             <td colspan="3"><h3>Seans: {% if transaction.seanse.wydarzeniaspecjalne %}
-                        {{ transaction.seanse.wydarzeniaspecjalne }} {{ transaction.seanse.typyseansow }}:
-                        {% for smf in transaction.seanse.seansMaFilmy %}
-                            {{ smf.filmy }} {{ transaction.seanse.typyseansow }}
-                        {% endfor %}
+                        {{ transaction.seanse.wydarzeniaspecjalne }} - {{ transaction.seanse.typyseansow }}:
                     {% else %}
                         {% for smf in transaction.seanse.seansMaFilmy|slice(0,1) %}
-                            {{ smf.filmy }} {{ transaction.seanse.typyseansow }}
+                            {{ smf.filmy }} - {{ transaction.seanse.typyseansow }}
                         {% endfor %}
                     {% endif %}</h3></td>
         </tr>
