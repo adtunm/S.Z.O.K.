@@ -632,6 +632,7 @@ class Generator extends AbstractController
             $seance = $this->seances[$k];
 
             $bookings = $this->bookings[$seance->getId()];
+            unset($this->bookings[$seance->getId()]);
 
             $pool = $seance->getPulebiletow();
 
@@ -867,7 +868,7 @@ class Generator extends AbstractController
             }
             $entityManager->merge($transaction);
             $counter2++;
-            if($counter2%5000 == 0)
+            if($counter2%10000 == 0)
                 $entityManager->flush();
         }
 
