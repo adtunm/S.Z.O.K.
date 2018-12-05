@@ -4,14 +4,14 @@
     {% if pula  %}
         <div class="h1 col-md">Pule biletów</div>
         <div class="container">
-            <div class="justify-content-center ">
+            <div class="justify-content-center h5">
                 <div class="row mb-3">
-                    <div class="col-sm-2">Nazwa puli:</div>
-                    <div class="col-sm-10 pl-sm-2">{{ pula.nazwa }}</div>
+                    <div class="col-sm-6">Nazwa puli:</div>
+                    <div class="col-sm-6 pl-sm-2">{{ pula.nazwa }}</div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-sm-2">Status:</div>
-                    <div class="col-sm-10 pl-sm-2">
+                    <div class="col-sm-6">Status:</div>
+                    <div class="col-sm-6 pl-sm-2">
                         {% if pula.status %}
                             Aktywna
                         {% else %}
@@ -23,11 +23,11 @@
                     <div class="col-sm-12">Ceny biletów w puli:</div>
                 </div>
                 <div style="overflow-x: auto ">
-                    <table class="table">
+                    <table class="table h6">
                         <thead>
                         <tr>
-                            <td>Rodzaj biletu</td>
-                            <td>Cena</td>
+                            <th>Rodzaj biletu</th>
+                            <th>Cena</th>
                         </tr>
                         </thead>
                         <tbody>
