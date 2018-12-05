@@ -100,11 +100,12 @@ class PromocjeRepository extends ServiceEntityRepository
         return $pageCount;
     }
 
-    public function findCurrent()
+    public function findCurrent($date = NULL)
     {
+        if (!$date) $date = date("Y-m-d");
         $query = $this->createQueryBuilder('p')
             ->andWhere('p.koniecpromocji >= :currentDate AND p.poczatekpromocji <= :currentDate')
-            ->setParameter('currentDate', date("Y-m-d"))
+            ->setParameter('currentDate', $date)
             ->orderBy('p.poczatekpromocji', 'ASC')
             ->getQuery();
 

@@ -28,12 +28,13 @@ class SeanseRepository extends ServiceEntityRepository
             AS seanse
             FROM App\Entity\Seanse se
             JOIN se.sale sa
+            WHERE se.czyodwolany = 0 OR se.czyodwolany IS NULL
             GROUP BY sa.id
             ORDER BY sa.numersali ASC'
         );
-        $roomsInSeances =  $query->execute();
+        $roomsInSeances = $query->execute();
         $checkRooms = array();
-        foreach($rooms as $key => $room){
+        foreach($rooms as $key => $room) {
             $checkRooms[$key] = !in_array(array('seanse' => $room->getId()), $roomsInSeances);
         }
         return $checkRooms;
@@ -45,7 +46,8 @@ class SeanseRepository extends ServiceEntityRepository
         $query = $entityManager->createQuery(
             'SELECT DISTINCT
                 se.id,
-                f.tytul, 
+                f.tytul,
+                f.datapremiery, 
                 DATE_FORMAT(se.poczatekseansu, \'%d.%m.%Y\') AS data,
                 DATE_FORMAT(se.poczatekseansu, \'%H:%i\') AS godzina,
                 sa.id AS salaid,
@@ -56,23 +58,26 @@ class SeanseRepository extends ServiceEntityRepository
             JOIN se.typyseansow ts
             JOIN App\Entity\SeansMaFilmy smf
             JOIN smf.filmy f
-            WHERE se.id = :id AND smf.seanse = se.id')
-        ->setParameter('id', $id);
+            WHERE se.id = :id AND smf.seanse = se.id
+            AND se.czyodwolany = 0 OR se.czyodwolany IS NULL')
+            ->setParameter('id', $id);
 
         return $query->execute();
     }
 
-    public function findSeancesForMovie(\App\Entity\Filmy $movie, $date, $page = 1, $pageLimit = 5){
-        $from = new \DateTime($date." 00:00:00");
-        $to   = new \DateTime($date." 23:59:59");
+    public function findSeancesForMovie(\App\Entity\Filmy $movie, $date, $page = 1, $pageLimit = 5)
+    {
+        $from = new \DateTime($date . " 00:00:00");
+        $to = new \DateTime($date . " 23:59:59");
 
         $query = $this->createQueryBuilder('s')
             ->select('s')
             ->join('s.seansMaFilmy', 'smf')
             ->andWhere('smf.filmy = :movie')
             ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
+            ->andWhere('s.czyodwolany = 0 OR s.czyodwolany IS NULL')
             ->setParameter('movie', $movie)
-            ->setParameter('from', $from )
+            ->setParameter('from', $from)
             ->setParameter('to', $to)
             ->getQuery();
 
@@ -85,17 +90,19 @@ class SeanseRepository extends ServiceEntityRepository
         return $requestedPage;
     }
 
-    public function getPageCountForMovie(\App\Entity\Filmy $movie, $date, $pageLimit = 5){
-        $from = new \DateTime($date." 00:00:00");
-        $to   = new \DateTime($date." 23:59:59");
+    public function getPageCountForMovie(\App\Entity\Filmy $movie, $date, $pageLimit = 5)
+    {
+        $from = new \DateTime($date . " 00:00:00");
+        $to = new \DateTime($date . " 23:59:59");
 
         $query = $this->createQueryBuilder('s')
             ->select('count(s.id)')
             ->join('s.seansMaFilmy', 'smf')
             ->andWhere('smf.filmy = :movie')
             ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
+            ->andWhere('s.czyodwolany = 0 OR s.czyodwolany IS NULL')
             ->setParameter('movie', $movie)
-            ->setParameter('from', $from )
+            ->setParameter('from', $from)
             ->setParameter('to', $to)
             ->getQuery();
 
@@ -110,18 +117,51 @@ class SeanseRepository extends ServiceEntityRepository
         return $pageCount;
     }
 
-    public function checkSeancesForMovie(\App\Entity\Filmy $movie){
-
+    public function checkSeancesForMovie(\App\Entity\Filmy $movie)
+    {
         $query = $this->createQueryBuilder('s')
             ->select('count(s.id)')
             ->join('s.seansMaFilmy', 'smf')
             ->andWhere('smf.filmy = :movie')
+            ->andWhere('s.czyodwolany = 0 OR s.czyodwolany IS NULL')
             ->setParameter('movie', $movie)
             ->getQuery();
 
         $count = $query->getSingleScalarResult();
 
-        if($count>0) return false;
+        if($count > 0) return false;
         else return true;
+    }
+
+    public function endTimeIsInvalid(\DateTime $seanceStartDate, \DateTime $seanceEndDate, \App\Entity\Sale $room, $editedId = NULL)
+    {
+        $from = clone $seanceStartDate->setTime(0,0,0);
+        $to = clone $seanceStartDate->setTime(0,0,0);
+
+        $query = $this->createQueryBuilder('s')
+            ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
+            ->andWhere('s.sale = :room')
+            ->andWhere('s.czyodwolany != true')
+            ->setParameter('from', $from->sub(new \DateInterval('P1D')))
+            ->setParameter('to', $to->add(new \DateInterval('P2D')))
+            ->setParameter('room', $room)
+            ->getQuery();
+
+        $result = $query->getResult();
+
+        if(!count($result)) return false;
+
+        foreach($result AS $qSeance) {
+            if ($editedId and $editedId == $qSeance->getId()) continue;
+            $qStart = $qSeance->getPoczatekseansu();
+            var_dump($qSeance->getSeansMaFilmy()->isEmpty(), $qSeance->getId());
+            $qEnd = $qSeance->getSeanceEndTime();
+            if(
+                ($seanceStartDate <= $qEnd and $seanceStartDate >= $qStart)
+                or ($seanceEndDate <= $qEnd and $seanceEndDate >= $qStart)
+                or ($seanceStartDate <= $qStart and $seanceEndDate >= $qEnd)
+            ) return $qSeance;
+        }
+        return false;
     }
 }

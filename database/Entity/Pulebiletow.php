@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -20,6 +21,11 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Pulebiletow
 {
+    public function __construct()
+    {
+        $this->pulaMaRodzajeBiletow = new ArrayCollection();
+    }
+
     /**
      * @return int
      */
@@ -99,6 +105,29 @@ class Pulebiletow
      * @ORM\Column(name="usunieto", type="boolean", nullable=true)
      */
     private $usunieto;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="App\Entity\PulabiletowMaRodzajebiletow", mappedBy="pulebiletow")
+     */
+    private $pulaMaRodzajeBiletow;
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPulaMaRodzajeBiletow(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->pulaMaRodzajeBiletow;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $pulaMaRodzajeBiletow
+     */
+    public function setPulaMaRodzajeBiletow(\Doctrine\Common\Collections\ArrayCollection $pulaMaRodzajeBiletow): void
+    {
+        $this->pulaMaRodzajeBiletow = $pulaMaRodzajeBiletow;
+    }
 
     /**
      * @return string

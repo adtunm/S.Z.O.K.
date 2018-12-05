@@ -63,7 +63,7 @@ INSERT INTO `SZOK`.`TypyRzedow` (`id`, `nazwa`, `usunieto`) VALUES (2, 'tylko do
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`RodzajePlatnosci`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`RodzajePlatnosci` (`id`, `nazwa`, `usunieto`) VALUES (1, 'Karta', NULL);
+INSERT INTO `SZOK`.`RodzajePlatnosci` (`id`, `nazwa`, `usunieto`) VALUES (1, 'Karta płatnicza', NULL);
 INSERT INTO `SZOK`.`RodzajePlatnosci` (`id`, `nazwa`, `usunieto`) VALUES (2, 'Gotówka', NULL);
 INSERT INTO `SZOK`.`RodzajePlatnosci` (`id`, `nazwa`, `usunieto`) VALUES (3, 'Przelew', NULL);
 

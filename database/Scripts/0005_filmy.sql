@@ -1,4 +1,4 @@
-INSERT INTO `filmy` (`id`, `tytul`, `opis`, `dataPremiery`, `czasTrwania`, `czasReklam`, `plakat`, `zwiastun`, `KategorieWiekowe_id`) VALUES
+INSERT INTO `szok`.`filmy` (`id`, `tytul`, `opis`, `dataPremiery`, `czasTrwania`, `czasReklam`, `plakat`, `zwiastun`, `KategorieWiekowe_id`) VALUES
 (1, 'Avatar', 'Jake, sparaliżowany były komandos, zostaje wysłany na planetę Pandora, gdzie zaprzyjaźnia się z lokalną społecznością i postanawia jej pomóc.', '2009-12-25', 162, 24, 'a06900b3b37ad8c72bbb8ca0762e0728.jpeg', 'https://www.youtube.com/watch?v=5PSNL1qE6VY', 4),
 (2, 'Pianista', 'Podczas drugiej wojny światowej Władysław Szpilman, znakomity polski pianista, stara się przeżyć w okupowanej Warszawie.', '2002-05-24', 111, 23, 'b4141e2bcc7710b7569eb7e7ed5f7293.jpeg', 'https://www.youtube.com/watch?v=u_jE7-6Uv7E', 4),
 (3, 'Constantine', 'Adaptacja komiksu \"Hellblazer\" opowiadająca historię Johna Constantine\'a - egzorcysty, który musi stanąć do walki o dusze wszystkich ludzi, by tym samym ocalić siebie od wiecznego potępienia.', '2005-02-08', 121, 23, '23ee93f39c676468c11e26de3d404903.jpeg', NULL, 4),

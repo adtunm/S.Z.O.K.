@@ -1,0 +1,286 @@
+{% extends 'workersApp/workerBase.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/room_view.css') }}" type="text/css">
+{% endblock %}
+
+
+{% block content %}
+    <div class="row px-3">
+        <h1 class="mb-3 font-weight-normal">Rezerwacja - wybór miejsc</h1>
+    </div>
+    <div class="row px-3">
+        <h6 class="mb-3 font-weight-normal">{{ seance[0].tytul }} ({{ seance[0].datapremiery|date('Y') }})
+            - {{ seance[0].nazwa }}
+            - {{ seance[0].data }} {{ seance[0].godzina }} - Numer sali: {{ seance[0].numersali }} </h6>
+    </div>
+    <div class="content panel mt-2 mb-3 mx-0 p-5 bg-light">
+        <div class="row justify-content-between px-3">
+            <div class="room_view" id="roomContent">
+                <div class="mb-3">
+                    <div class="text_center screen"
+                         style="width: {{ values[0].miejsca.rzedy.sale.szerokoscsali *38-8 }} px">
+                        EKRAN
+                    </div>
+                </div>
+
+                <div class="inline mb-2" id="seats">
+                    <div class="mr-3 rowNumber seatViewPadding" id="Row"> 1</div>
+                    {% set currentRow = values[0].miejsca.rzedy %}
+                    {% for value in values %}
+                        {% if currentRow != value.miejsca.rzedy %}
+                            <div class="inline mb-2">
+                            <div class="mr-3 rowNumber seatViewPadding" id="Row"> {{ currentRow.numerrzedu + 1 }} </div>
+                        {% endif %}
+
+                        {% if value.miejsca.numermiejsca == 0 %}
+                            <div class="no-seat seatViewPadding mr-2" id=""></div>
+                        {% else %}
+                            {% if value.rezerwacje %}
+                                <div class="seat seat_reserved seatViewPadding mr-2"
+                                     id="{{ value.miejsca.id }}">{{ value.miejsca.numermiejsca }}</div>
+                            {% elseif value.tranzakcje %}
+                                <div class="seat seat_sold seatViewPadding mr-2"
+                                     id="{{ value.miejsca.id }}">{{ value.miejsca.numermiejsca }}</div>
+                            {% else %}
+                                {% if value.miejsca.rzedy.typyrzedow.id == 2 %}
+                                    <div class="seat seat_buying_only seatViewPadding mr-2"
+                                         id="{{ value.miejsca.id }}">{{ value.miejsca.numermiejsca }}</div>
+                                {% else %}
+                                    <button class="seat seat_normal seatViewPadding mr-2 pointer"
+                                            id="{{ value.miejsca.id }}"
+                                            onclick="selectSeat(this, {{ value.miejsca.id }}, {{ value.miejsca.rzedy.numerrzedu }},{{ value.miejsca.numermiejsca }})">{{ value.miejsca.numermiejsca }}</button>
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+
+                        {% if (values[loop.index0 + 1].miejsca.rzedy is defined and value.miejsca.rzedy != values[loop.index0 + 1].miejsca.rzedy) %}
+                            </div>
+                        {% endif %}
+                        {% set currentRow = value.miejsca.rzedy %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="mt-2 mx-2 p-3 legend float-right">
+                <h3 class="col-12 mb-3">Legenda</h3>
+                <div class="col-12 mb-2">
+                    <div class="seat seat_normal legend_seat mr-1" id="button1"></div>
+                    <label for="button1">Do rezerwacji</label>
+                </div>
+                <div class="col-12 mb-2">
+                    <div class="seat seat_buying_only legend_seat mr-1"></div>
+                    <label for="button2">Tylko do zakupu</label>
+                </div>
+                <div class="col-12 mb-2">
+                    <div class="seat seat_reserved legend_seat mr-1"></div>
+                    <label for="button2">Zarezerwowane</label>
+                </div>
+                <div class="col-12 mb-2">
+                    <div class="seat seat_sold legend_seat mr-1"></div>
+                    <label for="button2">Sprzedane</label>
+                </div>
+                <div class="col-12">
+                    <div class="seat seat_selected legend_seat mr-1"></div>
+                    <label for="button2">Zaznaczone</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-between px-3">
+        <div>
+            <a href="{{ path('workers_app/rooms_page') }}" class="btn btn-secondary"><i class="fa fa-angle-left"
+                                                                                        aria-hidden="true"></i> Wróć</a>
+            {#<p id="test"></p>#}
+        </div>
+        <div>
+            <form method="post">
+                <input type="text" id="roomNumber" name="roomNumber" hidden value="">
+                <input type="text" id="rowCount" name="rowCount" hidden value="">
+                <input type="text" id="seatCount" name="seatCount" hidden value="">
+                <input type="text" id="rowCode" name="rowCode" hidden value="">
+                <input type="text" id="seatCode" name="seatCode" hidden value="">
+            </form>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" onclick="getDate()"
+                data-target="#reservationId">
+            Dalej
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="reservationId" tabindex="-1" role="dialog"
+         aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content bg-dark text-light text-left">
+                <div class="modal-header">
+                    <div class="row px-3">
+                        <h2 class="modal-title" id="modelTitleId">
+                            Rezerwacja - wprowadź dane osobowe
+                        </h2>
+                    </div>
+                    <button type="button" class="close text-light" data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row px-3">
+                        <h5 class="mb-3 font-weight-normal">{{ seance[0].tytul }}
+                            ({{ seance[0].datapremiery|date('Y') }})
+                            - {{ seance[0].nazwa }}
+                            - {{ seance[0].data }} {{ seance[0].godzina }} - Numer sali: {{ seance[0].numersali }} </h5>
+                    </div>
+                    {{ form_start(form) }}
+                    <div class="m-3">
+                        <div class="m-3">
+                            <input class="form-control" type="number" id="submit" name="submit" hidden value="0">
+                            <input class="form-control" type="text" id="seatId" name="seatId" hidden value="">
+                            <input class="form-control" type="text" id="seatNumber" name="seatNumber" hidden value="">
+                            <div class="form-group row" >
+                                <div class="col-sm-12" id="seatNumberLabel">
+
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                {{ form_label(form.imie) }}
+                                <div class="col-sm-10 px-0">
+                                    {% if form.imie.vars.errors|length > 0 %}
+                                        {{ form_widget(form.imie, {'attr': {'class': 'is-invalid form-control'}}) }}
+                                    {% else %}
+                                        {{ form_widget(form.imie) }}
+                                    {% endif %}
+                                    <div class="invalid-feedback">
+                                        {{ form_errors(form.imie) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                {{ form_label(form.nazwisko) }}
+                                <div class="col-sm-10 px-0">
+                                    {% if form.nazwisko.vars.errors|length > 0 %}
+                                        {{ form_widget(form.nazwisko, {'attr': {'class': 'is-invalid form-control'}}) }}
+                                    {% else %}
+                                        {{ form_widget(form.nazwisko) }}
+                                    {% endif %}
+                                    <div class="invalid-feedback">
+                                        {{ form_errors(form.nazwisko) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                {{ form_label(form.email) }}
+                                <div class="col-sm-10 px-0">
+                                    {% if form.email.vars.errors|length > 0 %}
+                                        {{ form_widget(form.email, {'attr': {'class': 'is-invalid form-control'}}) }}
+                                    {% else %}
+                                        {{ form_widget(form.email) }}
+                                    {% endif %}
+                                    <div class="invalid-feedback">
+                                        {{ form_errors(form.email) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                {{ form_label(form.telefon) }}
+                                <div class="col-sm-10 px-0">
+                                    {% if form.telefon.vars.errors|length > 0 %}
+                                        {{ form_widget(form.telefon, {'attr': {'class': 'is-invalid form-control'}}) }}
+                                    {% else %}
+                                        {{ form_widget(form.telefon) }}
+                                    {% endif %}
+                                    <div class="invalid-feedback">
+                                        {{ form_errors(form.telefon) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">
+                            Anuluj
+                        </button>
+                        {{ form_widget(form.save) }}
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Modal -->
+    </div>
+    <script>
+        var seatArray = [];
+        var seatNumberArray = [];
+        const seatIdInput = document.getElementById("seatId");
+        const seatNumberInput = document.getElementById("seatNumber");
+        const seatNumberLabel = document.getElementById("seatNumberLabel");
+
+        window.onload = function () {
+            for (var i = 0; i < {{ values[0].miejsca.rzedy.sale.dlugoscsali }}; i++) {
+                seatNumberArray[i] = [];
+            }
+
+            {% for checkedSeat in checkedSeats %}
+                var checkedseat = document.getElementById("{{ checkedSeat }}");
+                if(checkedseat.classList.toString().includes('seat_normal')){
+                    checkedseat.click();
+                }
+            {% endfor %}
+
+        };
+
+        function selectSeat(button, id, rowNumber, seatNumber) {
+            if (button.classList.toString().includes('seat_normal')) {
+                seatNumberArray[rowNumber - 1].push(seatNumber);
+                seatArray.push(id);
+                button.classList.remove('seat_normal');
+                button.classList.add('seat_selected');
+            } else {
+                var elementIndex = seatArray.indexOf(id);
+                seatArray.splice(elementIndex, 1);
+
+                elementIndex = seatNumberArray[rowNumber - 1].indexOf(seatNumber);
+                seatNumberArray[rowNumber - 1].splice(elementIndex, 1);
+                button.classList.remove('seat_selected');
+                button.classList.add('seat_normal');
+            }
+        }
+
+        function getDate() {
+            seatNumberLabel.innerHTML = '';
+            seatNumberInput.value = '';
+            seatIdInput.value = '';
+            //document.getElementById("test").innerHTML = '';
+            for (var i = 0; i < seatArray.length; i++) {
+                if (i != 0) {
+                    seatIdInput.value += ',';
+                }
+                seatIdInput.value += seatArray[i];
+                //document.getElementById("test").innerHTML += seatArray[i] + ',';
+            }
+            for (var i = 0; i < seatNumberArray.length; i++) {
+                if(seatNumberArray[i].length > 0) {
+                    seatNumberArray[i].sort(function (a, b) {
+                        return a - b
+                    });
+                    for (var j = 0; j < seatNumberArray[i].length; j++) {
+                        if (j == 0) {
+                            seatNumberInput.value += 'Rząd: ' + (i + 1) + ' Miejsca: ' + seatNumberArray[i][j];
+                            seatNumberLabel.innerHTML += 'Rząd: ' + (i + 1) + ' Miejsca: ' + seatNumberArray[i][j];
+                        } else {
+                            seatNumberInput.value += ', ' + seatNumberArray[i][j];
+                            seatNumberLabel.innerHTML += ', ' + seatNumberArray[i][j];
+                        }
+                    }
+                    seatNumberInput.value += ' ';
+                    seatNumberLabel.innerHTML += '<br>';
+                }
+            }
+
+
+
+        }
+
+    </script>
+{% endblock %}

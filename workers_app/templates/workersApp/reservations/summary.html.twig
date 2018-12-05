@@ -1,0 +1,70 @@
+{% extends 'workersApp/workerBase.html.twig' %}
+
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-md-6 pb-4 mt-0">
+            <div class="h1 pb-3">Rezerwacja - podsumowanie</div>
+            <div class="mx-3">
+                <div class="mx-3">
+                    <div class="row mb-3">
+                        <div class="col-sm-3">Film:</div>
+                        <div class="col-sm-9 pl-sm-2">{{ seance[0].tytul }}
+                            ({{ seance[0].datapremiery|date('Y') }}) - {{ seance[0].nazwa }}</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">Data i godzina:</div>
+                        <div class="col-sm-9 pl-sm-2">{{ seance[0].data }} {{ seance[0].godzina }}</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">Wybrane miejsca:</div>
+                        <div class="col-sm-9 pl-sm-2">{{ rezervationData.seatNumber }}</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">Imie i nazwisko:</div>
+                        <div class="col-sm-9 pl-sm-2">{{ rezervationData.form.imie }} {{ rezervationData.form.nazwisko }}</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">E-mail:</div>
+                        <div class="col-sm-9 pl-sm-2">{{ rezervationData.form.email }}</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">Numer telefonu:</div>
+                        <div class="col-sm-9 pl-sm-2">{{ rezervationData.form.telefon }}</div>
+                    </div>
+                    <form name="form" method="post">
+                        <input type="number" id="submit" name="submit" hidden value="">
+                        <input type="text" id="seatId" name="seatId" hidden value="{{ rezervationData.seatId }}">
+                        <input type="text" id="form_imie" name="form[imie]" hidden
+                               value="{{ rezervationData.form.imie }}">
+                        <input type="text" id="form_nazwisko" name="form[nazwisko]" hidden
+                               value="{{ rezervationData.form.nazwisko }}">
+                        <input type="email" id="form_email" name="form[email]" hidden value="{{ rezervationData.form.email }}">
+                        <input type="text" id="form_telefon" name="form[telefon]" hidden
+                               value="{{ rezervationData.form.telefon }}">
+                        <button type="submit" id="form_back" name="form[back]" class="btn btn-primary float-left"
+                                onclick="setBack()">Zmień rezerwacje
+                        </button>
+                        <button type="submit" id="form_save" name="form[save]" class="btn btn-primary float-right"
+                                onclick="setConfirm()">Zatwierdz
+                        </button>
+                        <input type="hidden" id="form__token" name="form[_token]"
+                               value="{{ rezervationData.form._token }}">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        function setBack() {
+            document.getElementById('submit').value = '1';
+        }
+
+        function setConfirm() {
+            document.getElementById('submit').value = '2';
+        }
+    </script>
+
+
+
+{% endblock %}

@@ -1,6 +1,7 @@
 .invalid-feedback ul{
     list-style-type: none;
     padding-left: 0;
+    margin-bottom: 0;
 }
 
 .input-group-append .input-group-text{

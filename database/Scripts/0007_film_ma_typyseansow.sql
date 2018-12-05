@@ -1,4 +1,4 @@
-INSERT INTO `film_ma_typyseansow` (`Filmy_id`, `TypySeansow_id`) VALUES
+INSERT INTO `szok`.`film_ma_typyseansow` (`Filmy_id`, `TypySeansow_id`) VALUES
 (1, 1),
 (1, 2),
 (1, 3),

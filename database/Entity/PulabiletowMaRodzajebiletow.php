@@ -94,7 +94,7 @@ class PulabiletowMaRodzajebiletow
     /**
      * @var Pulebiletow
      *
-     * @ORM\ManyToOne(targetEntity="Pulebiletow")
+     * @ORM\ManyToOne(targetEntity="Pulebiletow", inversedBy="pulaMaRodzajeBiletow")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="PuleBiletow_id", referencedColumnName="id")
      * })
