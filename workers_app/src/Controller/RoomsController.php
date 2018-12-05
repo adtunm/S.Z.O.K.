@@ -207,7 +207,8 @@ class RoomsController extends Controller
                 } else {
                     $checkRoom = true;
                 }
-                return $this->render('workersApp/screeningRoomPages/view.html.twig', ['id' => $id, 'seatCount' => $seatCount, 'checkRoom' => $checkRoom, 'values' => $values]);
+                return $this->render('workersApp/screeningRoomPages/view.html.twig', ['id' => $id, 'seatCount' => $seatCount,
+                                                                                        'checkRoom' => $checkRoom, 'values' => $values]);
             } else {
                 return $this->redirectToRoute('workers_app/rooms_page');
             }

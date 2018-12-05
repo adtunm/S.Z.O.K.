@@ -7,12 +7,12 @@
 
 {% block content %}
     <div class="row px-3">
-        <h1 class="mb-3 font-weight-normal">Rezerwacja - wybór miejsc</h1>
+        <h1 class="mb-3 font-weight-normal">Sprzedaż - wybór miejsc</h1>
     </div>
     <div class="row px-3">
         <h6 class="mb-3 font-weight-normal">{{ seance[0].tytul }} ({{ seance[0].datapremiery|date('Y') }})
             - {{ seance[0].nazwa }}
-            - {{ seance[0].data }} {{ seance[0].godzina }} - Numer sali: {{ seance[0].numersali }} </h6>
+            - {{ seance[0].data }} {{ seance[0].godzina }} - Sala {{ seance[0].numersali }} </h6>
     </div>
     <div class="content panel mt-2 mb-3 mx-0 p-5 bg-light">
         <div class="row justify-content-between px-3">
@@ -44,8 +44,9 @@
                                      id="{{ value.miejsca.id }}">{{ value.miejsca.numermiejsca }}</div>
                             {% else %}
                                 {% if value.miejsca.rzedy.typyrzedow.id == 2 %}
-                                    <div class="seat seat_buying_only seatViewPadding mr-2"
-                                         id="{{ value.miejsca.id }}">{{ value.miejsca.numermiejsca }}</div>
+                                    <button class="seat seat_buying_only seatViewPadding mr-2 pointer"
+                                            id="{{ value.miejsca.id }}"
+                                            onclick="selectSeatBuyingOnly(this, {{ value.miejsca.id }}, {{ value.miejsca.rzedy.numerrzedu }},{{ value.miejsca.numermiejsca }})">{{ value.miejsca.numermiejsca }}</button>
                                 {% else %}
                                     <button class="seat seat_normal seatViewPadding mr-2 pointer"
                                             id="{{ value.miejsca.id }}"
@@ -102,7 +103,7 @@
             </form>
         </div>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" onclick="getDate()"
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" onclick="createTable()"
                 data-target="#reservationId">
             Dalej
         </button>
@@ -131,79 +132,34 @@
                             - {{ seance[0].nazwa }}
                             - {{ seance[0].data }} {{ seance[0].godzina }} - Sala {{ seance[0].numersali }} </h5>
                     </div>
-                    {{ form_start(form) }}
-                    <div class="m-3">
+                    <form name="form" method="post">
                         <div class="m-3">
-                            <input class="form-control" type="number" id="submit" name="submit" hidden value="0">
-                            <input class="form-control" type="text" id="seatId" name="seatId" hidden value="">
-                            <input class="form-control" type="text" id="seatNumber" name="seatNumber" hidden value="">
-                            <div class="form-group row" >
-                                <div class="col-sm-12" id="seatNumberLabel">
+                            <div class="m-3">
+                                {#<input class="form-control" type="number" id="submit" name="submit" hidden value="0">#}
+                                {#<input class="form-control" type="text" id="seatId" name="seatId" hidden value="">#}
+                                {#<input class="form-control" type="text" id="seatNumber" name="seatNumber" hidden#}
+                                       {#value="">#}
+                                <div class="form-group row">
+                                    <div class="col-sm-12" id="seatLabel">
 
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                {{ form_label(form.imie) }}
-                                <div class="col-sm-10 px-0">
-                                    {% if form.imie.vars.errors|length > 0 %}
-                                        {{ form_widget(form.imie, {'attr': {'class': 'is-invalid form-control'}}) }}
-                                    {% else %}
-                                        {{ form_widget(form.imie) }}
-                                    {% endif %}
-                                    <div class="invalid-feedback">
-                                        {{ form_errors(form.imie) }}
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                {{ form_label(form.nazwisko) }}
-                                <div class="col-sm-10 px-0">
-                                    {% if form.nazwisko.vars.errors|length > 0 %}
-                                        {{ form_widget(form.nazwisko, {'attr': {'class': 'is-invalid form-control'}}) }}
-                                    {% else %}
-                                        {{ form_widget(form.nazwisko) }}
-                                    {% endif %}
-                                    <div class="invalid-feedback">
-                                        {{ form_errors(form.nazwisko) }}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                {{ form_label(form.email) }}
-                                <div class="col-sm-10 px-0">
-                                    {% if form.email.vars.errors|length > 0 %}
-                                        {{ form_widget(form.email, {'attr': {'class': 'is-invalid form-control'}}) }}
-                                    {% else %}
-                                        {{ form_widget(form.email) }}
-                                    {% endif %}
-                                    <div class="invalid-feedback">
-                                        {{ form_errors(form.email) }}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                {{ form_label(form.telefon) }}
-                                <div class="col-sm-10 px-0">
-                                    {% if form.telefon.vars.errors|length > 0 %}
-                                        {{ form_widget(form.telefon, {'attr': {'class': 'is-invalid form-control'}}) }}
-                                    {% else %}
-                                        {{ form_widget(form.telefon) }}
-                                    {% endif %}
-                                    <div class="invalid-feedback">
-                                        {{ form_errors(form.telefon) }}
-                                    </div>
+
+                                <div id="ticketTable">
+
                                 </div>
                             </div>
                         </div>
 
-                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">
                             Anuluj
                         </button>
-                        {{ form_widget(form.save) }}
-                        {{ form_end(form) }}
+                        <button type="submit" id="form_save" name="" class="btn btn-primary float-right"
+                                onclick="" disabled="">Zatwierdz
+                        </button>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -211,80 +167,105 @@
     </div>
     <script>
         var seatArray = [];
-        var seatNumberArray = [];
+        var seatIdArray = [];
+        var seatCounter = 0;
         const seatIdInput = document.getElementById("seatId");
         const seatNumberInput = document.getElementById("seatNumber");
-        const seatNumberLabel = document.getElementById("seatNumberLabel");
+        const seatLabel = document.getElementById("seatLabel");
         const submitButton = document.getElementById("form_save");
+        const ticketTable = document.getElementById('ticketTable');
 
         window.onload = function () {
             for (var i = 0; i < {{ values[0].miejsca.rzedy.sale.dlugoscsali }}; i++) {
-                seatNumberArray[i] = [];
+                seatIdArray[i] = [];
+                for (var j = 0; j < {{ values[0].miejsca.rzedy.sale.szerokoscsali }}; j++) {
+                    seatIdArray[i][j] = [];
+                }
             }
 
-            {% for checkedSeat in checkedSeats %}
-            {% if checkedSeat != null %}
-            var checkedseat = document.getElementById("{{ checkedSeat }}");
-            if(checkedseat.classList.toString().includes('seat_normal')){
-                checkedseat.click();
+
+            {% for selectedSeat in selectedSeats %}
+            {% if selectedSeat != null %}
+            var selectedseat = document.getElementById("{{ selectedSeat }}");
+            if (selectedseat.classList.toString().includes('seat_normal') || selectedseat.classList.toString().includes('seat_buying_only')) {
+                selectedseat.click();
             }
             {% endif %}
             {% endfor %}
 
+            createTable();
         };
+
+        function selectSeatBuyingOnly(button, id, rowNumber, seatNumber) {
+            if (button.classList.toString().includes('seat_buying_only')) {
+                seatCounter++;
+                seatIdArray[rowNumber - 1][seatNumber - 1].push(id);
+                button.classList.remove('seat_buying_only');
+                button.classList.add('seat_selected');
+            } else {
+                seatCounter--;
+                seatIdArray[rowNumber - 1][seatNumber - 1].pop();
+                button.classList.remove('seat_selected');
+                button.classList.add('seat_buying_only');
+            }
+        }
 
         function selectSeat(button, id, rowNumber, seatNumber) {
             if (button.classList.toString().includes('seat_normal')) {
-                seatNumberArray[rowNumber - 1].push(seatNumber);
-                seatArray.push(id);
+                seatCounter++;
+                seatIdArray[rowNumber - 1][seatNumber - 1].push(id);
                 button.classList.remove('seat_normal');
                 button.classList.add('seat_selected');
             } else {
-                var elementIndex = seatArray.indexOf(id);
-                seatArray.splice(elementIndex, 1);
-
-                elementIndex = seatNumberArray[rowNumber - 1].indexOf(seatNumber);
-                seatNumberArray[rowNumber - 1].splice(elementIndex, 1);
+                seatCounter--;
+                seatIdArray[rowNumber - 1][seatNumber - 1].pop();
                 button.classList.remove('seat_selected');
                 button.classList.add('seat_normal');
             }
         }
 
-        function getDate() {
+        function createTable() {
             submitButton.disabled = false;
-            seatNumberLabel.style.color = 'white';
-            seatNumberLabel.innerHTML = '';
-            seatNumberInput.value = '';
-            seatIdInput.value = '';
-            //document.getElementById("test").innerHTML = '';
-            for (var i = 0; i < seatArray.length; i++) {
-                if (i != 0) {
-                    seatIdInput.value += ',';
-                }
-                seatIdInput.value += seatArray[i];
-                //document.getElementById("test").innerHTML += seatArray[i] + ',';
-            }
-            for (var i = 0; i < seatNumberArray.length; i++) {
-                if(seatNumberArray[i].length > 0) {
-                    seatNumberArray[i].sort(function (a, b) {
-                        return a - b
-                    });
-                    for (var j = 0; j < seatNumberArray[i].length; j++) {
-                        if (j == 0) {
-                            seatNumberInput.value += 'Rząd: ' + (i + 1) + ' Miejsca: ' + seatNumberArray[i][j];
-                            seatNumberLabel.innerHTML += 'Rząd: ' + (i + 1) + ' Miejsca: ' + seatNumberArray[i][j];
-                        } else {
-                            seatNumberInput.value += ', ' + seatNumberArray[i][j];
-                            seatNumberLabel.innerHTML += ', ' + seatNumberArray[i][j];
+            seatLabel.style.color = 'white';
+            seatLabel.innerHTML = '';
+            ticketTable.innerHTML = '';
+
+            if (seatCounter > 0) {
+
+                var tableHtml =
+                    '<table id="tickets" class="table">' +
+                    '<thead>' +
+                    '<tr>' +
+                    '<th>Rząd i miejsce</th>' +
+                    '<th>Rodzaj biletu</th>' +
+                    '</tr>' +
+                    '</thead>' +
+                    '<tbody>' +
+                    '<tr>';
+
+                for (var i = 0; i < seatIdArray.length; i++) {
+                    for (var j = 0; j < seatIdArray[i].length; j++) {
+                        if (seatIdArray[i][j].length > 0) {
+                            tableHtml += '<td> Rząd: ' + (i + 1) + ' Miejsca: ' + (j + 1) + '</td>' +
+                                '<td><select id="ticketFor' + seatIdArray[i][j][0] + '" name="' + seatIdArray[i][j][0] + '"' +
+                                'class="form-control">' +
+                                    {% for ticket in tickets %}
+                                '<option value="{{ ticket.id }}">{{ ticket.nazwa }} ({{ ticket.cena }})</option>' +
+                                    {% endfor %}
+                                '</select></td>' +
+                                '</tr>';
                         }
                     }
-                    seatNumberInput.value += ' ';
-                    seatNumberLabel.innerHTML += '<br>';
                 }
-            }
-            if(seatNumberLabel.innerHTML == ''){
-                seatNumberLabel.innerHTML = "Żadne miejsca nie zostały wybrane."
-                seatNumberLabel.style.color = 'red';
+
+                tableHtml +=
+                    '</tbody>' +
+                    '</table>';
+
+                ticketTable.innerHTML = tableHtml;
+            } else {
+                seatLabel.innerHTML = "Żadne miejsca nie zostały wybrane."
+                seatLabel.style.color = 'red';
                 submitButton.disabled = true;
             }
         }

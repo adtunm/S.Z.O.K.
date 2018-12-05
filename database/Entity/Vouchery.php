@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Vouchery
  *
  * @ORM\Table(name="vouchery", uniqueConstraints={@ORM\UniqueConstraint(name="idVouchery_UNIQUE", columns={"id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\VoucherRepository")
  */
 class Vouchery
 {
@@ -143,17 +143,17 @@ class Vouchery
     /**
      * @return bool|null
      */
-    public function getCzywykorzystanyy(): ?bool
+    public function getCzywykorzystany(): ?bool
     {
-        return $this->czywykorzystanyy;
+        return $this->czywykorzystany;
     }
 
     /**
-     * @param bool|null $czywykorzystanyy
+     * @param bool|null $czywykorzystany
      */
-    public function setCzywykorzystanyy(?bool $czywykorzystanyy): void
+    public function setCzywykorzystany(?bool $czywykorzystany): void
     {
-        $this->czywykorzystanyy = $czywykorzystanyy;
+        $this->czywykorzystanyy = $czywykorzystany;
     }
     /**
      * @var int
@@ -218,7 +218,7 @@ class Vouchery
      *
      * @ORM\Column(name="czyWykorzystanyy", type="boolean", nullable=true)
      */
-    private $czywykorzystanyy;
+    private $czywykorzystany;
 
 
 }

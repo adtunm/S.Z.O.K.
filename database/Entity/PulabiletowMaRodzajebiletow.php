@@ -61,9 +61,9 @@ class PulabiletowMaRodzajebiletow
     }
 
     /**
-     * @return \Rodzajebiletow
+     * @return Rodzajebiletow
      */
-    public function getRodzajebiletow(): \Rodzajebiletow
+    public function getRodzajebiletow(): Rodzajebiletow
     {
         return $this->rodzajebiletow;
     }
@@ -94,7 +94,7 @@ class PulabiletowMaRodzajebiletow
     /**
      * @var \Pulebiletow
      *
-     * @ORM\ManyToOne(targetEntity="Pulebiletow")
+     * @ORM\ManyToOne(targetEntity="Pulebiletow",  inversedBy="pulabiletowmarodzajebiletow")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="PuleBiletow_id", referencedColumnName="id")
      * })

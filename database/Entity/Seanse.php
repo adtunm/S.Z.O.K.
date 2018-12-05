@@ -149,7 +149,7 @@ class Seanse
     /**
      * @var \Pulebiletow
      *
-     * @ORM\ManyToOne(targetEntity="Pulebiletow")
+     * @ORM\ManyToOne(targetEntity="Pulebiletow", inversedBy="seanse")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="PuleBiletow_id", referencedColumnName="id")
      * })

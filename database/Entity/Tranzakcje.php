@@ -69,9 +69,9 @@ class Tranzakcje
     }
 
     /**
-     * @param \Pracownicy $pracownicy
+     * @param Pracownicy $pracownicy
      */
-    public function setPracownicy(\Pracownicy $pracownicy): void
+    public function setPracownicy(Pracownicy $pracownicy): void
     {
         $this->pracownicy = $pracownicy;
     }
@@ -85,9 +85,9 @@ class Tranzakcje
     }
 
     /**
-     * @param \Promocje $promocje
+     * @param ?romocje $promocje
      */
-    public function setPromocje(\Promocje $promocje): void
+    public function setPromocje(?Promocje $promocje): void
     {
         $this->promocje = $promocje;
     }
@@ -101,9 +101,9 @@ class Tranzakcje
     }
 
     /**
-     * @param \Rodzajeplatnosci $rodzajeplatnosci
+     * @param Rodzajeplatnosci $rodzajeplatnosci
      */
-    public function setRodzajeplatnosci(\Rodzajeplatnosci $rodzajeplatnosci): void
+    public function setRodzajeplatnosci(Rodzajeplatnosci $rodzajeplatnosci): void
     {
         $this->rodzajeplatnosci = $rodzajeplatnosci;
     }
@@ -117,9 +117,9 @@ class Tranzakcje
     }
 
     /**
-     * @param \Seanse $seanse
+     * @param Seanse $seanse
      */
-    public function setSeanse(\Seanse $seanse): void
+    public function setSeanse(Seanse $seanse): void
     {
         $this->seanse = $seanse;
     }

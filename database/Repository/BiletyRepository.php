@@ -47,9 +47,6 @@ class BiletyRepository extends ServiceEntityRepository
             WHERE t.id = :id
             AND smf.seanse = se.id')
         ->setParameter('id', $id);
-
-
-
         return $query->execute();
     }
 

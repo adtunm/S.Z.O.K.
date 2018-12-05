@@ -117,9 +117,9 @@ class Bilety
     }
 
     /**
-     * @param \Vouchery $vouchery
+     * @param ?Vouchery $vouchery
      */
-    public function setVouchery(\Vouchery $vouchery): void
+    public function setVouchery(?Vouchery $vouchery): void
     {
         $this->vouchery = $vouchery;
     }
@@ -133,9 +133,9 @@ class Bilety
     }
 
     /**
-     * @param \Miejsca $miejsca
+     * @param Miejsca $miejsca
      */
-    public function setMiejsca(\Miejsca $miejsca): void
+    public function setMiejsca(Miejsca $miejsca): void
     {
         $this->miejsca = $miejsca;
     }
@@ -149,9 +149,9 @@ class Bilety
     }
 
     /**
-     * @param \Rodzajebiletow $rodzajebiletow
+     * @param Rodzajebiletow $rodzajebiletow
      */
-    public function setRodzajebiletow(\Rodzajebiletow $rodzajebiletow): void
+    public function setRodzajebiletow(Rodzajebiletow $rodzajebiletow): void
     {
         $this->rodzajebiletow = $rodzajebiletow;
     }
@@ -165,9 +165,9 @@ class Bilety
     }
 
     /**
-     * @param \Tranzakcje $tranzakcje
+     * @param Tranzakcje $tranzakcje
      */
-    public function setTranzakcje(\Tranzakcje $tranzakcje): void
+    public function setTranzakcje(Tranzakcje $tranzakcje): void
     {
         $this->tranzakcje = $tranzakcje;
     }
@@ -255,5 +255,38 @@ class Bilety
      */
     private $tranzakcje;
 
+    public function recalculateControlDigit()
+    {
+        $code = "" . $this->tranzakcje->getData()->format("YmdHis") . sprintf("%03d", $this->losowecyfry) . sprintf("%010d", $this->id);
+        $sum = 0;
+        for($i = 0; $i < strlen($code); $i++) {
+            $sum += (int)$code[$i] * ($i % 3 * 3 + 1);
+        }
+        if($sum % 10 == 0) $this->cyfrakontrolna = 0;
+        else $this->cyfrakontrolna = 10 - $sum % 10;
+    }
+
+    public function getCode()
+    {
+        return "" . $this->tranzakcje->getData()->format("YmdHis") . sprintf("%03d", $this->losowecyfry) . sprintf("%010d", $this->id)
+            . $this->cyfrakontrolna;
+    }
+
+    public static function verifyCode(string $code)
+    {
+        $controlDigitFromCode = substr($code, -1);
+        $code = substr($code, 0, -1);
+
+        $sum = 0;
+        for($i = 0; $i < strlen($code); $i++) {
+            $sum += (int)$code[$i] * ($i % 3 * 3 + 1);
+        }
+
+        if($sum % 10 == 0) $controlDigit = 0;
+        else $controlDigit = 10 - $sum % 10;
+
+        if($controlDigit == $controlDigitFromCode) return true;
+        else return false;
+    }
 
 }
