@@ -146,10 +146,10 @@
                                 <td class="my-1">{{ seance.typyseansow }}</td>
                                 <td>
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-primary" style="vertical-align: center">Pokaż
-                                            salę</a>
+                                        <a href="#" class="btn btn-sm btn-primary" style="vertical-align: center">Rezerwacja</a>
+                                        <a href="#" class="btn btn-sm btn-primary" style="vertical-align: center">Sprzedaż</a>
                                         {% if (is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN') ) %}
-                                            <a href="{{ path('workers_app/seances/show', {'id': seance.id}) }}" class="btn btn-primary"
+                                            <a href="{{ path('workers_app/seances/show', {'id': seance.id}) }}" class="btn btn-sm btn-primary"
                                                style="vertical-align: center">Przejdź</a>
                                         {% endif %}
                                     </div>
