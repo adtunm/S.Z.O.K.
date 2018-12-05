@@ -20,7 +20,8 @@ class BiletyRepository extends ServiceEntityRepository
         parent::__construct($registry, Bilety::class);
     }
 
-    public function getTickets($id){
+    public function getTickets($id)
+    {
 
         $entityManager = $this->getEntityManager();
         $query = $entityManager->createQuery(
@@ -48,6 +49,13 @@ class BiletyRepository extends ServiceEntityRepository
             AND smf.seanse = se.id')
         ->setParameter('id', $id);
         return $query->execute();
+    }
+
+    public function findTicketByCode(string $code)
+    {
+        if(strlen($code) < 28 or !Bilety::verifyCode($code)) return NULL;
+        $id = (int) substr($code, 17, -1);
+        return $this->find($id);
     }
 
 }

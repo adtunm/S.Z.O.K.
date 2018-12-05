@@ -111,7 +111,7 @@ class Bilety
     /**
      * @return \Vouchery
      */
-    public function getVouchery(): \Vouchery
+    public function getVouchery(): Vouchery
     {
         return $this->vouchery;
     }
@@ -127,7 +127,7 @@ class Bilety
     /**
      * @return \Miejsca
      */
-    public function getMiejsca(): \Miejsca
+    public function getMiejsca(): Miejsca
     {
         return $this->miejsca;
     }
@@ -143,7 +143,7 @@ class Bilety
     /**
      * @return \Rodzajebiletow
      */
-    public function getRodzajebiletow(): \Rodzajebiletow
+    public function getRodzajebiletow(): Rodzajebiletow
     {
         return $this->rodzajebiletow;
     }
@@ -159,7 +159,7 @@ class Bilety
     /**
      * @return \Tranzakcje
      */
-    public function getTranzakcje(): \Tranzakcje
+    public function getTranzakcje(): Tranzakcje
     {
         return $this->tranzakcje;
     }
@@ -171,6 +171,7 @@ class Bilety
     {
         $this->tranzakcje = $tranzakcje;
     }
+
     /**
      * @var int
      *
@@ -288,5 +289,4 @@ class Bilety
         if($controlDigit == $controlDigitFromCode) return true;
         else return false;
     }
-
 }

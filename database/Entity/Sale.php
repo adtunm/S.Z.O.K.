@@ -105,5 +105,8 @@ class Sale
      */
     private $szerokoscsali;
 
-
+    public function __toString()
+    {
+        return 'Sala '.$this->numersali;
+    }
 }

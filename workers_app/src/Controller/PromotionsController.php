@@ -153,7 +153,7 @@ class PromotionsController extends Controller
                 'attr' => array(
                     'class' => 'form-control',
                     'placeholder' => 'Wprowadź nazwę...',
-                    'pattern' => '[A-Za-z0-9\-ĘÓĄŚŁŻŹĆŃęąśłżźćń ]{5,45}',
+                    'pattern' => '[A-Za-z0-9\-ĘÓĄŚŁŻŹĆŃęóąśłżźćń ]{5,45}',
                     'title' => 'Polskie litery, cyfry, spacje i myślniki, od 5 do 45 znaków'
                 )
             ))

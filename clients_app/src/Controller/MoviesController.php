@@ -57,7 +57,7 @@ class MoviesController extends Controller
     }
 
     /**
-     * @Route("/movies/show/{id<[1-9]\d*>}/{page<[1-9]\d*>?1}", name="workers_app/movies/show", methods={"GET", "POST"})
+     * @Route("/movies/show/{id<[1-9]\d*>}/{page<[1-9]\d*>?1}", name="clients_app/movies/show", methods={"GET", "POST"})
      */
     public function show(Request $request, $id, $page)
     {

@@ -3,12 +3,19 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Kategoriewiekowe
  *
  * @ORM\Table(name="kategoriewiekowe", uniqueConstraints={@ORM\UniqueConstraint(name="idKategorieWiekowe_UNIQUE", columns={"id"}), @ORM\UniqueConstraint(name="nazwa_UNIQUE", columns={"nazwa"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\KategorieWiekoweRepository")
+ * @UniqueEntity(
+ *     fields={"nazwa"},
+ *     errorPath="nazwa",
+ *     message="Podana wartość już istnieje."
+ * )
  */
 class Kategoriewiekowe
 {
@@ -31,7 +38,7 @@ class Kategoriewiekowe
     /**
      * @return string
      */
-    public function getNazwa(): string
+    public function getNazwa(): ?string
     {
         return $this->nazwa;
     }
@@ -72,6 +79,17 @@ class Kategoriewiekowe
      * @var string
      *
      * @ORM\Column(name="nazwa", type="string", length=3, nullable=false)
+     *
+     * @Assert\Regex(
+     *     pattern="/^[\p{L}\d\s\-\/\+]+$/u",
+     *     message="Nazwa powinna się składać tylko z liter, spacji, myślników i cyfr."
+     * )
+     * @Assert\Length(
+     *     max = 3,
+     *     min = 2,
+     *     maxMessage = "Nazwa może zawierać maksymalnie 3 znaków.",
+     *     minMessage = "Nazwa musi zawierać minimum 2 znaki."
+     * )
      */
     private $nazwa;
 
@@ -89,4 +107,5 @@ class Kategoriewiekowe
     {
         return $this->nazwa;
     }
+
 }

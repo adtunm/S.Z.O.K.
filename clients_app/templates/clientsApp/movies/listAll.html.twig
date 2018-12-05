@@ -12,8 +12,8 @@
         </div>
         <div class="row px-5">
             {% for movie in movies %}
-                <a class="col-lg-3 col-sm-6 mb-2 p-3 text-dark hover"
-                   href="{{ path('workers_app/movies/show', {'id': movie.id}) }}">
+                <a class="col-lg-3 col-sm-6 mb-2 pt-4 p-3 text-dark hover"
+                   href="{{ path('clients_app/movies/show', {'id': movie.id}) }}">
                     <div class="col-12 p-2">
                         <img src="{% if movie.plakat %}{{ asset('img/'~movie.plakat) }}{% else %}{{ asset('img/no_poster.jpg') }}{% endif %}"
                              class="img-fluid">

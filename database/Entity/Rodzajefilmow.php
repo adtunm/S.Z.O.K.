@@ -3,12 +3,19 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Rodzajefilmow
  *
  * @ORM\Table(name="rodzajefilmow", uniqueConstraints={@ORM\UniqueConstraint(name="idRodzajFilmu_UNIQUE", columns={"id"}), @ORM\UniqueConstraint(name="nazwa_UNIQUE", columns={"nazwa"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\RodzajeFilmowRepository")
+ * @UniqueEntity(
+ *     fields={"nazwa"},
+ *     errorPath="nazwa",
+ *     message="Podana wartość już istnieje."
+ * )
  */
 class Rodzajefilmow
 {
@@ -31,7 +38,7 @@ class Rodzajefilmow
     /**
      * @return string
      */
-    public function getNazwa(): string
+    public function getNazwa(): ?string
     {
         return $this->nazwa;
     }
@@ -75,6 +82,7 @@ class Rodzajefilmow
     {
         $this->filmy = $filmy;
     }
+
     /**
      * @var int
      *
@@ -88,7 +96,19 @@ class Rodzajefilmow
      * @var string
      *
      * @ORM\Column(name="nazwa", type="string", length=45, nullable=false)
+     *
+     * @Assert\Regex(
+     *     pattern="/^[\p{L}\d\s\-]+$/u",
+     *     message="Nazwa powinna się składać tylko z liter, spacji, myślników i cyfr."
+     * )
+     * @Assert\Length(
+     *     max = 45,
+     *     min = 3,
+     *     maxMessage = "Nazwa może zawierać maksymalnie 45 znaków.",
+     *     minMessage = "Nazwa musi zawierać minimum 3 znaki."
+     * )
      */
+
     private $nazwa;
 
     /**
@@ -112,7 +132,6 @@ class Rodzajefilmow
     {
         $this->filmy = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
     /**
      * @return string
      */
@@ -120,4 +139,5 @@ class Rodzajefilmow
     {
         return $this->nazwa;
     }
+
 }

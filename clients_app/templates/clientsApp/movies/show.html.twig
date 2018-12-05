@@ -69,9 +69,9 @@
                                 <td class="my-1">{{ seance.typyseansow }}</td>
                                 <td>
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-primary"
+                                        <a href="#" class="btn btn-sm btn-primary"
                                            style="vertical-align: center">Zarezerwuj</a>
-                                        <a href="#" class="btn btn-primary"
+                                        <a href="#" class="btn btn-sm btn-primary"
                                            style="vertical-align: center">Kup bilety</a>
                                     </div>
                                 </td>
@@ -84,7 +84,10 @@
                 {% set basePath = path('clients_app/movies/show', {'id': movie.id }) %}
                 {% include 'clientsApp/inc/pagination.html.twig' %}
             {% else %}
-                <p><h3>Brak seansów</h3></p>
+                <h1 class="text-center">Brak seansów</h1>
+                <div class="text-center display-1">
+                    <i class="fa fa-calendar"></i>
+                </div>
             {% endif %}
         </div>
         <a href="{{ path('clients_app/movies') }}" class="btn btn-secondary mt-3 ml-3">

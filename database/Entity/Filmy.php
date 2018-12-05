@@ -188,6 +188,7 @@ class Filmy
     {
         $this->typyseansow = $typyseansow;
     }
+
     /**
      * @var int
      *
@@ -378,4 +379,8 @@ class Filmy
         $this->seansMaFilmy = $seansMaFilmy;
     }
 
+    public function __toString()
+    {
+        return $this->tytul . ' (' . $this->datapremiery->format('Y') . ')';
+    }
 }

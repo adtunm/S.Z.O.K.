@@ -61,17 +61,17 @@ class Tranzakcje
     }
 
     /**
-     * @return \Pracownicy
+     * @return Pracownicy|null
      */
-    public function getPracownicy(): \Pracownicy
+    public function getPracownicy(): ?Pracownicy
     {
         return $this->pracownicy;
     }
 
     /**
-     * @param Pracownicy $pracownicy
+     * @param Pracownicy|null $pracownicy
      */
-    public function setPracownicy(Pracownicy $pracownicy): void
+    public function setPracownicy(?Pracownicy $pracownicy): void
     {
         $this->pracownicy = $pracownicy;
     }
@@ -79,13 +79,13 @@ class Tranzakcje
     /**
      * @return \Promocje
      */
-    public function getPromocje(): \Promocje
+    public function getPromocje(): Promocje
     {
         return $this->promocje;
     }
 
     /**
-     * @param ?romocje $promocje
+     * @param ?Promocje $promocje
      */
     public function setPromocje(?Promocje $promocje): void
     {
@@ -95,7 +95,7 @@ class Tranzakcje
     /**
      * @return \Rodzajeplatnosci
      */
-    public function getRodzajeplatnosci(): \Rodzajeplatnosci
+    public function getRodzajeplatnosci(): Rodzajeplatnosci
     {
         return $this->rodzajeplatnosci;
     }
@@ -111,7 +111,7 @@ class Tranzakcje
     /**
      * @return \Seanse
      */
-    public function getSeanse(): \Seanse
+    public function getSeanse(): Seanse
     {
         return $this->seanse;
     }
@@ -125,17 +125,17 @@ class Tranzakcje
     }
 
     /**
-     * @return \Uzytkownicy
+     * @return Uzytkownicy|null
      */
-    public function getUzytkownicy(): \Uzytkownicy
+    public function getUzytkownicy(): ?Uzytkownicy
     {
         return $this->uzytkownicy;
     }
 
     /**
-     * @param \Uzytkownicy $uzytkownicy
+     * @param Uzytkownicy|null $uzytkownicy
      */
-    public function setUzytkownicy(\Uzytkownicy $uzytkownicy): void
+    public function setUzytkownicy(?Uzytkownicy $uzytkownicy): void
     {
         $this->uzytkownicy = $uzytkownicy;
     }
@@ -215,7 +215,7 @@ class Tranzakcje
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\OneToMany(targetEntity="Bilety", mappedBy="tranzakcje")
+     * @ORM\OneToMany(targetEntity="Bilety", mappedBy="tranzakcje", cascade={"persist"})
      */
     private $bilety;
 
