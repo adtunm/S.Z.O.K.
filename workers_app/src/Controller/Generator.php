@@ -33,6 +33,7 @@ class Generator extends AbstractController
 {
     private $startGeneration = '2018-11-01'; //from when to start generate
     private $endGeneration ='2019-02-01'; //where to end, this day won't be included
+    private $percentageOfNonEmptySeansces = 0.97; //how many seansces need to have transaction and booking from 0.5 to 1
 
     private $revLayout = array(
         1 => array(
@@ -394,10 +395,10 @@ class Generator extends AbstractController
         $counterR = 0;
         $counterT = 0;
 
-        $counterV += $this->pushVouchers(600);
         $counterS += $this->pushSeances($period);
-        $counterR += $this->pushReservations(0.99);
-        $counterT += $this->pushTransaction(0.99);
+        $counterV += $this->pushVouchers($counterS/10 *$this->percentageOfNonEmptySeansces);
+        $counterR += $this->pushReservations($this->percentageOfNonEmptySeansces);
+        $counterT += $this->pushTransaction($this->percentageOfNonEmptySeansces);
         $counterV += $this->pushVouchers(10);
 
         return new Response('<html><body>Wygenerowano: <ul> '

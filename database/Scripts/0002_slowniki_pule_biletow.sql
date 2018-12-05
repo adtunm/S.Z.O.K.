@@ -1,92 +1,105 @@
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`KategorieWiekowe`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`KategorieWiekowe` (`id`, `nazwa`, `usunieto`) VALUES (1, 'N/A', NULL);
-INSERT INTO `SZOK`.`KategorieWiekowe` (`id`, `nazwa`, `usunieto`) VALUES (2, '7+', NULL);
-INSERT INTO `SZOK`.`KategorieWiekowe` (`id`, `nazwa`, `usunieto`) VALUES (3, '12+', NULL);
-INSERT INTO `SZOK`.`KategorieWiekowe` (`id`, `nazwa`, `usunieto`) VALUES (4, '15+', NULL);
-INSERT INTO `SZOK`.`KategorieWiekowe` (`id`, `nazwa`, `usunieto`) VALUES (5, '18+', NULL);
+INSERT INTO `kategoriewiekowe` (`id`, `nazwa`, `usunieto`) VALUES
+(1, 'N/A', NULL),
+(2, '7+', NULL),
+(3, '12+', NULL),
+(4, '15+', NULL),
+(5, '18+', NULL);
 
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`RodzajeFilmow`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (1, 'Film akcji', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (2, 'Przygodowy', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (3, 'Sci-Fi', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (4, 'Fantasy', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (5, 'Komedia', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (6, 'Romans', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (7, 'Horror', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (8, 'Thriller', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (9, 'Dramat', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (10, 'Film animowany', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (11, 'Film biograficzny', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (12, 'Film historyczny', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (13, 'Western', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (14, 'Musical', NULL);
-INSERT INTO `SZOK`.`RodzajeFilmow` (`id`, `nazwa`, `usunieto`) VALUES (15, 'Film dokumentalny', NULL);
+INSERT INTO `rodzajefilmow` (`id`, `nazwa`, `usunieto`) VALUES
+(1, 'Film akcji', NULL),
+(2, 'Przygodowy', NULL),
+(3, 'Sci-Fi', NULL),
+(4, 'Fantasy', NULL),
+(5, 'Komedia', NULL),
+(6, 'Romans', NULL),
+(7, 'Horror', NULL),
+(8, 'Thriller', NULL),
+(9, 'Dramat', NULL),
+(10, 'Film animowany', NULL),
+(11, 'Film biograficzny', NULL),
+(12, 'Film historyczny', NULL),
+(13, 'Western', NULL),
+(14, 'Musical', NULL),
+(15, 'Film dokumentalny', NULL);
 
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`WydarzeniaSpecjalne`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`WydarzeniaSpecjalne` (`id`, `nazwa`, `usunieto`) VALUES (1, 'Maraton', NULL);
-INSERT INTO `SZOK`.`WydarzeniaSpecjalne` (`id`, `nazwa`, `usunieto`) VALUES (2, 'Lejdis Night', NULL);
+INSERT INTO `wydarzeniaspecjalne` (`id`, `nazwa`, `usunieto`) VALUES
+(1, 'Maraton', NULL),
+(2, 'Lejdis Night', NULL);
 
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`TypySeansow`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`TypySeansow` (`id`, `nazwa`, `usunieto`) VALUES (1, '2D Napisy', NULL);
-INSERT INTO `SZOK`.`TypySeansow` (`id`, `nazwa`, `usunieto`) VALUES (2, '3D Napisy', NULL);
-INSERT INTO `SZOK`.`TypySeansow` (`id`, `nazwa`, `usunieto`) VALUES (3, '2D Dubbing', NULL);
-INSERT INTO `SZOK`.`TypySeansow` (`id`, `nazwa`, `usunieto`) VALUES (4, '3D Dubbing', NULL);
+INSERT INTO `typyseansow` (`id`, `nazwa`, `usunieto`) VALUES
+(1, '2D Napisy', NULL),
+(2, '3D Napisy', NULL),
+(3, '2D Dubbing', NULL),
+(4, '3D Dubbing', NULL);
 
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`RodzajeBiletow`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`RodzajeBiletow` (`id`, `nazwa`, `usunieto`) VALUES (1, 'Normalny', NULL);
-INSERT INTO `SZOK`.`RodzajeBiletow` (`id`, `nazwa`, `usunieto`) VALUES (2, 'Ulgowy', NULL);
-INSERT INTO `SZOK`.`RodzajeBiletow` (`id`, `nazwa`, `usunieto`) VALUES (3, 'Studencki', NULL);
+INSERT INTO `rodzajebiletow` (`id`, `nazwa`, `usunieto`) VALUES
+(1, 'Normalny', NULL),
+(2, 'Ulgowy', NULL),
+(3, 'Studencki', NULL);
 
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`Role`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`Role` (`id`, `nazwa`, `usunieto`) VALUES (1, 'Administrator', NULL);
-INSERT INTO `SZOK`.`Role` (`id`, `nazwa`, `usunieto`) VALUES (2, 'Kierownik', NULL);
-INSERT INTO `SZOK`.`Role` (`id`, `nazwa`, `usunieto`) VALUES (3, 'Pracownik', NULL);
+INSERT INTO `role` (`id`, `nazwa`, `usunieto`) VALUES
+(1, 'Administrator', NULL),
+(2, 'Kierownik', NULL),
+(3, 'Pracownik', NULL);
 
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`TypyRzedow`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`TypyRzedow` (`id`, `nazwa`, `usunieto`) VALUES (1, 'zwykle', NULL);
-INSERT INTO `SZOK`.`TypyRzedow` (`id`, `nazwa`, `usunieto`) VALUES (2, 'tylko do kupna', NULL);
+INSERT INTO `typyrzedow` (`id`, `nazwa`, `usunieto`) VALUES
+(1, 'Zwykle', NULL),
+(2, 'Tylko do kupna', NULL);
+
 
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`RodzajePlatnosci`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`RodzajePlatnosci` (`id`, `nazwa`, `usunieto`) VALUES (1, 'Karta płatnicza', NULL);
-INSERT INTO `SZOK`.`RodzajePlatnosci` (`id`, `nazwa`, `usunieto`) VALUES (2, 'Gotówka', NULL);
-INSERT INTO `SZOK`.`RodzajePlatnosci` (`id`, `nazwa`, `usunieto`) VALUES (3, 'Przelew', NULL);
+INSERT INTO `rodzajeplatnosci` (`id`, `nazwa`, `usunieto`) VALUES
+(1, 'Karta płatnicza', NULL),
+(2, 'Gotówka', NULL),
+(3, 'Przelew', NULL);
 
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`PuleBiletow`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`PuleBiletow` (`id`, `nazwa`, `usunieto`) VALUES (1, 'Zwykłe 2d', NULL);
-INSERT INTO `SZOK`.`PuleBiletow` (`id`, `nazwa`, `usunieto`) VALUES (2, 'Zwykłe 3d', NULL);
-INSERT INTO `SZOK`.`PuleBiletow` (`id`, `nazwa`, `usunieto`) VALUES (3, 'Weekend 2d', NULL);
-INSERT INTO `SZOK`.`PuleBiletow` (`id`, `nazwa`, `usunieto`) VALUES (4, 'Weekend 3d', NULL);
+INSERT INTO `pulebiletow` (`id`, `nazwa`, `usunieto`) VALUES
+(1, 'Zwykłe 2d', NULL),
+(2, 'Zwykłe 3d', NULL),
+(3, 'Weekend 2d', NULL),
+(4, 'Weekend 3d', NULL);
 
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`PulaBiletow_ma_RodzajeBiletow`
 -- -----------------------------------------------------
-INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (1, 1, 1, 20.00);
-INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (2, 1, 2, 17.00);
-INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (3, 1, 3, 15.00);
-INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (4, 2, 1, 30.00);
-INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (5, 2, 2, 25.00);
-INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (6, 2, 3, 20.00);
-INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (7, 3, 1, 25.00);
-INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (8, 3, 2, 22.00);
-INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (9, 3, 3, 19.00);
-INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (10, 4, 1, 35.00);
-INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (11, 4, 2, 30.00);
-INSERT INTO `SZOK`.`PulaBiletow_ma_RodzajeBiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES (12, 4, 3, 27.00);
+INSERT INTO `pulabiletow_ma_rodzajebiletow` (`id`, `PuleBiletow_id`, `RodzajeBiletow_id`, `cena`) VALUES
+(1, 1, 1, '20.00'),
+(2, 1, 2, '17.00'),
+(3, 1, 3, '15.00'),
+(4, 2, 1, '30.00'),
+(5, 2, 2, '25.00'),
+(6, 2, 3, '20.00'),
+(7, 3, 1, '25.00'),
+(8, 3, 2, '22.00'),
+(9, 3, 3, '19.00'),
+(10, 4, 1, '35.00'),
+(11, 4, 2, '30.00'),
+(12, 4, 3, '27.00');
+
+COMMIT;
