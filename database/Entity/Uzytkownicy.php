@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * Uzytkownicy
  *
  * @ORM\Table(name="uzytkownicy", uniqueConstraints={@ORM\UniqueConstraint(name="idUzytkownicy_UNIQUE", columns={"id"}), @ORM\UniqueConstraint(name="login_UNIQUE", columns={"login"}), @ORM\UniqueConstraint(name="email_UNIQUE", columns={"email"}), @ORM\UniqueConstraint(name="telefon_UNIQUE", columns={"telefon"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\UzytkownicyRepository")
  */
 class Uzytkownicy implements UserInterface
 {

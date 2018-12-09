@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Tranzakcje
  *
  * @ORM\Table(name="tranzakcje", uniqueConstraints={@ORM\UniqueConstraint(name="idTranzakcje_UNIQUE", columns={"id"})}, indexes={@ORM\Index(name="fk_Tranzakcje_RodzajePlatnosci1_idx", columns={"RodzajePlatnosci_id"}), @ORM\Index(name="fk_Tranzakcje_Uzytkownicy1_idx", columns={"Uzytkownicy_id"}), @ORM\Index(name="fk_Tranzakcje_Pracownicy1_idx", columns={"Pracownicy_id"}), @ORM\Index(name="fk_Tranzakcje_Promocje1_idx", columns={"Promocje_id"}), @ORM\Index(name="fk_Tranzakcje_Seanse1_idx", columns={"Seanse_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\TranzakcjeRepository")
  */
 class Tranzakcje
 {
@@ -77,7 +77,7 @@ class Tranzakcje
     }
 
     /**
-     * @return \Promocje
+     * @return Promocje
      */
     public function getPromocje(): Promocje
     {
@@ -85,7 +85,7 @@ class Tranzakcje
     }
 
     /**
-     * @param \Promocje $promocje
+     * @param Promocje $promocje
      */
     public function setPromocje(Promocje $promocje): void
     {
@@ -93,7 +93,7 @@ class Tranzakcje
     }
 
     /**
-     * @return \Rodzajeplatnosci
+     * @return Rodzajeplatnosci
      */
     public function getRodzajeplatnosci(): Rodzajeplatnosci
     {
@@ -233,5 +233,15 @@ class Tranzakcje
     public function setBilety(\Doctrine\Common\Collections\Collection $bilety): void
     {
         $this->bilety = $bilety;
+    }
+
+    public function getSum()
+    {
+        $sum=0.00;
+        foreach ($this->bilety->getIterator() as $ticket)
+        {
+            $sum+=$ticket->getCena();
+        }
+        return $sum;
     }
 }
