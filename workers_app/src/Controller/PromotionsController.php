@@ -143,9 +143,6 @@ class PromotionsController extends Controller
      */
     private function getForm(Promocje $promotion)
     {
-        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
-            return $this->redirectToRoute('workers_app/logout_page');
-        }
         return $this->createFormBuilder($promotion)
             ->add('nazwa', TextType::class, array(
                 'label' => 'Nazwa promocji:',

@@ -307,7 +307,7 @@ class Generator extends AbstractController
         'Dębek', 'Kubala', 'Chrobak', 'Dzika', 'Dziekan', 'Kotlińska', 'Kantorska', 'Wadas', 'Czopek', 'Kociołek',
     );
 
-    private $emaildomains = array(
+    private $emailDomains = array(
         'gmail.com', 'yahoo.com', 'hotmail.com', 'wp.pl', 'poczta.onet.pl', 'o2.pl', 'interia.pl', 'op.pl', 'tlen.pl',
         'poczta.fm', 'gazeta.pl', 'go2.pl'
     );
@@ -343,7 +343,7 @@ class Generator extends AbstractController
 
         $data['email'] = strtolower(strtr($data['name'], $this->polishCharsSwap)) . "."
             . strtolower(strtr($data['surname'], $this->polishCharsSwap)) . '@'
-            . $this->emaildomains[rand(0, count($this->emaildomains) - 1)];
+            . $this->emailDomains[rand(0, count($this->emailDomains) - 1)];
         $data['phone'] = "" . rand(4, 9) . rand(0, 9) . rand(0, 9)
             . rand(0, 9) . rand(0, 9) . rand(0, 9)
             . rand(0, 9) . rand(0, 9) . rand(0, 9);
@@ -396,10 +396,10 @@ class Generator extends AbstractController
         $counterT = 0;
 
         $counterS += $this->pushSeances($period);
-        $counterV += $this->pushVouchers($counterS/10 *$this->percentageOfNonEmptySeances);
+        $counterV += $this->pushVouchers($counterS/10 *$this->percentageOfNonEmptySeances, 0);
         $counterR += $this->pushReservations($this->percentageOfNonEmptySeances);
         $counterT += $this->pushTransaction($this->percentageOfNonEmptySeances);
-        $counterV += $this->pushVouchers(10);
+        $counterV += $this->pushVouchers(20, 1);
 
         return new Response('<html><body>Wygenerowano: <ul> '
             . '<li>' . $counterS . ' seansów</li>'
@@ -411,7 +411,7 @@ class Generator extends AbstractController
             . '</body></html>');
     }
 
-    public function pushVouchers($numberOfPushes)
+    public function pushVouchers($numberOfPushes, $pushNumber)
     {
         set_time_limit(10000000);
         $counter = 0;
@@ -419,9 +419,11 @@ class Generator extends AbstractController
         $promotionStart = \DateTime::createFromFormat('Y-m-d', $this->startGeneration);
         $promotionEnd = \DateTime::createFromFormat('Y-m-d', $this->endGeneration);
         for($i = 0; $i < $numberOfPushes; $i++) {
-            $voucherCount = rand(1, 50);
+            $voucherCount = rand(1, 150);
             $generationDate = new \DateTime();
             $generationDate->setDate(2017, 10, 1);
+            $generationDate->setTime(10,34,21);
+            $generationDate->add(new \DateInterval('P'. $pushNumber*8 .'T' . ($i*2 +1) . 'M'. $i .'S'));
             $money = (boolean)rand(0, 1);
             for($j = 0; $j < $voucherCount; $j++) {
                 $voucher = new Vouchery();

@@ -57,7 +57,9 @@ class BiletyRepository extends ServiceEntityRepository
     {
         if(strlen($code) < 28 or !Bilety::verifyCode($code)) return NULL;
         $id = (int) substr($code, 17, -1);
-        return $this->find($id);
+        $ticket = $this->find($id);
+        if(!$ticket or $ticket->getCode() != $code) return NULL;
+        return $ticket;
     }
 
 }
