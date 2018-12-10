@@ -27,6 +27,7 @@ class TranzakcjeRepository extends ServiceEntityRepository
         $query = $this->createQueryBuilder('t')
             ->andWhere('t.uzytkownicy = :user')
             ->setParameter('user', $user)
+            ->orderBy('t.id', 'DESC')
             ->getQuery();
 
         $requestedPage = new Paginator($query);

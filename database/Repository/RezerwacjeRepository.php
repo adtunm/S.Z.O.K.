@@ -99,6 +99,7 @@ class RezerwacjeRepository extends ServiceEntityRepository
         $query = $this->createQueryBuilder('r')
             ->andWhere('r.uzytkownicy = :user')
             ->setParameter('user', $user)
+            ->orderBy('r.id', 'DESC')
             ->getQuery();
 
         $requestedPage = new Paginator($query);

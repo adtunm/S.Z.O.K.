@@ -4,13 +4,13 @@
         {% set nextPage = currentPageRes + 1 %}
         <div class="d-block d-sm-none">
             {% if currentPageRes > 1 %}
-                <a href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: previousPage}) }}"
+                <a href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: previousPage}) }}"
                    class="btn btn-primary btn-sm">
                     <i class="fa fa-angle-left" aria-hidden="true"></i> Wstecz
                 </a>
             {% endif %}
             {% if currentPageRes < pageCountRes %}
-                <a href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: nextPage}) }}"
+                <a href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: nextPage}) }}"
                    class="btn btn-primary btn-sm pull-right">
                     Dalej <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </a>
@@ -28,7 +28,7 @@
                 {% else %}
                     <li class="page-item">
                         <a class="page-link"
-                           href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: previousPage}) }}"
+                           href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: previousPage}) }}"
                            aria-label="Wstecz">
                             <i class="fa fa-angle-left" aria-hidden="true"></i>
                             <span class="sr-only">Wstecz</span>
@@ -39,14 +39,14 @@
                 {% if pageCountRes < 7 %}
                     {% for i in range(1, pageCountRes) %}
                         <li class="page-item{% if i == currentPageRes %} active{% endif %}">
-                            <a href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: i}) }}"
+                            <a href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: i}) }}"
                                class="page-link">{{ i }}</a>
                         </li>
                     {% endfor %}
                 {% elseif previousPage < 3 %}
                     {% for i in range(1, 4) %}
                         <li class="page-item{% if i == currentPageRes %} active{% endif %}">
-                            <a href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: i}) }}"
+                            <a href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: i}) }}"
                                class="page-link">{{ i }}</a>
                         </li>
                     {% endfor %}
@@ -54,12 +54,12 @@
                         <a href="#" class="page-link">&hellip;</a>
                     </li>
                     <li class="page-item">
-                        <a href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: pageCountRes}) }}"
+                        <a href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: pageCountRes}) }}"
                            class="page-link">{{ pageCountRes }}</a>
                     </li>
                 {% elseif nextPage > pageCountRes-2 %}
                     <li class="page-item">
-                        <a href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: 1}) }}"
+                        <a href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: 1}) }}"
                            class="page-link">1</a>
                     </li>
                     <li class="page-item disabled">
@@ -67,13 +67,13 @@
                     </li>
                     {% for i in range(pageCountRes-3, pageCountRes) %}
                         <li class="page-item{% if i == currentPageRes %} active{% endif %}">
-                            <a href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: i}) }}"
+                            <a href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: i}) }}"
                                class="page-link">{{ i }}</a>
                         </li>
                     {% endfor %}
                 {% else %}
                     <li class="page-item">
-                        <a href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: 1}) }}"
+                        <a href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: 1}) }}"
                            class="page-link">1</a>
                     </li>
                     <li class="page-item disabled">
@@ -81,20 +81,20 @@
                     </li>
 
                     <li class="page-item">
-                        <a href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: previousPage}) }}" class="page-link">{{ previousPage }}</a>
+                        <a href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: previousPage}) }}" class="page-link">{{ previousPage }}</a>
                     </li>
                     <li class="page-item active">
-                        <a href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: currentPageRes}) }}" class="page-link">{{ currentPageRes }}</a>
+                        <a href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: currentPageRes}) }}" class="page-link">{{ currentPageRes }}</a>
                     </li>
                     <li class="page-item">
-                        <a href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: nextPage}) }}" class="page-link">{{ nextPage }}</a>
+                        <a href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: nextPage}) }}" class="page-link">{{ nextPage }}</a>
                     </li>
 
                     <li class="page-item disabled">
                         <a href="#" class="page-link">&hellip;</a>
                     </li>
                     <li class="page-item">
-                        <a href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: pageCountRes}) }}" class="page-link">{{ pageCountRes }}</a>
+                        <a href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: pageCountRes}) }}" class="page-link">{{ pageCountRes }}</a>
                     </li>
                 {% endif %}
                 {% if currentPageRes == pageCountRes %}
@@ -107,7 +107,7 @@
                 {% else %}
                     <li class="page-item">
                         <a class="page-link"
-                           href="{{ path('workers_app/clients/show', {id: client.id, pgTra: currentPageTra, pgRes: nextPage}) }}"
+                           href="{{ path('workers_app/clients/show', {id: client.id, pageTra: currentPageTra, pageRes: nextPage}) }}"
                            aria-label="Dalej">
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                             <span class="sr-only">Dalej</span>

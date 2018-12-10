@@ -2,14 +2,22 @@
 
 {% block content %}
     <div class="row pb-4 mt-0">
-        <div class="h1 col-md">Lista użytkowników</div>
-            <div class="col-md">
-                {% if blocked %}
-                <a href="{{ path("workers_app/clients") }}" class="btn btn-primary pull-right">Wyświetl aktywnych użytkowników</a>
-                {% else %}
-                <a href="{{ path("workers_app/clients/blocked") }}" class="btn btn-primary pull-right">Wyświetl zablokowanych użytkowników</a>
-                {% endif %}
-            </div>
+        <div class="h1 col-md">
+            {% if blocked %}
+                Zablokowani użytkownicy
+            {% else %}
+                Aktywni użytkownicy
+            {% endif %}
+        </div>
+        <div class="col-md">
+            {% if blocked %}
+                <a href="{{ path("workers_app/clients") }}" class="btn btn-primary pull-right">Wyświetl aktywnych
+                    użytkowników</a>
+            {% else %}
+                <a href="{{ path("workers_app/clients/blocked") }}" class="btn btn-primary pull-right">Wyświetl
+                    zablokowanych użytkowników</a>
+            {% endif %}
+        </div>
     </div>
     {% if currentPage %}
         <div style="overflow-x: auto ">
@@ -23,7 +31,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for client in clientList  %}
+                {% for client in clientList %}
                     <tr>
                         <td>{{ client.id }}</td>
                         <td>{{ client.imie }}</td>

@@ -49,7 +49,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-6">Płeć:</div>
-                    <div class="col-sm-6 pl-sm-2">{% if client.czykobieta %}kobieta{% else %}mężczyzna{% endif %}</div>
+                    <div class="col-sm-6 pl-sm-2">{% if client.czykobieta %}Kobieta{% else %}Mężczyzna{% endif %}</div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-6">Status:</div>
@@ -57,9 +57,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
+        <div class="row pt-3">
+            <div class="col-lg-6">
+                <div class="h5 pb-2">Rezerwacje: </div>
                 {% if pageCountRes > 0 %}
+                    <div style="overflow-x: auto">
                     <table class="table">
                         <thead>
                         <tr>
@@ -98,6 +100,7 @@
                         {% endfor %}
                         </tbody>
                     </table>
+                    </div>
                 {% else %}
                     <h1 class="text-center">Brak rezerwacji</h1>
                     <div class="text-center display-1">
@@ -106,8 +109,10 @@
                 {% endif %}
                 {% include 'workersApp/inc/paginationRes.html.twig' %}
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
+                <div class="h5 pb-2">Transakcje: </div>
                 {% if pageCountTra > 0 %}
+                    <div style="overflow-x: auto">
                     <table class="table">
                         <thead>
                         <tr>
@@ -146,6 +151,7 @@
                         {% endfor %}
                         </tbody>
                     </table>
+                    </div>
                 {% else %}
                     <h1 class="text-center">Brak transakcji</h1>
                     <div class="text-center display-1">
@@ -247,7 +253,7 @@
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">
                             Anuluj
                         </button>
-                        <button type="button" id="act-user" class="btn btn-danger"
+                        <button type="button" id="act-user" class="btn btn-primary"
                                 data-id="{{ client.id }}">
                             <i id="spinner{{ client.id }}"></i>
                             {% if client.czyzablokowany %}

@@ -81,9 +81,9 @@ class ClientsController extends AbstractController
     }
 
     /**
-     * @Route("/clients/show/{id<[1-9]\d*>},{pgTra<[1-9]\d*>?1},{pgRes<[1-9]\d*>?1}", name="workers_app/clients/show")
+     * @Route("/clients/show/{id<[1-9]\d*>},{pageTra<[1-9]\d*>?1},{pageRes<[1-9]\d*>?1}", name="workers_app/clients/show")
      */
-    public function show($id, $pgTra, $pgRes)
+    public function show($id, $pageTra, $pageRes)
     {
         if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
             return $this->redirectToRoute('workers_app/logout_page');
@@ -91,22 +91,25 @@ class ClientsController extends AbstractController
         if ($this->isGranted('ROLE_ADMIN')) {
             $pageLimit = 5;
             $client = $this->getDoctrine()->getRepository(Uzytkownicy::class)->find($id);
-            $reservations = $this->getDoctrine()->getRepository(Rezerwacje::class)->getClientReservationsPage($client, $pgRes, $pageLimit);
-            $transactions = $this->getDoctrine()->getRepository(Tranzakcje::class)->getClientTransactionsPage($client, $pgTra, $pageLimit);
+            if (!isset($client)) {
+                return $this->redirectToRoute('workers_app/no_permission');
+            }
+            $reservations = $this->getDoctrine()->getRepository(Rezerwacje::class)->getClientReservationsPage($client, $pageRes, $pageLimit);
+            $transactions = $this->getDoctrine()->getRepository(Tranzakcje::class)->getClientTransactionsPage($client, $pageTra, $pageLimit);
             $pageCountRes = $this->getDoctrine()->getRepository(Rezerwacje::class)->getClientReservationsPageCount($client, $pageLimit);
             $pageCountTra = $this->getDoctrine()->getRepository(Tranzakcje::class)->getClientTransactionsPageCount($client, $pageLimit);
 
             $error = null;
-            if ($pgRes > $pageCountRes and $pageCountRes != 0) {
-                $pgRes = 1;
+            if ($pageRes > $pageCountRes and $pageCountRes != 0) {
+                $pageRes = 1;
                 $error = 1;
             }
-            if ($pgTra > $pageCountTra and $pageCountTra != 0) {
-                $pgTra = 1;
+            if ($pageTra > $pageCountTra and $pageCountTra != 0) {
+                $pageTra = 1;
                 $error = 1;
             }
             if ($error) {
-                return $this->redirectToRoute('workers_app/clients/show', array('id' => $id, 'pgTra' => $pgTra, 'pgRes' => $pgRes));
+                return $this->redirectToRoute('workers_app/clients/show', array('id' => $id, 'pgTra' => $pageTra, 'pgRes' => $pageRes));
             } else {
                 return $this->render('workersApp/clients/show.html.twig', array(
                     'client' => $client,
@@ -114,8 +117,8 @@ class ClientsController extends AbstractController
                     'reservations' => $reservations,
                     'pageCountRes' => $pageCountRes,
                     'pageCountTra' => $pageCountTra,
-                    'currentPageTra' => $pgTra,
-                    'currentPageRes' => $pgRes
+                    'currentPageTra' => $pageTra,
+                    'currentPageRes' => $pageRes
                 ));
             }
         } else {
@@ -131,11 +134,11 @@ class ClientsController extends AbstractController
      */
     public function deleteUser($id)
     {
-        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
-            return $this->redirectToRoute('workers_app/logout_page');
-        }
         if ($this->isGranted('ROLE_ADMIN')) {
             $user = $this->getDoctrine()->getRepository(Uzytkownicy::class)->find($id);
+            if (!isset($user)) {
+                return $this->redirectToRoute('workers_app/no_permission');
+            }
             $reservations = $this->getDoctrine()->getRepository(Rezerwacje::class)->findBy(array('uzytkownicy' => $id));
             $entityManager = $this->getDoctrine()->getManager();
             foreach ($reservations as $key => $reservation) {
@@ -152,12 +155,6 @@ class ClientsController extends AbstractController
             }
             $entityManager->remove($user);
             $entityManager->flush();
-            return $this->redirectToRoute('workers_app/clients');
-        } else {
-            if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->redirectToRoute('workers_app/no_permission');
-            else
-                return $this->redirectToRoute('workers_app/login_page');
         }
     }
 
@@ -166,19 +163,22 @@ class ClientsController extends AbstractController
      *      name="workers_app/clients/block",
      *      requirements={"action":"block"},
      *      methods={"DELETE"})
+
      *
      * @Route("/clients/{action?unblock}/{id<[1-9]\d*>}",
      *      name="workers_app/clients/unblock",
      *      requirements={"action":"unblock"},
      *      methods={"DELETE"})
      */
+
+//*      methods={"DELETE"})
     public function blockUser($id, $action)
     {
-        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
-            return $this->redirectToRoute('workers_app/logout_page');
-        }
         if ($this->isGranted('ROLE_ADMIN')) {
             $user = $this->getDoctrine()->getRepository(Uzytkownicy::class)->find($id);
+            if (!isset($user)) {
+                return $this->redirectToRoute('workers_app/no_permission');
+            }
             $entityManager = $this->getDoctrine()->getManager();
             if ($action == 'block' && ($user->getCzyzablokowany() == 0 || $user->getCzyzablokowany() == null))
                 $user->setCzyzablokowany(1);
@@ -186,12 +186,6 @@ class ClientsController extends AbstractController
                 $user->setCzyzablokowany(null);
 
             $entityManager->flush();
-            return $this->redirectToRoute('workers_app/clients');
-        } else {
-            if ($this->isGranted('IS_AUTHENTICATED_FULLY'))
-                return $this->redirectToRoute('workers_app/no_permission');
-            else
-                return $this->redirectToRoute('workers_app/login_page');
         }
     }
 }
