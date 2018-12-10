@@ -32,7 +32,7 @@ use Symfony\Component\Validator\Constraints\DateTime;
 class Generator extends AbstractController
 {
     private $startGeneration = '2018-11-01'; //from when to start generate
-    private $endGeneration ='2019-02-01'; //where to end, this day won't be included
+    private $endGeneration = '2019-02-01'; //where to end, this day won't be included
     private $percentageOfNonEmptySeances = 0.97; //how many seansces need to have transaction and booking from 0.5 to 1
 
     private $revLayout = array(
@@ -354,9 +354,9 @@ class Generator extends AbstractController
         return $data;
     }
 
-//    /**
-//     * @Route("/generator")
-//     */
+    /**
+     * @Route("/generator")
+     */
     public function generator()
     {
         set_time_limit(100000000);
@@ -396,7 +396,7 @@ class Generator extends AbstractController
         $counterT = 0;
 
         $counterS += $this->pushSeances($period);
-        $counterV += $this->pushVouchers($counterS/10 *$this->percentageOfNonEmptySeances, 0);
+        $counterV += $this->pushVouchers($counterS / 10 * $this->percentageOfNonEmptySeances, 0);
         $counterR += $this->pushReservations($this->percentageOfNonEmptySeances);
         $counterT += $this->pushTransaction($this->percentageOfNonEmptySeances);
         $counterV += $this->pushVouchers(20, 1);
@@ -422,8 +422,8 @@ class Generator extends AbstractController
             $voucherCount = rand(1, 150);
             $generationDate = new \DateTime();
             $generationDate->setDate(2017, 10, 1);
-            $generationDate->setTime(10,34,21);
-            $generationDate->add(new \DateInterval('P'. $pushNumber*8 .'T' . ($i*2 +1) . 'M'. $i .'S'));
+            $generationDate->setTime(10, 34, 21);
+            $generationDate->add(new \DateInterval('P' . ($pushNumber * 8) . 'T' . ($i * 2 + 1) . 'M' . $i . 'S'));
             $money = (boolean)rand(0, 1);
             for($j = 0; $j < $voucherCount; $j++) {
                 $voucher = new Vouchery();
@@ -442,17 +442,17 @@ class Generator extends AbstractController
                 $entityManager->persist($voucher);
                 array_push($this->vouchers, $voucher);
                 $counter++;
-                if($counter%5000 == 0)
+                if($counter % 5000 == 0)
                     $entityManager->flush();
             }
         }
         $entityManager->flush();
-        $counter2 =0;
+        $counter2 = 0;
         foreach($this->vouchers AS $voucher) {
             $voucher->recalculateControlDigit();
             $entityManager->merge($voucher);
             $counter2++;
-            if($counter2%5000 == 0)
+            if($counter2 % 5000 == 0)
                 $entityManager->flush();
         }
         $entityManager->flush();
@@ -603,7 +603,7 @@ class Generator extends AbstractController
                 $entityManager->persist($booking);
                 $count++;
 
-                if($count%5000 == 0)
+                if($count % 5000 == 0)
                     $entityManager->flush();
             }
         }
@@ -854,7 +854,7 @@ class Generator extends AbstractController
 
                         $counter++;
                     }
-                    if($counter%5000 == 0)
+                    if($counter % 5000 == 0)
                         $entityManager->flush();
                     $diff++;
                 }
@@ -871,7 +871,7 @@ class Generator extends AbstractController
             }
             $entityManager->merge($transaction);
             $counter2++;
-            if($counter2%10000 == 0)
+            if($counter2 % 10000 == 0)
                 $entityManager->flush();
         }
 
