@@ -354,9 +354,9 @@ class Generator extends AbstractController
         return $data;
     }
 
-    /**
-     * @Route("/generator")
-     */
+//    /**
+//     * @Route("/generator")
+//     */
     public function generator()
     {
         set_time_limit(100000000);
