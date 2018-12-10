@@ -423,7 +423,7 @@ class Generator extends AbstractController
             $generationDate = new \DateTime();
             $generationDate->setDate(2017, 10, 1);
             $generationDate->setTime(8, 34, 21);
-            $generationDate->add(new \DateInterval('PT' . ($pushNumber * 8) . 'H' . ($i * 2 + 1) . 'M' . $i . 'S'));
+            $generationDate->add(new \DateInterval('PT' . ($pushNumber * 10) . 'H' . ($i * 2 + 1) . 'M' . $i . 'S'));
             $money = (boolean)rand(0, 1);
             for($j = 0; $j < $voucherCount; $j++) {
                 $voucher = new Vouchery();
