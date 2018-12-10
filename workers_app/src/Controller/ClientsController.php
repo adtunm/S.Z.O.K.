@@ -91,7 +91,7 @@ class ClientsController extends AbstractController
         if ($this->isGranted('ROLE_ADMIN')) {
             $pageLimit = 5;
             $client = $this->getDoctrine()->getRepository(Uzytkownicy::class)->find($id);
-            if (!isset($client)) {
+            if (!$client) {
                 return $this->redirectToRoute('workers_app/no_permission');
             }
             $reservations = $this->getDoctrine()->getRepository(Rezerwacje::class)->getClientReservationsPage($client, $pageRes, $pageLimit);
@@ -136,25 +136,23 @@ class ClientsController extends AbstractController
     {
         if ($this->isGranted('ROLE_ADMIN')) {
             $user = $this->getDoctrine()->getRepository(Uzytkownicy::class)->find($id);
-            if (!isset($user)) {
-                return $this->redirectToRoute('workers_app/no_permission');
+            if ($user) {
+                $reservations = $this->getDoctrine()->getRepository(Rezerwacje::class)->findBy(array('uzytkownicy' => $id));
+                $entityManager = $this->getDoctrine()->getManager();
+                foreach ($reservations as $key => $reservation) {
+                    $reservation->setUzytkownicy(null);
+                    $reservation->setCzyodwiedzajacy(1);
+                    $entityManager->merge($reservation);
+                }
+                $transactions = $this->getDoctrine()->getRepository(Tranzakcje::class)->findBy(array('uzytkownicy' => $id));
+                foreach ($transactions as $key => $transaction) {
+                    $transaction->setUzytkownicy(null);
+                    $transaction->setCzyodwiedzajacy(1);
+                    $entityManager->merge($transaction);
+                }
+                $entityManager->remove($user);
+                $entityManager->flush();
             }
-            $reservations = $this->getDoctrine()->getRepository(Rezerwacje::class)->findBy(array('uzytkownicy' => $id));
-            $entityManager = $this->getDoctrine()->getManager();
-            foreach ($reservations as $key => $reservation) {
-                $reservation->setUzytkownicy(null);
-                $reservation->setCzyodwiedzajacy(1);
-                $entityManager->merge($reservation);
-            }
-
-            $transactions = $this->getDoctrine()->getRepository(Tranzakcje::class)->findBy(array('uzytkownicy' => $id));
-            foreach ($transactions as $key => $transaction) {
-                $transaction->setUzytkownicy(null);
-                $transaction->setCzyodwiedzajacy(1);
-                $entityManager->merge($transaction);
-            }
-            $entityManager->remove($user);
-            $entityManager->flush();
         }
     }
 
@@ -171,21 +169,19 @@ class ClientsController extends AbstractController
      *      methods={"DELETE"})
      */
 
-//*      methods={"DELETE"})
     public function blockUser($id, $action)
     {
         if ($this->isGranted('ROLE_ADMIN')) {
             $user = $this->getDoctrine()->getRepository(Uzytkownicy::class)->find($id);
-            if (!isset($user)) {
-                return $this->redirectToRoute('workers_app/no_permission');
-            }
-            $entityManager = $this->getDoctrine()->getManager();
-            if ($action == 'block' && ($user->getCzyzablokowany() == 0 || $user->getCzyzablokowany() == null))
-                $user->setCzyzablokowany(1);
-            elseif ($action == 'unblock' && $user->getCzyzablokowany() == 1)
-                $user->setCzyzablokowany(null);
+            if ($user) {
+                $entityManager = $this->getDoctrine()->getManager();
+                if ($action == 'block' && ($user->getCzyzablokowany() == 0 || $user->getCzyzablokowany() == null))
+                    $user->setCzyzablokowany(1);
+                elseif ($action == 'unblock' && $user->getCzyzablokowany() == 1)
+                    $user->setCzyzablokowany(null);
 
-            $entityManager->flush();
+                $entityManager->flush();
+            }
         }
     }
 }
