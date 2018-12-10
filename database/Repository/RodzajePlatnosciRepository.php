@@ -9,7 +9,6 @@
 namespace App\Repository;
 
 
-use App\Entity\Kategoriewiekowe;
 use App\Entity\Rodzajeplatnosci;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
