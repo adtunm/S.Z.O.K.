@@ -113,16 +113,14 @@ class TicketController extends AbstractController
                         if (!$error) {
                             $entityManager = $this->getDoctrine()->getManager();
                             $entityManager->persist($nowaPula);
-                            $entityManager->flush();
                             foreach ($keep as $key => $value) {
                                 $pulaMaRodzaj = new PulabiletowMaRodzajebiletow();
                                 $pulaMaRodzaj->setCena($prices[$key]);
                                 $pulaMaRodzaj->setRodzajebiletow($this->getDoctrine()->getRepository(Rodzajebiletow::class)->find($key));
                                 $pulaMaRodzaj->setPulebiletow($nowaPula);
-                                $entityManager = $this->getDoctrine()->getManager();
                                 $entityManager->persist($pulaMaRodzaj);
-                                $entityManager->flush();
                             }
+                            $entityManager->flush();
                             return $this->redirectToRoute('workers_app/tickets/pools/show', array('id' => $nowaPula->getId()));
                         }
                         return $this->render('workersApp/tickets/add_edit.html.twig', array(
@@ -207,7 +205,6 @@ class TicketController extends AbstractController
                 $form->handleRequest($request);
                 if ($form->isSubmitted()) {
                     $prices = $request->get('form_price');
-                    //var_dump($prices);
                     foreach ($rodzajeBiletow as $id => $nazwa) {
                         if (!isset($prices[$nazwa->getId()])) {
                             $prices[$nazwa->getId()] = null;
@@ -232,20 +229,15 @@ class TicketController extends AbstractController
                     }
                     if ($form->isValid()) {
                         if ($prices and $keep = $request->get('form_keep')) {
-                            var_dump(isset($keep));
                             if (!$error) {
                                 $entityManager = $this->getDoctrine()->getManager();
                                 $entityManager->persist($Pula);
-                                $entityManager->flush();
                                 foreach ($wartosci as $key => $value) {
                                     if(!is_null($wartosci[$key]['cena']) && !is_null($wartosci[$key]['idPMR']))
                                     {
                                         $pmr=$this->getDoctrine()->getRepository(PulabiletowMaRodzajebiletow::class)->find($wartosci[$key]['idPMR']);
                                         $pmr->setCena($wartosci[$key]['cena']);
-
-                                        $entityManager = $this->getDoctrine()->getManager();
                                         $entityManager->merge($pmr);
-                                        $entityManager->flush();
                                     }
                                     elseif(!is_null($wartosci[$key]['cena']) && is_null($wartosci[$key]['idPMR']))
                                     {
@@ -253,20 +245,15 @@ class TicketController extends AbstractController
                                         $pmr->setCena($wartosci[$key]['cena']);
                                         $pmr->setRodzajebiletow($this->getDoctrine()->getRepository(Rodzajebiletow::class)->find($wartosci[$key]['idRodzajBiletu']));
                                         $pmr->setPulebiletow($Pula);
-
-                                        $entityManager = $this->getDoctrine()->getManager();
                                         $entityManager->persist($pmr);
-                                        $entityManager->flush();
                                     }
                                     elseif(is_null($wartosci[$key]['cena']) && !is_null($wartosci[$key]['idPMR']))
                                     {
                                         $pmr=$this->getDoctrine()->getRepository(PulabiletowMaRodzajebiletow::class)->find($wartosci[$key]['idPMR']);
-
-                                        $entityManager = $this->getDoctrine()->getManager();
                                         $entityManager->remove($pmr);
-                                        $entityManager->flush();
                                     }
                                 }
+                                $entityManager->flush();
                                 return $this->redirectToRoute('workers_app/tickets/pools/show', array('id' => $pulaId));
                             }
                             return $this->render('workersApp/tickets/add_edit.html.twig', array(
