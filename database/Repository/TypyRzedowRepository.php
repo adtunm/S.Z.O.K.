@@ -9,16 +9,16 @@
 namespace App\Repository;
 
 
-use App\Entity\Role;
+use App\Entity\Typyrzedow;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 
-class RoleRepository  extends ServiceEntityRepository
+class TypyRzedowRepository  extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, Role::class);
+        parent::__construct($registry, Typyrzedow::class);
     }
 
     public function getPageCountOfActive($pageLimit = 10)
