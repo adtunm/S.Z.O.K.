@@ -58,7 +58,7 @@ class TicketController extends AbstractController
             $form = $this->createFormBuilder($nowaPula)
                 ->add('nazwa', TextType::class, array(
                     'attr' => array("class" => "form-control ",
-                        'pattern' => '[A-Za-z0-9\-ĘÓĄŚŁŻŹĆŃęąśłżźćń ]{3,45}',
+                        'pattern' => '[A-Za-z0-9\-ĘÓĄŚŁŻŹĆŃęąóśłżźćń ]{3,45}',
                         'title' => 'Polskie litery, cyfry, spacje i myślniki, od 3 do 45 znaków',
                         'autocomplete' => "off"),
                     'csrf_protection' => false,
@@ -165,7 +165,7 @@ class TicketController extends AbstractController
                 $form = $this->createFormBuilder($Pula)
                     ->add('nazwa', TextType::class, array(
                         'attr' => array("class" => "form-control ",
-                            'pattern' => '[A-Za-z0-9\-ĘÓĄŚŁŻŹĆŃęąśłżźćń ]{3,45}',
+                            'pattern' => '[A-Za-z0-9\-ĘÓĄŚŁŻŹĆŃęąóśłżźćń ]{3,45}',
                             'title' => 'Polskie litery, cyfry, spacje i myślniki, od 3 do 45 znaków',
                             'autocomplete' => "off"),
                         'csrf_protection' => false,

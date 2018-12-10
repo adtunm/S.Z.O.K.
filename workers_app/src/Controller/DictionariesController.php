@@ -135,7 +135,7 @@ class DictionariesController extends AbstractController
             $form = $this->createFormBuilder($type)
                 ->add('nazwa', TextType::class, array(
                     'attr' => array("class" => "form-control ",
-                        'pattern' => '[A-Za-z0-9\-\/\+ĘÓĄŚŁŻŹĆŃęąśłżźćń ]{2,45}',
+                        'pattern' => '[A-Za-z0-9\-\/\+ĘÓĄŚŁŻŹĆŃęąóśłżźćń ]{2,45}',
                         'title' => 'Polskie litery, cyfry, spacje i myślniki, od 3 do 45 znaków',
                         'autocomplete' => "off"),
                     'label_attr' => array('class' => "col-sm-2 col-form-label")
@@ -238,7 +238,7 @@ class DictionariesController extends AbstractController
                 $form = $this->createFormBuilder($wartosc)
                     ->add('nazwa', TextType::class, array(
                         'attr' => array("class" => "form-control ",
-                            'pattern' => '[A-Za-z0-9\/\+\-ĘÓĄŚŁŻŹĆŃęąśłżźćń ]{2,45}',
+                            'pattern' => '[A-Za-z0-9\/\+\-ĘÓĄŚŁŻŹĆŃęąóśłżźćń ]{2,45}',
                             'title' => 'Polskie litery, cyfry, spacje i myślniki, od 2 do 45 znaków',
                             'autocomplete' => "off"),
                     ))
