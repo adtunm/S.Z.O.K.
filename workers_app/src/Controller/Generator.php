@@ -396,10 +396,10 @@ class Generator extends AbstractController
         $counterT = 0;
 
         $counterS += $this->pushSeances($period);
-        $counterV += $this->pushVouchers($counterS / 10 * $this->percentageOfNonEmptySeances, 0);
+        $counterV += $this->pushVouchers($counterS / 5 * $this->percentageOfNonEmptySeances, 0);
         $counterR += $this->pushReservations($this->percentageOfNonEmptySeances);
         $counterT += $this->pushTransaction($this->percentageOfNonEmptySeances);
-        $counterV += $this->pushVouchers(20, 1);
+        $counterV += $this->pushVouchers(15, 1);
 
         return new Response('<html><body>Wygenerowano: <ul> '
             . '<li>' . $counterS . ' seansów</li>'
@@ -854,7 +854,7 @@ class Generator extends AbstractController
 
                         $counter++;
                     }
-                    if($counter % 5000 == 0)
+                    if($counter % 10000 == 0)
                         $entityManager->flush();
                     $diff++;
                 }
@@ -871,7 +871,7 @@ class Generator extends AbstractController
             }
             $entityManager->merge($transaction);
             $counter2++;
-            if($counter2 % 10000 == 0)
+            if($counter2 % 20000 == 0)
                 $entityManager->flush();
         }
 
