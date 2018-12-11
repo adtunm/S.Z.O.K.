@@ -6,7 +6,7 @@
             <h1 class="mb-3 font-weight-normal">Rezerwacje</h1>
         </div>
     </div>
-    <form method="post" class="form">
+    <form method="post">
         <div class="row pl-2 pr-4 mb-3">
             <div class="form-inline">
                 <label for="date" class="mx-sm-2">Dzień: </label>
@@ -17,8 +17,8 @@
         </div>
         <div class="row justify-content-between pl-2 pr-4 mb-3">
             <div class="form-inline">
-                <label for="number" class="mx-sm-2">Numer: </label>
-                <input type="number" name="number" id="number"
+                <label for="id" class="mx-sm-2">Numer: </label>
+                <input type="id" name="id" id="id"
                        class="form-control" value="{% if values %}{{ values.number }}{% endif %}"
                        onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                 <label for="name" class="mx-sm-2 ">Imię: </label>
@@ -29,14 +29,13 @@
                 <input type="text" name="surname" id="surname"
                        class="form-control" value="{% if values %}{{ values.surname }}{% endif %}"
                        onkeypress='return event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122'>
-                <button class="btn btn-primary ml-sm-2" id="filtrButton" type="submit">
+                <button class="btn btn-primary ml-sm-2" id="filterButton" type="submit">
                     Filtruj
                 </button>
-
             </div>
             <div>
                 <a class="btn btn-primary"
-                   href="">Pokaż wszystkie</a>
+                   href="{{ path('workers_app/reservations', {'date': 0, 'id': 0, 'name': 0, 'surname': 0 } ) }}">Pokaż wszystkie</a>
             </div>
         </div>
     </form>
@@ -45,24 +44,37 @@
             <table id="reservations" class="table">
                 <thead>
                 <tr>
-                    <th style="width: 20%">Numer rezerwacji</th>
-                    <th style="width: 25%">Imię i nazwisko</th>
-                    <th style="width: 25%">Seans</th>
-                    <th style="width: 30%"></th>
+                    <th style="width: 15%">Numer rezerwacji</th>
+                    <th style="width: 15%">Imię</th>
+                    <th style="width: 15%">Nazwisko</th>
+                    <th style="width: 35%">Seans</th>
+                    <th style="width: 20%"></th>
                 </tr>
                 </thead>
                 <tbody>
                 {% for reservation in reservations %}
                     <tr>
                         <td scope="row">{{ reservation.id }} </td>
-                        <td>{{ reservation.imie }} {{ reservation.nazwisko }}</td>
-                        <td>{{ reservation.seans }}</td>
+                        <td>{{ reservation.imie }} </td>
+                        <td>{{ reservation.nazwisko }}</td>
+                        <td>{% if reservation.seanse.wydarzeniaspecjalne %}
+                                {{ reservation.seanse.wydarzeniaspecjalne }}
+                            {% else %}
+                                {% for smf in reservation.seanse.seansMaFilmy|slice(0,1) %}
+                                    {{ smf.filmy }}
+                                {% endfor %}
+                            {% endif %}
+                            - {{ reservation.seanse.typyseansow.nazwa }}
+                            - {{ reservation.seanse.poczatekseansu|date('d.m.Y H:i') }}
+                            - {{ reservation.seanse.sale }}
+                        </td>
                         <td>
-                            <div class="pull-right">
+                            <div class="pull-right" id="alert{{ reservation.id }}"></div>
+                            <div class="pull-right" id="buttonsDiv{{ reservation.id }}">
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
                                         data-target="#reservationId{{ reservation.id }}">
-                                    Anuluj
+                                    Anuluj rezerwacje
                                 </button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="reservationId{{ reservation.id }}" tabindex="-1"
@@ -76,6 +88,7 @@
                                                     Anulowanie rezerwacji
                                                 </h4>
                                                 <button type="button" class="close text-light"
+                                                        id="buttonClose"
                                                         data-dismiss="modal"
                                                         aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
@@ -89,7 +102,14 @@
                                                         nazwisko: {{ reservation.imie }} {{ reservation.nazwisko }}
                                                     </li>
                                                     <li>
-                                                        Seans: {{ reservation.seans }}
+                                                        Seans:
+                                                        {% if reservation.seanse.wydarzeniaspecjalne %}
+                                                            {{ reservation.seanse.wydarzeniaspecjalne }}
+                                                        {% else %}
+                                                            {% for smf in reservation.seanse.seansMaFilmy|slice(0,1) %}
+                                                                {{ smf.filmy }}
+                                                            {% endfor %}
+                                                        {% endif %}
                                                     </li>
                                                 </ul>
                                                 Akcji tej nie da sie odwrócić.
@@ -99,9 +119,8 @@
                                                         data-dismiss="modal">
                                                     Anuluj
                                                 </button>
-                                                <button type="button" class="btn btn-danger delete-reservation"
-                                                        data-id="{{ reservation.id }}">
-                                                    <i id="spinner{{ reservation.id }}"></i> Anuluj
+                                                <button type="button" onclick="deleteReservation({{ reservation.id }})" class="btn btn-danger delete-reservation">
+                                                    <i id="spinner{{ reservation.id }}"></i> Anuluj rezerwacje
                                                 </button>
                                             </div>
                                         </div>
@@ -109,7 +128,7 @@
                                 </div>
                                 <!-- End of Modal -->
                                 <a class="btn btn-primary btn-sm"
-                                   href="">Zrealizuj</a>
+                                   href="{{ path('workers_app/reservations/accomplish', {'id':reservation.id } ) }}">Zrealizuj</a>
                             </div>
                         </td>
                     </tr>
@@ -118,28 +137,43 @@
             </table>
         </div>
 
-        {# remember to set basePath before including pagination #}
-        {% set basePath = path('workers_app/reservations') %}
+
+
+        {% set basePath = path('workers_app/reservations', {
+            'date': app.request.get('date'),
+            'id': app.request.get('id'),
+            'name': app.request.get('name'),
+            'surname': app.request.get('surname')
+        } ) %}
         {% include 'workersApp/inc/pagination.html.twig' %}
 
-        {% if is_granted('ROLE_ADMIN') %}
-            <script>
-                const reservation = document.getElementById('reservations');
-                if (reservation) {
-                    reservation.addEventListener('click', e => {
-                        if (e.target.className === 'btn btn-danger delete-reservation') {
-                            const id = e.target.getAttribute('data-id');
-                            e.target.setAttribute('disabled', 'true');
-                            document.getElementById('spinner' + id).setAttribute('class', 'fa fa-spinner fa-spin');
-
-                            fetch(`{{ path('workers_app/reservations/delete') }}/${id}`,
-                                {method: 'DELETE'}
-                            ).then(res => window.location.reload());
+        <script>
+            function deleteReservation(reservationId) {
+                document.getElementById('spinner' + reservationId).setAttribute('class', 'fa fa-spinner fa-spin');
+                $.ajax({
+                    url: '{{ path('workers_app/reservations/delete') }}',
+                    type: "DELETE",
+                    dataType: "json",
+                    data: {
+                        "reservationId": reservationId
+                    },
+                    async: true,
+                    success: function (data) {
+                        document.getElementById('buttonClose').click();
+                        document.getElementById('buttonsDiv' + reservationId).hidden = true;
+                        document.getElementById('alert' + reservationId).hidden = false;
+                        console.log(data);
+                        if (data.result) {
+                            document.getElementById('alert' + reservationId).innerHTML = "Rezerwacja została poprawnie usunięta!";
+                            document.getElementById('alert' + reservationId).style.color = 'green';
+                        } else {
+                            document.getElementById('alert' + reservationId).innerHTML = "Rezerwacja została już wcześniej usunięta lub jest już zrealizowana. Proszę odświeżyć stronę i spróbować ponownie";
+                            document.getElementById('alert' + reservationId).style.color = 'red';
                         }
-                    })
-                }
-            </script>
-        {% endif %}
+                    }
+                });
+            }
+        </script>
     {% else %}
         <p class="h1">Brak rezerwacji</p>
     {% endif %}

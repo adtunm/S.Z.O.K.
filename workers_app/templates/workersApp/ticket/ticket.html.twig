@@ -54,7 +54,8 @@
         </tr>
     </table>
     <br>
-    {% if loop.index is divisible by(4) %}
+
+    {% if loop.index is divisible by(4) and loop.index != loop.last %}
         <div class="page">
         </div>
     {% endif %}

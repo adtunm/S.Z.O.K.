@@ -10,55 +10,58 @@
         <h1 class="mb-3 font-weight-normal">Sprzedaż - wybór miejsc</h1>
     </div>
     <div class="row px-3">
-        <h6 class="mb-3 font-weight-normal">{{ seance[0].tytul }} ({{ seance[0].datapremiery|date('Y') }})
-            - {{ seance[0].nazwa }}
-            - {{ seance[0].data }} {{ seance[0].godzina }} - Sala {{ seance[0].numersali }} </h6>
+        <h6 class="mb-3 font-weight-normal">
+            {% if seance.wydarzeniaspecjalne %}
+                {{ seance.wydarzeniaspecjalne }}
+            {% else %}
+                {% for smf in seance.seansMaFilmy|slice(0,1) %}
+                    {{ smf.filmy }}
+                {% endfor %}
+            {% endif %}
+            - {{ seance.typyseansow }} - {{ seance.poczatekseansu|date('d.m.Y H:i') }} - {{ seance.sale }}
+        </h6>
     </div>
     <div class="content panel mt-2 mb-3 mx-0 p-5 bg-light">
         <div class="row justify-content-between px-3">
             <div class="room_view" id="roomContent">
                 <div class="mb-3">
                     <div class="text_center screen"
-                         style="width: {{ values[0].miejsca.rzedy.sale.szerokoscsali *38-8 }} px">
+                         style="width: {{ seance.sale.szerokoscsali *38-8 }} px">
                         EKRAN
                     </div>
                 </div>
 
                 <div class="inline mb-2" id="seats">
                     <div class="mr-3 rowNumber seatViewPadding" id="Row"> 1</div>
-                    {% set currentRow = values[0].miejsca.rzedy %}
-                    {% for value in values %}
-                        {% if currentRow != value.miejsca.rzedy %}
-                            <div class="inline mb-2">
-                            <div class="mr-3 rowNumber seatViewPadding" id="Row"> {{ currentRow.numerrzedu + 1 }} </div>
-                        {% endif %}
-
-                        {% if value.miejsca.numermiejsca == 0 %}
-                            <div class="no-seat seatViewPadding mr-2" id=""></div>
-                        {% else %}
-                            {% if value.rezerwacje %}
-                                <div class="seat seat_reserved seatViewPadding mr-2"
-                                     id="{{ value.miejsca.id }}">{{ value.miejsca.numermiejsca }}</div>
-                            {% elseif value.tranzakcje %}
-                                <div class="seat seat_sold seatViewPadding mr-2"
-                                     id="{{ value.miejsca.id }}">{{ value.miejsca.numermiejsca }}</div>
-                            {% else %}
-                                {% if value.miejsca.rzedy.typyrzedow.id == 2 %}
-                                    <button class="seat seat_buying_only seatViewPadding mr-2 pointer"
-                                            id="{{ value.miejsca.id }}"
-                                            onclick="selectSeatBuyingOnly(this, {{ value.miejsca.id }}, {{ value.miejsca.rzedy.numerrzedu }},{{ value.miejsca.numermiejsca }})">{{ value.miejsca.numermiejsca }}</button>
-                                {% else %}
-                                    <button class="seat seat_normal seatViewPadding mr-2 pointer"
-                                            id="{{ value.miejsca.id }}"
-                                            onclick="selectSeat(this, {{ value.miejsca.id }}, {{ value.miejsca.rzedy.numerrzedu }},{{ value.miejsca.numermiejsca }})">{{ value.miejsca.numermiejsca }}</button>
-                                {% endif %}
-                            {% endif %}
-                        {% endif %}
-
-                        {% if (values[loop.index0 + 1].miejsca.rzedy is defined and value.miejsca.rzedy != values[loop.index0 + 1].miejsca.rzedy) %}
-                            </div>
-                        {% endif %}
+                    {% for value in roomLayout %}
+                    {% if loop.index == loop.first %}
                         {% set currentRow = value.miejsca.rzedy %}
+                    {% endif %}
+                    {% if currentRow != value.miejsca.rzedy %}
+                </div>
+                <div class="inline mb-2">
+                    <div class="mr-3 rowNumber seatViewPadding" id="Row"> {{ currentRow.numerrzedu + 1 }} </div>
+                    {% endif %}
+
+                    {% if value.miejsca.numermiejsca == 0 %}
+                        <div class="no-seat seatViewPadding mr-2" id=""></div>
+                    {% elseif value.status == 4 %}
+                        <div class="seat seat_sold seatViewPadding mr-2"
+                             id="{{ value.miejsca.id }}">{{ value.miejsca.numermiejsca }}</div>
+                    {% elseif value.status == 3 %}
+                        <div class="seat seat_reserved seatViewPadding mr-2"
+                             id="{{ value.miejsca.id }}">{{ value.miejsca.numermiejsca }}</div>
+                    {% elseif value.status == 2 %}
+                        <button class="seat seat_buying_only seatViewPadding mr-2 pointer"
+                                id="{{ value.miejsca.id }}"
+                                onclick="selectSeatBuyingOnly(this, {{ value.miejsca.id }}, {{ value.miejsca.rzedy.numerrzedu }},{{ value.miejsca.numermiejsca }})">{{ value.miejsca.numermiejsca }}</button>
+                    {% else %}
+                        <button class="seat seat_normal seatViewPadding mr-2 pointer"
+                                id="{{ value.miejsca.id }}"
+                                onclick="selectSeat(this, {{ value.miejsca.id }}, {{ value.miejsca.rzedy.numerrzedu }},{{ value.miejsca.numermiejsca }})">{{ value.miejsca.numermiejsca }}</button>
+                    {% endif %}
+
+                    {% set currentRow = value.miejsca.rzedy %}
                     {% endfor %}
                 </div>
             </div>
@@ -127,18 +130,21 @@
                 </div>
                 <div class="modal-body">
                     <div class="row px-3">
-                        <h5 class="mb-3 font-weight-normal">{{ seance[0].tytul }}
-                            ({{ seance[0].datapremiery|date('Y') }})
-                            - {{ seance[0].nazwa }}
-                            - {{ seance[0].data }} {{ seance[0].godzina }} - Sala {{ seance[0].numersali }} </h5>
+                        <h5 class="mb-3 font-weight-normal">
+                            {% if seance.wydarzeniaspecjalne %}
+                                {{ seance.wydarzeniaspecjalne }}
+                            {% else %}
+                                {% for smf in seance.seansMaFilmy|slice(0,1) %}
+                                    {{ smf.filmy }}
+                                {% endfor %}
+                            {% endif %}
+                            - {{ seance.typyseansow }}
+                            - {{ seance.poczatekseansu|date('d.m.Y H:i') }} - {{ seance.sale }}
+                        </h5>
                     </div>
                     <form name="form" method="post">
                         <div class="m-3">
                             <div class="m-3">
-                                {#<input class="form-control" type="number" id="submit" name="submit" hidden value="0">#}
-                                {#<input class="form-control" type="text" id="seatId" name="seatId" hidden value="">#}
-                                {#<input class="form-control" type="text" id="seatNumber" name="seatNumber" hidden#}
-                                       {#value="">#}
                                 <div class="form-group row">
                                     <div class="col-sm-12" id="seatLabel">
 
@@ -166,23 +172,19 @@
         <!-- End of Modal -->
     </div>
     <script>
-        var seatArray = [];
         var seatIdArray = [];
         var seatCounter = 0;
-        const seatIdInput = document.getElementById("seatId");
-        const seatNumberInput = document.getElementById("seatNumber");
         const seatLabel = document.getElementById("seatLabel");
         const submitButton = document.getElementById("form_save");
         const ticketTable = document.getElementById('ticketTable');
 
         window.onload = function () {
-            for (var i = 0; i < {{ values[0].miejsca.rzedy.sale.dlugoscsali }}; i++) {
+            for (var i = 0; i < {{ seance.sale.dlugoscsali }}; i++) {
                 seatIdArray[i] = [];
-                for (var j = 0; j < {{ values[0].miejsca.rzedy.sale.szerokoscsali }}; j++) {
+                for (var j = 0; j < {{ seance.sale.szerokoscsali }}; j++) {
                     seatIdArray[i][j] = [];
                 }
             }
-
 
             {% for selectedSeat in selectedSeats %}
             {% if selectedSeat != null %}

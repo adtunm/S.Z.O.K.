@@ -15,7 +15,7 @@ class Rzedy
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -94,7 +94,7 @@ class Rzedy
     /**
      * @var \Sale
      *
-     * @ORM\ManyToOne(targetEntity="Sale")
+     * @ORM\ManyToOne(targetEntity="Sale", inversedBy="rzedy")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="Sale_id", referencedColumnName="id")
      * })
@@ -111,5 +111,27 @@ class Rzedy
      */
     private $typyrzedow;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Miejsca", mappedBy="rzedy")
+     */
+    private $miejsca;
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getMiejsca(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->miejsca;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $miejsca
+     */
+    public function setMiejsca(\Doctrine\Common\Collections\Collection $miejsca): void
+    {
+        $this->miejsca = $miejsca;
+    }
 
 }

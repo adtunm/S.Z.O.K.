@@ -21,29 +21,38 @@ class RezerwacjeRepository extends ServiceEntityRepository
         parent::__construct($registry, Rezerwacje::class);
     }
 
-    public function getReservations($page = 1, $pageLimit = 10, $id = '%', $date = '%', $name = '%', $surname = '%'){
+    public function getReservations($id, $date, $name, $surname, $page = 1, $pageLimit = 10){
+
+        if($id == null){
+            $id = '%';
+        }
+        if($date == null or !\DateTime::createFromFormat('Y-m-d', $date)){
+            $from = new \DateTime("1000-01-01 00:00:00");
+            $to = new \DateTime("9999-12-31 23:59:59");
+        } else {
+            $from = new \DateTime($date . " 00:00:00");
+            $to = new \DateTime($date . " 23:59:59");
+        }
 
         $entityManager = $this->getEntityManager();
         $query = $entityManager->createQuery(
-            'SELECT
-                r.id,
-                r.imie,
-                r.nazwisko,
-                CONCAT_WS(\' - \', f.tytul, tse.nazwa, DATE_FORMAT(se.poczatekseansu, \'%H:%i\')) AS seans
+            'SELECT r
             FROM App\Entity\Rezerwacje r
             JOIN r.seanse se
-            JOIN App\Entity\SeansMaFilmy smf
+            JOIN se.seansMaFilmy smf
             JOIN smf.filmy f
             JOIN se.typyseansow tse
-            WHERE smf.seanse = se.id
-            AND DATE_FORMAT(se.poczatekseansu, \'%d.%m.%Y\') LIKE :date
-            AND r.imie LIKE :name
-            AND r.nazwisko LIKE :surname
+            WHERE se.poczatekseansu BETWEEN :dateF AND :dateT
+            AND (INSTR(r.imie, :name) > 0 OR :name IS NULL)
+            AND (INSTR(r.nazwisko, :surname) > 0 OR :surname IS NULL)
             AND r.id LIKE :id
+            AND r.sfinalizowana != 1
+            GROUP BY r.id
             ORDER BY r.id')
             ->setParameter('name', $name)
             ->setParameter('surname', $surname)
-            ->setParameter('date', $date)
+            ->setParameter('dateF', $from)
+            ->setParameter('dateT', $to)
             ->setParameter('id', $id)
             ->setFirstResult($pageLimit * ($page - 1))
             ->setMaxResults($pageLimit);
@@ -51,21 +60,34 @@ class RezerwacjeRepository extends ServiceEntityRepository
         return $query->execute();
     }
 
-    public function getPageCount($pageLimit = 10, $id = '%', $date = '%', $name = '%', $surname = '%')
+    public function getPageCount($id, $date, $name, $surname, $pageLimit = 10)
     {
+        if($id == null){
+            $id = '%';
+        }
+        if($date == null or !\DateTime::createFromFormat('Y-m-d', $date) ){
+            $from = new \DateTime("1000-01-01 00:00:00");
+            $to = new \DateTime("9999-12-31 23:59:59");
+        } else {
+            $from = new \DateTime($date . " 00:00:00");
+            $to = new \DateTime($date . " 23:59:59");
+        }
+
+
         $query = $this->createQueryBuilder('r')
             ->select('count(r.id)')
             ->join('r.seanse', 'se')
             ->join('App\Entity\SeansMaFilmy', 'smf')
             ->where('smf.seanse = se.id',
-                'DATE_FORMAT(se.poczatekseansu, \'%d.%m.%Y\') LIKE :date',
-                'r.imie LIKE :name',
-                'r.nazwisko LIKE :surname',
-                'r.id LIKE :id')
-
-            ->setParameter('surname', $surname)
+                'se.poczatekseansu BETWEEN :dateF AND :dateT',
+                '(INSTR(r.imie, :name) > 0 OR :name IS NULL)',
+                '(INSTR(r.nazwisko, :surname) > 0 OR :surname IS NULL)',
+                'r.id LIKE :id',
+                'r.sfinalizowana != 1')
             ->setParameter('name', $name)
-            ->setParameter('date', $date)
+            ->setParameter('surname', $surname)
+            ->setParameter('dateF', $from)
+            ->setParameter('dateT', $to)
             ->setParameter('id', $id)
             ->orderBy('r.id', 'ASC')
             ->getQuery();
@@ -90,4 +112,5 @@ class RezerwacjeRepository extends ServiceEntityRepository
             ->getQuery();
         return $query->execute();
     }
+
 }

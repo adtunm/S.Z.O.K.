@@ -77,6 +77,7 @@ class MiejscaRepository extends ServiceEntityRepository
 
     public function getRoom($idRoom, $idSeance)
     {
+        set_time_limit(300);
         $query = $this->createQueryBuilder('m')
             ->select('m AS miejsca, 
                             SUM(CASE WHEN se.id != :idSeance THEN 0 ELSE re.id END) AS rezerwacje,
@@ -90,6 +91,41 @@ class MiejscaRepository extends ServiceEntityRepository
             ->leftJoin('t.seanse', 'se2')
             ->andWhere('s.id = :idRoom')
             ->setParameter('idRoom', $idRoom)
+            ->setParameter('idSeance', $idSeance)
+            ->orderBy('r.numerrzedu, m.pozycja', 'ASC')
+            ->groupBy('m')
+            ->getQuery();
+
+        return $query->execute();
+    }
+
+
+
+    public function getReservedSeat($idRoom, $idSeance){
+
+        $query = $this->createQueryBuilder('m')
+            ->select('m.id')
+            ->join('m.rzedy', 'r')
+            ->join('m.rezerwacje', 're')
+            ->join('re.seanse', 'se')
+            ->andWhere('se.id = :idSeance')
+            ->setParameter('idSeance', $idSeance)
+            ->orderBy('r.numerrzedu, m.pozycja', 'ASC')
+            ->groupBy('m')
+            ->getQuery();
+
+        return $query->execute();
+    }
+
+    public function getSoldSeat($idRoom, $idSeance){
+
+        $query = $this->createQueryBuilder('m')
+            ->select('m.id')
+            ->join('m.rzedy', 'r')
+            ->leftJoin('m.bilety', 'b')
+            ->leftjoin('b.tranzakcje', 't')
+            ->leftJoin('t.seanse', 'se')
+            ->andWhere('se.id = :idSeance')
             ->setParameter('idSeance', $idSeance)
             ->orderBy('r.numerrzedu, m.pozycja', 'ASC')
             ->groupBy('m')
@@ -114,7 +150,6 @@ class MiejscaRepository extends ServiceEntityRepository
             ->leftJoin('t.seanse', 'se2')
             ->andWhere('s.id = :idRoom')
             ->andWhere('m.id = :idSeat')
-            //->andWhere('b.id IS NULL OR t.seanse = :idSeance')
             ->setParameter('idSeat', $idSeat)
             ->setParameter('idRoom', $idRoom)
             ->setParameter('idSeance', $idSeance)
@@ -122,6 +157,18 @@ class MiejscaRepository extends ServiceEntityRepository
             ->groupBy('m')
             ->getQuery();
 
+        return $query->execute();
+    }
+
+    public function getSeatsForReservation($id){
+        $query = $this->createQueryBuilder('m')
+            ->select('m')
+            ->join('m.rzedy', 'rz')
+            ->join('m.rezerwacje', 're')
+            ->andWhere('re.id = :id')
+            ->setParameter('id', $id)
+            ->orderBy('rz.numerrzedu, m.numermiejsca', 'ASC')
+            ->getQuery();
         return $query->execute();
     }
 }

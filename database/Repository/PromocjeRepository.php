@@ -116,7 +116,7 @@ class PromocjeRepository extends ServiceEntityRepository
     {
         $query = $this->createQueryBuilder('p')
             ->andWhere('p.koniecpromocji >= :currentDate AND p.poczatekpromocji <= :currentDate')
-            ->andWhere('p.id == :promotionId')
+            ->andWhere('p.id = :promotionId')
             ->setParameter('promotionId', $promotionId)
             ->setParameter('currentDate', date("Y-m-d"))
             ->getQuery();

@@ -32,3 +32,4 @@ doctrine:
                 DATE_FORMAT: DoctrineExtensions\Query\Mysql\DateFormat
                 CONCAT_WS: DoctrineExtensions\Query\Mysql\ConcatWs
                 LPAD: DoctrineExtensions\Query\Mysql\Lpad
+                INSTR: DoctrineExtensions\Query\Mysql\Instr

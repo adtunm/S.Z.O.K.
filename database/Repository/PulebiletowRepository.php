@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Mateusz
- * Date: 29.11.2018
- * Time: 20:54
+ * User: Piotr
+ * Date: 20.11.2018
+ * Time: 02:05
  */
 
 namespace App\Repository;
@@ -11,11 +11,12 @@ namespace App\Repository;
 
 use App\Entity\Pulebiletow;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Symfony\Bridge\Doctrine\RegistryInterface;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
-class PulebiletowRepository extends ServiceEntityRepository
+class PuleBiletowRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
+    public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Pulebiletow::class);
     }
@@ -30,7 +31,7 @@ class PulebiletowRepository extends ServiceEntityRepository
                 rb.nazwa
             FROM App\Entity\Pulebiletow pb
             JOIN pb.seanse se
-            JOIN pb.pulabiletowmarodzajebiletow pbmrb
+            JOIN pb.pulaMaRodzajeBiletow pbmrb
             JOIN pbmrb.rodzajebiletow rb
             WHERE se.id = :id')
             ->setParameter('id', $id);
@@ -46,7 +47,7 @@ class PulebiletowRepository extends ServiceEntityRepository
                 pbmrb.id
             FROM App\Entity\Pulebiletow pb
             JOIN pb.seanse se
-            JOIN pb.pulabiletowmarodzajebiletow pbmrb
+            JOIN pb.pulaMaRodzajeBiletow pbmrb
             JOIN pbmrb.rodzajebiletow rb
             WHERE se.id = :id
             AND pbmrb.id = :ticketId')
@@ -54,5 +55,69 @@ class PulebiletowRepository extends ServiceEntityRepository
             ->setParameter('ticketId', $ticketId);
 
         return $query->execute();
+    }
+
+    public function getPageCountOfActive($pageLimit = 10)
+    {
+        $query = $this->createQueryBuilder('d')
+            ->select('count(d.id)')
+            ->andWhere('d.usunieto IS NULL OR d.usunieto = 0')
+            ->orderBy('d.id', 'ASC')
+            ->getQuery();
+
+        $count = $query->getSingleScalarResult();
+        $pageCount = floor($count / $pageLimit);
+        $rest = $count % $pageLimit;
+        if($rest != 0) {
+            $pageCount = $pageCount + 1;
+        }
+        return $pageCount;
+    }
+
+    public function findActive($page = 1, $pageLimit = 10)
+    {
+        $query = $this->createQueryBuilder('d')
+            ->andWhere('d.usunieto IS NULL OR d.usunieto = 0')
+            ->orderBy('d.id', 'ASC')
+            ->getQuery();
+
+        $requestedPage = new Paginator($query);
+        $requestedPage->getQuery()
+            ->setFirstResult($pageLimit * ($page - 1))
+            ->setMaxResults($pageLimit);
+
+        return $requestedPage;
+    }
+
+    public function getPageCountOfDeleted($pageLimit = 10)
+    {
+        $query = $this->createQueryBuilder('d')
+            ->select('count(d.id)')
+            ->andWhere('d.usunieto = 1')
+            ->orderBy('d.id', 'ASC')
+            ->getQuery();
+
+        $count = $query->getSingleScalarResult();
+        $pageCount = floor($count / $pageLimit);
+        $rest = $count % $pageLimit;
+        if($rest != 0) {
+            $pageCount = $pageCount + 1;
+        }
+        return $pageCount;
+    }
+
+    public function findDeleted($page = 1, $pageLimit = 10)
+    {
+        $query = $this->createQueryBuilder('d')
+            ->andWhere('d.usunieto = 1')
+            ->orderBy('d.id', 'ASC')
+            ->getQuery();
+
+        $requestedPage = new Paginator($query);
+        $requestedPage->getQuery()
+            ->setFirstResult($pageLimit * ($page - 1))
+            ->setMaxResults($pageLimit);
+
+        return $requestedPage;
     }
 }

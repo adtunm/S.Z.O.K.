@@ -105,8 +105,31 @@ class Sale
      */
     private $szerokoscsali;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Rzedy", mappedBy="sale")
+     */
+    private $rzedy;
+
     public function __toString()
     {
         return 'Sala '.$this->numersali;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getRzedy(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->rzedy;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $rzedy
+     */
+    public function setRzedy(\Doctrine\Common\Collections\Collection $rzedy): void
+    {
+        $this->rzedy = $rzedy;
     }
 }

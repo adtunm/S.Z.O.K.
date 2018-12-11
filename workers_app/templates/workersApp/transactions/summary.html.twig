@@ -107,16 +107,23 @@
                 <div class="mx-3">
                     <div class="row mb-3">
                         <div class="col-sm-3">Film:</div>
-                        <div class="col-sm-9 pl-sm-2">{{ seance[0].tytul }}
-                            ({{ seance[0].datapremiery|date('Y') }}) - {{ seance[0].nazwa }}</div>
+                        <div class="col-sm-9 pl-sm-2">
+                            {% if seance.wydarzeniaspecjalne %}
+                                {{ seance.wydarzeniaspecjalne }}
+                            {% else %}
+                                {% for smf in seance.seansMaFilmy|slice(0,1) %}
+                                    {{ smf.filmy }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">Data i godzina:</div>
-                        <div class="col-sm-9 pl-sm-2">{{ seance[0].data }} {{ seance[0].godzina }}</div>
+                        <div class="col-sm-9 pl-sm-2">{{ seance.poczatekseansu|date('d.m.Y H:i') }}</div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">Sala:</div>
-                        <div class="col-sm-9 pl-sm-2">{{ seance[0].numersali }}</div>
+                        <div class="col-sm-9 pl-sm-2">{{ seance.sale.numersali }}</div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">Do zaplaty:</div>
@@ -326,7 +333,7 @@
 
             if (ifAmount) {
                 for (var i = 0; i < priceArray.length; i++) {
-                    if (value < ppriceArray[i].price) {
+                    if (value < priceArray[i].price) {
                         priceArray[i].promotionPrice = priceArray[i].price - value;
                     } else {
                         priceArray[i].promotionPrice = 0;
@@ -411,12 +418,11 @@
                 priceArray[index].voucherPrice = priceArray[index].promotionPrice;
                 document.getElementById('price' + index).innerHTML = priceArray[index].voucherPrice.toFixed(2);
             }
-
         }
 
         function checkVoucher(seatId, index) {
             $.ajax({
-                url: '{{ path('workers_app/transactions/check_voucher') }}/{{ seance[0].id }}',
+                url: '{{ path('workers_app/transactions/check_voucher') }}/{{ seance.id }}',
                 type: "POST",
                 dataType: "json",
                 data: {
@@ -428,14 +434,18 @@
                     if ('error' in data) {
                         document.getElementById('voucherAlert' + seatId).innerHTML = data['error'];
                     } else {
-                        document.getElementById('closeModalButton' + seatId).click();
-                        document.getElementById('voucherModalButton' + seatId).hidden = true;
-                        document.getElementById('deleteVoucherButton' + seatId).hidden = false;
-                        voucherArray[index].ifAmount = data.czykwotowa;
-                        voucherArray[index].value = data.wartosc;
-                        vouchersIdArray[index] = data.id;
-                        updateVoucherPrice(index, data.czykwotowa, data.wartosc);
-                        updatePrice();
+                        if(vouchersIdArray.includes(data.id)){
+                            document.getElementById('voucherAlert' + seatId).innerHTML = "Voucher został już użyty na innym bilecie w tej transakcji.";
+                        } else {
+                            document.getElementById('closeModalButton' + seatId).click();
+                            document.getElementById('voucherModalButton' + seatId).hidden = true;
+                            document.getElementById('deleteVoucherButton' + seatId).hidden = false;
+                            voucherArray[index].ifAmount = data.czykwotowa;
+                            voucherArray[index].value = data.wartosc;
+                            vouchersIdArray[index] = data.id;
+                            updateVoucherPrice(index, data.czykwotowa, data.wartosc);
+                            updatePrice();
+                        }
                     }
                 }
             });
@@ -480,10 +490,6 @@
                     vouchersIdInput.value += 'null';
                 }
             }
-
         }
     </script>
-
-
-
 {% endblock %}

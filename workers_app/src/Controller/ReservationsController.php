@@ -9,39 +9,83 @@
 namespace App\Controller;
 
 
+use App\Entity\Bilety;
 use App\Entity\Miejsca;
+use App\Entity\Promocje;
 use App\Entity\Rezerwacje;
-
+use App\Entity\Rodzajeplatnosci;
+use App\Entity\Rzedy;
 use App\Entity\Seanse;
+use App\Entity\Tranzakcje;
+use App\Entity\Vouchery;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ReservationsController extends Controller
+class ReservationsController extends AbstractController
 {
     /**
-     * @Route("/reservations/{page<[1-9]\d*>?1}", name="workers_app/reservations", methods={"GET", "POST"})
+     * @Route("/reservations/{date},{id},{name},{surname}/{page<[1-9]\d*>?1}", name="workers_app/reservations", methods={"GET", "POST"})
      */
-    public function index(Request $request, $page)
+    public function index(Request $request, $page, $date, $id, $name, $surname)
     {
         if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
             return $this->redirectToRoute('workers_app/logout_page');
         }
-
-        //var_dump($request);
-
         if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
+
+            if ($values = $request->request->all()) {
+                if ($values['id'] == null) {
+                    $values['id'] = 0;
+                }
+                if ($values['date'] == null) {
+                    $values['date'] = 0;
+                }
+                if ($values['name'] == null) {
+                    $values['name'] = 0;
+                }
+                if ($values['surname'] == null) {
+                    $values['surname'] = 0;
+                }
+                return $this->redirectToRoute('workers_app/reservations', $values);
+            }
+
+            if ($id === '0') {
+                $id = null;
+            }
+            if ($date === '0') {
+                $date = null;
+            }
+            if ($name === '0') {
+                $name = null;
+            }
+            if ($surname === '0') {
+                $surname = null;
+            }
+
+            $values = [
+                'number' => $id,
+                'date' => $date,
+                'name' => $name,
+                'surname' => $surname
+            ];
+
             $pageLimit = $this->getParameter('page_limit');
-            $pageCount = $this->getDoctrine()->getRepository(Rezerwacje::class)->getPageCount($pageLimit);
+            $pageCount = $this->getDoctrine()->getRepository(Rezerwacje::class)->getPageCount(
+                $id, $date, $name, $surname, $pageLimit);
+
             if ($page > $pageCount and $pageCount != 0)
                 return $this->redirectToRoute('workers_app/rooms_page');
             else {
-                $reservations = $this->getDoctrine()->getRepository(Rezerwacje::class)->getReservations($page, $pageLimit);
-                return $this->render('workersApp/reservations/list.html.twig', array('reservations' => $reservations, 'values' => $request->request->all() , 'currentPage' => $page, 'pageCount' => $pageCount));
+                $reservations = $this->getDoctrine()->getRepository(Rezerwacje::class)->getReservations(
+                    $id, $date, $name, $surname, $page, $pageLimit);
+                return $this->render('workersApp/reservations/list.html.twig', array('reservations' => $reservations, 'values' => $values, 'currentPage' => $page, 'pageCount' => $pageCount));
             }
         } else {
             return $this->redirectToRoute('workers_app/login_page');
@@ -57,20 +101,19 @@ class ReservationsController extends Controller
             return $this->redirectToRoute('workers_app/logout_page');
         }
 
-        if($this->isGranted('IS_AUTHENTICATED_FULLY')) {
+        if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
+            if (!$seance = $this->getDoctrine()->getRepository(Seanse::class)->find($id) or $seance->getCzyodwolany()) {
+                return $this->redirectToRoute('workers_app/no_permission');
+            }
             $submit = $request->request->get('submit');
-
             $reservation = new Rezerwacje();
             $form = $this->getForm($reservation);
             $form->handleRequest($request);
 
-            $seanceId = 1;
-            $seance = $this->getDoctrine()->getRepository(Seanse::class)->getSeance($seanceId);
             $seatsIdArray = explode(",", $request->get('seatId'));
-            //var_dump($request->request->all());
-            if (($submit == 0 || $submit == 2) && $form->isSubmitted() && $form->isValid() && $this->validSeat($seatsIdArray, $seance[0]['salaid'], $seanceId)) {
+            $roomLayout = $this->getRoomLayout($this->getDoctrine()->getRepository(Seanse::class)->find($id));
+            if (($submit == 0 || $submit == 2) && $form->isSubmitted() && $form->isValid() && $this->validSeat($seatsIdArray, $roomLayout)) {
                 if ($submit == 2) {
-                    $seanceObject = $this->getDoctrine()->getRepository(Seanse::class)->find($seanceId);
                     $seatsArrayCollection = new ArrayCollection();
                     foreach ($seatsIdArray as $seatId) {
                         $seatsArrayCollection->add($this->getDoctrine()->getRepository(Miejsca::class)->find($seatId));
@@ -78,42 +121,78 @@ class ReservationsController extends Controller
                     $reservation->setCzyodwiedzajacy(0);
                     $reservation->setSfinalizowana(0);
                     $reservation->setPracownicy($this->getUser());
-                    $reservation->setSeanse($seanceObject);
+                    $reservation->setSeanse($seance);
                     $reservation->setMiejsca($seatsArrayCollection);
                     $entityManager = $this->getDoctrine()->getManager();
                     $entityManager->persist($reservation);
                     $entityManager->flush();
 
-                    return $this->redirectToRoute('workers_app/reservations');
+                    $values = [
+                        'id' => $reservation->getId(),
+                        'date' => 0,
+                        'name' => 0,
+                        'surname' => 0
+                    ];
+
+                    return $this->redirectToRoute('workers_app/reservations', $values);
                 }
                 return $this->render('workersApp/reservations/summary.html.twig', ['seance' => $seance, 'rezervationData' => $request->request->all()]);
             }
 
-            $values = $this->getDoctrine()->getRepository(Miejsca::class)->getRoom($seance[0]['salaid'], $seanceId);
-            return $this->render('workersApp/reservations/add.html.twig', ['seance' => $seance, 'values' => $values, 'checkedSeats' => $seatsIdArray, 'form' => $form->createView()]);
+            return $this->render('workersApp/reservations/add.html.twig', ['seance' => $seance, 'roomLayout' => $roomLayout, 'checkedSeats' => $seatsIdArray, 'form' => $form->createView()]);
+        } else {
+            return $this->redirectToRoute('workers_app/login_page');
         }
     }
 
-    private function validSeat($seatsIdArray, $roomId, $seanceId)
+    private function getRoomLayout($seance)
+    {
+
+        $room = $seance->getSale();
+        $roomLayout = array();
+        foreach ($room->getRzedy()->getIterator() AS $row) {
+            foreach ($row->getMiejsca()->getIterator() AS $seat) {
+                $roomLayout[$seat->getId()] = array(
+                    'miejsca' => $seat,
+                    'status' => $row->getTypyrzedow()->getId());
+            }
+        }
+        foreach ($seance->getTranzakcje()->getIterator() AS $transaction) {
+            foreach ($transaction->getBilety()->getIterator() AS $ticket) {
+                if (!$ticket->getCzyanulowany()) {
+                    $transSeat = $ticket->getMiejsca();
+                    if ($roomLayout[$transSeat->getId()]['status'] == 1 or $roomLayout[$transSeat->getId()]['status'] = 2) {
+                        $roomLayout[$transSeat->getId()]['status'] = 4;
+                    }
+                }
+            }
+        }
+        foreach ($seance->getRezerwacje()->getIterator() AS $booking) {
+            if (!$booking->isSfinalizowana()) {
+                foreach ($booking->getMiejsca()->getIterator() AS $revSeat) {
+                    if ($roomLayout[$revSeat->getId()]['status'] == 1 or $roomLayout[$revSeat->getId()]['status'] = 2) {
+                        $roomLayout[$revSeat->getId()]['status'] = 3;
+
+                    }
+                }
+            }
+        }
+
+        return $roomLayout;
+    }
+
+    private function validSeat($seatsIdArray, $roomLayout)
     {
         foreach ($seatsIdArray as $seatId) {
             if (!preg_match('/^[0-9]{1,}$/', $seatId)) {
                 return false;
             }
 
-            $seatToCheck = $this->getDoctrine()->getRepository(Miejsca::class)->getSeatToCheck($roomId, $seanceId, $seatId);
-            if (!$seatToCheck) {
+            if (!array_key_exists($seatId, $roomLayout)) {
                 return false;
             }
 
-            if ($seatToCheck[0]['typrzedu'] == 2) {
-                return false;
-            }
-            if ($seatToCheck[0]['rezerwacje']) {
-                return false;
-
-            }
-            if ($seatToCheck[0]['tranzakcje']) {
+            if ($roomLayout[$seatId]['status'] != 1) {
                 return false;
             }
         }
@@ -169,29 +248,24 @@ class ReservationsController extends Controller
             ->getForm();
     }
 
-
-
-
-
     /**
-     * @Route("/reservations/delete/{id<[1-9]\d*>?}", name="workers_app/reservations/delete", methods={"DELETE"})
+     * @Route("/reservations/delete", name="workers_app/reservations/delete", methods={"DELETE"})
      */
-    public function delete(Request $request, $id)
+    public function delete(Request $request)
     {
-//        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
-//            return $this->redirectToRoute('workers_app/logout_page');
-//        }
-//
-//        if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
-//            $promotion = $this->getDoctrine()->getRepository(Promocje::class)->find($id);
-//            if($promotion->getPoczatekpromocji()->format("Y-m-d") > date("Y-m-d")) {
-//                $entityManager = $this->getDoctrine()->getManager();
-//
-//                $entityManager->remove($promotion);
-//                $entityManager->flush();
-//            }
-//        }
+        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('workers_app/logout_page');
+        }
+
+        if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
+            $reservation = $this->getDoctrine()->getRepository(Rezerwacje::class)->find($request->get('reservationId'));
+            if(!$reservation or $reservation->isSfinalizowana()){
+                return new JsonResponse(['result' => false]);
+            }
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($reservation);
+            $entityManager->flush();
+            return new JsonResponse(['result' => true]);
+        }
     }
-
-
 }
