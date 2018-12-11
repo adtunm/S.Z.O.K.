@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * Pulebiletow
  *
  * @ORM\Table(name="pulebiletow", uniqueConstraints={@ORM\UniqueConstraint(name="idPuleBiletow_UNIQUE", columns={"id"}), @ORM\UniqueConstraint(name="NazwaPuli_UNIQUE", columns={"nazwa"})})
- * @ORM\Entity(repositoryClass="App\Repository\PuleBiletowRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\PuleRepository")
  * @UniqueEntity(
  *     fields={"nazwa"},
  *     errorPath="nazwa",

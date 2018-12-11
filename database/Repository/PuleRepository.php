@@ -14,11 +14,47 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 
-class PuleBiletowRepository extends ServiceEntityRepository
+class PuleRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Pulebiletow::class);
+    }
+
+    public function getSeancesTickets($id)
+    {
+        $entityManager = $this->getEntityManager();
+        $query = $entityManager->createQuery(
+            'SELECT DISTINCT
+                pbmrb.id,
+                pbmrb.cena,
+                rb.nazwa
+            FROM App\Entity\Pulebiletow pb
+            JOIN pb.seanse se
+            JOIN pb.pulaMaRodzajeBiletow pbmrb
+            JOIN pbmrb.rodzajebiletow rb
+            WHERE se.id = :id')
+            ->setParameter('id', $id);
+
+        return $query->execute();
+    }
+
+    public function getTicketToCheck($id, $ticketId)
+    {
+        $entityManager = $this->getEntityManager();
+        $query = $entityManager->createQuery(
+            'SELECT DISTINCT
+                pbmrb.id
+            FROM App\Entity\Pulebiletow pb
+            JOIN pb.seanse se
+            JOIN pb.pulaMaRodzajeBiletow pbmrb
+            JOIN pbmrb.rodzajebiletow rb
+            WHERE se.id = :id
+            AND pbmrb.id = :ticketId')
+            ->setParameter('id', $id)
+            ->setParameter('ticketId', $ticketId);
+
+        return $query->execute();
     }
 
     public function getPageCountOfActive($pageLimit = 10)
