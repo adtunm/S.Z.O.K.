@@ -29,11 +29,11 @@ class MailTemplate extends AbstractController
 //        $html = $this->renderView('workersApp/ticket/ticket.html.twig', ['bilety' => $tickets]);      //fragment generowania mateuszowego biletu
 //        $data = $snappy->getOutputFromHtml($html);                                                    //zapisanie wygenerowanego pliku do zmiennej
 //        $attachment = new Swift_Attachment($data, 'bilety.pdf', 'application/pdf');                   //tworzenie załaczona o wybranej nazwie o wybranym fomracie
-        $client = $this->getDoctrine()->getRepository(Uzytkownicy::class)->find(1);
+        $client = $this->getDoctrine()->getRepository(Uzytkownicy::class)->find(rand(1,50));
         $message = (new \Swift_Message());          //nowa wiadomosć
         $message ->setSubject('Temat');       //temet wiadomości
         $message ->setFrom('szok.smtp@gmail.com');  //nadawca
-        $message ->setTo('adtunm');       //odbiorca
+        $message ->setTo('g.nowak126@gmail.com');       //odbiorca
         $message ->setBody($this->renderView(       //treść maila jako twig
             'workersApp/mail/mailRegistration.html.twig',
             array('client' => $client)      //przekazywanie wartości do twinga, jakby ktoś nie wiedział
@@ -56,11 +56,13 @@ class MailTemplate extends AbstractController
     public function sendEmail2( \Swift_Mailer $mailer)
     {
         //to samo ale inaczej zbudowane.
+        $client = $this->getDoctrine()->getRepository(Uzytkownicy::class)->find(rand(1,50));
         $message = (new \Swift_Message('Hello Email'))  //temat
-            ->setFrom('send@example.com')               //nadawaca
-            ->setTo('recipient@example.com')            //odbiorca
+            ->setFrom('szok.smtp@gmail.com')               //nadawaca
+            ->setTo('g.nowak126@gmail.com')            //odbiorca
             ->setBody(                                  //wiadomość
-                $this->renderView('jakiśtwig.ktorego.niema'
+                $this->renderView('workersApp/mail/mailRegistration.html.twig',
+                    array('client' => $client)
                 ),
                 'text/html'
             )

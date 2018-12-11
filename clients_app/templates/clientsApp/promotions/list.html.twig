@@ -42,7 +42,8 @@
                                 Brak
                             {% endif %}
                         </td>
-                        <td>
+                        <td{% if "now"|date('Y-m-d') >= promotion.poczatekpromocji|date('Y-m-d') and "now"|date('Y-m-d') <= promotion.koniecpromocji|date('Y-m-d') %}
+                            class="text-success"{% endif %}>
                             {{ promotion.poczatekPromocji|date("d.m.Y") }}
                             - {{ promotion.koniecPromocji|date("d.m.Y") }}
                         </td>

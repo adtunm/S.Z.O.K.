@@ -2,31 +2,31 @@
 /**
  * Created by PhpStorm.
  * User: Piotr
- * Date: 17.11.2018
- * Time: 22:33
+ * Date: 02.12.2018
+ * Time: 17:26
  */
 
 namespace App\Repository;
 
 
-use App\Entity\Role;
+use App\Entity\Uzytkownicy;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Symfony\Bridge\Doctrine\RegistryInterface;
 use Doctrine\ORM\Tools\Pagination\Paginator;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 
-class RoleRepository  extends ServiceEntityRepository
+class UzytkownicyRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, Role::class);
+        parent::__construct($registry, Uzytkownicy::class);
     }
 
     public function getPageCountOfActive($pageLimit = 10)
     {
-        $query = $this->createQueryBuilder('d')
-            ->select('count(d.id)')
-            ->andWhere('d.usunieto IS NULL OR d.usunieto = 0')
-            ->orderBy('d.id', 'ASC')
+        $query = $this->createQueryBuilder('p')
+            ->select('count(p.id)')
+            ->andWhere('p.czyzablokowany IS NULL')
+            ->orderBy('p.id', 'ASC')
             ->getQuery();
 
         $count = $query->getSingleScalarResult();
@@ -40,9 +40,9 @@ class RoleRepository  extends ServiceEntityRepository
 
     public function findActive($page = 1, $pageLimit = 10)
     {
-        $query = $this->createQueryBuilder('d')
-            ->andWhere('d.usunieto IS NULL OR d.usunieto = 0')
-            ->orderBy('d.id', 'ASC')
+        $query = $this->createQueryBuilder('p')
+            ->andWhere('p.czyzablokowany IS NULL OR p.czyzablokowany = 0')
+            ->orderBy('p.id', 'ASC')
             ->getQuery();
 
         $requestedPage = new Paginator($query);
@@ -52,13 +52,12 @@ class RoleRepository  extends ServiceEntityRepository
 
         return $requestedPage;
     }
-
-    public function getPageCountOfDeleted($pageLimit = 10)
+    public function getPageCountOfDisable($pageLimit = 10)
     {
-        $query = $this->createQueryBuilder('d')
-            ->select('count(d.id)')
-            ->andWhere('d.usunieto = 1')
-            ->orderBy('d.id', 'ASC')
+        $query = $this->createQueryBuilder('p')
+            ->select('count(p.id)')
+            ->andWhere('p.czyzablokowany = 1')
+            ->orderBy('p.id', 'ASC')
             ->getQuery();
 
         $count = $query->getSingleScalarResult();
@@ -70,11 +69,11 @@ class RoleRepository  extends ServiceEntityRepository
         return $pageCount;
     }
 
-    public function findDeleted($page = 1, $pageLimit = 10)
+    public function findDisable($page = 1, $pageLimit = 10)
     {
-        $query = $this->createQueryBuilder('d')
-            ->andWhere('d.usunieto = 1')
-            ->orderBy('d.id', 'ASC')
+        $query = $this->createQueryBuilder('p')
+            ->andWhere('p.czyzablokowany = 1')
+            ->orderBy('p.id', 'ASC')
             ->getQuery();
 
         $requestedPage = new Paginator($query);

@@ -11,8 +11,10 @@ namespace App\Repository;
 
 use App\Entity\Rezerwacje;
 use App\Entity\Seanse;
+use App\Entity\Uzytkownicy;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 class RezerwacjeRepository extends ServiceEntityRepository
 {
@@ -96,14 +98,15 @@ class RezerwacjeRepository extends ServiceEntityRepository
 
         $pageCount = floor($count / $pageLimit);
         $rest = $count % $pageLimit;
-        if($rest != 0) {
+        if ($rest != 0) {
             $pageCount = $pageCount + 1;
         }
 
         return $pageCount;
     }
 
-    public function findBookingNotFinalized(Seanse $seance){
+    public function findBookingNotFinalized(Seanse $seance)
+    {
         $query = $this->createQueryBuilder('r')
             ->select('r')
             ->andWhere('r.sfinalizowana = false')
@@ -113,4 +116,36 @@ class RezerwacjeRepository extends ServiceEntityRepository
         return $query->execute();
     }
 
+    public function getClientReservationsPage(Uzytkownicy $user, $page = 1, $pageLimit = 5)
+    {
+        $query = $this->createQueryBuilder('r')
+            ->andWhere('r.uzytkownicy = :user')
+            ->setParameter('user', $user)
+            ->orderBy('r.id', 'DESC')
+            ->getQuery();
+
+        $requestedPage = new Paginator($query);
+        $requestedPage->getQuery()
+            ->setFirstResult($pageLimit * ($page - 1))
+            ->setMaxResults($pageLimit);
+
+        return $requestedPage;
+    }
+
+    public function getClientReservationsPageCount(Uzytkownicy $user, $pageLimit = 5)
+    {
+        $query = $this->createQueryBuilder('r')
+            ->select('count(r.id)')
+            ->andWhere('r.uzytkownicy = :user')
+            ->setParameter('user', $user)
+            ->getQuery();
+
+        $count = $query->getSingleScalarResult();
+        $pageCount = floor($count / $pageLimit);
+        $rest = $count % $pageLimit;
+        if ($rest != 0) {
+            $pageCount = $pageCount + 1;
+        }
+        return $pageCount;
+    }
 }
