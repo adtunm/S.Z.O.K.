@@ -165,10 +165,10 @@
                         console.log(data);
                         if (data.result) {
                             document.getElementById('alert' + reservationId).innerHTML = "Rezerwacja została poprawnie usunięta!";
-                            document.getElementById('alert' + reservationId).style.color = 'green';
+                            document.getElementById('alert' + reservationId).classList = 'text-success font-weight-bold';
                         } else {
                             document.getElementById('alert' + reservationId).innerHTML = "Rezerwacja została już wcześniej usunięta lub jest już zrealizowana. Proszę odświeżyć stronę i spróbować ponownie";
-                            document.getElementById('alert' + reservationId).style.color = 'red';
+                            document.getElementById('alert' + reservationId).classList = 'text-danger font-weight-bold';
                         }
                     }
                 });
