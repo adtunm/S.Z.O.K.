@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * Pulebiletow
  *
  * @ORM\Table(name="pulebiletow", uniqueConstraints={@ORM\UniqueConstraint(name="idPuleBiletow_UNIQUE", columns={"id"}), @ORM\UniqueConstraint(name="NazwaPuli_UNIQUE", columns={"nazwa"})})
- * @ORM\Entity(repositoryClass="App\Repository\PuleBiletowRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\PuleRepository")
  * @UniqueEntity(
  *     fields={"nazwa"},
  *     errorPath="nazwa",
@@ -119,6 +119,29 @@ class Pulebiletow
     public function getPulaMaRodzajeBiletow(): \Doctrine\Common\Collections\Collection
     {
         return $this->pulaMaRodzajeBiletow;
+    }
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Seanse", mappedBy="pulebiletow")
+     */
+    private $seanse;
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSeanse(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->seanse;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $seanse
+     */
+    public function setSeanse(\Doctrine\Common\Collections\Collection $seanse): void
+    {
+        $this->seanse = $seanse;
     }
 
     /**

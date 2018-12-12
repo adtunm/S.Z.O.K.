@@ -47,9 +47,7 @@ class BiletyRepository extends ServiceEntityRepository
             JOIN smf.filmy f
             WHERE t.id = :id
             AND smf.seanse = se.id')
-            ->setParameter('id', $id);
-
-
+        ->setParameter('id', $id);
         return $query->execute();
     }
 

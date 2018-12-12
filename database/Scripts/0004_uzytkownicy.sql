@@ -1,5 +1,5 @@
 INSERT INTO `uzytkownicy` (`id`, `login`, `haslo`, `imie`, `nazwisko`, `telefon`, `email`, `dataRejestracji`, `czyKobieta`, `czyZablokowany`) VALUES
-(1, 'user', '$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO', 'Mirela', 'Piwowarska', '645939719', 'mirela.piwowarska@op.pl', '2017-10-01', 1, NULL),
+(1, 'uzytkownik', '$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO', 'Mirela', 'Piwowarska', '645939719', 'mirela.piwowarska@op.pl', '2017-10-01', 1, NULL),
 (2, 'abartosz774', '$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO', 'Adrian', 'Bartosz', '938221206', 'adrian.bartosz@gmail.com', '2017-10-01', 0, NULL),
 (3, 'aowczarz747', '$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO', 'Alfred', 'Owczarz', '682138400', 'alfred.owczarz@interia.pl', '2017-10-01', 0, NULL),
 (4, 'wsujecka202', '$2y$12$O501S38/LbW5WgrcQ6AVu.c4q.MvYUu68gyGaFffJrOifIZuVhhLO', 'Waleria', 'Sujecka', '781029284', 'waleria.sujecka@hotmail.com', '2017-10-01', 1, NULL),

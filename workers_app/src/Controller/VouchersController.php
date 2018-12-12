@@ -120,7 +120,7 @@ class VouchersController extends Controller
                     $errors['value'] = 'Wartość zniżki nie powinna przekraczać 100.00.';
 
                 if($data['start']->format('Y-m-d') <= date('Y-m-d'))
-                    $errors['start'] = 'Vouchery powinniy być ważne od nie wcześniej niż jutra.';
+                    $errors['start'] = 'Vouchery powinniy być ważne nie wcześniej niż od jutra.';
 
                 if($data['end']->format('Y-m-d') < $data['start']->format('Y-m-d'))
                     $errors['end'] = "Koniec ważności voucherów nie może być wcześniej niż jej początek.";

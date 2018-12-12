@@ -117,9 +117,9 @@ class Bilety
     }
 
     /**
-     * @param \Vouchery $vouchery
+     * @param ?Vouchery $vouchery
      */
-    public function setVouchery(Vouchery $vouchery): void
+    public function setVouchery(?Vouchery $vouchery): void
     {
         $this->vouchery = $vouchery;
     }
@@ -133,7 +133,7 @@ class Bilety
     }
 
     /**
-     * @param \Miejsca $miejsca
+     * @param Miejsca $miejsca
      */
     public function setMiejsca(Miejsca $miejsca): void
     {
@@ -149,7 +149,7 @@ class Bilety
     }
 
     /**
-     * @param \Rodzajebiletow $rodzajebiletow
+     * @param Rodzajebiletow $rodzajebiletow
      */
     public function setRodzajebiletow(Rodzajebiletow $rodzajebiletow): void
     {
@@ -165,7 +165,7 @@ class Bilety
     }
 
     /**
-     * @param \Tranzakcje $tranzakcje
+     * @param Tranzakcje $tranzakcje
      */
     public function setTranzakcje(Tranzakcje $tranzakcje): void
     {

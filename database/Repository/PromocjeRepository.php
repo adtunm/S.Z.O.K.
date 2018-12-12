@@ -111,4 +111,16 @@ class PromocjeRepository extends ServiceEntityRepository
 
         return $query->execute();
     }
+
+    public function getPromotionToCheck($promotionId)
+    {
+        $query = $this->createQueryBuilder('p')
+            ->andWhere('p.koniecpromocji >= :currentDate AND p.poczatekpromocji <= :currentDate')
+            ->andWhere('p.id = :promotionId')
+            ->setParameter('promotionId', $promotionId)
+            ->setParameter('currentDate', date("Y-m-d"))
+            ->getQuery();
+
+        return $query->execute();
+    }
 }

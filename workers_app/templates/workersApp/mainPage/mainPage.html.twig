@@ -99,11 +99,11 @@
                     {% set counter = counter + 1 %}
                     <td>Sprzedaż</td>
                     <td>
-                        <a href="{{ path('workers_app/reservations') }}" class="btn btn-primary mb-1">Lista rezerwacji</a>
+                        <a href="{{ path('workers_app/reservations', {'date': 0, 'id': 0, 'name': 0, 'surname': 0 } ) }}" class="btn btn-primary mb-1">Lista rezerwacji</a>
                         {% if is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN') %}
-                            <a href="#" class="btn btn-primary mb-1">Zwrot biletów</a>
+                            <a href="{{ path('workers_app/return_ticket') }}" class="btn btn-primary mb-1">Zwrot biletów</a>
                         {% endif %}
-                        <a href="#" class="btn btn-primary mb-1">Weryfikacja</a>
+                        <a href="{{ path('workers_app/verify_ticket') }}" class="btn btn-primary mb-1">Weryfikacja</a>
                     </td>
                 </tr>
                 {% if is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN') %}

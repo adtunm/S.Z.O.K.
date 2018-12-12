@@ -136,7 +136,7 @@ class RoomsController extends Controller
             if ($rowCode[$i] != 1 && $rowCode[$i] != 2) {
                 return false;
             }
-            for ($j = 0; $j < $rowCount; $j++) {
+            for ($j = 0; $j < $seatCount; $j++) {
                 if ($seatCodeArray[$i][$j] != 1 && $seatCodeArray[$i][$j] != 0) {
                     return false;
                 }
@@ -147,45 +147,38 @@ class RoomsController extends Controller
 
     private function pushRoom($rowCount, $seatCount, $rowCode, $seatCodeArray, $roomNumber)
     {
-        set_time_limit(300);
         $entityManager = $this->getDoctrine()->getManager();
         $room = new Sale();
         $room->setNumersali($roomNumber);
         $room->setDlugoscsali($rowCount);
         $room->setSzerokoscsali($seatCount);
-
         $entityManager->persist($room);
-        $entityManager->flush();
-
         for ($i = 0; $i < $rowCount; $i++) {
             $row = new Rzedy();
             $row->setNumerrzedu($i + 1);
-
             $rowType = $entityManager->getRepository(Typyrzedow::class)->find($rowCode[$i]);
             $row->setTypyrzedow($rowType);
-
             $row->setSale($room);
-
             $entityManager->persist($row);
-            $entityManager->flush();
+            $this->pushSeatsInRow($row, $seatCount, $seatCodeArray[$i], $entityManager);
+        }
+        $entityManager->flush();
+    }
 
-            $seatNumber = 1;
-            for ($j = 0; $j < $seatCount; $j++) {
-                $seat = new Miejsca();
-                $seat->setPozycja($j + 1);
-
-                if ($seatCodeArray[$i][$j] == 1) {
-                    $seat->setNumermiejsca($seatNumber);
-                    $seatNumber++;
-                } else {
-                    $seat->setNumermiejsca(0);
-                }
-
-                $seat->setRzedy($row);
-
-                $entityManager->persist($seat);
-                $entityManager->flush();
+    private function pushSeatsInRow($row, $seatCount, $seatCode, $entityManager)
+    {
+        $seatNumber = 1;
+        for ($j = 0; $j < $seatCount; $j++) {
+            $seat = new Miejsca();
+            $seat->setPozycja($j + 1);
+            if ($seatCode[$j] == 1) {
+                $seat->setNumermiejsca($seatNumber);
+                $seatNumber++;
+            } else {
+                $seat->setNumermiejsca(0);
             }
+            $seat->setRzedy($row);
+            $entityManager->persist($seat);
         }
     }
 
@@ -207,7 +200,8 @@ class RoomsController extends Controller
                 } else {
                     $checkRoom = true;
                 }
-                return $this->render('workersApp/screeningRoomPages/view.html.twig', ['id' => $id, 'seatCount' => $seatCount, 'checkRoom' => $checkRoom, 'values' => $values]);
+                return $this->render('workersApp/screeningRoomPages/view.html.twig', ['id' => $id, 'seatCount' => $seatCount,
+                    'checkRoom' => $checkRoom, 'values' => $values]);
             } else {
                 return $this->redirectToRoute('workers_app/rooms_page');
             }
@@ -295,7 +289,7 @@ class RoomsController extends Controller
                     $values = $this->getRoomView($id);
                     $error = null;
                 } else {
-                    return $this->redirectToRoute('workers_app/rooms_page');
+                    return $this->redirectToRoute('workers_app/no_permission');
                 }
             }
             return $this->render('workersApp/screeningRoomPages/edit.html.twig', ['error' => $error, 'id' => $id, 'values' => $values]);
@@ -353,38 +347,84 @@ class RoomsController extends Controller
 
     private function updateRoom($id, $rowCount, $seatCount, $rowCode, $seatCodeArray, $roomNumber)
     {
-        set_time_limit(300);
         $entityManager = $this->getDoctrine()->getManager();
         $room = $this->getDoctrine()->getRepository(Sale::class)->find($id);
         $room->setDlugoscsali($rowCount);
         $room->setSzerokoscsali($seatCount);
         $room->setNumersali($roomNumber);
+        $entityManager->merge($room);
 
-        $rows = $this->getDoctrine()->getRepository(Rzedy::class)->getRows($id);
+        $existRows = $this->getDoctrine()->getRepository(Rzedy::class)->getRows($id);
+
+        if (count($existRows) > $rowCount) {
+            $rows = array_slice($existRows, 0, $rowCount);
+            $rowsToRemove = array_slice($existRows, $rowCount, count($existRows) - $rowCount);
+            foreach($rowsToRemove as $rowToRemove){
+                foreach($rowToRemove->getMiejsca()->getIterator() as $seat){
+                    $entityManager->remove($seat);
+                }
+                $entityManager->remove($rowToRemove);
+            }
+        } else {
+            $rows = $existRows;
+            for ($i = 0; $i < $rowCount - count($existRows); $i++) {
+                $rows[] = new Rzedy();
+            }
+        }
+
         for ($i = 0; $i < $rowCount; $i++) {
-
             $rowType = $entityManager->getRepository(Typyrzedow::class)->find($rowCode[$i]);
             $rows[$i]->setTypyrzedow($rowType);
             $rows[$i]->setNumerrzedu($i + 1);
-
-            $rowId = $rows[$i]->getId();
-            $seats = $this->getDoctrine()->getRepository(Miejsca::class)->getSeats($rowId);
-            $seatNumber = 1;
-            for ($j = 0; $j < $seatCount; $j++) {
-                $seats[$j]->setPozycja($j + 1);
-
-                if ($seatCodeArray[$i][$j] == 1) {
-                    $seats[$j]->setNumermiejsca($seatNumber);
-                    $seatNumber++;
-                } else {
-                    $seats[$j]->setNumermiejsca(0);
-                }
-
-                $seats[$j]->setRzedy($rows[$i]);
+            if($rows[$i]->getId()){
+                $rowId = $rows[$i]->getId();
+                $existSeats = $this->getDoctrine()->getRepository(Miejsca::class)->getSeats($rowId);
+                $this->updateSeatsInRow($rows[$i], $existSeats, $seatCount, $seatCodeArray[$i], $entityManager);
+                $entityManager->merge($rows[$i]);
+            } else {
+                $rows[$i]->setSale($room);
+                $entityManager->persist($rows[$i]);
+                $this->pushSeatsInRow($rows[$i], $seatCount, $seatCodeArray[$i], $entityManager);
 
             }
         }
         $entityManager->flush();
+    }
+
+    private function updateSeatsInRow($row, $existSeats, $seatCount, $seatCode, $entityManager)
+    {
+        if (count($existSeats) > $seatCount) {
+            $seats = array_slice($existSeats, 0, $seatCount);
+            $seatsToRemove = array_slice($existSeats, $seatCount, count($existSeats) - $seatCount);
+            foreach($seatsToRemove as $seatToRemove){
+                $entityManager->remove($seatToRemove);
+            }
+        } else {
+            $seats = $existSeats;
+            for ($i = 0; $i < $seatCount - count($existSeats); $i++) {
+                $seats[] = new Miejsca();
+            }
+        }
+
+        $seatNumber = 1;
+        for ($j = 0; $j < $seatCount; $j++) {
+            $seats[$j]->setPozycja($j + 1);
+
+            if ($seatCode[$j] == 1) {
+                $seats[$j]->setNumermiejsca($seatNumber);
+                $seatNumber++;
+            } else {
+                $seats[$j]->setNumermiejsca(0);
+            }
+
+            $seats[$j]->setRzedy($row);
+
+            if($seats[$j]->getId()){
+                $entityManager->merge($seats[$j]);
+            } else {
+                $entityManager->persist($seats[$j]);
+            }
+        }
     }
 
     /**
@@ -414,5 +454,4 @@ class RoomsController extends Controller
             }
         }
     }
-
 }

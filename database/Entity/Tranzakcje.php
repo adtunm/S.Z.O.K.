@@ -87,7 +87,7 @@ class Tranzakcje
     /**
      * @param Promocje $promocje
      */
-    public function setPromocje(Promocje $promocje): void
+    public function setPromocje(?Promocje $promocje): void
     {
         $this->promocje = $promocje;
     }
@@ -101,7 +101,7 @@ class Tranzakcje
     }
 
     /**
-     * @param \Rodzajeplatnosci $rodzajeplatnosci
+     * @param Rodzajeplatnosci $rodzajeplatnosci
      */
     public function setRodzajeplatnosci(Rodzajeplatnosci $rodzajeplatnosci): void
     {
@@ -117,7 +117,7 @@ class Tranzakcje
     }
 
     /**
-     * @param \Seanse $seanse
+     * @param Seanse $seanse
      */
     public function setSeanse(Seanse $seanse): void
     {

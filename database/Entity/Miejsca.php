@@ -15,7 +15,7 @@ class Miejsca
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -134,7 +134,7 @@ class Miejsca
     /**
      * @var \Rzedy
      *
-     * @ORM\ManyToOne(targetEntity="Rzedy")
+     * @ORM\ManyToOne(targetEntity="Rzedy", inversedBy="miejsca")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="Rzedy_id", referencedColumnName="id")
      * })

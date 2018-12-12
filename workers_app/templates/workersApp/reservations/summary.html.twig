@@ -8,16 +8,22 @@
                 <div class="mx-3">
                     <div class="row mb-3">
                         <div class="col-sm-3">Film:</div>
-                        <div class="col-sm-9 pl-sm-2">{{ seance[0].tytul }}
-                            ({{ seance[0].datapremiery|date('Y') }}) - {{ seance[0].nazwa }}</div>
+                        <div class="col-sm-9 pl-sm-2">{% if seance.wydarzeniaspecjalne %}
+                                {{ seance.wydarzeniaspecjalne }}
+                            {% else %}
+                                {% for smf in seance.seansMaFilmy|slice(0,1) %}
+                                    {{ smf.filmy }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">Data i godzina:</div>
-                        <div class="col-sm-9 pl-sm-2">{{ seance[0].data }} {{ seance[0].godzina }}</div>
+                        <div class="col-sm-9 pl-sm-2">{{ seance.poczatekseansu|date('d.m.Y H:i') }}</div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">Wybrane miejsca:</div>
-                        <div class="col-sm-9 pl-sm-2">{{ rezervationData.seatNumber }}</div>
+                        <div class="col-sm-9 pl-sm-2">Sala: {{ seance.sale.numersali }} {{ rezervationData.seatNumber }}</div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">Imie i nazwisko:</div>
