@@ -41,16 +41,13 @@ class RezerwacjeRepository extends ServiceEntityRepository
             'SELECT r
             FROM App\Entity\Rezerwacje r
             JOIN r.seanse se
-            JOIN se.seansMaFilmy smf
-            JOIN smf.filmy f
-            JOIN se.typyseansow tse
             WHERE se.poczatekseansu BETWEEN :dateF AND :dateT
             AND (INSTR(r.imie, :name) > 0 OR :name IS NULL)
             AND (INSTR(r.nazwisko, :surname) > 0 OR :surname IS NULL)
             AND r.id LIKE :id
             AND r.sfinalizowana != 1
             GROUP BY r.id
-            ORDER BY r.id')
+            ORDER BY r.id DESC')
             ->setParameter('name', $name)
             ->setParameter('surname', $surname)
             ->setParameter('dateF', $from)
@@ -77,11 +74,9 @@ class RezerwacjeRepository extends ServiceEntityRepository
 
 
         $query = $this->createQueryBuilder('r')
-            ->select('count(r.id)')
+            ->select('count(DISTINCT r.id)')
             ->join('r.seanse', 'se')
-            ->join('App\Entity\SeansMaFilmy', 'smf')
-            ->where('smf.seanse = se.id',
-                'se.poczatekseansu BETWEEN :dateF AND :dateT',
+            ->where('se.poczatekseansu BETWEEN :dateF AND :dateT',
                 '(INSTR(r.imie, :name) > 0 OR :name IS NULL)',
                 '(INSTR(r.nazwisko, :surname) > 0 OR :surname IS NULL)',
                 'r.id LIKE :id',

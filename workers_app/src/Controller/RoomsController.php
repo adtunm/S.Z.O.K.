@@ -147,30 +147,22 @@ class RoomsController extends Controller
 
     private function pushRoom($rowCount, $seatCount, $rowCode, $seatCodeArray, $roomNumber)
     {
-        set_time_limit(300);
         $entityManager = $this->getDoctrine()->getManager();
         $room = new Sale();
         $room->setNumersali($roomNumber);
         $room->setDlugoscsali($rowCount);
         $room->setSzerokoscsali($seatCount);
-
         $entityManager->persist($room);
-        $entityManager->flush();
-
         for ($i = 0; $i < $rowCount; $i++) {
             $row = new Rzedy();
             $row->setNumerrzedu($i + 1);
-
             $rowType = $entityManager->getRepository(Typyrzedow::class)->find($rowCode[$i]);
             $row->setTypyrzedow($rowType);
-
             $row->setSale($room);
-
             $entityManager->persist($row);
-            $entityManager->flush();
-
             $this->pushSeatsInRow($row, $seatCount, $seatCodeArray[$i], $entityManager);
         }
+        $entityManager->flush();
     }
 
     private function pushSeatsInRow($row, $seatCount, $seatCode, $entityManager)
@@ -179,18 +171,14 @@ class RoomsController extends Controller
         for ($j = 0; $j < $seatCount; $j++) {
             $seat = new Miejsca();
             $seat->setPozycja($j + 1);
-
             if ($seatCode[$j] == 1) {
                 $seat->setNumermiejsca($seatNumber);
                 $seatNumber++;
             } else {
                 $seat->setNumermiejsca(0);
             }
-
             $seat->setRzedy($row);
-
             $entityManager->persist($seat);
-            $entityManager->flush();
         }
     }
 
@@ -359,7 +347,6 @@ class RoomsController extends Controller
 
     private function updateRoom($id, $rowCount, $seatCount, $rowCode, $seatCodeArray, $roomNumber)
     {
-        set_time_limit(300);
         $entityManager = $this->getDoctrine()->getManager();
         $room = $this->getDoctrine()->getRepository(Sale::class)->find($id);
         $room->setDlugoscsali($rowCount);

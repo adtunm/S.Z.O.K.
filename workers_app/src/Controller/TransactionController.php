@@ -146,7 +146,7 @@ class TransactionController extends Controller
             $promotions = $this->getDoctrine()->getRepository(Promocje::class)->findCurrent();
             $paymentWay = $this->getDoctrine()->getRepository(Rodzajeplatnosci::class)->findAll();
             $selectedSeats = $this->getDoctrine()->getRepository(Miejsca::class)->getSeatsForReservation($id);
-            return $this->render('workersApp/reservations/accomplish.html.twig', [
+            return $this->render('workersApp/transactions/accomplish.html.twig', [
                 'reservation' => $reservation, 'promotions' => $promotions,
                 'selectedSeats' => $selectedSeats, 'paymentWay' => $paymentWay]);
         } else {
@@ -343,7 +343,7 @@ class TransactionController extends Controller
 
         $voucherCode = $request->get('voucherCode');
 
-        if (strlen($voucherCode) < 28 || !preg_match('/^[0-9]{1,}$/', $voucherCode)) {
+        if (strlen($voucherCode) < 28 || !preg_match('/^[0-9]{1,}$/', $voucherCode) || !Vouchery::verifyCode($voucherCode)) {
             return new JsonResponse(['error' => 'Błędny kod vouchera']);
         }
         $voucherId = $this->getDoctrine()->getRepository(Vouchery::class)->findVoucherByCode($voucherCode);
@@ -392,9 +392,9 @@ class TransactionController extends Controller
                 return $this->redirectToRoute('workers_app/logout_page');
             }
             $entityManager = $this->getDoctrine()->getManager();
-            $tickets = $entityManager->getRepository(Bilety::class)->getTickets($id);
+            $transaction = $entityManager->getRepository(Tranzakcje::class)->find($id);
             $snappy = $this->get('knp_snappy.pdf');
-            $html = $this->renderView('workersApp/ticket/ticket.html.twig', ['bilety' => $tickets]);
+            $html = $this->renderView('workersApp/ticket/ticket.html.twig', ['transaction' => $transaction]);
             return new Response(
                 $snappy->getOutputFromHtml($html),
                 200,
@@ -458,7 +458,7 @@ class TransactionController extends Controller
     private function checkTicket($ticketCode)
     {
 
-        if (strlen($ticketCode) < 28 || !preg_match('/^[0-9]{1,}$/', $ticketCode)) {
+        if (strlen($ticketCode) < 28 || !preg_match('/^[0-9]{1,}$/', $ticketCode) || !Bilety::verifyCode($ticketCode)) {
             return ['error' => 'Błędny kod biletu'];
         }
         $ticketId = $this->getDoctrine()->getRepository(Bilety::class)->findTicketByCode($ticketCode);
