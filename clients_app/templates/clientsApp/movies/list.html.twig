@@ -3,11 +3,20 @@
 {% block content %}
     {% if movies %}
         <div class="row pb-4 mt-0">
-            <div class="h1 col-md">Obecnie w kinie:</div>
-            <div class="col-md">
-                <a href="{{ path('clients_app/movies/all') }}" class="btn btn-primary pull-right">
-                    <i class="fa fa-th" aria-hidden="true"></i> Pokaż wszystkie filmy
-                </a>
+            <div class="h1 col-lg">Obecnie w kinie:</div>
+            <div class="col-lg h5">
+                <div class="pull-right">
+                    {{ form_start(form, {'attr': {'class': 'form-inline'}}) }}
+                    <div class="form-group mr-2">
+                        {{ form_label(form.movieType) }}
+                        {{ form_widget(form.movieType) }}
+                        {{ form_widget(form.submit) }}
+                    </div>
+                    <a href="{{ path('clients_app/movies/all') }}" class="btn btn-primary pull-right mb-2">
+                        <i class="fa fa-th" aria-hidden="true"></i> Pokaż wszystkie filmy
+                    </a>
+                    {{ form_end(form) }}
+                </div>
             </div>
         </div>
         <div class="row px-5">
@@ -23,9 +32,17 @@
                 </a>
             {% endfor %}
         </div>
-        {% set basePath = path('clients_app/movies') %}
-        {% include 'clientsApp/inc/pagination.html.twig' %}
+        {% include 'clientsApp/inc/paginationWithParams.html.twig' %}
     {% else %}
+        <div class="pull-right">
+            {{ form_start(form, {'attr': {'class': 'form-inline'}}) }}
+            <div class="form-group">
+                {{ form_label(form.movieType) }}
+                {{ form_widget(form.movieType) }}
+            </div>
+            {{ form_widget(form.submit) }}
+            {{ form_end(form) }}
+        </div>
         <h1 class="text-center">Obecnie nic nie jest grane w kinie</h1>
         <div class="text-center display-1">
             <i class="fa fa-film" aria-hidden="true"></i>
