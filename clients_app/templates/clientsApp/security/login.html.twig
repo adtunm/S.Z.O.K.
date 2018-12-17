@@ -3,7 +3,7 @@
 {% block content %}
     <div class="row justify-content-center">
         <div class="col-md-9 ">
-            <h1 class="h2 mb-4 font-weight-normal">Logowanie:</h1>
+            <div class="h2 mb-4 font-weight-normal">Logowanie:</div>
             <form method="post" class="mx-3">
                 {% if error %}
                     <div class="alert alert-danger alert-dismissible fade show">
@@ -31,6 +31,7 @@
                     Zaloguj się
                 </button>
             </form>
+            <a class="btn btn-primary float-right mr-1" href="{{ path('clients_app/password_reset') }}">Zapomniałem hasła</a>
         </div>
     </div>
 {% endblock %}

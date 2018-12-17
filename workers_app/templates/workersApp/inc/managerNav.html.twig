@@ -49,8 +49,8 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="repertuarDropdown">
                             <a class="dropdown-item" href="{{ path('workers_app/movies') }}">Wyświetl listę filmów</a>
-                            <a class="dropdown-item" href="#">Pokaż seanse wg daty</a>
-                            <a class="dropdown-item" href="#">Pokaż repertuar wg sal</a>
+                            <a class="dropdown-item" href="{{ path('workers_app/program/date') }}">Pokaż seanse wg daty</a>
+                            <a class="dropdown-item" href="{{ path('workers_app/program/rooms') }}">Pokaż repertuar wg sal</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ path('workers_app/movies/new') }}">Dodaj nowy film</a>
                             <a class="dropdown-item" href="{{ path('workers_app/seances/new') }}">Dodaj nowy seans</a>

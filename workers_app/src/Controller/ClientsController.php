@@ -161,7 +161,7 @@ class ClientsController extends AbstractController
      *      name="workers_app/clients/block",
      *      requirements={"action":"block"},
      *      methods={"DELETE"})
-
+     *
      *
      * @Route("/clients/{action?unblock}/{id<[1-9]\d*>}",
      *      name="workers_app/clients/unblock",
