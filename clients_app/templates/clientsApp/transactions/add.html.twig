@@ -1,4 +1,4 @@
-{% extends 'workersApp/workerBase.html.twig' %}
+{% extends 'clientsApp/clientBase.html.twig' %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/room_view.css') }}" type="text/css">
@@ -92,9 +92,8 @@
     </div>
     <div class="row justify-content-between px-3">
         <div>
-            <a href="{{ path('workers_app/rooms_page') }}" class="btn btn-secondary"><i class="fa fa-angle-left"
+            <a href="{{ path('clients_app/movies') }}" class="btn btn-secondary"><i class="fa fa-angle-left"
                                                                                         aria-hidden="true"></i> Wróć</a>
-            {#<p id="test"></p>#}
         </div>
         <div>
             <form method="post">
@@ -116,7 +115,7 @@
     <div class="modal fade" id="reservationId" tabindex="-1" role="dialog"
          aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content bg-dark text-light text-left">
+            <div class="modal-content bg-client text-black text-left">
                 <div class="modal-header">
                     <div class="row px-3">
                         <h2 class="modal-title" id="modelTitleId">
@@ -146,7 +145,7 @@
                         <div class="m-3">
                             <div class="m-3">
                                 <div class="form-group row">
-                                    <div class="col-sm-12" id="seatLabel">
+                                    <div class="col-sm-12 font-weight-bold" id="seatLabel">
 
                                     </div>
                                 </div>
@@ -228,7 +227,7 @@
 
         function createTable() {
             submitButton.disabled = false;
-            seatLabel.style.color = 'white';
+            seatLabel.style.color = 'black';
             seatLabel.innerHTML = '';
             ticketTable.innerHTML = '';
 

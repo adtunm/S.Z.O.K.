@@ -32,118 +32,137 @@ use Symfony\Component\Routing\Annotation\Route;
 class ReservationsController extends AbstractController
 {
     /**
-     * @Route("/reservations/{date},{id},{name},{surname}/{page<[1-9]\d*>?1}", name="workers_app/reservations", methods={"GET", "POST"})
+     * @Route("/reservations/{date},{ifAccomplish}/{page<[1-9]\d*>?1}", name="clients_app/reservations", methods={"GET", "POST"})
      */
-    public function index(Request $request, $page, $date, $id, $name, $surname)
+    public function index(Request $request, $page, $date, $ifAccomplish)
     {
-        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
-            return $this->redirectToRoute('workers_app/logout_page');
+        if ($this->isGranted('ROLE_USER') && AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('clients_app/logout_page');
         }
         if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
-
             if ($values = $request->request->all()) {
-                if ($values['id'] == null) {
-                    $values['id'] = 0;
+                var_dump($values);
+                if ((array_key_exists('accomplish', $values) and array_key_exists('notAccomplish', $values))
+                    or (!array_key_exists('accomplish', $values) and !array_key_exists('notAccomplish', $values))) {
+                    $ifAccomplish = 2;
+                } else {
+                    if (array_key_exists('accomplish', $values)) {
+                        $ifAccomplish = 1;
+                    }
+                    if (array_key_exists('notAccomplish', $values)) {
+                        $ifAccomplish = 0;
+                    }
                 }
                 if ($values['date'] == null) {
-                    $values['date'] = 0;
+                    $date = 0;
+                } else {
+                    $date = $values['date'];
                 }
-                if ($values['name'] == null) {
-                    $values['name'] = 0;
-                }
-                if ($values['surname'] == null) {
-                    $values['surname'] = 0;
-                }
-                return $this->redirectToRoute('workers_app/reservations', $values);
+                return $this->redirectToRoute('clients_app/reservations', ['date' => $date, 'ifAccomplish' => $ifAccomplish]);
             }
 
-            if ($id === '0') {
-                $id = null;
+            if ($ifAccomplish === '2') {
+                $ifAccomplish = null;
             }
             if ($date === '0') {
                 $date = null;
             }
-            if ($name === '0') {
-                $name = null;
-            }
-            if ($surname === '0') {
-                $surname = null;
-            }
 
             $values = [
-                'number' => $id,
+                'ifAccomplish' => $ifAccomplish,
                 'date' => $date,
-                'name' => $name,
-                'surname' => $surname
             ];
 
             $pageLimit = $this->getParameter('page_limit');
-            $pageCount = $this->getDoctrine()->getRepository(Rezerwacje::class)->getPageCount(
-                $id, $date, $name, $surname, $pageLimit);
+            $pageCount = $this->getDoctrine()->getRepository(Rezerwacje::class)->getClientReservationsPageCount(
+                $this->getUser(), $pageLimit, $date, $ifAccomplish);
 
             if ($page > $pageCount and $pageCount != 0)
-                return $this->redirectToRoute('workers_app/reservations', $values);
+                return $this->redirectToRoute('clients_app/reservations', $values);
             else {
-                $reservations = $this->getDoctrine()->getRepository(Rezerwacje::class)->getReservations(
-                    $id, $date, $name, $surname, $page, $pageLimit);
-                return $this->render('workersApp/reservations/list.html.twig', array('reservations' => $reservations, 'values' => $values, 'currentPage' => $page, 'pageCount' => $pageCount));
+                $reservations = $this->getDoctrine()->getRepository(Rezerwacje::class)->getClientReservationsPage(
+                    $this->getUser(), $page, $pageLimit, $date, $ifAccomplish);
+                return $this->render('clientsApp/reservations/list.html.twig', array('reservations' => $reservations, 'values' => $values, 'currentPage' => $page, 'pageCount' => $pageCount));
             }
         } else {
-            return $this->redirectToRoute('workers_app/login_page');
+            return $this->redirectToRoute('clients_app/login_page');
         }
     }
 
     /**
-     * @Route("/reservations/add/{id<[1-9]\d*>?}", name="workers_app/reservations/add", methods={"GET", "POST"})
+     * @Route("/reservations/add/{id<[1-9]\d*>?}", name="clients_app/reservations/add", methods={"GET", "POST"})
      */
     public function add(Request $request, $id)
     {
-        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
-            return $this->redirectToRoute('workers_app/logout_page');
+        if ($this->isGranted('ROLE_USER') && AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('clients_app/logout_page');
         }
 
-        if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
-            if (!$seance = $this->getDoctrine()->getRepository(Seanse::class)->find($id) or $seance->getCzyodwolany()) {
-                return $this->redirectToRoute('workers_app/no_permission');
-            }
-            $submit = $request->request->get('submitNumber');
-            $reservation = new Rezerwacje();
-            $form = $this->getForm($reservation);
-            $form->handleRequest($request);
+        if (!$seance = $this->getDoctrine()->getRepository(Seanse::class)->find($id) or $seance->getCzyodwolany()) {
+            return $this->redirectToRoute('clients_app/movies');
+        }
 
-            $seatsIdArray = explode(",", $request->get('seatId'));
-            $roomLayout = $this->getRoomLayout($this->getDoctrine()->getRepository(Seanse::class)->find($id));
-            if (($submit == 0 || $submit == 2) && $form->isSubmitted() && $form->isValid() && $this->validSeat($seatsIdArray, $roomLayout)) {
-                if ($submit == 2) {
-                    $seatsArrayCollection = new ArrayCollection();
-                    foreach ($seatsIdArray as $seatId) {
-                        $seatsArrayCollection->add($this->getDoctrine()->getRepository(Miejsca::class)->find($seatId));
-                    }
-                    $reservation->setCzyodwiedzajacy(0);
-                    $reservation->setSfinalizowana(0);
-                    $reservation->setPracownicy($this->getUser());
-                    $reservation->setSeanse($seance);
-                    $reservation->setMiejsca($seatsArrayCollection);
-                    $entityManager = $this->getDoctrine()->getManager();
-                    $entityManager->persist($reservation);
-                    $entityManager->flush();
 
-                    $values = [
-                        'id' => $reservation->getId(),
-                        'date' => 0,
-                        'name' => 0,
-                        'surname' => 0
-                    ];
+        $submit = $request->request->get('submitNumber');
+        $reservation = new Rezerwacje();
+        $form = $this->getForm($reservation);
+        $form->handleRequest($request);
 
-                    return $this->redirectToRoute('workers_app/reservations', $values);
+        $seatsIdArray = explode(",", $request->get('seatId'));
+        $roomLayout = $this->getRoomLayout($this->getDoctrine()->getRepository(Seanse::class)->find($id));
+        if (($submit == 0 || $submit == 2) && $form->isSubmitted() && $form->isValid()
+            && $this->validSeat($seatsIdArray, $roomLayout) && count($seatsIdArray) <= 10) {
+            if ($submit == 2) {
+                $seatsArrayCollection = new ArrayCollection();
+                foreach ($seatsIdArray as $seatId) {
+                    $seatsArrayCollection->add($this->getDoctrine()->getRepository(Miejsca::class)->find($seatId));
                 }
-                return $this->render('workersApp/reservations/summary.html.twig', ['seance' => $seance, 'rezervationData' => $request->request->all()]);
+                if ($this->isGranted('ROLE_USER')) {
+                    $reservation->setCzyodwiedzajacy(0);
+                    $reservation->setUzytkownicy($this->getUser());
+                } else {
+                    $reservation->setCzyodwiedzajacy(1);
+                }
+                $reservation->setSfinalizowana(0);
+                $reservation->setSeanse($seance);
+                $reservation->setMiejsca($seatsArrayCollection);
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($reservation);
+                $entityManager->flush();
+                $values = [
+                    'ifAccomplish' => 2,
+                    'date' => 0,
+                ];
+                if ($this->isGranted('ROLE_USER')) {
+                    return $this->redirectToRoute('clients_app/reservations', $values);
+                } else {
+                    return $this->redirectToRoute('clients_app/reservations/end');
+                }
             }
-            $rowType = $this->getDoctrine()->getRepository(Typyrzedow::class)->findAll();
-            return $this->render('workersApp/reservations/add.html.twig', ['seance' => $seance, 'roomLayout' => $roomLayout, 'checkedSeats' => $seatsIdArray, 'form' => $form->createView(), 'rowType' => $rowType]);
-        } else {
-            return $this->redirectToRoute('workers_app/login_page');
+            return $this->render('clientsApp/reservations/summary.html.twig', ['seance' => $seance,
+                'rezervationData' => $request->request->all()]);
         }
+
+        if ($this->isGranted('ROLE_USER') and !$submit) {
+            $form = $this->getForm($reservation);
+            $user = $this->getUser();
+            $form->get('imie')->setData($user->getImie());
+            $form->get('nazwisko')->setData($user->getNazwisko());
+            $form->get('email')->setData($user->getEmail());
+            $form->get('telefon')->setData($user->getTelefon());
+        }
+
+        $rowType = $this->getDoctrine()->getRepository(Typyrzedow::class)->findAll();
+        return $this->render('clientsApp/reservations/add.html.twig', ['seance' => $seance,
+            'roomLayout' => $roomLayout, 'checkedSeats' => $seatsIdArray,
+            'form' => $form->createView(), 'rowType' => $rowType]);
+    }
+
+    /**
+     * @Route("/reservations/end", name="clients_app/reservations/end", methods={"GET", "POST"})
+     */
+    public function showEnd(){
+        return $this->render('clientsApp/reservations/end.html.twig');
     }
 
     private function getRoomLayout($seance)
@@ -249,17 +268,17 @@ class ReservationsController extends AbstractController
     }
 
     /**
-     * @Route("/reservations/delete", name="workers_app/reservations/delete", methods={"DELETE"})
+     * @Route("/reservations/delete", name="clients_app/reservations/delete", methods={"DELETE"})
      */
     public function delete(Request $request)
     {
-        if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
-            return $this->redirectToRoute('workers_app/logout_page');
+        if ($this->isGranted('ROLE_USER') && AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
+            return $this->redirectToRoute('clients_app/logout_page');
         }
 
         if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
-            $reservation = $this->getDoctrine()->getRepository(Rezerwacje::class)->find($request->get('reservationId'));
-            if(!$reservation or $reservation->isSfinalizowana()){
+            $reservation = $this->getDoctrine()->getRepository(Rezerwacje::class)->findOneBy(['id' => $request->get('reservationId'), 'uzytkownicy' => $this->getUser()]);
+            if (!$reservation or $reservation->isSfinalizowana()) {
                 return new JsonResponse(['result' => false]);
             }
             $entityManager = $this->getDoctrine()->getManager();

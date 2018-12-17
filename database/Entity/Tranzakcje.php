@@ -77,9 +77,9 @@ class Tranzakcje
     }
 
     /**
-     * @return Promocje
+     * @return ?Promocje
      */
-    public function getPromocje(): Promocje
+    public function getPromocje(): ?Promocje
     {
         return $this->promocje;
     }

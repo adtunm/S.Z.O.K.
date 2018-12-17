@@ -64,8 +64,8 @@ INSERT INTO `role` (`id`, `nazwa`, `usunieto`) VALUES
 -- Data for table `SZOK`.`TypyRzedow`
 -- -----------------------------------------------------
 INSERT INTO `typyrzedow` (`id`, `nazwa`, `usunieto`) VALUES
-(1, 'Zwykle', NULL),
-(2, 'Tylko do kupna', NULL);
+(1, 'Do rezerwacji', NULL),
+(2, 'Tylko do zakupu', NULL);
 
 
 -- -----------------------------------------------------

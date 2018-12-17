@@ -123,4 +123,64 @@ class PromocjeRepository extends ServiceEntityRepository
 
         return $query->execute();
     }
+
+    public function findCurrentForUser($registrationDate, $ifWoman){
+        $date = date("Y-m-d");
+        $query = $this->createQueryBuilder('p')
+            ->andWhere('p.koniecpromocji >= :currentDate AND p.poczatekpromocji <= :currentDate')
+            ->andWhere('p.staz < :registrationDate OR p.staz IS NULL')
+            ->andWhere('p.czykobieta LIKE :ifWoman OR p.czykobieta IS NULL')
+            ->setParameter('registrationDate', $registrationDate)
+            ->setParameter('ifWoman', $ifWoman)
+            ->setParameter('currentDate', $date)
+            ->orderBy('p.poczatekpromocji', 'ASC')
+            ->getQuery();
+
+        return $query->execute();
+    }
+
+    public function getPromotionToCheckForUser($registrationDate, $ifWoman, $promotionId){
+        $date = date("Y-m-d");
+        $query = $this->createQueryBuilder('p')
+            ->andWhere('p.koniecpromocji >= :currentDate AND p.poczatekpromocji <= :currentDate')
+            ->andWhere('p.staz < :registrationDate OR p.staz IS NULL')
+            ->andWhere('p.czykobieta LIKE :ifWoman OR p.czykobieta IS NULL')
+            ->andWhere('p.id = :promotionId')
+            ->setParameter('promotionId', $promotionId)
+            ->setParameter('registrationDate', $registrationDate)
+            ->setParameter('ifWoman', $ifWoman)
+            ->setParameter('currentDate', $date)
+            ->orderBy('p.poczatekpromocji', 'ASC')
+            ->getQuery();
+
+        return $query->execute();
+    }
+
+    public function findCurrentForVisitor(){
+        $date = date("Y-m-d");
+        $query = $this->createQueryBuilder('p')
+            ->andWhere('p.koniecpromocji >= :currentDate AND p.poczatekpromocji <= :currentDate')
+            ->andWhere('p.staz IS NULL')
+            ->andWhere('p.czykobieta IS NULL')
+            ->setParameter('currentDate', $date)
+            ->orderBy('p.poczatekpromocji', 'ASC')
+            ->getQuery();
+
+        return $query->execute();
+    }
+
+    public function getPromotionToCheckForVisitor($promotionId){
+        $date = date("Y-m-d");
+        $query = $this->createQueryBuilder('p')
+            ->andWhere('p.koniecpromocji >= :currentDate AND p.poczatekpromocji <= :currentDate')
+            ->andWhere('p.staz IS NULL')
+            ->andWhere('p.czykobieta IS NULL')
+            ->andWhere('p.id = :promotionId')
+            ->setParameter('promotionId', $promotionId)
+            ->setParameter('currentDate', $date)
+            ->orderBy('p.poczatekpromocji', 'ASC')
+            ->getQuery();
+
+        return $query->execute();
+    }
 }

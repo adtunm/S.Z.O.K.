@@ -42,7 +42,7 @@ class RoomsController extends Controller
                 $rooms = $this->getDoctrine()->getRepository(Sale::class)->findRooms($page, $pageLimit);
                 $seatCount = $this->getDoctrine()->getRepository(Miejsca::class)->getSeatsCount($page, $pageLimit);
                 $checkRooms = $this->getDoctrine()->getRepository(Seanse::class)->checkSeancesForRooms($rooms);
-                return $this->render('workersApp/screeningRoomPages/list.html.twig', array('rooms' => $rooms, 'seatCounts' => $seatCount, 'checkRooms' => $checkRooms, 'currentPage' => $page, 'pageCount' => $pageCount));
+                return $this->render('workersApp/screeningRooms/list.html.twig', array('rooms' => $rooms, 'seatCounts' => $seatCount, 'checkRooms' => $checkRooms, 'currentPage' => $page, 'pageCount' => $pageCount));
             }
         } else {
             return $this->redirectToRoute('workers_app/login_page');
@@ -100,7 +100,8 @@ class RoomsController extends Controller
                 );
                 $error = "";
             }
-            return $this->render('workersApp/screeningRoomPages/new.html.twig', ['error' => $error, 'values' => $values]);
+            $rowType = $entityManager->getRepository(Typyrzedow::class)->findAll();
+            return $this->render('workersApp/screeningRooms/new.html.twig', ['error' => $error, 'values' => $values, 'rowType' => $rowType]);
 
         } else if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             return $this->redirectToRoute('workers_app/no_permission');
@@ -200,8 +201,9 @@ class RoomsController extends Controller
                 } else {
                     $checkRoom = true;
                 }
-                return $this->render('workersApp/screeningRoomPages/view.html.twig', ['id' => $id, 'seatCount' => $seatCount,
-                    'checkRoom' => $checkRoom, 'values' => $values]);
+                $rowType = $entityManager->getRepository(Typyrzedow::class)->findAll();
+                return $this->render('workersApp/screeningRooms/view.html.twig', ['id' => $id, 'seatCount' => $seatCount,
+                    'checkRoom' => $checkRoom, 'values' => $values, 'rowType' => $rowType]);
             } else {
                 return $this->redirectToRoute('workers_app/rooms_page');
             }
@@ -231,7 +233,6 @@ class RoomsController extends Controller
             $rowId = $rows[$i]->getId();
             $seats = $this->getDoctrine()->getRepository(Miejsca::class)->getSeats($rowId);
             for ($j = 0; $j < $seatCount; $j++) {
-                //$seat = new Miejsca();
                 if ($seats[$j]->getNumermiejsca() == 0)
                     $seatCode .= 0;
                 else {
@@ -292,7 +293,12 @@ class RoomsController extends Controller
                     return $this->redirectToRoute('workers_app/no_permission');
                 }
             }
-            return $this->render('workersApp/screeningRoomPages/edit.html.twig', ['error' => $error, 'id' => $id, 'values' => $values]);
+            $rowType = $entityManager->getRepository(Typyrzedow::class)->findAll();
+            $editable = true;
+            if ($entityManager->getRepository(Seanse::class)->findOneBy(array('sale' => $id))) {
+                $editable = false;
+            }
+            return $this->render('workersApp/screeningRooms/edit.html.twig', ['error' => $error, 'id' => $id, 'values' => $values, 'rowType' => $rowType, 'editable' => $editable]);
 
         } else if ($this->isGranted('ROLE_MANAGER')) {
             if ($this->ifRoomViewExist($request)) {
@@ -309,7 +315,8 @@ class RoomsController extends Controller
             } else {
                 return $this->redirectToRoute('workers_app/rooms_page');
             }
-            return $this->render('workersApp/screeningRoomPages/editManager.html.twig', ['error' => $error, 'id' => $id, 'values' => $values]);
+            $rowType = $entityManager->getRepository(Typyrzedow::class)->findAll();
+            return $this->render('workersApp/screeningRooms/editManager.html.twig', ['error' => $error, 'id' => $id, 'values' => $values, 'rowType' => $rowType]);
 
         } else if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             return $this->redirectToRoute('workers_app/no_permission');

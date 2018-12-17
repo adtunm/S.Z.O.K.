@@ -1,0 +1,48 @@
+{% extends 'clientsApp/clientBase.html.twig' %}
+
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h2>Dziękujemy za skorzystaie z naszych usług!</h2> <br>
+                Na podany adres email: {{ email }} została wysłana wiadomość mailowa zawierająca wydruk biletów na seans.<br>
+                Strona z biletami została otwarta w nowym oknie. <br>
+                Przycisk "Pokaż bilety" ponownie otworzy strone z biletami w nowym oknie. <br>
+                Przycisk "Wyślij email" ponownie wyśle wiadomość mailową z biletami na podany adres email. <br>
+                <br>
+            <div id="mailAlert" class="font-weight-bold"></div>
+            <a class="btn btn-primary pull-right" id="ticketButton"
+               href="{{ path('clients_app/ticket') }}"
+               target="_blank">Pokaż bilety</a>
+            <button onclick="sendEmail()" class="btn btn-primary pull-right mr-1" id="mailButton">Wyślij email</button>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            document.getElementById('ticketButton').click();
+        };
+
+        function sendEmail() {
+            $.ajax({
+                url: '{{ path('clients_app/transactions/end') }}',
+                type: "POST",
+                dataType: "json",
+                data: {
+                    "sendMail": true
+                },
+                async: true,
+                success: function (data) {
+                    var mailAlert =document.getElementById('mailAlert');
+                    if(data.result == 0){
+                        mailAlert.innerHTML = 'Nie udało sie wysłąć maila.';
+                        mailAlert.style.color = 'red';
+                    } else {
+                        mailAlert.innerHTML =  'Wysłano maila.';
+                        mailAlert.style.color = 'green';
+                    }
+
+                }
+            });
+        }
+    </script>
+
+{% endblock %}

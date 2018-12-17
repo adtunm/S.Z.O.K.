@@ -60,4 +60,17 @@ class BiletyRepository extends ServiceEntityRepository
         return $ticket;
     }
 
+    public function getTicketsForTransaction($id){
+        $query = $this->createQueryBuilder('b')
+            ->select('b')
+            ->join('b.miejsca', 'm')
+            ->join('m.rzedy', 'rz')
+            ->join('b.tranzakcje', 't')
+            ->andWhere('t.id = :id')
+            ->setParameter('id', $id)
+            ->orderBy('rz.numerrzedu, m.numermiejsca', 'ASC')
+            ->getQuery();
+        return $query->execute();
+    }
+
 }
