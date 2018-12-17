@@ -65,7 +65,6 @@ class ReportsControler extends AbstractController
             $form->handleRequest($request);
             if($form->isSubmitted() and $form->isValid()) {
                 $data = $form->getData();
-                $data['movie'] = $this->getDoctrine()->getRepository(Filmy::class)->find($data['movie']);
                 if($data['to'] < $data['from']) {
                     $error = "Data \"do\" nie może być wcześniej niż data \"do\"";
                 }

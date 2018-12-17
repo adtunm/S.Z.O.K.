@@ -35,18 +35,18 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 mb-2 row px-md-0 mx-md-0">
+                    <div class="col-md-6 row px-md-0 mx-md-0">
                         <div class="col-md-6 mb-1 px-md-0 mx-md-0">Pracownik:</div>
                         <div class="col-md-6 mb-2 px-md-0 mx-md-0">{% if data.employee %}{{ data.employee }}{% else %}Nie dotyczy{% endif %}</div>
                     </div>
-                    <div class="col-md-6 mb-2 row px-md-0 mx-md-0">
+                    <div class="col-md-6 row px-md-0 mx-md-0">
                         <div class="col-md-4 mb-1 px-md-0 mx-md-0">Film:</div>
                         <div class="col-md-8 mb-2 px-md-0 mx-md-0">{% if data.movie %}{{ data.movie }}{% else %}Nie dotyczy{% endif %}</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3 mb-1 px-md-0 mx-md-0">Rodzaj płatności:</div>
-                    <div class="col-md-9 mb2 px-md-0 mx-md-0">
+                    <div class="col-md-9 mb-2 px-md-0 mx-md-0">
                         {% if not data.payment == {} %}
                             {% for payment in data.payment %}{{ payment }}{% if not loop.last %}, {% endif %}{% endfor %}
                         {% else %}Nie dotyczy

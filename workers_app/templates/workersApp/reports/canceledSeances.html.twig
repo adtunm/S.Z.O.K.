@@ -1,4 +1,10 @@
 {% extends 'workersApp/workerBase.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/error_messages.css') }}">
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/form_invalid_func.js') }}"></script>
+{% endblock %}
 
 {% block content %}
     <div class="row pb-4 mt-0">
@@ -11,7 +17,7 @@
             <div class="form-group">
                 {{ form_label(form.from) }}
                 {% if form.from.vars.errors|length > 0 %}
-                    {{ form_widget(form.from, {'attr': {'class': 'is-invalid form-control'}}) }}
+                    {{ form_widget(form.from, {'attr': {'class': 'is-invalid form-control mx-2'}}) }}
                 {% else %}
                     {{ form_widget(form.from) }}
                 {% endif %}
@@ -22,7 +28,7 @@
             <div class="form-group">
                 {{ form_label(form.to) }}
                 {% if form.to.vars.errors|length > 0 or error %}
-                    {{ form_widget(form.to, {'attr': {'class': 'is-invalid form-control'}}) }}
+                    {{ form_widget(form.to, {'attr': {'class': 'is-invalid form-control mx-2'}}) }}
                 {% else %}
                     {{ form_widget(form.to) }}
                 {% endif %}
