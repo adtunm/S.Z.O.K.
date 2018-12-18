@@ -17,25 +17,26 @@
         </div>
         <div class="row justify-content-between pl-2 pr-4 mb-3">
             <div class="form-inline">
-                <label for="id" class="mx-sm-2">Numer: </label>
+                <label for="id" class="mx-sm-2 mb-2">Numer: </label>
                 <input type="id" name="id" id="id"
-                       class="form-control" value="{% if values %}{{ values.number }}{% endif %}"
+                       class="form-control mb-2" value="{% if values %}{{ values.number }}{% endif %}"
                        onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                <label for="name" class="mx-sm-2 ">Imię: </label>
+                <label for="name" class="mx-sm-2 mb-2">Imię: </label>
                 <input type="text" name="name" id="name"
-                       class="form-control" value="{% if values %}{{ values.name }}{% endif %}"
+                       class="form-control mb-2" value="{% if values %}{{ values.name }}{% endif %}"
                        onkeypress='return event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122'>
-                <label for="surname" class="mx-sm-2">Nazwisko:</label>
+                <label for="surname" class="mx-sm-2 mb-2">Nazwisko:</label>
                 <input type="text" name="surname" id="surname"
-                       class="form-control" value="{% if values %}{{ values.surname }}{% endif %}"
+                       class="form-control mb-2" value="{% if values %}{{ values.surname }}{% endif %}"
                        onkeypress='return event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122'>
-                <button class="btn btn-primary ml-sm-2" id="filterButton" type="submit">
+                <button class="btn btn-primary ml-sm-2 mb-2" id="filterButton" type="submit">
                     Filtruj
                 </button>
             </div>
             <div>
                 <a class="btn btn-primary"
-                   href="{{ path('workers_app/reservations', {'date': 0, 'id': 0, 'name': 0, 'surname': 0 } ) }}">Pokaż wszystkie</a>
+                   href="{{ path('workers_app/reservations', {'date': 0, 'id': 0, 'name': 0, 'surname': 0 } ) }}">Pokaż
+                    wszystkie</a>
             </div>
         </div>
     </form>
@@ -44,11 +45,12 @@
             <table id="reservations" class="table">
                 <thead>
                 <tr>
-                    <th style="width: 15%">Numer rezerwacji</th>
-                    <th style="width: 15%">Imię</th>
-                    <th style="width: 15%">Nazwisko</th>
-                    <th style="width: 35%">Seans</th>
-                    <th style="width: 20%"></th>
+                    <th style="width: 10%">Numer rezerwacji</th>
+                    <th style="width: 10%">Imię</th>
+                    <th style="width: 10%">Nazwisko</th>
+                    <th style="width: 40%">Seans</th>
+                    <th style="width: 15%">Rezerwujący</th>
+                    <th style="width: 15%"></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -67,6 +69,15 @@
                             - {{ reservation.seanse.typyseansow.nazwa }}
                             - {{ reservation.seanse.poczatekseansu|date('d.m.Y H:i') }}
                             - {{ reservation.seanse.sale }}
+                        </td>
+                        <td>
+                            {% if reservation.pracownicy is not null %}
+                                Pracownik: {{ reservation.pracownicy }}
+                            {% elseif reservation.uzytkownicy is not null %}
+                                Użytkownik: {{ reservation.uzytkownicy }}
+                            {% else %}
+                                Odwiedzający
+                            {% endif %}
                         </td>
                         <td>
                             <div id="alert{{ reservation.id }}"></div>
@@ -119,7 +130,8 @@
                                                         data-dismiss="modal">
                                                     Anuluj
                                                 </button>
-                                                <button type="button" onclick="deleteReservation({{ reservation.id }})" class="btn btn-danger delete-reservation">
+                                                <button type="button" onclick="deleteReservation({{ reservation.id }})"
+                                                        class="btn btn-danger delete-reservation">
                                                     <i id="spinner{{ reservation.id }}"></i> Anuluj rezerwacje
                                                 </button>
                                             </div>

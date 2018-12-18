@@ -16,3 +16,7 @@
 .is-invalid.form-control-file{
     border: 1px solid #dc3545;
 }
+
+.form-control:disabled{
+    opacity: 0.3;
+}

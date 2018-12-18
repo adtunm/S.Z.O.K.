@@ -74,7 +74,7 @@ INSERT INTO `typyrzedow` (`id`, `nazwa`, `usunieto`) VALUES
 INSERT INTO `rodzajeplatnosci` (`id`, `nazwa`, `usunieto`) VALUES
 (1, 'Karta płatnicza', NULL),
 (2, 'Gotówka', NULL),
-(3, 'Przelew', NULL);
+(3, 'Internet', NULL);
 
 -- -----------------------------------------------------
 -- Data for table `SZOK`.`PuleBiletow`

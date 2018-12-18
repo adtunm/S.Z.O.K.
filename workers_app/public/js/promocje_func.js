@@ -17,7 +17,6 @@ $('document').ready(function () {
         document.getElementById('stazControl').checked = false;
         document.getElementById('form_staz').disabled = true;
     }
-    $('#form_wartosc')
 });
 
 function genderOnClick(genderCheckbox) {

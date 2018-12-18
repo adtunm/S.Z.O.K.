@@ -94,7 +94,7 @@
             </div>
         </div>
         <div>
-            <a href="#" class="btn btn-secondary mt-2"><i class="fa fa-angle-left" aria-hidden="true"></i>
+            <a href="{{ path('workers_app/program/date') }}" class="btn btn-secondary mt-2"><i class="fa fa-angle-left" aria-hidden="true"></i>
                 Przejdź do repertuaru</a>
             <div class="pull-right">
                 <a href="{{ path('workers_app/rooms_page/view', {'id': seance.sale.id }) }}" class="btn btn-primary mt-2">Pokaż salę</a>
@@ -232,7 +232,7 @@
                             document.getElementById('spinnerCancel' + id).setAttribute('class', 'fa fa-spinner fa-spin');
                             fetch(`{{ path('workers_app/seances/rmSeance') }}/${id}`,
                                 {method: 'DELETE'}
-                            ).then(res => window.location.href = "{{ path('workers_app/main_page') }}");
+                            ).then(res => window.location.href = "{{  path('workers_app/program/date') }}");
                         })
                     </script>
                 {% endif %}

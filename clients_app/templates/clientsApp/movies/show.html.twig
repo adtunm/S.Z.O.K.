@@ -48,8 +48,8 @@
             <form class="form-inline mt-5 mb-3" name="form" method="post">
                 <label for="form_date" class="mb-1 mr-4">Wybierz datę:</label>
                 <input id="form_date" name="form_date" type="date" class="form-control mr-1 mb-1"
-                       value="{{ dateInput }}"
-                       required style="width: 9rem">
+                       value="{{ dateInput|date('Y-m-d') }}" min="{{ 'now'|date('Y-m-d') }}"
+                       required style="width: 11rem">
                 <button type="submit" class="btn btn-primary mb-1">Przejdź</button>
             </form>
             {% if pageCount > 0 %}
@@ -81,8 +81,9 @@
                     </table>
                 </div>
 
-                {% set basePath = path('clients_app/movies/show', {'id': movie.id }) %}
-                {% include 'clientsApp/inc/pagination.html.twig' %}
+                <div class="h6">
+                    {% include 'clientsApp/inc/paginationWithParams.html.twig' %}
+                </div>
             {% else %}
                 <h1 class="text-center">Brak seansów</h1>
                 <div class="text-center display-1">

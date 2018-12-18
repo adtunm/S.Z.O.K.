@@ -3,8 +3,7 @@
 {% block content %}
     <div class="row pb-4 mt-0">
     <div class="h1 col-md">{{ rodzaj }}</div>
-    {% if is_granted('ROLE_ADMIN') %}
-    {% if krytyczny %}
+    {% if (is_granted('ROLE_ADMIN') and krytyczny) %}
     {% if page == 'types' or page == 'pools' %}
     {% if  page == 'types' %}
     <div class="col-md">
@@ -35,7 +34,6 @@
         {% endif %}
         {% endif %}
     </div>
-    {% endif %}
     {% endif %}
     {% if pageCount %}
     </div>

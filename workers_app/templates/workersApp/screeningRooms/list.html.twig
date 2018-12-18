@@ -10,7 +10,7 @@
                 <a href="{{ path('workers_app/rooms_page/room_creator_page') }}"
                    class="btn btn-primary pull-right ml-1">Nowa sala</a>
             {% endif %}
-            <a href="#" class="btn btn-primary pull-right">Pokaż repertuar wg
+            <a href="{{ path('workers_app/program/rooms') }}" class="btn btn-primary pull-right">Pokaż repertuar wg
                 sal</a>
         </div>
     </div>
@@ -89,7 +89,7 @@
                                    href="{{ path('workers_app/rooms_page/view', {'id': room.id}) }}">Pokaż
                                     podgląd</a>
                                 <a class="btn btn-primary btn-sm"
-                                   href="#">Pokaż seanse</a>
+                                   href="{{ path("workers_app/program/room", {'roomId':room.id}) }}">Pokaż seanse</a>
                             </div>
                         </td>
                     </tr>

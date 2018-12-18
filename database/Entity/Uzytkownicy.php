@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -11,6 +12,22 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Table(name="uzytkownicy", uniqueConstraints={@ORM\UniqueConstraint(name="idUzytkownicy_UNIQUE", columns={"id"}), @ORM\UniqueConstraint(name="login_UNIQUE", columns={"login"}), @ORM\UniqueConstraint(name="email_UNIQUE", columns={"email"}), @ORM\UniqueConstraint(name="telefon_UNIQUE", columns={"telefon"})})
  * @ORM\Entity(repositoryClass="App\Repository\UzytkownicyRepository")
+ *
+ *  @UniqueEntity(
+ *     fields={"login"},
+ *     errorPath="login",
+ *     message="Ten login jest już w użyciu"
+ * )
+ * * @UniqueEntity(
+ *     fields={"email"},
+ *     errorPath="email",
+ *     message="Ten email jest już w użyciu"
+ * )
+ * * @UniqueEntity(
+ *     fields={"telefon"},
+ *     errorPath="telefon",
+ *     message="Ten telefon jest już w użyciu"
+ * )
  */
 class Uzytkownicy implements UserInterface
 {
@@ -356,5 +373,10 @@ class Uzytkownicy implements UserInterface
      */
     public function eraseCredentials()
     {
+    }
+
+    public function __toString()
+    {
+        return '' . $this->imie . ' ' . $this->nazwisko;
     }
 }
