@@ -34,7 +34,6 @@ class ReservationsController extends AbstractController
         }
         if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
             if ($values = $request->request->all()) {
-                var_dump($values);
                 if ((array_key_exists('accomplish', $values) and array_key_exists('notAccomplish', $values))
                     or (!array_key_exists('accomplish', $values) and !array_key_exists('notAccomplish', $values))) {
                     $ifAccomplish = 2;
