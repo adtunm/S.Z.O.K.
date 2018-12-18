@@ -326,7 +326,6 @@ class Generator extends AbstractController
     private $users;
     private $employees;
     private $payment;
-    private $bookings;
 
 
     private function getPersonData()
@@ -379,7 +378,6 @@ class Generator extends AbstractController
         $this->users = $this->getDoctrine()->getRepository(Uzytkownicy::class)->findAll();
         $this->employees = $this->getDoctrine()->getRepository(Pracownicy::class)->findAll();
         $this->payment = $this->getDoctrine()->getRepository(Rodzajeplatnosci::class)->findAll();
-        $this->bookings = array();
 
         foreach($this->revLayout AS $key => $roomLayout) {
             foreach($roomLayout AS $key1 => $value) {
@@ -890,7 +888,6 @@ class Generator extends AbstractController
         $entityManager->flush();
 
         unset($this->vouchers);
-        unset($this->bookings);
         unset($this->seances);
         unset($this->users);
         unset($this->employees);
