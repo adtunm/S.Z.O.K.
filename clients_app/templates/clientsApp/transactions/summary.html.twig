@@ -1,4 +1,4 @@
-{% extends 'workersApp/workerBase.html.twig' %}
+{% extends 'clientsApp/clientBase.html.twig' %}
 
 {% block content %}
     <div class="row justify-content-center">
@@ -20,7 +20,7 @@
                     <div class="modal fade" id="promotions" tabindex="-1" role="dialog"
                          aria-labelledby="modelTitleId" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                            <div class="modal-content bg-dark text-light text-left">
+                            <div class="modal-content bg-client text-black text-left">
                                 <div class="modal-header">
                                     <h4 class="modal-title" id="modelTitleId">
                                         Wybierz promocje
@@ -90,7 +90,6 @@
                                     {% endif %}
                                 </div>
                                 <div class="modal-footer">
-
                                     <button type="button" class="btn btn-secondary"
                                             data-dismiss="modal">
                                         Anuluj
@@ -100,7 +99,6 @@
                         </div>
                     </div>
                     <!-- End of Modal -->
-
                 </div>
             </div>
             <div class="mx-3">
@@ -134,6 +132,16 @@
                         <div class="col-sm-9 pl-sm-2" id="promotionName">Nie wybrano</div>
                     </div>
                     <div class="row mb-3">
+                        <div class="col-sm-3">Email:</div>
+                        <div class="col-sm-3 pl-sm-2">
+                            <input type="email" id="inputEmail"
+                                   class="form-control" onblur="validEmail()"
+                                   {% if email %}value="{{ email }}"{% endif %} placeholder="Wprowdź email..."
+                                   autocomplete="off">
+                        </div>
+                        <div class="col-sm-3 text-danger font-weight-bold" id="emailAlert"></div>
+                    </div>
+                    <div class="row mb-3">
                         <div class="col-sm-3">Bilety:</div>
                         <div class="col-sm-9 pl-sm-2"></div>
                     </div>
@@ -162,7 +170,7 @@
                                     <td>
                                         <button type="button" class="btn btn-danger btn-sm pull-right"
                                                 id="deleteVoucherButton{{ selectedSeat.id }}" hidden
-                                                onclick="deleteVocher({{ selectedSeat.id }}, {{ loop.index0 }})">
+                                                onclick="deleteVoucher({{ selectedSeat.id }}, {{ loop.index0 }})">
                                             Usuń voucher
                                         </button>
                                         <button type="button" class="btn btn-primary btn-sm pull-right"
@@ -177,7 +185,7 @@
                                          role="dialog"
                                          aria-labelledby="modelTitleId" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                            <div class="modal-content bg-dark text-light text-left">
+                                            <div class="modal-content bg-client text-black text-left">
                                                 <div class="modal-header">
                                                     <h4 class="modal-title" id="modelTitleId">
                                                         Wprowdzanie vouchera
@@ -219,31 +227,6 @@
                         </table>
                     </div>
 
-                    <div class="row mb-3">
-                        <div class="col-sm-3">Rodzaj płatności:</div>
-                        <div class="col-sm-9 pl-sm-2">
-                            <input type="radio" id="payment{{ paymentWay[1].id }}" name="payment" required="required" value="{{ paymentWay[1].id }}">
-                            <label for="payment{{ paymentWay[1].id }}" class="required">{{ paymentWay[1].nazwa }}</label>
-                            <input type="radio" id="payment{{ paymentWay[0].id }}" name="payment" required="required" value="{{ paymentWay[0].id }}">
-                            <label for="payment{{ paymentWay[0].id }}" class="required">{{ paymentWay[0].nazwa }}</label>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3" id="paymentInput" hidden>
-                        <div class="col-sm-3">Zapłacono:</div>
-                        <div class="col-sm-9 pl-sm-2">
-                            <input type="number" min="0" step="0.01" value="0.00" name="paymentValue" id="paymentValue"
-                                   class="form-control"
-                                   onkeypress='return event.charCode >= 48 && event.charCode <= 57
-                                                             || event.charCode == 46 || event.charCode == 44'>
-                        </div>
-                    </div>
-                    <div class="row mb-3" id="paymentChange" hidden>
-                        <div class="col-sm-3">Reszta:</div>
-                        <div class="col-sm-9 pl-sm-2" id="paymentChangeValue">
-
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -253,7 +236,7 @@
                 <input type="text" id="vouchersIds" name="vouchersIds" hidden value="">
                 <input type="text" id="ticketsIds" name="ticketsIds" hidden value="">
                 <input type="text" id="promotionId" name="promotionId" hidden value="">
-                <input type="text" id="paymentId" name="paymentId" hidden value="">
+                <input type="text" id="email" name="email" hidden value="">
                 <button type="button" id="form_back" name="form[back]" class="btn btn-primary float-left"
                         onclick="setBack()">Zmień miejsca lub bilety
                 </button>
@@ -269,7 +252,7 @@
         var price;
         var priceArray = [];
         var dataArray = [];
-        var voucherArray = []
+        var voucherArray = [];
         var promotion = null;
 
         var seatsIdArray = [];
@@ -279,7 +262,6 @@
         window.onload = function () {
             price = {{ price }};
             document.getElementById('price').innerText = price.toFixed(2) + " PLN";
-            document.getElementById('payment{{ paymentWay[0].id }}').checked = true;
 
             {% for selectedSeat in selectedSeats %}
             {% if selectedSeat != null %}
@@ -297,28 +279,7 @@
 
             {% endif %}{{ selectedSeat.id }}
             {% endfor %}
-
         };
-
-        $(document).ready(function () {
-            $('input[type=radio][name=payment]').change(function () {
-                if (this.value == '{{ paymentWay[1].id }}') {
-                    document.getElementById('paymentInput').hidden = false;
-                    document.getElementById('paymentChange').hidden = false;
-                    document.getElementById('paymentChangeValue').innerText = (document.getElementById('paymentValue').value - price).toFixed(2) + ' PLN';
-                    document.getElementById('paymentId').value = {{ paymentWay[1].id }};
-                }
-                else if (this.value == '{{ paymentWay[0].id }}') {
-                    document.getElementById('paymentInput').hidden = true;
-                    document.getElementById('paymentChange').hidden = true;
-                    document.getElementById('paymentId').value = {{ paymentWay[0].id }};
-                }
-            });
-
-            $('input[type=number][name=paymentValue]').keyup(function () {
-                document.getElementById('paymentChangeValue').innerText = (this.value - price).toFixed(2) + ' PLN';
-            });
-        });
 
         function onKeyUpVoucherInput(seatId) {
             document.getElementById('voucherAlert' + seatId).innerHTML = '';
@@ -367,25 +328,9 @@
                 price += priceArray[i].voucherPrice;
             }
             document.getElementById('price').innerText = price.toFixed(2) + " PLN";
-            document.getElementById('paymentChangeValue').innerText = (document.getElementById('paymentValue').value - price).toFixed(2) + ' PLN';
-            var cardRadio = document.getElementById('payment{{ paymentWay[0].id }}');
-            var cashRadio = document.getElementById('payment{{ paymentWay[1].id }}');
-
-            if(price == 0){
-                cashRadio.disabled = true;
-                cashRadio.checked = false;
-                cardRadio.disabled = true;
-                cardRadio.checked = true;
-                document.getElementById('paymentInput').hidden = true;
-                document.getElementById('paymentChange').hidden = true;
-            } else {
-                cashRadio.disabled = false;
-                cardRadio.disabled = false;
-
-            }
         }
 
-        function deleteVocher(seatId, index) {
+        function deleteVoucher(seatId, index) {
             priceArray[index].voucherPrice = priceArray[index].promotionPrice;
             document.getElementById('price' + index).innerHTML = priceArray[index].voucherPrice.toFixed(2);
             voucherArray[index] = [];
@@ -396,7 +341,7 @@
         }
 
         function updateVoucherPrice(index, ifAmount, value) {
-            if((typeof ifAmount !== 'undefined') && (typeof value !== 'undefined')) {
+            if ((typeof ifAmount !== 'undefined') && (typeof value !== 'undefined')) {
                 var newTicketPrice = 0;
                 if (ifAmount) {
                     if (parseFloat(value) < priceArray[index].promotionPrice) {
@@ -421,7 +366,7 @@
 
         function checkVoucher(seatId, index) {
             $.ajax({
-                url: '{{ path('workers_app/transactions/check_voucher') }}/{{ seance.id }}',
+                url: '{{ path('clients_app/transactions/check_voucher') }}/{{ seance.id }}',
                 type: "POST",
                 dataType: "json",
                 data: {
@@ -433,7 +378,7 @@
                     if ('error' in data) {
                         document.getElementById('voucherAlert' + seatId).innerHTML = data['error'];
                     } else {
-                        if(vouchersIdArray.includes(data.id)){
+                        if (vouchersIdArray.includes(data.id)) {
                             document.getElementById('voucherAlert' + seatId).innerHTML = "Voucher został już użyty na innym bilecie w tej transakcji.";
                         } else {
                             document.getElementById('closeModalButton' + seatId).click();
@@ -450,11 +395,38 @@
             });
         }
 
+        function validEmail() {
+            var emailInput = document.getElementById('inputEmail');
+            var email = emailInput.value;
+            var emailAlert =  document.getElementById('emailAlert');
+            email = email.trim();
+            const reg = /^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i;
+            emailAlert.hidden = false;
+            if(reg.test(String(email))){
+                if(emailAlert.classList.contains('text-danger')){
+                    emailAlert.classList.replace('text-danger', 'text-success');
+                }
+                emailAlert.innerText = 'Email poprawny';
+                document.getElementById('form_save').disabled = false;
+                emailInput.style.border = '1px solid green';
+                return true;
+            } else {
+                if(emailAlert.classList.contains('text-success')) {
+                    emailAlert.classList.replace('text-success', 'text-danger');
+                }
+                emailInput.style.border = 'green';
+                emailAlert.innerText = 'Nie poprawny email';
+                document.getElementById('form_save').disabled = true;
+                emailInput.style.border = '1px solid red';
+                return false;
+            }
+        }
+
         function setBack() {
             document.getElementById('form_save').disabled = true;
             document.getElementById('form_back').disabled = true;
             var seatIdInput = document.getElementById('seatsIds');
-            document.getElementById('submit').value = 2;
+            document.getElementById('submitNumber').value = 2;
             seatIdInput.value = '';
             for (var i = 0; i < seatsIdArray.length; i++) {
                 if (i != 0) {
@@ -466,35 +438,33 @@
         }
 
         function setConfirm() {
-            document.getElementById('form_save').disabled = true;
-            document.getElementById('form_back').disabled = true;
-            var seatsIdInput = document.getElementById('seatsIds');
-            var vouchersIdInput = document.getElementById('vouchersIds');
-            var ticketsIdInput = document.getElementById('ticketsIds');
-            if(document.getElementsByName('payment')[0].checked){
-                document.getElementById('paymentId').value = document.getElementsByName('payment')[0].value;
-            } else {
-                document.getElementById('paymentId').value = document.getElementsByName('payment')[1].value;
-            }
+            if(validEmail()) {
+                document.getElementById('form_save').disabled = true;
+                document.getElementById('form_back').disabled = true;
+                var seatsIdInput = document.getElementById('seatsIds');
+                var vouchersIdInput = document.getElementById('vouchersIds');
+                var ticketsIdInput = document.getElementById('ticketsIds');
 
-            document.getElementById('submit').value = 1;
-            document.getElementById('promotionId').value = promotion;
-            seatsIdInput.value = '';
-            for (var i = 0; i < seatsIdArray.length; i++) {
-                if (i != 0) {
-                    seatsIdInput.value += ',';
-                    vouchersIdInput.value += ',';
-                    ticketsIdInput.value += ',';
+                document.getElementById('email').value =  document.getElementById('inputEmail').value;
+                document.getElementById('submitNumber').value = 1;
+                document.getElementById('promotionId').value = promotion;
+                seatsIdInput.value = '';
+                for (var i = 0; i < seatsIdArray.length; i++) {
+                    if (i != 0) {
+                        seatsIdInput.value += ',';
+                        vouchersIdInput.value += ',';
+                        ticketsIdInput.value += ',';
+                    }
+                    seatsIdInput.value += seatsIdArray[i];
+                    ticketsIdInput.value += ticketsIdArray[i];
+                    if (vouchersIdArray[i]) {
+                        vouchersIdInput.value += vouchersIdArray[i];
+                    } else {
+                        vouchersIdInput.value += 'null';
+                    }
                 }
-                seatsIdInput.value += seatsIdArray[i];
-                ticketsIdInput.value += ticketsIdArray[i];
-                if(vouchersIdArray[i]){
-                    vouchersIdInput.value += vouchersIdArray[i];
-                } else {
-                    vouchersIdInput.value += 'null';
-                }
+                document.getElementById('summaryForm').submit();
             }
-            document.getElementById('summaryForm').submit();
         }
     </script>
 {% endblock %}

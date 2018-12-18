@@ -24,11 +24,15 @@ class AppController extends Controller
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
+        if($this->isGranted('ROLE_USER')){
+            return $this->redirectToRoute('clients_app/main_page');
+        }
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
         // last username entered by the users
         $lastUsername = $authenticationUtils->getLastUsername();
         return $this->render('clientsApp/security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+
     }
 
     /**

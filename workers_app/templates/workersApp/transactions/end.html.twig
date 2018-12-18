@@ -6,9 +6,13 @@
             <h2>Dokonanie transakcji zakończyło się sukcesem!</h2> </br>
             <h6>
                 Strona z biletami została otwarta w nowym oknie. </br>
-                Proszę o wydrukowanie biletu przed zamknięciem tego okna. </br>
-                Przycisk "Pokaż bilety" ponownie otworzy strone z biletami w nowym oknie. </br>
+                Należy wydrukować bilety przed zamknięciem tego okna. </br>
+                Przycisk "Pokaż bilety" ponownie otworzy strone z biletami w nowym oknie. </br></br>
             </h6>
+            <a class="btn btn-primary pull-left" id="mainPageButton"
+               href="{{ path('workers_app/main_page') }}">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                Przejdź do strony głównej</a>
             <a class="btn btn-primary pull-right" id="ticketButton"
                href="{{ path('workers_app/ticket', {id: transactionId}) }}"
                target="_blank">Pokaż bilety</a>
@@ -19,5 +23,4 @@
             document.getElementById('ticketButton').click();
         }
     </script>
-
 {% endblock %}

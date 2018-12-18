@@ -1,4 +1,4 @@
-{% extends 'workersApp/workerBase.html.twig' %}
+{% extends 'clientsApp/clientBase.html.twig' %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/room_view.css') }}" type="text/css">
@@ -20,6 +20,9 @@
             {% endif %}
             - {{ seance.typyseansow }} - {{ seance.poczatekseansu|date('d.m.Y H:i') }} - {{ seance.sale }}
         </h6>
+    </div>
+    <div id="alertSeats" class="text-danger font-weight-bold" hidden>
+        Nie można zerezerwować jednocześnie więcej niż 10 miejsc.
     </div>
     <div class="content panel mt-2 mb-3 mx-0 p-5 bg-light">
         <div class="row justify-content-between px-3">
@@ -93,9 +96,8 @@
     </div>
     <div class="row justify-content-between px-3">
         <div>
-            <a href="{{ path('workers_app/rooms_page') }}" class="btn btn-secondary"><i class="fa fa-angle-left"
+            <a href="{{ path('clients_app/main_page') }}" class="btn btn-secondary"><i class="fa fa-angle-left"
                                                                                         aria-hidden="true"></i> Wróć</a>
-            {#<p id="test"></p>#}
         </div>
         <div>
             <form method="post">
@@ -117,7 +119,7 @@
     <div class="modal fade" id="reservationId" tabindex="-1" role="dialog"
          aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content bg-dark text-light text-left">
+            <div class="modal-content bg-client text-black text-left">
                 <div class="modal-header">
                     <div class="row px-3">
                         <h2 class="modal-title" id="modelTitleId">
@@ -207,7 +209,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">
@@ -222,6 +223,7 @@
         <!-- End of Modal -->
     </div>
     <script>
+        var seatCounter = 0;
         var seatArray = [];
         var seatNumberArray = [];
         const seatIdInput = document.getElementById("seatId");
@@ -247,11 +249,18 @@
 
         function selectSeat(button, id, rowNumber, seatNumber) {
             if (button.classList.toString().includes('seat_normal')) {
-                seatNumberArray[rowNumber - 1].push(seatNumber);
-                seatArray.push(id);
-                button.classList.remove('seat_normal');
-                button.classList.add('seat_selected');
+                if(seatCounter < 10) {
+                    seatCounter++;
+                    seatNumberArray[rowNumber - 1].push(seatNumber);
+                    seatArray.push(id);
+                    button.classList.remove('seat_normal');
+                    button.classList.add('seat_selected');
+                } else {
+                    document.getElementById('alertSeats').hidden = false;
+                    setTimeout(function(){ document.getElementById('alertSeats').hidden = true;}, 3000);
+                }
             } else {
+                seatCounter--;
                 var elementIndex = seatArray.indexOf(id);
                 seatArray.splice(elementIndex, 1);
 
@@ -264,7 +273,7 @@
 
         function getDate() {
             submitButton.disabled = false;
-            seatNumberLabel.style.color = 'white';
+            seatNumberLabel.style.color = 'black';
             seatNumberLabel.innerHTML = '';
             seatNumberInput.value = '';
             seatIdInput.value = '';
@@ -298,6 +307,5 @@
                 submitButton.disabled = true;
             }
         }
-
     </script>
 {% endblock %}

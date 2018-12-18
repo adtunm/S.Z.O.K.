@@ -111,11 +111,29 @@ class RezerwacjeRepository extends ServiceEntityRepository
         return $query->execute();
     }
 
-    public function getClientReservationsPage(Uzytkownicy $user, $page = 1, $pageLimit = 5)
+    public function getClientReservationsPage(Uzytkownicy $user, $page = 1, $pageLimit = 5, $date = null, $ifAccomplish = null)
     {
+        if($ifAccomplish == null){
+            $ifAccomplish = "%";
+        }
+
+        if($date == null or !\DateTime::createFromFormat('Y-m-d', $date) ){
+            $from = new \DateTime("1000-01-01 00:00:00");
+            $to = new \DateTime("9999-12-31 23:59:59");
+        } else {
+            $from = new \DateTime($date . " 00:00:00");
+            $to = new \DateTime($date . " 23:59:59");
+        }
+
         $query = $this->createQueryBuilder('r')
+            ->join('r.seanse', 'se')
             ->andWhere('r.uzytkownicy = :user')
+            ->andWhere('r.sfinalizowana LIKE :ifAccomplish')
+            ->andwhere('se.poczatekseansu BETWEEN :dateF AND :dateT')
             ->setParameter('user', $user)
+            ->setParameter('ifAccomplish', $ifAccomplish)
+            ->setParameter('dateF', $from)
+            ->setParameter('dateT', $to)
             ->orderBy('r.id', 'DESC')
             ->getQuery();
 
@@ -127,12 +145,30 @@ class RezerwacjeRepository extends ServiceEntityRepository
         return $requestedPage;
     }
 
-    public function getClientReservationsPageCount(Uzytkownicy $user, $pageLimit = 5)
+    public function getClientReservationsPageCount(Uzytkownicy $user, $pageLimit = 5, $date = null, $ifAccomplish = null)
     {
+        if($ifAccomplish == null){
+            $ifAccomplish = "%";
+        }
+
+        if($date == null or !\DateTime::createFromFormat('Y-m-d', $date) ){
+            $from = new \DateTime("1000-01-01 00:00:00");
+            $to = new \DateTime("9999-12-31 23:59:59");
+        } else {
+            $from = new \DateTime($date . " 00:00:00");
+            $to = new \DateTime($date . " 23:59:59");
+        }
+
         $query = $this->createQueryBuilder('r')
             ->select('count(r.id)')
+            ->join('r.seanse', 'se')
             ->andWhere('r.uzytkownicy = :user')
+            ->andWhere('r.sfinalizowana LIKE :ifAccomplish')
+            ->andwhere('se.poczatekseansu BETWEEN :dateF AND :dateT')
             ->setParameter('user', $user)
+            ->setParameter('ifAccomplish', $ifAccomplish)
+            ->setParameter('dateF', $from)
+            ->setParameter('dateT', $to)
             ->getQuery();
 
         $count = $query->getSingleScalarResult();
