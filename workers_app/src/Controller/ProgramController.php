@@ -44,7 +44,7 @@ class ProgramController extends AbstractController
      * @Route("/program/rooms",
      *      name="workers_app/program/rooms")
      */
-    public function probramByRooms()
+    public function programByRooms()
     {
         if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
             return $this->redirectToRoute('workers_app/logout_page');
@@ -76,7 +76,7 @@ class ProgramController extends AbstractController
                 }
                 $firstTo = $first->format('H');
                 $interval = $first->diff($last);
-                $intervalTo = $interval->h;
+                $intervalTo = $interval->h + $interval->d*24;
 
                 foreach ($seances as $keyClone => $valueClone) {
                     if ($prev != $valueClone->getSale()->getId()) {
@@ -86,9 +86,9 @@ class ProgramController extends AbstractController
 
                     $time = $valueClone->getPoczatekseansu()->diff($valueClone->getSeanceEndTime());
                     $intervalBtw = $end->diff($valueClone->getPoczatekseansu());
-
                     $program[$keyClone] = array(
                         'interval' => array(
+                            'd' => $intervalBtw->d,
                             'h' => $intervalBtw->h,
                             'i' => $intervalBtw->i),
                         'seance' => $valueClone,
