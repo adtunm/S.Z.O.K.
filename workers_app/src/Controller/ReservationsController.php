@@ -9,18 +9,12 @@
 namespace App\Controller;
 
 
-use App\Entity\Bilety;
 use App\Entity\Miejsca;
-use App\Entity\Promocje;
 use App\Entity\Rezerwacje;
-use App\Entity\Rodzajeplatnosci;
-use App\Entity\Rzedy;
 use App\Entity\Seanse;
-use App\Entity\Tranzakcje;
-use App\Entity\Vouchery;
+use App\Entity\Typyrzedow;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -81,7 +75,7 @@ class ReservationsController extends AbstractController
                 $id, $date, $name, $surname, $pageLimit);
 
             if ($page > $pageCount and $pageCount != 0)
-                return $this->redirectToRoute('workers_app/rooms_page');
+                return $this->redirectToRoute('workers_app/reservations', $values);
             else {
                 $reservations = $this->getDoctrine()->getRepository(Rezerwacje::class)->getReservations(
                     $id, $date, $name, $surname, $page, $pageLimit);
@@ -105,7 +99,7 @@ class ReservationsController extends AbstractController
             if (!$seance = $this->getDoctrine()->getRepository(Seanse::class)->find($id) or $seance->getCzyodwolany()) {
                 return $this->redirectToRoute('workers_app/no_permission');
             }
-            $submit = $request->request->get('submit');
+            $submit = $request->request->get('submitNumber');
             $reservation = new Rezerwacje();
             $form = $this->getForm($reservation);
             $form->handleRequest($request);
@@ -138,8 +132,8 @@ class ReservationsController extends AbstractController
                 }
                 return $this->render('workersApp/reservations/summary.html.twig', ['seance' => $seance, 'rezervationData' => $request->request->all()]);
             }
-
-            return $this->render('workersApp/reservations/add.html.twig', ['seance' => $seance, 'roomLayout' => $roomLayout, 'checkedSeats' => $seatsIdArray, 'form' => $form->createView()]);
+            $rowType = $this->getDoctrine()->getRepository(Typyrzedow::class)->findAll();
+            return $this->render('workersApp/reservations/add.html.twig', ['seance' => $seance, 'roomLayout' => $roomLayout, 'checkedSeats' => $seatsIdArray, 'form' => $form->createView(), 'rowType' => $rowType]);
         } else {
             return $this->redirectToRoute('workers_app/login_page');
         }
@@ -161,7 +155,7 @@ class ReservationsController extends AbstractController
             foreach ($transaction->getBilety()->getIterator() AS $ticket) {
                 if (!$ticket->getCzyanulowany()) {
                     $transSeat = $ticket->getMiejsca();
-                    if ($roomLayout[$transSeat->getId()]['status'] == 1 or $roomLayout[$transSeat->getId()]['status'] = 2) {
+                    if ($roomLayout[$transSeat->getId()]['status'] == 1 or $roomLayout[$transSeat->getId()]['status'] == 2) {
                         $roomLayout[$transSeat->getId()]['status'] = 4;
                     }
                 }
@@ -170,9 +164,8 @@ class ReservationsController extends AbstractController
         foreach ($seance->getRezerwacje()->getIterator() AS $booking) {
             if (!$booking->isSfinalizowana()) {
                 foreach ($booking->getMiejsca()->getIterator() AS $revSeat) {
-                    if ($roomLayout[$revSeat->getId()]['status'] == 1 or $roomLayout[$revSeat->getId()]['status'] = 2) {
+                    if ($roomLayout[$revSeat->getId()]['status'] == 1 or $roomLayout[$revSeat->getId()]['status'] == 2) {
                         $roomLayout[$revSeat->getId()]['status'] = 3;
-
                     }
                 }
             }

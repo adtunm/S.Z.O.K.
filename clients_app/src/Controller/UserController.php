@@ -11,7 +11,6 @@ namespace App\Controller;
 
 use App\Entity\Uzytkownicy;
 
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -19,7 +18,6 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
@@ -29,7 +27,7 @@ class UserController extends Controller
     /**
      * @Route("/registration", name="clients_app/registration", methods={"GET", "POST"})
      */
-    public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder)
+    public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder, \Swift_Mailer $mailer)
     {
         if ($this->isGranted('ROLE_USER') and AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
             return $this->redirectToRoute('clients_app/logout_page');
@@ -124,6 +122,18 @@ class UserController extends Controller
                 $user->setHaslo($password);
                 $entityManager->persist($user);
                 $entityManager->flush();
+
+                $message = (new \Swift_Message('Potwierdzenie rejestracji'))
+                    ->setFrom('szok.smtp@gmail.com')
+                    ->setTo('adtunm@gmail.com')
+                    ->setBody(
+                        $this->renderView('clientsApp/mails/mailRegistration.html.twig',
+                            array('user' => $user)
+                        ),
+                        'text/html'
+                    );
+                $mailer->send($message);
+
                 return $this->redirectToRoute('clients_app/main_page');
             }
             return $this->render('clientsApp/users/registration.html.twig', array('form' => $form->createView()));
@@ -240,10 +250,10 @@ class UserController extends Controller
                 ->getForm();
             $form->handleRequest($request);
 
-            if(!$request->request->has('stareHaslo')){
+            if (!$request->request->has('stareHaslo')) {
                 $error = null;
                 return $this->render('clientsApp/users/passwordEdit.html.twig', array('form' => $form->createView(), 'error' => $error));
-            }else {
+            } else {
                 if ($passwordEncoder->isPasswordValid($user, $request->get('stareHaslo'))) {
                     if ($form->isSubmitted() && $form->isValid()) {
                         $entityManager = $this->getDoctrine()->getManager();
@@ -260,5 +270,79 @@ class UserController extends Controller
                 }
             }
         }
+    }
+
+    /**
+     * @Route("/passwordReset", name="clients_app/password_reset", methods={"GET", "POST"})
+     */
+    public function resetPassword(Request $request, UserPasswordEncoderInterface $passwordEncoder, \Swift_Mailer $mailer)
+    {
+        $user = null;
+        $error = false;
+
+        $form = $this->createFormBuilder($user)
+            ->add('login', TextType::class, array(
+                'label' => 'Login:',
+                'attr' => array('class' => 'form-control',
+                    "pattern" => "[A-Za-z0-9\-_]{5,45}",
+                    "placeholder" => "Wprowadź login...",
+                    'title' => 'Polskie litery, cyfry, myślniki, podkreślenia, od 5 do 45 znaków.',
+                    'autocomplete' => "off"),
+                'label_attr' => array('class' => "col-sm-2 col-form-label")
+            ))
+            ->add('email', EmailType::class, array(
+                'label' => 'E-mail:',
+                'attr' => array('class' => 'form-control',
+                    "placeholder" => "Wprowdź email...",
+                    'autocomplete' => "off"),
+                'label_attr' => array('class' => "col-sm-2 col-form-label")
+            ))
+            ->add('save', SubmitType::class, array(
+                'label' => 'Resetuj hasło',
+                'attr' => array('class' => "btn btn-primary float-right")
+            ))
+            ->getForm();
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $email = $form->get('email')->getData();
+            $login = $form->get('login')->getData();
+            $user = $this->getDoctrine()->getRepository(Uzytkownicy::class)->findOneBy(array('email' => $email, 'login' => $login));
+            if (!$user) {
+                $error = true;
+                return $this->render('clientsApp/users/passwordReset.html.twig', array('form' => $form->createView(), 'error' => $error));
+            } else {
+                $newPassword = $this->random_str(15);
+                $entityManager = $this->getDoctrine()->getManager();
+                $password = $passwordEncoder->encodePassword($user, $newPassword);
+                $user->setHaslo($password);
+                $entityManager->merge($user);
+                $entityManager->flush();
+
+                $message = (new \Swift_Message('Twoje hasło zostało zresetowane!'))
+                    ->setFrom('szok.smtp@gmail.com')
+                    ->setTo('adtunm@gmail.com')
+                    ->setBody(
+                        $this->renderView('clientsApp/mails/passwordReset.html.twig',
+                            array('user' => $user, 'password' => $newPassword)
+                        ),
+                        'text/html'
+                    );
+                $mailer->send($message);
+
+                return $this->redirectToRoute('clients_app/main_page');
+            }
+        }
+        return $this->render('clientsApp/users/passwordReset.html.twig', array('form' => $form->createView(), 'error' => $error));
+    }
+
+    public function random_str($length, $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=')
+    {
+        $pieces = [];
+        $max = mb_strlen($keyspace, '8bit') - 1;
+        for ($i = 0; $i < $length; ++$i) {
+            $pieces [] = $keyspace[random_int(0, $max)];
+        }
+        return implode('', $pieces);
     }
 }

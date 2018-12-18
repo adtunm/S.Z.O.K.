@@ -12,12 +12,12 @@ namespace App\Controller;
 use App\Entity\Bilety;
 use App\Entity\Miejsca;
 use App\Entity\Promocje;
-use App\Entity\PulabiletowMaRodzajebiletow;
 use App\Entity\Pulebiletow;
 use App\Entity\Rezerwacje;
 use App\Entity\Rodzajeplatnosci;
 use App\Entity\Seanse;
 use App\Entity\Tranzakcje;
+use App\Entity\Typyrzedow;
 use App\Entity\Vouchery;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -29,8 +29,8 @@ use Symfony\Component\HttpFoundation\Response;
 class TransactionController extends Controller
 {
     /**
-     * @Route("/transaction/add/{id<[1-9]\d*>?}", name="workers_app/transactions/add", methods={"GET", "POST"})
-     */
+ * @Route("/transaction/add/{id<[1-9]\d*>?}", name="workers_app/transactions/add", methods={"GET", "POST"})
+ */
     public function add(Request $request, $id)
     {
         if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
@@ -44,7 +44,7 @@ class TransactionController extends Controller
             $tickets = $this->getDoctrine()->getRepository(Pulebiletow::class)->getSeancesTickets($id);
             $roomLayout = $this->getRoomLayout($this->getDoctrine()->getRepository(Seanse::class)->find($id));
 
-            $submit = $request->request->get('submit');
+            $submit = $request->request->get('submitNumber');
 
             $selectedSeatsIdArray = [];
             $requestArray = $request->request->all();
@@ -83,9 +83,7 @@ class TransactionController extends Controller
                     (!$selectedPromotionId ||
                         $this->getDoctrine()->getRepository(Promocje::class)->getPromotionToCheck($selectedPromotionId)) &&
                     ($selectedPaymentWayId == 1 || $selectedPaymentWayId == 2)) {
-                    //dodanie do bazy, render strony koncowej, render biletu pdf
                     $transaction = $this->addToDatabase($seance, $selectedSeatsIdArray, $selectedTicketsIdArray, $selectedVouchersIdArray, $selectedPromotionId, $selectedPaymentWayId);
-                    var_dump($transaction->getId());
                     return $this->redirectToRoute('workers_app/transactions/end', ['id' => $transaction->getId()]);
                 }
             }
@@ -94,8 +92,9 @@ class TransactionController extends Controller
                 $selectedSeatsIdArray = explode(",", $requestArray['seatsIds']);
             }
 
+            $rowType = $this->getDoctrine()->getRepository(Typyrzedow::class)->findAll();
             return $this->render('workersApp/transactions/add.html.twig', ['seance' => $seance,
-                'roomLayout' => $roomLayout, 'tickets' => $tickets, 'selectedSeats' => $selectedSeatsIdArray]);
+                'roomLayout' => $roomLayout, 'tickets' => $tickets, 'selectedSeats' => $selectedSeatsIdArray, 'rowType' => $rowType]);
         } else {
             return $this->redirectToRoute('workers_app/login_page');
         }
@@ -106,59 +105,106 @@ class TransactionController extends Controller
      */
     public function accomplishReservation(Request $request, $id)
     {
-
         if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
             return $this->redirectToRoute('workers_app/logout_page');
         }
 
         if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
-
-            if (!$reservation = $this->getDoctrine()->getRepository(Rezerwacje::class)->find($id) or $reservation->isSfinalizowana()) {
+            $requestArray = $request->request->all();
+            if ((!$reservation = $this->getDoctrine()->getRepository(Rezerwacje::class)->find($id) and empty($requestArray)) or ($reservation and $reservation->isSfinalizowana())) {
                 return $this->redirectToRoute('workers_app/no_permission');
             }
 
-            $selectedSeats = $this->getDoctrine()->getRepository(Miejsca::class)->getSeatsForReservation($id);
-            $requestArray = $request->request->all();
+            $reservationsSeats = $this->getSeatsForReservation($reservation);
+
             if (!empty($requestArray)) {
                 $seatsIdArrayFromClient = explode(",", $requestArray['seatsIds']);
                 $ticketsIdArrayFromClient = explode(",", $requestArray['ticketsIds']);
                 $vouchersIdArrayFromClient = explode(",", $requestArray['vouchersIds']);
                 $promotionIdFromClient = $requestArray['promotionId'];
                 $paymentWayIdFromClient = $requestArray['paymentId'];
+                $seanceId = $requestArray['seanceId'];
 
-                if ($this->validSeatForReservationAccomplish($seatsIdArrayFromClient, $selectedSeats) &&
-                    $this->validTickets($ticketsIdArrayFromClient, $reservation->getSeanse()->getId()) &&
+                $seance = $this->getDoctrine()->getRepository(Seanse::class)->find($seanceId);
+
+                if ($this->validSeanceId($seance, $reservation) &&
+                    $this->validSeatForReservationAccomplish($seatsIdArrayFromClient, $reservationsSeats, $seance) &&
+                    $this->validTickets($ticketsIdArrayFromClient, $seanceId) &&
                     $this->validVoucher($vouchersIdArrayFromClient) &&
                     (!$promotionIdFromClient ||
                         $this->getDoctrine()->getRepository(Promocje::class)->getPromotionToCheck($promotionIdFromClient)) &&
                     ($paymentWayIdFromClient == 1 || $paymentWayIdFromClient == 2)) {
 
-
-                    $transaction = $this->addToDatabase($reservation->getSeanse(), $seatsIdArrayFromClient, $ticketsIdArrayFromClient, $vouchersIdArrayFromClient, $promotionIdFromClient, $paymentWayIdFromClient);
+                    $transaction = $this->addToDatabase($seance, $seatsIdArrayFromClient, $ticketsIdArrayFromClient, $vouchersIdArrayFromClient, $promotionIdFromClient, $paymentWayIdFromClient);
                     $entityManager = $this->getDoctrine()->getManager();
-                    $reservation->setSfinalizowana(1);
+                    if($reservation && $this->checkIfReservationDone($seatsIdArrayFromClient, $reservationsSeats)) {
+                        $reservation->setSfinalizowana(1);
+                    }
+
                     $entityManager->merge($transaction);
                     $entityManager->flush();
                     return $this->redirectToRoute('workers_app/transactions/end', ['id' => $transaction->getId()]);
                 }
             }
 
+            if(!$reservation){
+                return $this->redirectToRoute('workers_app/no_permission');
+            }
+
             $promotions = $this->getDoctrine()->getRepository(Promocje::class)->findCurrent();
             $paymentWay = $this->getDoctrine()->getRepository(Rodzajeplatnosci::class)->findAll();
-            $selectedSeats = $this->getDoctrine()->getRepository(Miejsca::class)->getSeatsForReservation($id);
             return $this->render('workersApp/transactions/accomplish.html.twig', [
                 'reservation' => $reservation, 'promotions' => $promotions,
-                'selectedSeats' => $selectedSeats, 'paymentWay' => $paymentWay]);
+                'selectedSeats' => $reservationsSeats, 'paymentWay' => $paymentWay]);
         } else {
             return $this->redirectToRoute('workers_app/login_page');
         }
+    }
+
+    private function getSeatsForReservation($reservation)
+    {
+        if(!$reservation){
+            return false;
+        }
+        $seats = $this->getDoctrine()->getRepository(Miejsca::class)->getSeatsForReservation($reservation->getId());
+        $seance = $reservation->getSeanse();
+        $selectedSeats = [];
+        foreach ($seats AS $seat) {
+            $selectedSeats[$seat->getId()] = array(
+                'miejsca' => $seat,
+                'status' => 1);
+        }
+        foreach ($seance->getTranzakcje()->getIterator() AS $transaction) {
+            foreach ($transaction->getBilety()->getIterator() AS $ticket) {
+                if (!$ticket->getCzyanulowany()) {
+                    $transSeat = $ticket->getMiejsca();
+                    $seatId = $transSeat->getId();
+                    if(array_key_exists($seatId, $selectedSeats)) {
+                        $selectedSeats[$seatId]['status'] = 0;
+                        $selectedSeats[$seatId]['cena'] = $ticket->getCena();
+                        $selectedSeats[$seatId]['rodzajbiletu'] = $ticket->getRodzajebiletow();
+                    }
+                }
+            }
+        }
+        return $selectedSeats;
+    }
+
+    private function validSeanceId($seance, $reservation){
+        if(!$seance){
+            return false;
+        }
+        if($reservation && $seance != $reservation->getSeanse()){
+            return false;
+        }
+        return true;
     }
 
     private function addToDatabase($seance, $selectedSeatsIdArray, $selectedTicketsIdArray, $selectedVouchersIdArray, $selectedPromotionId, $selectedPaymentWayId)
     {
         $entityManager = $this->getDoctrine()->getManager();
         $transaction = new Tranzakcje();
-        $date = new \DateTime(date('Y-m-d'));
+        $date = new \DateTime(date('Y-m-d H:i:s'));
         $transaction->setData($date);
         $transaction->setRodzajeplatnosci($this->getDoctrine()->getRepository(Rodzajeplatnosci::class)->find($selectedPaymentWayId));
         $transaction->setSeanse($seance);
@@ -218,7 +264,7 @@ class TransactionController extends Controller
             foreach ($transaction->getBilety()->getIterator() AS $ticket) {
                 if (!$ticket->getCzyanulowany()) {
                     $transSeat = $ticket->getMiejsca();
-                    if ($roomLayout[$transSeat->getId()]['status'] == 1 or $roomLayout[$transSeat->getId()]['status'] = 2) {
+                    if ($roomLayout[$transSeat->getId()]['status'] == 1 or $roomLayout[$transSeat->getId()]['status'] == 2) {
                         $roomLayout[$transSeat->getId()]['status'] = 4;
                     }
                 }
@@ -227,7 +273,7 @@ class TransactionController extends Controller
         foreach ($seance->getRezerwacje()->getIterator() AS $booking) {
             if (!$booking->isSfinalizowana()) {
                 foreach ($booking->getMiejsca()->getIterator() AS $revSeat) {
-                    if ($roomLayout[$revSeat->getId()]['status'] == 1 or $roomLayout[$revSeat->getId()]['status'] = 2) {
+                    if ($roomLayout[$revSeat->getId()]['status'] == 1 or $roomLayout[$revSeat->getId()]['status'] == 2) {
                         $roomLayout[$revSeat->getId()]['status'] = 3;
 
                     }
@@ -315,24 +361,53 @@ class TransactionController extends Controller
                 return false;
             }
 
-            if ($roomLayout[$seatId]['status'] != 1) {
+            if ($roomLayout[$seatId]['status'] != 1 and $roomLayout[$seatId]['status'] != 2) {
                 return false;
             }
         }
         return true;
     }
 
-    private function validSeatForReservationAccomplish($seatsIdArray, $seats)
+    private function validSeatForReservationAccomplish($seatsIdArrayFromClient, $reservationsSeats, $seance)
     {
-        if (count($seatsIdArray) != count($seats)) {
-            return false;
-        }
-        foreach ($seats as $seatId) {
-            if (!in_array($seatId->getId(), $seatsIdArray)) {
+        if($reservationsSeats){
+            if (count($seatsIdArrayFromClient) > count($reservationsSeats)) {
                 return false;
             }
+
+            foreach ($seatsIdArrayFromClient as $seatId) {
+                if (!preg_match('/^[0-9]{1,}$/', $seatId)) {
+                    return false;
+                }
+
+                if (!array_key_exists($seatId, $reservationsSeats)) {
+                    return false;
+                }
+
+                if ($reservationsSeats[$seatId]['status'] != 1) {
+                    return false;
+                }
+            }
+        } else {
+            $roomLayout = $this->getRoomLayout($seance);
+            return $this->validSeat($seatsIdArrayFromClient, $roomLayout);
         }
         return true;
+    }
+
+    private function checkIfReservationDone($seatsIdArrayFromClient, $reservationsSeats){
+        $soldSeatsCounter = 0;
+        foreach ($reservationsSeats as $reservationsSeat){
+            if(!$reservationsSeat['status']){
+                $soldSeatsCounter++;
+            }
+        }
+        $soldSeatsCounter += count($seatsIdArrayFromClient);
+
+        if($soldSeatsCounter == count($reservationsSeats)){
+            return true;
+        }
+        return false;
     }
 
     /**

@@ -99,8 +99,6 @@ class MiejscaRepository extends ServiceEntityRepository
         return $query->execute();
     }
 
-
-
     public function getReservedSeat($idRoom, $idSeance){
 
         $query = $this->createQueryBuilder('m')

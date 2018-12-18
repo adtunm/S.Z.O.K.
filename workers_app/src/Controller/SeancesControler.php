@@ -83,9 +83,9 @@ class SeancesControler extends AbstractController
                         $collectionValues = implode($filmy_id, '/');
 
                         $seanceStartDate = new \DateTime($_POST['form']['poczatekseansu']['date'] . ' ' . $_POST['form']['poczatekseansu']['time']['hour'] . ':' . $_POST['form']['poczatekseansu']['time']['minute']);
+
                         $seanceEndDate = $this->getEndTime($seanceStartDate,$collectionValues);
                         $room = $this->getDoctrine()->getRepository(\App\Entity\Sale::class)->find($_POST['form']['sale']);
-
                         if($qSeance = $this->getDoctrine()->getRepository(Seanse::class)->endTimeIsInvalid($seanceStartDate, $seanceEndDate, $room))
                         {
                             $psError2 = "W sali " . $room->getNumersali() . " zaplanowany jest już seans w godzinach "

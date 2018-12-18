@@ -247,17 +247,17 @@
                 </div>
             </div>
 
-            <form name="form" method="post">
-                <input class="form-control" type="number" id="submit" name="submit" hidden value="">
+            <form id="summaryForm" name="form" method="post">
+                <input class="form-control" type="number" id="submitNumber" name="submitNumber" hidden value="">
                 <input type="text" id="seatsIds" name="seatsIds" hidden value="">
                 <input type="text" id="vouchersIds" name="vouchersIds" hidden value="">
                 <input type="text" id="ticketsIds" name="ticketsIds" hidden value="">
                 <input type="text" id="promotionId" name="promotionId" hidden value="">
                 <input type="text" id="paymentId" name="paymentId" hidden value="">
-                <button type="submit" id="form_back" name="form[back]" class="btn btn-primary float-left"
+                <button type="button" id="form_back" name="form[back]" class="btn btn-primary float-left"
                         onclick="setBack()">Zmień miejsca lub bilety
                 </button>
-                <button type="submit" id="form_save" name="form[save]" class="btn btn-primary float-right"
+                <button type="button" id="form_save" name="form[save]" class="btn btn-primary float-right"
                         onclick="setConfirm()">Zatwierdz
                 </button>
             </form>
@@ -451,6 +451,8 @@
         }
 
         function setBack() {
+            document.getElementById('form_save').disabled = true;
+            document.getElementById('form_back').disabled = true;
             var seatIdInput = document.getElementById('seatsIds');
             document.getElementById('submit').value = 2;
             seatIdInput.value = '';
@@ -460,9 +462,12 @@
                 }
                 seatIdInput.value += seatsIdArray[i];
             }
+            document.getElementById('summaryForm').submit();
         }
 
         function setConfirm() {
+            document.getElementById('form_save').disabled = true;
+            document.getElementById('form_back').disabled = true;
             var seatsIdInput = document.getElementById('seatsIds');
             var vouchersIdInput = document.getElementById('vouchersIds');
             var ticketsIdInput = document.getElementById('ticketsIds');
@@ -489,6 +494,7 @@
                     vouchersIdInput.value += 'null';
                 }
             }
+            document.getElementById('summaryForm').submit();
         }
     </script>
 {% endblock %}

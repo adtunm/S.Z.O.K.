@@ -35,16 +35,33 @@
 
 .seat_normal{
     background-color: lightseagreen;
+    color: white;
 }
 
 .seat_buying_only{
-    background-color: blueviolet;
+    background-color: #6633FF;
+    color: white;
 }
 
 .seat_inactive{
     background-color: white;
     border: 2px solid grey;
     color: gray;
+}
+
+.seat_reserved{
+    background-color: #993399;
+    color: white;
+}
+
+.seat_sold{
+    background-color: #CC6600;
+    color: white;
+}
+
+.seat_selected{
+    background-color: #FFFF99;
+    color: black;
 }
 
 .no-seat{

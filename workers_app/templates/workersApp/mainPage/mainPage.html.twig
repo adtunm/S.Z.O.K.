@@ -74,8 +74,8 @@
                     <td>Repertuar</td>
                     <td>
                         <a href="{{ path('workers_app/movies') }}" class="btn btn-primary mb-1">Lista filmów</a>
-                        <a href="#" class="btn btn-primary mb-1">Seanse wg daty</a>
-                        <a href="#" class="btn btn-primary mb-1">Repertuar wg sal</a>
+                        <a href="{{ path('workers_app/program/date') }}" class="btn btn-primary mb-1">Seanse wg daty</a>
+                        <a href="{{ path('workers_app/program/rooms') }}" class="btn btn-primary mb-1">Repertuar wg sal</a>
                         {% if is_granted('ROLE_MANAGER') or is_granted('ROLE_ADMIN') %}
                             <a href="{{ path('workers_app/movies/new') }}" class="btn btn-primary mb-1">Nowy film</a>
                             <a href="{{ path('workers_app/seances/new') }}" class="btn btn-primary mb-1">Nowy seans</a>

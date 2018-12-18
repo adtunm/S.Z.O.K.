@@ -37,8 +37,8 @@
                         <div class="col-sm-3">Numer telefonu:</div>
                         <div class="col-sm-9 pl-sm-2">{{ rezervationData.form.telefon }}</div>
                     </div>
-                    <form name="form" method="post">
-                        <input type="number" id="submit" name="submit" hidden value="">
+                    <form id="summaryForm" name="form" method="post">
+                        <input type="number" id="submitNumber" name="submitNumber" hidden value="">
                         <input type="text" id="seatId" name="seatId" hidden value="{{ rezervationData.seatId }}">
                         <input type="text" id="form_imie" name="form[imie]" hidden
                                value="{{ rezervationData.form.imie }}">
@@ -47,10 +47,10 @@
                         <input type="email" id="form_email" name="form[email]" hidden value="{{ rezervationData.form.email }}">
                         <input type="text" id="form_telefon" name="form[telefon]" hidden
                                value="{{ rezervationData.form.telefon }}">
-                        <button type="submit" id="form_back" name="form[back]" class="btn btn-primary float-left"
+                        <button type="button" id="form_back" name="form[back]" class="btn btn-primary float-left"
                                 onclick="setBack()">Zmień rezerwacje
                         </button>
-                        <button type="submit" id="form_save" name="form[save]" class="btn btn-primary float-right"
+                        <button type="button" id="form_save" name="form[save]" class="btn btn-primary float-right"
                                 onclick="setConfirm()">Zatwierdz
                         </button>
                         <input type="hidden" id="form__token" name="form[_token]"
@@ -63,11 +63,17 @@
     </div>
     <script>
         function setBack() {
-            document.getElementById('submit').value = '1';
+            document.getElementById('form_save').disabled = true;
+            document.getElementById('form_back').disabled = true;
+            document.getElementById('submitNumber').value = '1';
+            document.getElementById('summaryForm').submit();
         }
 
         function setConfirm() {
-            document.getElementById('submit').value = '2';
+            document.getElementById('form_save').disabled = true;
+            document.getElementById('form_back').disabled = true;
+            document.getElementById('submitNumber').value = '2';
+            document.getElementById('summaryForm').submit();
         }
     </script>
 

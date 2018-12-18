@@ -135,13 +135,13 @@ class SeanseRepository extends ServiceEntityRepository
 
     public function endTimeIsInvalid(\DateTime $seanceStartDate, \DateTime $seanceEndDate, \App\Entity\Sale $room, $editedId = NULL)
     {
-        $from = clone $seanceStartDate->setTime(0,0,0);
-        $to = clone $seanceStartDate->setTime(0,0,0);
+        $from = \DateTime::createFromFormat('Y-m-d',$seanceStartDate->format('Y-m-d'));
+        $to = \DateTime::createFromFormat('Y-m-d',$seanceStartDate->format('Y-m-d'));
 
         $query = $this->createQueryBuilder('s')
             ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
             ->andWhere('s.sale = :room')
-            ->andWhere('s.czyodwolany != true')
+            ->andWhere('s.czyodwolany = 0 OR s.czyodwolany IS NULL')
             ->setParameter('from', $from->sub(new \DateInterval('P1D')))
             ->setParameter('to', $to->add(new \DateInterval('P2D')))
             ->setParameter('room', $room)
@@ -154,7 +154,6 @@ class SeanseRepository extends ServiceEntityRepository
         foreach($result AS $qSeance) {
             if ($editedId and $editedId == $qSeance->getId()) continue;
             $qStart = $qSeance->getPoczatekseansu();
-            var_dump($qSeance->getSeansMaFilmy()->isEmpty(), $qSeance->getId());
             $qEnd = $qSeance->getSeanceEndTime();
             if(
                 ($seanceStartDate <= $qEnd and $seanceStartDate >= $qStart)
@@ -163,6 +162,62 @@ class SeanseRepository extends ServiceEntityRepository
             ) return $qSeance;
         }
         return false;
+    }
+
+    public function getProgram(\DateTime $date)
+    {
+        $from = clone $date->setTime(0,0,0);
+        $to = clone $date->setTime(0,0,0);
+        $query = $this->createQueryBuilder('s')
+            ->select('s')
+            ->join('s.seansMaFilmy', 'smf')
+            ->join('smf.filmy','f')
+            ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
+            ->setParameter('from', $from)
+            ->setParameter('to', $to->add(new \DateInterval('P1D')))
+            ->orderBy('s.wydarzeniaspecjalne, f.tytul ,s.poczatekseansu' , 'ASC')
+            ->getQuery()
+            ->getResult();
+
+        return $query;
+    }
+
+    public function getProgramRooms(\DateTime $date)
+    {
+        $from = clone $date->setTime(0,0,0);
+        $to = clone $date->setTime(0,0,0);
+        $query = $this->createQueryBuilder('s')
+            ->select('s')
+            ->join('s.seansMaFilmy', 'smf')
+            ->join('smf.filmy','f')
+            ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
+            ->setParameter('from', $from)
+            ->setParameter('to', $to->add(new \DateInterval('P1D')))
+            ->orderBy('s.sale, s.poczatekseansu' , 'ASC')
+            ->getQuery()
+            ->getResult();
+
+        return $query;
+    }
+
+    public function getProgramForRooms(\DateTime $date, \App\Entity\Sale $room)
+    {
+        $from = clone $date->setTime(0,0,0);
+        $to = clone $date->setTime(0,0,0);
+        $query = $this->createQueryBuilder('s')
+            ->select('s')
+            ->join('s.seansMaFilmy', 'smf')
+            ->join('smf.filmy','f')
+            ->andWhere('s.poczatekseansu BETWEEN :from AND :to')
+            ->andWhere('s.sale = :room')
+            ->setParameter('from', $from)
+            ->setParameter('to', $to->add(new \DateInterval('P1D')))
+            ->setParameter('room', $room)
+            ->orderBy('s.wydarzeniaspecjalne, f.tytul ,s.poczatekseansu' , 'ASC')
+            ->getQuery()
+            ->getResult();
+
+        return $query;
     }
 
     public function getCanceledPage(\DateTime $fromDate, \DateTime $toDate, $page = 1, $pageLimit = 10){
