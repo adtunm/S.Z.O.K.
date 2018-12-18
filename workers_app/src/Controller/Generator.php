@@ -526,6 +526,7 @@ class Generator extends AbstractController
         $entityManager->flush();
         unset($this->movies);
         unset($this->ticketPools);
+        gc_collect_cycles();
         $this->seances = $this->getDoctrine()->getRepository(Seanse::class)->findAll();
 
         return $counter;
@@ -629,14 +630,10 @@ class Generator extends AbstractController
         unset($this->femaleSurnames);
         unset($this->emailDomains);
         unset($this->polishCharsSwap);
+        gc_collect_cycles();
 
-        foreach($this->seances AS $seance) {
-            $this->bookings[$seance->getId()] = array();
-        }
-        $allBooking = $this->getDoctrine()->getRepository(Rezerwacje::class)->findAll();
-        foreach($allBooking AS $booking) {
-            array_push($this->bookings[$booking->getSeanse()->getId()], $booking);
-        }
+        $this->seances = $this->getDoctrine()->getRepository(Seanse::class)->findAll();
+
         return $count;
     }
 
@@ -660,7 +657,7 @@ class Generator extends AbstractController
             unset($this->seances[$k]);
             if($seance->getCzyodwolany()) continue;
 
-            $bookings = $this->bookings[$seance->getId()];
+            $bookings = $seance->getRezerwacje()->getValues();
             unset($this->bookings[$seance->getId()]);
 
             $pool = $seance->getPulebiletow();
@@ -874,7 +871,7 @@ class Generator extends AbstractController
                         }
 
                         $transaction->setBilety($tickets);
-                        if($transaction->getSum() == 0.00){
+                        if($transaction->getSum() == 0.00) {
                             $transaction->setRodzajeplatnosci($this->payment[1]);
                         }
                         $entityManager->persist($transaction);
@@ -906,7 +903,8 @@ class Generator extends AbstractController
         return $counter;
     }
 
-    public function updateTickets(){
+    public function updateTickets()
+    {
 
         set_time_limit(10000000);
         ini_set('memory_limit', '20000M');
@@ -914,7 +912,7 @@ class Generator extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
 
         $counter = 0;
-        while($transactions = $this->getDoctrine()->getRepository(Tranzakcje::class)->findBy(array(),null,10000,$counter)) {
+        while($transactions = $this->getDoctrine()->getRepository(Tranzakcje::class)->findBy(array(), NULL, 10000, $counter)) {
             foreach($transactions AS $transaction) {
                 foreach($transaction->getBilety()->getIterator() AS $ticket) {
                     $ticket->recalculateControlDigit();
