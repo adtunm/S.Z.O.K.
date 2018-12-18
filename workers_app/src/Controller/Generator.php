@@ -33,7 +33,7 @@ class Generator extends AbstractController
 {
     private $startGeneration = '2018-11-01'; //from when to start generate
     private $endGeneration = '2019-02-01'; //where to end, this day won't be included
-    private $percentageOfNonEmptySeances = 0.97; //how many seances need to have transaction and booking from 0.5 to 1
+    private $percentageOfNonEmptySeances = 0.93; //how many seances need to have transaction and booking from 0.5 to 1
 
     private $revLayout = array(
         1 => array(
