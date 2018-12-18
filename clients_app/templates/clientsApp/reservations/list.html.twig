@@ -69,7 +69,7 @@
                         </td>
                         <td>
                             {% if reservation.sfinalizowana == 0 %}
-                            <div class="pull-right" id="alert{{ reservation.id }}"></div>
+                            <div id="alert{{ reservation.id }}"></div>
                             <div class="pull-right" id="buttonsDiv{{ reservation.id }}">
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
@@ -182,10 +182,10 @@
                         console.log(data);
                         if (data.result) {
                             document.getElementById('alert' + reservationId).innerHTML = "Rezerwacja została poprawnie usunięta!";
-                            document.getElementById('alert' + reservationId).classList = 'text-success font-weight-bold';
+                            document.getElementById('alert' + reservationId).classList = 'text-success font-weight-bold pull-right';
                         } else {
                             document.getElementById('alert' + reservationId).innerHTML = "Rezerwacja została już wcześniej usunięta lub jest już zrealizowana. Proszę odświeżyć stronę i spróbować ponownie";
-                            document.getElementById('alert' + reservationId).classList = 'text-danger font-weight-bold';
+                            document.getElementById('alert' + reservationId).classList = 'text-danger font-weight-bold pull-right';
                         }
                     }
                 });

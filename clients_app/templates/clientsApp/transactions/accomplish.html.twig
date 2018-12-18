@@ -20,7 +20,7 @@
                     <div class="modal fade" id="promotions" tabindex="-1" role="dialog"
                          aria-labelledby="modelTitleId" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                            <div class="modal-content bg-dark text-light text-left">
+                            <div class="modal-content bg-client text-black text-left">
                                 <div class="modal-header">
                                     <h4 class="modal-title" id="modelTitleId">
                                         Wybierz promocje
@@ -176,8 +176,6 @@
                                                     </option>
                                                 {% endfor %}
                                             </select>
-
-
                                         </td>
                                         <td>
                                             <input id="ifAccomplish{{ selectedSeat.miejsca.id }}" style="vertical-align: middle"
@@ -206,7 +204,7 @@
                                              role="dialog"
                                              aria-labelledby="modelTitleId" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                                <div class="modal-content bg-dark text-light text-left">
+                                                <div class="modal-content bg-client text-black text-left">
                                                     <div class="modal-header">
                                                         <h4 class="modal-title" id="modelTitleId">
                                                             Wprowdzanie vouchera
@@ -262,20 +260,6 @@
                             </tbody>
                         </table>
                     </div>
-
-                    <div class="row mb-3">
-                        <div class="col-sm-3">Rodzaj płatności:</div>
-                        <div class="col-sm-9 pl-sm-2">
-                            <input type="radio" id="payment{{ paymentWay[2].id }}" name="payment" required="required"
-                                   value="{{ paymentWay[2].id }}">
-                            <label for="payment{{ paymentWay[2].id }}"
-                                   class="required">{{ paymentWay[2].nazwa }}</label>
-                            <input type="radio" id="payment{{ paymentWay[0].id }}" name="payment" required="required"
-                                   value="{{ paymentWay[0].id }}">
-                            <label for="payment{{ paymentWay[0].id }}"
-                                   class="required">{{ paymentWay[0].nazwa }}</label>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -284,7 +268,6 @@
                 <input type="text" id="vouchersIds" name="vouchersIds" hidden value="">
                 <input type="text" id="ticketsIds" name="ticketsIds" hidden value="">
                 <input type="text" id="promotionId" name="promotionId" hidden value="">
-                <input type="text" id="paymentId" name="paymentId" hidden value="">
                 <input type="text" id="seanceId" name="seanceId" hidden value="{{ reservation.seanse.id }}">
                 <input type="text" id="email" name="email" hidden value="">
                 <a class="btn btn-secondary"
@@ -315,7 +298,6 @@
         window.onload = function () {
             price = 0;
             document.getElementById('price').innerText = price.toFixed(2) + " PLN";
-            document.getElementById('payment{{ paymentWay[0].id }}').checked = true;
 
             {% for ticket in reservation.seanse.pulebiletow.pulaMaRodzajeBiletow %}
             ticketPriceArray.push({
@@ -444,19 +426,6 @@
                 }
             }
             document.getElementById('price').innerText = price.toFixed(2) + " PLN";
-            var cardRadio = document.getElementById('payment{{ paymentWay[0].id }}');
-            var cashRadio = document.getElementById('payment{{ paymentWay[2].id }}');
-
-            if (price == 0) {
-                cashRadio.disabled = true;
-                cashRadio.checked = false;
-                cardRadio.disabled = true;
-                cardRadio.checked = true;
-            } else {
-                cashRadio.disabled = false;
-                cardRadio.disabled = false;
-
-            }
         }
 
         function deleteVoucher(seatId, index) {
@@ -528,13 +497,10 @@
 
         function changeAccomplishment(seatId, index, checkbox) {
             if (statusArray[index]) {
-                //var $accomplishmentAlert = document.getElementById('accomplishmentAlert' + $reservationId);
                 if (checkbox.checked) {
                     ifAccomplish[index] = 1;
                     document.getElementById('voucherModalButton' + seatId).hidden = false;
                     document.getElementById('ticketFor' + seatId).disabled = false;
-                    //$accomplishmentAlert.innerHTML = 'Do realizacji';
-                    //$accomplishmentAlert.classList = 'text-success font-weight-bold';
                 } else {
                     ifAccomplish[index] = 0;
                     if(voucherArray[index]) {
@@ -542,8 +508,6 @@
                     }
                     document.getElementById('voucherModalButton' + seatId).hidden = true;
                     document.getElementById('ticketFor' + seatId).disabled = true;
-                    //$accomplishmentAlert.innerHTML = 'Nie do realizacji';
-                    //$accomplishmentAlert.classList = 'text-danger font-weight-bold';
                 }
                 updatePromotionPrice(promotionDate.ifAmount, promotionDate.value);
 
@@ -567,11 +531,6 @@
                 var vouchersIdInput = document.getElementById('vouchersIds');
                 var ticketsIdInput = document.getElementById('ticketsIds');
 
-                if (document.getElementsByName('payment')[0].checked) {
-                    document.getElementById('paymentId').value = document.getElementsByName('payment')[0].value;
-                } else {
-                    document.getElementById('paymentId').value = document.getElementsByName('payment')[1].value;
-                }
                 document.getElementById('email').value =  document.getElementById('inputEmail').value;
                 document.getElementById('promotionId').value = promotion;
                 seatsIdInput.value = '';

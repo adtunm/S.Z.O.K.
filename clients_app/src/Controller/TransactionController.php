@@ -87,9 +87,10 @@ class TransactionController extends Controller
         }
         if ($this->isGranted('IS_AUTHENTICATED_FULLY') and $transaction = $this->getDoctrine()->getRepository(Tranzakcje::class)->findOneBy(['id' => $id, 'uzytkownicy' => $this->getUser()])) {
             $selectedSeats = $this->getDoctrine()->getRepository(Bilety::class)->getTicketsForTransaction($id);
+            $this->get('session')->set('transaction', $transaction->getId());
             return $this->render('clientsApp/transactions/show.html.twig', array('transaction' => $transaction, 'selectedSeats' => $selectedSeats));
         } else {
-            return $this->redirectToRoute('workers_app/login_page');
+            return $this->redirectToRoute('clients_app/login_page');
         }
     }
 
@@ -134,10 +135,9 @@ class TransactionController extends Controller
                 } else {
                     $promotions = $this->getDoctrine()->getRepository(Promocje::class)->findCurrentForVisitor();
                 }
-                $paymentWay = $this->getDoctrine()->getRepository(Rodzajeplatnosci::class)->findAll();
                 return $this->render('clientsApp/transactions/summary.html.twig', ['seance' => $seance,
                     'selectedSeats' => $selectedSeats, 'selectedTickets' => $selectedTickets,
-                    'promotions' => $promotions, 'paymentWay' => $paymentWay, 'email' => $email]);
+                    'promotions' => $promotions, 'email' => $email]);
             }
         }
 
@@ -146,7 +146,6 @@ class TransactionController extends Controller
             $selectedTicketsIdArray = explode(",", $requestArray['ticketsIds']);
             $selectedVouchersIdArray = explode(",", $requestArray['vouchersIds']);
             $selectedPromotionId = $requestArray['promotionId'];
-            $selectedPaymentWayId = $requestArray['paymentId'];
             $email = $requestArray['email'];
 
             if ($this->validSeat($selectedSeatsIdArray, $roomLayout) &&
@@ -154,9 +153,8 @@ class TransactionController extends Controller
                 $this->validVoucher($selectedVouchersIdArray) &&
                 $this->validEmail($email) &&
                 (!$selectedPromotionId ||
-                    $this->validPromotion($selectedPromotionId)) &&
-                ($selectedPaymentWayId == 1 || $selectedPaymentWayId == 2)) {
-                $transaction = $this->addToDatabase($seance, $selectedSeatsIdArray, $selectedTicketsIdArray, $selectedVouchersIdArray, $selectedPromotionId, $selectedPaymentWayId);
+                    $this->validPromotion($selectedPromotionId))) {
+                $transaction = $this->addToDatabase($seance, $selectedSeatsIdArray, $selectedTicketsIdArray, $selectedVouchersIdArray, $selectedPromotionId);
                 $this->get('session')->set('transaction', $transaction->getId());
                 $this->get('session')->set('email', $email);
                 return $this->redirectToRoute('clients_app/transactions/end');
@@ -194,7 +192,6 @@ class TransactionController extends Controller
                 $ticketsIdArrayFromClient = explode(",", $requestArray['ticketsIds']);
                 $vouchersIdArrayFromClient = explode(",", $requestArray['vouchersIds']);
                 $promotionIdFromClient = $requestArray['promotionId'];
-                $paymentWayIdFromClient = $requestArray['paymentId'];
                 $seanceId = $requestArray['seanceId'];
                 $email = $requestArray['email'];
 
@@ -206,10 +203,9 @@ class TransactionController extends Controller
                     $this->validEmail($email) &&
                     $this->validVoucher($vouchersIdArrayFromClient) &&
                     (!$promotionIdFromClient ||
-                        $this->getDoctrine()->getRepository(Promocje::class)->getPromotionToCheck($promotionIdFromClient)) &&
-                    ($paymentWayIdFromClient == 1 || $paymentWayIdFromClient == 2)) {
+                        $this->getDoctrine()->getRepository(Promocje::class)->getPromotionToCheck($promotionIdFromClient))) {
 
-                    $transaction = $this->addToDatabase($seance, $seatsIdArrayFromClient, $ticketsIdArrayFromClient, $vouchersIdArrayFromClient, $promotionIdFromClient, $paymentWayIdFromClient);
+                    $transaction = $this->addToDatabase($seance, $seatsIdArrayFromClient, $ticketsIdArrayFromClient, $vouchersIdArrayFromClient, $promotionIdFromClient);
                     $entityManager = $this->getDoctrine()->getManager();
                     if ($reservation && $this->checkIfReservationDone($seatsIdArrayFromClient, $reservationsSeats)) {
                         $reservation->setSfinalizowana(1);
@@ -229,11 +225,10 @@ class TransactionController extends Controller
 
             $user =$this->getUser();
             $promotions = $this->getDoctrine()->getRepository(Promocje::class)->findCurrentForUser($user->getDatarejestracji(), $user->isCzykobieta());
-            $paymentWay = $this->getDoctrine()->getRepository(Rodzajeplatnosci::class)->findAll();
             $email = $user->getEmail();
             return $this->render('clientsApp/transactions/accomplish.html.twig', [
                 'reservation' => $reservation, 'promotions' => $promotions,
-                'selectedSeats' => $reservationsSeats, 'paymentWay' => $paymentWay, 'email' => $email]);
+                'selectedSeats' => $reservationsSeats, 'email' => $email]);
         } else {
             return $this->redirectToRoute('clients_app/login_page');
         }
@@ -301,13 +296,13 @@ class TransactionController extends Controller
         return true;
     }
 
-    private function addToDatabase($seance, $selectedSeatsIdArray, $selectedTicketsIdArray, $selectedVouchersIdArray, $selectedPromotionId, $selectedPaymentWayId)
+    private function addToDatabase($seance, $selectedSeatsIdArray, $selectedTicketsIdArray, $selectedVouchersIdArray, $selectedPromotionId)
     {
         $entityManager = $this->getDoctrine()->getManager();
         $transaction = new Tranzakcje();
         $date = new \DateTime(date('Y-m-d H:i:s'));
         $transaction->setData($date);
-        $transaction->setRodzajeplatnosci($this->getDoctrine()->getRepository(Rodzajeplatnosci::class)->find($selectedPaymentWayId));
+        $transaction->setRodzajeplatnosci($this->getDoctrine()->getRepository(Rodzajeplatnosci::class)->find(3));
         $transaction->setSeanse($seance);
         $promotion = $this->getDoctrine()->getRepository(Promocje::class)->find($selectedPromotionId);
         if ($promotion) $transaction->setPromocje($promotion);

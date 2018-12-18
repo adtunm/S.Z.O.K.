@@ -9,19 +9,12 @@
 namespace App\Controller;
 
 
-use App\Entity\Bilety;
 use App\Entity\Miejsca;
-use App\Entity\Promocje;
 use App\Entity\Rezerwacje;
-use App\Entity\Rodzajeplatnosci;
-use App\Entity\Rzedy;
 use App\Entity\Seanse;
-use App\Entity\Tranzakcje;
 use App\Entity\Typyrzedow;
-use App\Entity\Vouchery;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;

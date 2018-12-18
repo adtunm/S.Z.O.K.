@@ -12,7 +12,6 @@ namespace App\Controller;
 use App\Entity\Bilety;
 use App\Entity\Miejsca;
 use App\Entity\Promocje;
-use App\Entity\PulabiletowMaRodzajebiletow;
 use App\Entity\Pulebiletow;
 use App\Entity\Rezerwacje;
 use App\Entity\Rodzajeplatnosci;

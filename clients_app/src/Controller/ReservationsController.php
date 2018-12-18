@@ -9,19 +9,12 @@
 namespace App\Controller;
 
 
-use App\Entity\Bilety;
 use App\Entity\Miejsca;
-use App\Entity\Promocje;
 use App\Entity\Rezerwacje;
-use App\Entity\Rodzajeplatnosci;
-use App\Entity\Rzedy;
 use App\Entity\Seanse;
-use App\Entity\Tranzakcje;
 use App\Entity\Typyrzedow;
-use App\Entity\Vouchery;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -129,15 +122,10 @@ class ReservationsController extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($reservation);
                 $entityManager->flush();
-                $values = [
-                    'ifAccomplish' => 2,
-                    'date' => 0,
-                ];
-                if ($this->isGranted('ROLE_USER')) {
-                    return $this->redirectToRoute('clients_app/reservations', $values);
-                } else {
-                    return $this->redirectToRoute('clients_app/reservations/end');
-                }
+
+                $this->get('session')->set('reservation', $reservation->getId());
+                return $this->redirectToRoute('clients_app/reservations/end');
+
             }
             return $this->render('clientsApp/reservations/summary.html.twig', ['seance' => $seance,
                 'rezervationData' => $request->request->all()]);
@@ -161,8 +149,53 @@ class ReservationsController extends AbstractController
     /**
      * @Route("/reservations/end", name="clients_app/reservations/end", methods={"GET", "POST"})
      */
-    public function showEnd(){
-        return $this->render('clientsApp/reservations/end.html.twig');
+    public function showEnd(Request $request, \Swift_Mailer $mailer){
+        $entityManager = $this->getDoctrine()->getManager();
+        $reservation = $entityManager->getRepository(Rezerwacje::class)->find($this->get('session')->get('reservation'));
+        $reservationsSeats = $this->getSeatsForReservation($reservation);
+        $email = $reservation->getEmail();
+        $client = $this->getUser();
+        $message = (new \Swift_Message());
+        $message->setSubject('Kino SZOK - rezerwacja');
+        $message->setFrom('szok.smtp@gmail.com');
+        $message->setTo($email);
+        $message->setBody($this->renderView(
+            'clientsApp/mail/reservationMail.html.twig',
+            array('client' => $client, 'reservation' => $reservation, 'selectedSeats' => $reservationsSeats)
+        ),
+            'text/html'
+        );
+        $mailer->send($message);
+        return $this->render('clientsApp/reservations/end.html.twig', ['email' => $email]);
+    }
+
+    private function getSeatsForReservation($reservation)
+    {
+        if (!$reservation) {
+            return false;
+        }
+        $seats = $this->getDoctrine()->getRepository(Miejsca::class)->getSeatsForReservation($reservation->getId());
+        $seance = $reservation->getSeanse();
+        $selectedSeats = [];
+        foreach ($seats AS $seat) {
+            $selectedSeats[$seat->getId()] = array(
+                'miejsca' => $seat,
+                'status' => 1);
+        }
+        foreach ($seance->getTranzakcje()->getIterator() AS $transaction) {
+            foreach ($transaction->getBilety()->getIterator() AS $ticket) {
+                if (!$ticket->getCzyanulowany()) {
+                    $transSeat = $ticket->getMiejsca();
+                    $seatId = $transSeat->getId();
+                    if (array_key_exists($seatId, $selectedSeats)) {
+                        $selectedSeats[$seatId]['status'] = 0;
+                        $selectedSeats[$seatId]['cena'] = $ticket->getCena();
+                        $selectedSeats[$seatId]['rodzajbiletu'] = $ticket->getRodzajebiletow();
+                    }
+                }
+            }
+        }
+        return $selectedSeats;
     }
 
     private function getRoomLayout($seance)
