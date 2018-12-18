@@ -149,9 +149,9 @@ class MoviesController extends Controller
     }
 
     /**
-     * @Route("/movies/show/{id<[1-9]\d*>}/{page<[1-9]\d*>?1}", name="workers_app/movies/show", methods={"GET", "POST"})
+     * @Route("/movies/show/{id<[1-9]\d*>}/{page<[1-9]\d*>?1},{filter<[1-9]\d*>?1}", name="workers_app/movies/show", methods={"GET", "POST"})
      */
-    public function show(Request $request, $id, $page)
+    public function show(Request $request, $id, $page, $filter)
     {
         if (AppController::logoutOnSessionLifetimeEnd($this->get('session'))) {
             return $this->redirectToRoute('workers_app/logout_page');
@@ -162,14 +162,20 @@ class MoviesController extends Controller
                 return $this->redirectToRoute('workers_app/no_permission');
 
             if($request->get('form_date')) {
-                if(\DateTime::createFromFormat('Y-m-d', $request->get('form_date'))) {
-                    $date = $request->get('form_date');
-                } else {
-                    $date = date('Y-m-d');
+                if($form_date = \DateTime::createFromFormat('Y-m-d', $request->get('form_date'))) {
+                    return $this->redirectToRoute('workers_app/movies/show', array(
+                       'id' => $id,
+                       'page' => 1,
+                       'filter' => $form_date->getTimestamp()
+                    ));
                 }
-            } else {
-                $date = date('Y-m-d');
             }
+
+            $date = new \DateTime();
+            if($filter > 1){
+                $date->setTimestamp($filter);
+            }
+            $date->setTime(0,0,0);
 
             $permission = $this->getDoctrine()->getRepository(Seanse::class)->checkSeancesForMovie($movie);
 
@@ -191,7 +197,12 @@ class MoviesController extends Controller
                 'pageCount' => $seancesPageCount,
                 'seancesPage' => $seancesPage,
                 'currentPage' => $page,
-                'permission' => $permission
+                'permission' => $permission,
+                'pathName' => 'workers_app/movies/show',
+                'pathParams' => array(
+                    'id' => $id,
+                    'filter' => $filter
+                )
             ));
         } else {
             return $this->redirectToRoute('workers_app/login_page');

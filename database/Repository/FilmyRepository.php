@@ -9,6 +9,8 @@
 namespace App\Repository;
 
 use App\Entity\Filmy;
+use App\Entity\Kategoriewiekowe;
+use App\Entity\Rodzajefilmow;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use Symfony\Bridge\Doctrine\RegistryInterface;
@@ -24,11 +26,18 @@ class FilmyRepository extends ServiceEntityRepository
         parent::__construct($registry, Filmy::class);
     }
 
-    public function findPage($page = 1, $pageLimit = 10)
+    public function findPage($page = 1, $pageLimit = 10, ?Rodzajefilmow $movieType = NULL)
     {
         $query = $this->createQueryBuilder('f')
-            ->orderBy('f.datapremiery', 'DESC')
-            ->getQuery();
+            ->orderBy('f.datapremiery', 'DESC');
+
+        if($movieType){
+            $query->join('f.rodzajefilmow', 'mt')
+                ->andWhere(':movieType = mt')
+                ->setParameter('movieType', $movieType);
+        }
+
+        $query = $query->getQuery();
 
         $requestedPage = new Paginator($query);
 
@@ -39,12 +48,19 @@ class FilmyRepository extends ServiceEntityRepository
         return $requestedPage;
     }
 
-    public function getPageCount($pageLimit = 10)
+    public function getPageCount($pageLimit = 10, ?Rodzajefilmow $movieType = NULL)
     {
         $query = $this->createQueryBuilder('f')
             ->select('count(f.id)')
-            ->orderBy('f.datapremiery', 'DESC')
-            ->getQuery();
+            ->orderBy('f.datapremiery', 'DESC');
+
+        if($movieType){
+            $query->join('f.rodzajefilmow', 'mt')
+                ->andWhere(':movieType = mt')
+                ->setParameter('movieType', $movieType);
+        }
+
+        $query = $query->getQuery();
 
         $count = $query->getSingleScalarResult();
 
@@ -57,7 +73,7 @@ class FilmyRepository extends ServiceEntityRepository
         return $pageCount;
     }
 
-    public function findPageOfActual($page = 1, $pageLimit = 10)
+    public function findPageOfActual($page = 1, $pageLimit = 10, ?Rodzajefilmow $movieType = NULL)
     {
         $query = $this->createQueryBuilder('f')
             ->select('DISTINCT f')
@@ -65,8 +81,15 @@ class FilmyRepository extends ServiceEntityRepository
             ->leftJoin('smf.seanse', 's')
             ->andWhere('smf.id IS NULL OR s.poczatekseansu >= :date')
             ->setParameter('date', date('Y-m-d'))
-            ->orderBy('f.datapremiery', 'DESC')
-            ->getQuery();
+            ->orderBy('f.datapremiery', 'DESC');
+
+        if($movieType){
+            $query->join('f.rodzajefilmow', 'mt')
+                ->andWhere(':movieType = mt')
+                ->setParameter('movieType', $movieType);
+        }
+
+        $query = $query->getQuery();
 
         $requestedPage = new Paginator($query);
 
@@ -77,7 +100,7 @@ class FilmyRepository extends ServiceEntityRepository
         return $requestedPage;
     }
 
-    public function getPageCountOfActual($pageLimit = 10)
+    public function getPageCountOfActual($pageLimit = 10, ?Rodzajefilmow $movieType = NULL)
     {
         $query = $this->createQueryBuilder('f')
             ->select('count(DISTINCT f.id)')
@@ -85,8 +108,15 @@ class FilmyRepository extends ServiceEntityRepository
             ->leftJoin('smf.seanse', 's')
             ->andWhere('smf.id IS NULL OR s.poczatekseansu >= :date')
             ->setParameter('date', date('Y-m-d'))
-            ->orderBy('f.datapremiery', 'DESC')
-            ->getQuery();
+            ->orderBy('f.datapremiery', 'DESC');
+
+        if($movieType){
+            $query->join('f.rodzajefilmow', 'mt')
+                ->andWhere(':movieType = mt')
+                ->setParameter('movieType', $movieType);
+        }
+
+        $query = $query->getQuery();
 
         $count = $query->getSingleScalarResult();
 
