@@ -4,7 +4,9 @@
     <div class="row pb-4 mt-0 justify-content-between">
         <div class="h1 col-md">Promocje nieaktywne</div>
         <div class="col-md">
-            <a href="{{ path('clients_app/promotions') }}" class="btn btn-primary pull-right"><i class="fa fa-percent" aria-hidden="true"></i> Pokaż aktywne</a>
+            <a href="{{ path('clients_app/promotions') }}" class="btn btn-primary pull-right"><i class="fa fa-percent"
+                                                                                                 aria-hidden="true"></i>
+                Pokaż aktywne</a>
         </div>
     </div>
     {% if promotions %}
@@ -23,7 +25,20 @@
                     <tr>
                         <td scope="row">{{ promotion.nazwa }}</td>
                         <td>{{ promotion.wartosc }} {% if promotion.czykwotowa %}zł{% else %}%{% endif %}</td>
-                        <td>
+                        {% if promotion.staz is not null %}
+                            {% if is_granted('ROLE_USER') %}
+                                {% if promotion.staz|date('Y-m-d') <= app.user.datarejestracji|date('Y-m-d') %}
+                                    {% set class = 'text-danger' %}
+                                {% else %}
+                                    {% set class = 'text-success' %}
+                                {% endif %}
+                            {% else %}
+                                {% set class = 'text-danger' %}
+                            {% endif %}
+                        {% else %}
+                            {% set class = 'text-success' %}
+                        {% endif %}
+                        <td class="{{ class }} font-weight-bold">
                             {% if promotion.czykobieta is not null %}
                                 {% if promotion.czykobieta %}
                                     Tylko dla pań
@@ -39,7 +54,7 @@
                                 Brak
                             {% endif %}
                         </td>
-                        <td>
+                        <td class="text-danger">
                             {{ promotion.poczatekPromocji|date("d.m.Y") }}
                             - {{ promotion.koniecPromocji|date("d.m.Y") }}
                         </td>

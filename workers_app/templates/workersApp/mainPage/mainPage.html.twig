@@ -112,8 +112,8 @@
                         {% set counter = counter + 1 %}
                         <td>Raporty</td>
                         <td>
-                            <a href="#" class="btn btn-primary mb-1">Raport sprzedaży</a>
-                            <a href="#" class="btn btn-primary mb-1">Raport seansów odwołanych</a>
+                            <a href="{{ path('workers_app/reports/sale') }}" class="btn btn-primary mb-1">Raport sprzedaży</a>
+                            <a href="{{ path('workers_app/reports/seances') }}" class="btn btn-primary mb-1">Raport seansów odwołanych</a>
                         </td>
                     </tr>
                 {% endif %}

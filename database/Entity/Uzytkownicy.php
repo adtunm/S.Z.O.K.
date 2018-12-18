@@ -374,4 +374,9 @@ class Uzytkownicy implements UserInterface
     public function eraseCredentials()
     {
     }
+
+    public function __toString()
+    {
+        return '' . $this->imie . ' ' . $this->nazwisko;
+    }
 }
