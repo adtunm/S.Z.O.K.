@@ -876,7 +876,7 @@ class Generator extends AbstractController
 
                         $counter++;
                     }
-                    if($counter % 10000 == 0) {
+                    if($counter % 5000 == 0) {
                         $entityManager->flush();
                         gc_collect_cycles();
                     }
@@ -887,7 +887,6 @@ class Generator extends AbstractController
 
         $entityManager->flush();
 
-        unset($this->vouchers);
         unset($this->seances);
         unset($this->users);
         unset($this->employees);
@@ -909,7 +908,7 @@ class Generator extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
 
         $counter = 0;
-        while($transactions = $this->getDoctrine()->getRepository(Tranzakcje::class)->findBy(array(), NULL, 10000, $counter)) {
+        while($transactions = $this->getDoctrine()->getRepository(Tranzakcje::class)->findBy(array(), NULL, 5000, $counter)) {
             foreach($transactions AS $transaction) {
                 foreach($transaction->getBilety()->getIterator() AS $ticket) {
                     $ticket->recalculateControlDigit();
