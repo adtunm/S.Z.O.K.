@@ -57,7 +57,7 @@
                             {% endif %}
 
                             <div class="my-1"
-                                 style="width: {{ (seance.interval.h*60 + seance.interval.i) *2 }}px"></div>
+                                 style="width: {{ (seance.interval.d*24*60 + seance.interval.h*60 + seance.interval.i) *2 }}px"></div>
                             <div class="btn btn-primary my-1"
                                  style="width:{{ (seance.time.h * 60 + seance.time.i)*2 }}px;white-space: normal"
                                  data-toggle="modal" data-target="#seanceId{{ seance.seance.id }}">
