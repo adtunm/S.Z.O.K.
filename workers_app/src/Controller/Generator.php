@@ -366,8 +366,6 @@ class Generator extends AbstractController
         $interval = \DateInterval::createFromDateString('1 day');
         $period = new \DatePeriod(new \DateTime($this->startGeneration), $interval, new \DateTime($this->endGeneration));
 
-        $this->vouchers = array();
-
         $counterS = 0;
         $counterV = 0;
         $counterR = 0;
@@ -396,13 +394,14 @@ class Generator extends AbstractController
         $this->payment = $this->getDoctrine()->getRepository(Rodzajeplatnosci::class)->findAll();
         $this->users = $this->getDoctrine()->getRepository(Uzytkownicy::class)->findAll();
         $this->employees = $this->getDoctrine()->getRepository(Pracownicy::class)->findAll();
-        $counterV += $this->pushVouchers($counterS / 5 * $this->percentageOfNonEmptySeances, 0);
+        $counterV += $this->pushVouchers($counterS/3 * $this->percentageOfNonEmptySeances, 0);
         $counterT += $this->pushTransaction($this->percentageOfNonEmptySeances);
         $counterB = 0;
         while($counterB > -1) {
             $counterB = $this->updateTickets($counterB);
         }
         $counterV += $this->pushVouchers(15, 1);
+        $this->updateVouchers();
 
         return new Response('<html><body>Wygenerowano: <ul> '
             . '<li>' . $counterS . ' seansów</li>'
@@ -417,6 +416,7 @@ class Generator extends AbstractController
     public function pushVouchers($numberOfPushes, $pushNumber)
     {
         set_time_limit(10000000);
+        $this->vouchers = array();
         $counter = 0;
         $entityManager = $this->getDoctrine()->getManager();
         $promotionStart = \DateTime::createFromFormat('Y-m-d', $this->startGeneration);
@@ -426,7 +426,7 @@ class Generator extends AbstractController
             $generationDate = new \DateTime();
             $generationDate->setDate(2017, 10, 1);
             $generationDate->setTime(8, 34, 21);
-            $generationDate->add(new \DateInterval('PT' . ($pushNumber * 10) . 'H' . ($i * 2 + 1) . 'M' . $i . 'S'));
+            $generationDate->add(new \DateInterval('PT' . ($pushNumber * 24) . 'H' . ($i * 2 + 1) . 'M' . $i . 'S'));
             $money = (boolean)rand(0, 1);
             for($j = 0; $j < $voucherCount; $j++) {
                 $voucher = new Vouchery();
@@ -443,23 +443,15 @@ class Generator extends AbstractController
                 $voucher->setCzywykorzystany(false);
                 $voucher->setLosowecyfry("" . rand(0, 9) . rand(0, 9) . rand(0, 9));
                 $entityManager->persist($voucher);
+                $counter++;
                 if($pushNumber == 0)
                     array_push($this->vouchers, $voucher);
-                $counter++;
                 if($counter % 5000 == 0)
                     $entityManager->flush();
             }
         }
         $entityManager->flush();
-        $counter2 = 0;
-        foreach($this->vouchers AS $voucher) {
-            $voucher->recalculateControlDigit();
-            $entityManager->merge($voucher);
-            $counter2++;
-            if($counter2 % 5000 == 0)
-                $entityManager->flush();
-        }
-        $entityManager->flush();
+
         return $counter;
     }
 
@@ -926,5 +918,21 @@ class Generator extends AbstractController
         if(count($transactions) % 30000 == 0)
             return $counter;
         return -1;
+    }
+
+    public function updateVouchers(){
+        $entityManager = $this->getDoctrine()->getManager();
+        $vouchers=$this->getDoctrine()->getRepository(Vouchery::class)->findAll();
+        $counter2 = 0;
+        foreach($vouchers AS $voucher) {
+            $voucher->recalculateControlDigit();
+            $entityManager->merge($voucher);
+            $counter2++;
+            if($counter2 % 5000 == 0){
+                $entityManager->flush();
+                gc_collect_cycles();
+            }
+        }
+        $entityManager->flush();
     }
 }
