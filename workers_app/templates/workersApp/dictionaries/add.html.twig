@@ -23,7 +23,10 @@
                 <div class="row">
                     {% if page == 'types' %}
                         <a class="btn btn-secondary" href="{{ path("workers_app/tickets/dictionaryName", {'dictionaryName':page}) }}"
-                           role="button"><i class="fa fa-angle-left" aria-hidden="true"></i>Wróć</a>
+                           role="button">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            Wróć
+                        </a>
                     {% else %}
                     <a class="btn btn-secondary" href="{{ path("workers_app/dictionaries/dictionaryName", {'dictionaryName':page}) }}"
                        role="button">Anuluj</a>

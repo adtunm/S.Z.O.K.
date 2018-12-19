@@ -135,11 +135,11 @@
         </tbody>
     </table>
 
-    {% if page == 'types' or page == 'pools' %}
-    {#<a class="btn btn-secondary" href="{{ path('workers_app/main_page') }}"><i class="fa fa-angle-left" aria-hidden="true"></i> Wróć</a>#}
-    {% else %}
-    <a class="btn btn-secondary" href="{{ path('workers_app/dictionaries') }}"><i class="fa fa-angle-left"
-                                                                                  aria-hidden="true"></i> Wróć</a>
+    {% if page != 'types' and page != 'pools' %}
+    <a class="btn btn-secondary" href="{{ path('workers_app/dictionaries') }}">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        Wróć
+    </a>
     {% endif %}
     {% if page == 'types' or page == 'pools' %}
         {% if not(deleted) %}
@@ -191,7 +191,10 @@
         <div>
             {% if page == 'types' or page == 'pools' %}
             {% else %}
-                <a class="btn btn-secondary" href="{{ path('workers_app/dictionaries') }}"><i class="fa fa-angle-left" aria-hidden="true"></i>Wróć</a>
+                <a class="btn btn-secondary" href="{{ path('workers_app/dictionaries') }}">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    Wróć
+                </a>
             {% endif %}
         </div>
     </div>
