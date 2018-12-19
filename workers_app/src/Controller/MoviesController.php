@@ -220,7 +220,7 @@ class MoviesController extends Controller
         if($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             $movie = $this->getDoctrine()->getRepository(Filmy::class)->find($id);
             if($movie != null and $this->getDoctrine()->getRepository(Seanse::class)->checkSeancesForMovie($movie)) {
-                if(file_exists('../../images/' . $movie->getPlakat()))
+                if($movie->getPlakat() and file_exists('../../images/' . $movie->getPlakat()))
                     unlink('../../images/' . $movie->getPlakat());
 
                 $entityManager = $this->getDoctrine()->getManager();

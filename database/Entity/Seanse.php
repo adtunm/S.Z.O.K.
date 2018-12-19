@@ -28,8 +28,8 @@ class Seanse
      *
      * @ORM\Column(name="poczatekSeansu", type="datetime", nullable=false)
      * @Assert\NotNull(message="Początek seansu jest wymagany.")
-     * @Assert\GreaterThan(
-     *     value="today",
+     * @Assert\GreaterThanOrEqual(
+     *     value="tomorrow",
      *     message="Seans nie może rozpoczynać się wcześniej niż jutro."
      *     )
      */
