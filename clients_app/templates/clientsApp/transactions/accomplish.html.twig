@@ -286,9 +286,12 @@
                 <input type="text" id="seanceId" name="seanceId" hidden value="{{ reservation.seanse.id }}">
                 <input type="text" id="email" name="email" hidden value="">
                 <a class="btn btn-secondary"
-                   href="{{ path('clients_app/reservations', {'date': 0, 'ifAccomplish': 2 } ) }}">Wróć</a>
+                   href="{{ path('clients_app/reservations', {'date': 0, 'ifAccomplish': 2 } ) }}">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    Wróć
+                </a>
                 <button type="button" id="form_save" name="form[save]" class="btn btn-primary float-right"
-                        onclick="setConfirm()">Zatwierdz
+                        onclick="setConfirm()">Zapłać
                 </button>
                 <div id="submitAlert" class="float-right text-danger font-weight-bold" hidden>Musisz wybrać przynajmniej jeden bilet.</div>
             </form>

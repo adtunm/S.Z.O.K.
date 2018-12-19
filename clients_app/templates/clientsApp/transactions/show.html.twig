@@ -39,7 +39,8 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">Zapłacono:</div>
-                        <div class="col-sm-9 pl-sm-2" id="price">{{ transaction.sum|number_format(2, '.', ' ') }} zł</div>
+                        <div class="col-sm-9 pl-sm-2" id="price">{{ transaction.sum|number_format(2, '.', ' ') }}zł
+                        </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">Promocja:</div>
@@ -84,7 +85,7 @@
                href="{{ path('clients_app/transactions', {
                    'dateFrom': 0,
                    'dateTo': 0
-               } ) }}">Wróć</a>
+               } ) }}"><i class="fa fa-angle-left" aria-hidden="true"></i> Wróć</a>
             <a class="btn btn-primary pull-right" id="ticketButton"
                href="{{ path('clients_app/ticket') }}"
                target="_blank">Pokaż bilety</a>
