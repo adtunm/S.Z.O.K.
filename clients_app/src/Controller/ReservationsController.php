@@ -100,6 +100,7 @@ class ReservationsController extends AbstractController
         $form = $this->getForm($reservation);
         $form->handleRequest($request);
 
+        $error = null;
         $seatsIdArray = explode(",", $request->get('seatId'));
         $roomLayout = $this->getRoomLayout($this->getDoctrine()->getRepository(Seanse::class)->find($id));
         if (($submit == 0 || $submit == 2) && $form->isSubmitted() && $form->isValid()
@@ -128,6 +129,8 @@ class ReservationsController extends AbstractController
             }
             return $this->render('clientsApp/reservations/summary.html.twig', ['seance' => $seance,
                 'rezervationData' => $request->request->all()]);
+        } else if ($submit and $submit != 1) {
+            $error = 'Coś poszło nie tak';
         }
 
         if ($this->isGranted('ROLE_USER') and !$submit) {
@@ -141,7 +144,7 @@ class ReservationsController extends AbstractController
 
         $rowType = $this->getDoctrine()->getRepository(Typyrzedow::class)->findAll();
         return $this->render('clientsApp/reservations/add.html.twig', ['seance' => $seance,
-            'roomLayout' => $roomLayout, 'checkedSeats' => $seatsIdArray,
+            'roomLayout' => $roomLayout, 'checkedSeats' => $seatsIdArray, 'error' => $error,
             'form' => $form->createView(), 'rowType' => $rowType]);
     }
 

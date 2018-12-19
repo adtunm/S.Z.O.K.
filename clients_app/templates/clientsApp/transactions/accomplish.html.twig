@@ -103,13 +103,28 @@
 
                 </div>
             </div>
+            {% if error %}
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    {{ error }}
+                </div>
+            {% endif %}
             <div class="mx-3">
                 <div class="mx-3">
                     <div class="row mb-3">
-                        <div class="col-sm-3">Film:</div>
+                        <div class="col-sm-3">
+                            {% if reservation.seanse.wydarzeniaspecjalne %}
+                                Wydarzenie specjalne:
+                            {% else %}
+                                Film:
+                            {% endif %}
+                        </div>
                         <div class="col-sm-9 pl-sm-2">
                             {% if reservation.seanse.wydarzeniaspecjalne %}
-                                {{ reservation.seanse.wydarzeniaspecjalne }}
+                                {{ reservation.seanse.wydarzeniaspecjalne }} -
+                                {% for smf in reservation.seanse.seansMaFilmy %}
+                                    {{ smf.filmy }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
                             {% else %}
                                 {% for smf in reservation.seanse.seansMaFilmy|slice(0,1) %}
                                     {{ smf.filmy }}
@@ -155,7 +170,7 @@
                                 <th style="width: 10%">Miejsce</th>
                                 <th style="width: 30%">Rodzaj biletu</th>
                                 <th style="width: 5%"></th>
-                                <th style="width: 20%">Cena</th>
+                                <th style="width: 20%">Cena (w zł)</th>
                                 <th style="width: 25%"></th>
                             </tr>
                             </thead>
@@ -297,7 +312,7 @@
 
         window.onload = function () {
             price = 0;
-            document.getElementById('price').innerText = price.toFixed(2) + " PLN";
+            document.getElementById('price').innerText = price.toFixed(2) + " zł";
 
             {% for ticket in reservation.seanse.pulebiletow.pulaMaRodzajeBiletow %}
             ticketPriceArray.push({
@@ -425,7 +440,7 @@
                     price += priceArray[i].voucherPrice;
                 }
             }
-            document.getElementById('price').innerText = price.toFixed(2) + " PLN";
+            document.getElementById('price').innerText = price.toFixed(2) + " zł";
         }
 
         function deleteVoucher(seatId, index) {

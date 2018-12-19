@@ -134,7 +134,7 @@ class RezerwacjeRepository extends ServiceEntityRepository
             ->setParameter('ifAccomplish', $ifAccomplish)
             ->setParameter('dateF', $from)
             ->setParameter('dateT', $to)
-            ->orderBy('r.id', 'DESC')
+            ->orderBy('r.sfinalizowana, r.id', 'ASC')
             ->getQuery();
 
         $requestedPage = new Paginator($query);

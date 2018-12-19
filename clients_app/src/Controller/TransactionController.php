@@ -113,6 +113,7 @@ class TransactionController extends Controller
 
         $selectedSeatsIdArray = [];
         $requestArray = $request->request->all();
+        $error = null;
         if (!empty($requestArray) && !$submit) {
             $selectedSeatsIdArray = array_keys($requestArray);
             $selectedTicketsIdArray = array_values($requestArray);
@@ -138,6 +139,8 @@ class TransactionController extends Controller
                 return $this->render('clientsApp/transactions/summary.html.twig', ['seance' => $seance,
                     'selectedSeats' => $selectedSeats, 'selectedTickets' => $selectedTickets,
                     'promotions' => $promotions, 'email' => $email]);
+            } else {
+                $error = 'Coś poszło nie tak';
             }
         }
 
@@ -158,6 +161,8 @@ class TransactionController extends Controller
                 $this->get('session')->set('transaction', $transaction->getId());
                 $this->get('session')->set('email', $email);
                 return $this->redirectToRoute('clients_app/transactions/end');
+            } else {
+                $error = 'Coś poszło nie tak';
             }
         }
 
@@ -166,7 +171,7 @@ class TransactionController extends Controller
         }
 
         $rowType = $this->getDoctrine()->getRepository(Typyrzedow::class)->findAll();
-        return $this->render('clientsApp/transactions/add.html.twig', ['seance' => $seance,
+        return $this->render('clientsApp/transactions/add.html.twig', ['seance' => $seance, 'error' => $error,
             'roomLayout' => $roomLayout, 'tickets' => $tickets, 'selectedSeats' => $selectedSeatsIdArray, 'rowType' => $rowType]);
     }
 
@@ -186,7 +191,7 @@ class TransactionController extends Controller
             }
 
             $reservationsSeats = $this->getSeatsForReservation($reservation);
-
+            $error = null;
             if (!empty($requestArray)) {
                 $seatsIdArrayFromClient = explode(",", $requestArray['seatsIds']);
                 $ticketsIdArrayFromClient = explode(",", $requestArray['ticketsIds']);
@@ -197,6 +202,7 @@ class TransactionController extends Controller
 
                 $seance = $this->getDoctrine()->getRepository(Seanse::class)->find($seanceId);
 
+                $error = null;
                 if ($this->validSeanceId($seance, $reservation) &&
                     $this->validSeatForReservationAccomplish($seatsIdArrayFromClient, $reservationsSeats, $seance) &&
                     $this->validTickets($ticketsIdArrayFromClient, $seanceId) &&
@@ -216,6 +222,8 @@ class TransactionController extends Controller
                     $this->get('session')->set('transaction', $transaction->getId());
                     $this->get('session')->set('email', $email);
                     return $this->redirectToRoute('clients_app/transactions/end');
+                } else {
+                    $error = 'Coś poszło nie tak';
                 }
             }
 
@@ -227,7 +235,7 @@ class TransactionController extends Controller
             $promotions = $this->getDoctrine()->getRepository(Promocje::class)->findCurrentForUser($user->getDatarejestracji(), $user->isCzykobieta());
             $email = $user->getEmail();
             return $this->render('clientsApp/transactions/accomplish.html.twig', [
-                'reservation' => $reservation, 'promotions' => $promotions,
+                'reservation' => $reservation, 'promotions' => $promotions, 'error' => $error,
                 'selectedSeats' => $reservationsSeats, 'email' => $email]);
         } else {
             return $this->redirectToRoute('clients_app/login_page');

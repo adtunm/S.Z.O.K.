@@ -16,7 +16,7 @@ class AppController extends AbstractController
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
         if($this->isGranted('IS_AUTHENTICATED_FULLY')){
-            return $this->redirectToRoute('clients_app/main_page');
+            return $this->redirectToRoute('workers_app/main_page');
         }
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();

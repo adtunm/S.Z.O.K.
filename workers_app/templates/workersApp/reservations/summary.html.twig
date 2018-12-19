@@ -7,9 +7,19 @@
             <div class="mx-3">
                 <div class="mx-3">
                     <div class="row mb-3">
-                        <div class="col-sm-3">Film:</div>
-                        <div class="col-sm-9 pl-sm-2">{% if seance.wydarzeniaspecjalne %}
-                                {{ seance.wydarzeniaspecjalne }}
+                        <div class="col-sm-3">
+                            {% if seance.wydarzeniaspecjalne %}
+                                Wydarzenie specjalne:
+                            {% else %}
+                                Film:
+                            {% endif %}
+                        </div>
+                        <div class="col-sm-9 pl-sm-2">
+                            {% if seance.wydarzeniaspecjalne %}
+                                {{ seance.wydarzeniaspecjalne }} -
+                                {% for smf in seance.seansMaFilmy %}
+                                    {{ smf.filmy }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
                             {% else %}
                                 {% for smf in seance.seansMaFilmy|slice(0,1) %}
                                     {{ smf.filmy }}

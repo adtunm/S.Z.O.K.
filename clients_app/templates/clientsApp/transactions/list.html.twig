@@ -13,7 +13,7 @@
                 <input type="date" name="dateFrom" id="dateForm"
                        class="form-control" value="{% if values %}{{ values.dateFrom }}{% endif %}"
                        onkeypress=''>
-                <label for="dateTo" class="mx-sm-2">Data od: </label>
+                <label for="dateTo" class="mx-sm-2">Data do: </label>
                 <input type="date" name="dateTo" id="dateTo"
                        class="form-control" value="{% if values %}{{ values.dateTo }}{% endif %}"
                        onkeypress=''>
@@ -34,9 +34,9 @@
                 <tr>
                     <th style="width: 15%">Numer transakcji</th>
                     <th style="width: 15%">Data realizacji</th>
-                    <th style="width: 35%">Seans</th>
+                    <th style="width: 45%">Seans</th>
                     <th style="width: 15%">Cena</th>
-                    <th style="width: 20%"></th>
+                    <th style="width: 10%"></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -44,8 +44,12 @@
                     <tr>
                         <td scope="row">{{ transaction.id }} </td>
                         <td scope="row">{{ transaction.data|date('d.m.Y H:i') }} </td>
-                        <td>{% if transaction.seanse.wydarzeniaspecjalne %}
-                                {{ transaction.seanse.wydarzeniaspecjalne }}
+                        <td>
+                            {% if transaction.seanse.wydarzeniaspecjalne %}
+                                {{ transaction.seanse.wydarzeniaspecjalne }} -
+                                {% for smf in transaction.seanse.seansMaFilmy %}
+                                    {{ smf.filmy }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
                             {% else %}
                                 {% for smf in transaction.seanse.seansMaFilmy|slice(0,1) %}
                                     {{ smf.filmy }}
@@ -55,7 +59,7 @@
                             - {{ transaction.seanse.poczatekseansu|date('d.m.Y H:i') }}
                             - {{ transaction.seanse.sale }}
                         </td>
-                        <td>{{ transaction.sum }}</td>
+                        <td>{{ transaction.sum|number_format(2, '.', ' ') }} zł</td>
                         <td>
                             <a class="btn btn-primary btn-sm pull-right"
                                href="{{ path('clients_app/transactions/show', {'id':transaction.id } ) }}">Pokaż</a>

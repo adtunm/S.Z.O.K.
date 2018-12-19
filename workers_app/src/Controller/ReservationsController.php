@@ -106,6 +106,7 @@ class ReservationsController extends AbstractController
 
             $seatsIdArray = explode(",", $request->get('seatId'));
             $roomLayout = $this->getRoomLayout($this->getDoctrine()->getRepository(Seanse::class)->find($id));
+            $error = null;
             if (($submit == 0 || $submit == 2) && $form->isSubmitted() && $form->isValid() && $this->validSeat($seatsIdArray, $roomLayout)) {
                 if ($submit == 2) {
                     $seatsArrayCollection = new ArrayCollection();
@@ -131,9 +132,13 @@ class ReservationsController extends AbstractController
                     return $this->redirectToRoute('workers_app/reservations', $values);
                 }
                 return $this->render('workersApp/reservations/summary.html.twig', ['seance' => $seance, 'rezervationData' => $request->request->all()]);
+            } else if ($submit and $submit != 1) {
+                $error = 'Coś poszło nie tak';
             }
             $rowType = $this->getDoctrine()->getRepository(Typyrzedow::class)->findAll();
-            return $this->render('workersApp/reservations/add.html.twig', ['seance' => $seance, 'roomLayout' => $roomLayout, 'checkedSeats' => $seatsIdArray, 'form' => $form->createView(), 'rowType' => $rowType]);
+            return $this->render('workersApp/reservations/add.html.twig', ['seance' => $seance,
+                'roomLayout' => $roomLayout, 'checkedSeats' => $seatsIdArray, 'form' => $form->createView(),
+                'rowType' => $rowType, 'error' => $error]);
         } else {
             return $this->redirectToRoute('workers_app/login_page');
         }
