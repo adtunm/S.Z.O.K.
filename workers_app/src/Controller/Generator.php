@@ -354,9 +354,9 @@ class Generator extends AbstractController
         return $data;
     }
 
-    /**
-     * @Route("/generator")
-     */
+//    /**
+//     * @Route("/generator")
+//     */
     public function generator()
     {
         gc_enable();
@@ -367,34 +367,36 @@ class Generator extends AbstractController
         $period = new \DatePeriod(new \DateTime($this->startGeneration), $interval, new \DateTime($this->endGeneration));
 
         $this->vouchers = array();
-        $this->movies = $movie = $this->getDoctrine()->getRepository(Filmy::class)->findAll();
-        $this->ticketPools = $this->getDoctrine()->getRepository(Pulebiletow::class)->findAll();
-        $this->specialEvents = $this->getDoctrine()->getRepository(Wydarzeniaspecjalne::class)->findAll();
-        $this->rooms = $this->getDoctrine()->getRepository(Sale::class)->findAll();
-        $this->users = $this->getDoctrine()->getRepository(Uzytkownicy::class)->findAll();
-        $this->employees = $this->getDoctrine()->getRepository(Pracownicy::class)->findAll();
-        $this->payment = $this->getDoctrine()->getRepository(Rodzajeplatnosci::class)->findAll();
-
-        foreach($this->revLayout AS $key => $roomLayout) {
-            foreach($roomLayout AS $key1 => $value) {
-                $this->revLayout[$key][$key1] = $this->getDoctrine()->getRepository(Miejsca::class)->find($value);
-            }
-        }
-
-        foreach($this->transLayout AS $key => $roomLayout) {
-            foreach($roomLayout AS $key1 => $value) {
-                $this->transLayout[$key][$key1] = $this->getDoctrine()->getRepository(Miejsca::class)->find($value);
-            }
-        }
 
         $counterS = 0;
         $counterV = 0;
         $counterR = 0;
         $counterT = 0;
 
+        $this->movies = $movie = $this->getDoctrine()->getRepository(Filmy::class)->findAll();
+        $this->ticketPools = $this->getDoctrine()->getRepository(Pulebiletow::class)->findAll();
+        $this->specialEvents = $this->getDoctrine()->getRepository(Wydarzeniaspecjalne::class)->findAll();
+        $this->rooms = $this->getDoctrine()->getRepository(Sale::class)->findAll();
         $counterS += $this->pushSeances($period);
-        $counterV += $this->pushVouchers($counterS / 5 * $this->percentageOfNonEmptySeances, 0);
+
+        foreach($this->revLayout AS $key => $roomLayout) {
+            foreach($roomLayout AS $key1 => $value) {
+                $this->revLayout[$key][$key1] = $this->getDoctrine()->getRepository(Miejsca::class)->find($value);
+            }
+        }
+        $this->users = $this->getDoctrine()->getRepository(Uzytkownicy::class)->findAll();
+        $this->employees = $this->getDoctrine()->getRepository(Pracownicy::class)->findAll();
         $counterR += $this->pushReservations($this->percentageOfNonEmptySeances);
+
+        foreach($this->transLayout AS $key => $roomLayout) {
+            foreach($roomLayout AS $key1 => $value) {
+                $this->transLayout[$key][$key1] = $this->getDoctrine()->getRepository(Miejsca::class)->find($value);
+            }
+        }
+        $this->payment = $this->getDoctrine()->getRepository(Rodzajeplatnosci::class)->findAll();
+        $this->users = $this->getDoctrine()->getRepository(Uzytkownicy::class)->findAll();
+        $this->employees = $this->getDoctrine()->getRepository(Pracownicy::class)->findAll();
+        $counterV += $this->pushVouchers($counterS / 5 * $this->percentageOfNonEmptySeances, 0);
         $counterT += $this->pushTransaction($this->percentageOfNonEmptySeances);
         $counterB = 0;
         while($counterB > -1) {
@@ -466,8 +468,8 @@ class Generator extends AbstractController
         set_time_limit(10000000);
         $counter = 0;
         $entityManager = $this->getDoctrine()->getManager();
+        $timeArray = array([12, 16, 20], [14, 19, 22], [16, 21]);
         foreach($datePeriod as $date) {
-            $timeArray = array([12, 16, 20], [14, 19, 22], [16, 21]);
             foreach($this->rooms AS $room) {
                 $switch = rand(0, 2);
                 $movie = $this->movies[rand(0, count($this->movies) - 3)];
@@ -521,11 +523,13 @@ class Generator extends AbstractController
         $entityManager->flush();
         unset($this->movies);
         unset($this->ticketPools);
+        unset($this->specialEvents);
+        unset($this->rooms);
         $counter = $counter;
+        $entityManager->clear();
         gc_collect_cycles();
 
         $this->seances = $this->getDoctrine()->getRepository(Seanse::class)->findAll();
-        $entityManager->clear();
 
         return $counter;
     }
@@ -616,9 +620,8 @@ class Generator extends AbstractController
                 $entityManager->persist($booking);
                 $count++;
 
-                if($count % 5000 == 0)
+                if($count % 15000 == 0)
                     $entityManager->flush();
-                    $entityManager->clear();
                     gc_collect_cycles();
 
             }
@@ -626,13 +629,14 @@ class Generator extends AbstractController
 
 
         $entityManager->flush();
-        $entityManager->clear();
         unset($this->maleNames);
         unset($this->femaleNames);
         unset($this->maleSurnames);
         unset($this->femaleSurnames);
         unset($this->emailDomains);
         unset($this->polishCharsSwap);
+        unset($this->revLayout);
+        $entityManager->clear();
         $count = $count;
         gc_collect_cycles();
 
@@ -880,9 +884,8 @@ class Generator extends AbstractController
 
                         $counter++;
                     }
-                    if($counter % 5000 == 0) {
+                    if($counter % 10000 == 0) {
                         $entityManager->flush();
-                        $entityManager->clear();
                         gc_collect_cycles();
                     }
                     $diff++;
@@ -892,15 +895,13 @@ class Generator extends AbstractController
 
         $entityManager->flush();
 
-        unset($this->bookings);
         unset($this->seances);
         unset($this->users);
         unset($this->employees);
-        unset($this->rooms);
-        unset($this->specialEvents);
         unset($this->transLayout);
-        unset($this->revLayout);
+        unset($this->payment);
         $entityManager->clear();
+        $counter = $counter;
         gc_collect_cycles();
 
         return $counter;
@@ -911,7 +912,7 @@ class Generator extends AbstractController
         set_time_limit(10000000);
 
         $entityManager = $this->getDoctrine()->getManager();
-        $transactions = $this->getDoctrine()->getRepository(Tranzakcje::class)->findBy(array(), NULL, 5000, $counter);
+        $transactions = $this->getDoctrine()->getRepository(Tranzakcje::class)->findBy(array(), NULL, 30000, $counter);
         foreach($transactions AS $transaction) {
             foreach($transaction->getBilety()->getIterator() AS $ticket) {
                 $ticket->recalculateControlDigit();
@@ -922,7 +923,7 @@ class Generator extends AbstractController
         $entityManager->flush();
         $entityManager->clear();
         gc_collect_cycles();
-        if(count($transactions) % 5000 == 0)
+        if(count($transactions) % 30000 == 0)
             return $counter;
         return -1;
     }
