@@ -104,10 +104,19 @@
             <div class="mx-3">
                 <div class="mx-3">
                     <div class="row mb-3">
-                        <div class="col-sm-3">Film:</div>
+                        <div class="col-sm-3">
+                            {% if seance.wydarzeniaspecjalne %}
+                                Wydarzenie specjalne:
+                            {% else %}
+                                Film:
+                            {% endif %}
+                        </div>
                         <div class="col-sm-9 pl-sm-2">
                             {% if seance.wydarzeniaspecjalne %}
-                                {{ seance.wydarzeniaspecjalne }}
+                                {{ seance.wydarzeniaspecjalne }} -
+                                {% for smf in seance.seansMaFilmy %}
+                                    {{ smf.filmy }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
                             {% else %}
                                 {% for smf in seance.seansMaFilmy|slice(0,1) %}
                                     {{ smf.filmy }}
@@ -152,7 +161,7 @@
                                 <th>Rząd</th>
                                 <th>Miejsce</th>
                                 <th>Rodzaj biletu</th>
-                                <th>Cena</th>
+                                <th>Cena (w zł)</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -261,7 +270,7 @@
 
         window.onload = function () {
             price = {{ price }};
-            document.getElementById('price').innerText = price.toFixed(2) + " PLN";
+            document.getElementById('price').innerText = price.toFixed(2) + " zł";
 
             {% for selectedSeat in selectedSeats %}
             {% if selectedSeat != null %}
@@ -327,7 +336,7 @@
             for (var i = 0; i < priceArray.length; i++) {
                 price += priceArray[i].voucherPrice;
             }
-            document.getElementById('price').innerText = price.toFixed(2) + " PLN";
+            document.getElementById('price').innerText = price.toFixed(2) + " zł";
         }
 
         function deleteVoucher(seatId, index) {
@@ -398,12 +407,12 @@
         function validEmail() {
             var emailInput = document.getElementById('inputEmail');
             var email = emailInput.value;
-            var emailAlert =  document.getElementById('emailAlert');
+            var emailAlert = document.getElementById('emailAlert');
             email = email.trim();
             const reg = /^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i;
             emailAlert.hidden = false;
-            if(reg.test(String(email))){
-                if(emailAlert.classList.contains('text-danger')){
+            if (reg.test(String(email))) {
+                if (emailAlert.classList.contains('text-danger')) {
                     emailAlert.classList.replace('text-danger', 'text-success');
                 }
                 emailAlert.innerText = 'Email poprawny';
@@ -411,7 +420,7 @@
                 emailInput.style.border = '1px solid green';
                 return true;
             } else {
-                if(emailAlert.classList.contains('text-success')) {
+                if (emailAlert.classList.contains('text-success')) {
                     emailAlert.classList.replace('text-success', 'text-danger');
                 }
                 emailInput.style.border = 'green';
@@ -438,14 +447,14 @@
         }
 
         function setConfirm() {
-            if(validEmail()) {
+            if (validEmail()) {
                 document.getElementById('form_save').disabled = true;
                 document.getElementById('form_back').disabled = true;
                 var seatsIdInput = document.getElementById('seatsIds');
                 var vouchersIdInput = document.getElementById('vouchersIds');
                 var ticketsIdInput = document.getElementById('ticketsIds');
 
-                document.getElementById('email').value =  document.getElementById('inputEmail').value;
+                document.getElementById('email').value = document.getElementById('inputEmail').value;
                 document.getElementById('submitNumber').value = 1;
                 document.getElementById('promotionId').value = promotion;
                 seatsIdInput.value = '';

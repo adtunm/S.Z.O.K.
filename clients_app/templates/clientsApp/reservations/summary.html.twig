@@ -7,9 +7,19 @@
             <div class="mx-3">
                 <div class="mx-3">
                     <div class="row mb-3">
-                        <div class="col-sm-3">Film:</div>
-                        <div class="col-sm-9 pl-sm-2">{% if seance.wydarzeniaspecjalne %}
-                                {{ seance.wydarzeniaspecjalne }}
+                        <div class="col-sm-3">
+                            {% if seance.wydarzeniaspecjalne %}
+                                Wydarzenie specjalne:
+                            {% else %}
+                                Film:
+                            {% endif %}
+                        </div>
+                        <div class="col-sm-9 pl-sm-2">
+                            {% if seance.wydarzeniaspecjalne %}
+                                {{ seance.wydarzeniaspecjalne }} -
+                                {% for smf in seance.seansMaFilmy %}
+                                    {{ smf.filmy }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
                             {% else %}
                                 {% for smf in seance.seansMaFilmy|slice(0,1) %}
                                     {{ smf.filmy }}
@@ -23,7 +33,8 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">Wybrane miejsca:</div>
-                        <div class="col-sm-9 pl-sm-2">Sala: {{ seance.sale.numersali }} {{ rezervationData.seatNumber }}</div>
+                        <div class="col-sm-9 pl-sm-2">
+                            Sala: {{ seance.sale.numersali }} {{ rezervationData.seatNumber }}</div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">Imie i nazwisko:</div>
@@ -44,7 +55,8 @@
                                value="{{ rezervationData.form.imie }}">
                         <input type="text" id="form_nazwisko" name="form[nazwisko]" hidden
                                value="{{ rezervationData.form.nazwisko }}">
-                        <input type="email" id="form_email" name="form[email]" hidden value="{{ rezervationData.form.email }}">
+                        <input type="email" id="form_email" name="form[email]" hidden
+                               value="{{ rezervationData.form.email }}">
                         <input type="text" id="form_telefon" name="form[telefon]" hidden
                                value="{{ rezervationData.form.telefon }}">
                         <button type="button" id="form_back" name="form[back]" class="btn btn-primary float-left"

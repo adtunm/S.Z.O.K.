@@ -104,6 +104,49 @@
                         <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#revId">
                             Zdejmij rezerwacje
                         </button>
+                    <div class="row mb-3" id="smf_group">
+                        {% if seance.wydarzeniaspecjalne %}
+                            <div class="col-md-12 mb-3">Filmy:</div>
+                            <div class="col-md-12 mb-3">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 30%">Pozycja</th>
+                                        <th style="width: 70%">Film</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for smf in seance.seansMaFilmy %}
+                                        <tr>
+                                            <td>{{ smf.kolejnosc }}</td>
+                                            <td>{{ smf.filmy }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% else %}
+                            <div class="col-md-6 mb-3">Filmy:</div>
+                            <div class="col-md-6 mb-3">
+                                {% for smf in seance.seansMaFilmy|slice(0,1) %}
+                                    {{ smf.filmy }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a href="{{ path('workers_app/program/date') }}" class="btn btn-secondary mt-2"><i class="fa fa-angle-left" aria-hidden="true"></i>
+                Przejdź do repertuaru</a>
+            <div class="pull-right">
+                <a href="{{ path('workers_app/reservations/add', {'id': seance.id }) }}" class="btn btn-primary mt-2">Rezerwacja</a>
+                <a href="{{ path('workers_app/transactions/add', {'id': seance.id }) }}" class="btn btn-primary mt-2">Sprzedaż</a>
+                {% if booking %}
+                    <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#revId">
+                        Zdejmij rezerwacje
+                    </button>
 
                         <!-- Modal -->
                         <div class="modal fade" id="revId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"

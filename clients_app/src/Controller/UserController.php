@@ -21,6 +21,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\Regex;
 
 class UserController extends Controller
 {
@@ -149,8 +151,9 @@ class UserController extends Controller
             return $this->redirectToRoute('clients_app/logout_page');
         }
         if ($this->isGranted('ROLE_USER')) {
-            $user = clone $this->getDoctrine()->getRepository(Uzytkownicy::class)->find($this->getUser()->getId());
+            $user = $this->getDoctrine()->getRepository(Uzytkownicy::class)->find($this->getUser()->getId());
             $form = $this->createFormBuilder($user)
+                ->remove('haslo')
                 ->add('imie', TextType::class, array(
                     'label' => 'Imię:',
                     'attr' => array('class' => 'form-control',
@@ -200,6 +203,7 @@ class UserController extends Controller
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()) {
+                $user = $form->getData();
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->merge($user);
                 $entityManager->flush();
@@ -219,57 +223,36 @@ class UserController extends Controller
             return $this->redirectToRoute('clients_app/logout_page');
         }
         if ($this->isGranted('ROLE_USER')) {
-            $user = $this->getDoctrine()->getRepository(Uzytkownicy::class)->find($this->getUser()->getId());
-            $userOject = clone $user;
-            $form = $this->createFormBuilder($userOject)
-                ->add('haslo', RepeatedType::class, array(
-                    'type' => PasswordType::class,
-                    'first_options' => array(
-                        'label' => 'Nowe hasło:',
-                        'attr' => array('class' => 'form-control',
-                            "pattern" => "\S{8,64}",
-                            'title' => 'Dowolne znaki bez znaków białych, od 8 do 64 znaków.',
-                            'placeholder' => 'Wprowadź nowe hasło...',
-                            'autocomplete' => "off"),
-                        'label_attr' => array('class' => "col-sm-2 col-form-label")),
-                    'second_options' => array(
-                        'label' => 'Powtórz nowe hasło:',
-                        'attr' => array('class' => 'form-control',
-                            "pattern" => "\S{8,64}",
-                            'title' => 'Dowolne znaki bez znaków białych, od 8 do 64 znaków.',
-                            'placeholder' => 'Powtórz nowe hasło...',
-                            'autocomplete' => "off"),
-                        'label_attr' => array('class' => "col-sm-2 col-form-label")),
-                    'invalid_message' => 'Hasła są nie zgodne.',
-                    'required' => true
-                ))
-                ->add('save', SubmitType::class, array(
-                    'label' => 'Zatwierdź',
-                    'attr' => array('class' => "btn btn-primary float-right")
-                ))
-                ->getForm();
-            $form->handleRequest($request);
 
-            if (!$request->request->has('stareHaslo')) {
-                $error = null;
-                return $this->render('clientsApp/users/passwordEdit.html.twig', array('form' => $form->createView(), 'error' => $error));
-            } else {
-                if ($passwordEncoder->isPasswordValid($user, $request->get('stareHaslo'))) {
-                    if ($form->isSubmitted() && $form->isValid()) {
+            $user = $this->getUser();
+            $error = "";
+            if($_POST) {
+                $oldPassword = $_POST['oldPassword'];
+                $newPassword = $_POST['newPassword'];
+                $confirmPassword = $_POST['confirmPassword'];
+                if(!preg_match("/^[\S]+$/u", $newPassword)) {
+                    $error = 'Hasło może składać się ze wszystkich znaków z wyłączeniem znaków białych.';
+                } else if($passwordEncoder->isPasswordValid($user, $oldPassword)) {
+                    if($newPassword == $confirmPassword) {
+                        $newPassword = $passwordEncoder->encodePassword($user, $newPassword);
+                        $user->setHaslo($newPassword);
                         $entityManager = $this->getDoctrine()->getManager();
-                        $var = $form->get('haslo')->getData();
-                        $password = $passwordEncoder->encodePassword($user, $var);
-                        $user->setHaslo($password);
-                        $entityManager->merge($user);
+                        $entityManager->persist($user);
                         $entityManager->flush();
                         return $this->redirectToRoute('clients_app/main_page');
+                    } else {
+                        $error = "Podane hasła nie są identyczne.";
                     }
                 } else {
-                    $error = ('Podałeś nie poprawne stare hasło.');
-                    return $this->render('clientsApp/users/passwordEdit.html.twig', array('form' => $form->createView(), 'error' => $error));
+                    $error = "Podałeś nie poprawne stare hasło.";
                 }
             }
+            return $this->render('clientsApp/users/passwordEdit.html.twig', array(
+                'error' => $error
+            ));
+
         }
+        return $this->redirectToRoute('clients_app/main_page');
     }
 
     /**

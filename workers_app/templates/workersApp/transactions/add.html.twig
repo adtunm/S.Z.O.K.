@@ -12,7 +12,10 @@
     <div class="row px-3">
         <h6 class="mb-3 font-weight-normal">
             {% if seance.wydarzeniaspecjalne %}
-                {{ seance.wydarzeniaspecjalne }}
+                {{ seance.wydarzeniaspecjalne }} -
+                {% for smf in seance.seansMaFilmy %}
+                    {{ smf.filmy }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
             {% else %}
                 {% for smf in seance.seansMaFilmy|slice(0,1) %}
                     {{ smf.filmy }}
@@ -21,6 +24,12 @@
             - {{ seance.typyseansow }} - {{ seance.poczatekseansu|date('d.m.Y H:i') }} - {{ seance.sale }}
         </h6>
     </div>
+    {% if error %}
+        <div class="alert alert-danger alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ error }}
+        </div>
+    {% endif %}
     <div class="content panel mt-2 mb-3 mx-0 p-5 bg-light">
         <div class="row justify-content-between px-3">
             <div class="room_view" id="roomContent">
@@ -92,7 +101,7 @@
     </div>
     <div class="row justify-content-between px-3">
         <div>
-            <a href="{{ path('workers_app/rooms_page') }}" class="btn btn-secondary"><i class="fa fa-angle-left"
+            <a href="{{ path('workers_app/program/date') }}" class="btn btn-secondary"><i class="fa fa-angle-left"
                                                                                         aria-hidden="true"></i> Wróć</a>
         </div>
         <div>
@@ -131,7 +140,10 @@
                     <div class="row px-3">
                         <h5 class="mb-3 font-weight-normal">
                             {% if seance.wydarzeniaspecjalne %}
-                                {{ seance.wydarzeniaspecjalne }}
+                                {{ seance.wydarzeniaspecjalne }} -
+                                {% for smf in seance.seansMaFilmy %}
+                                    {{ smf.filmy }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
                             {% else %}
                                 {% for smf in seance.seansMaFilmy|slice(0,1) %}
                                     {{ smf.filmy }}

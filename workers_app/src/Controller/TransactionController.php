@@ -48,6 +48,7 @@ class TransactionController extends Controller
 
             $selectedSeatsIdArray = [];
             $requestArray = $request->request->all();
+            $error = null;
             if (!empty($requestArray) && !$submit) {
                 $selectedSeatsIdArray = array_keys($requestArray);
                 $selectedTicketsIdArray = array_values($requestArray);
@@ -67,6 +68,8 @@ class TransactionController extends Controller
                     return $this->render('workersApp/transactions/summary.html.twig', ['seance' => $seance,
                         'selectedSeats' => $selectedSeats, 'selectedTickets' => $selectedTickets,
                         'promotions' => $promotions, 'paymentWay' => $paymentWay]);
+                } else {
+                    $error = 'Coś poszło nie tak';
                 }
             }
 
@@ -85,6 +88,8 @@ class TransactionController extends Controller
                     ($selectedPaymentWayId == 1 || $selectedPaymentWayId == 2)) {
                     $transaction = $this->addToDatabase($seance, $selectedSeatsIdArray, $selectedTicketsIdArray, $selectedVouchersIdArray, $selectedPromotionId, $selectedPaymentWayId);
                     return $this->redirectToRoute('workers_app/transactions/end', ['id' => $transaction->getId()]);
+                } else {
+                    $error = 'Coś poszło nie tak';
                 }
             }
 
@@ -93,7 +98,7 @@ class TransactionController extends Controller
             }
 
             $rowType = $this->getDoctrine()->getRepository(Typyrzedow::class)->findAll();
-            return $this->render('workersApp/transactions/add.html.twig', ['seance' => $seance,
+            return $this->render('workersApp/transactions/add.html.twig', ['seance' => $seance, 'error' => $error,
                 'roomLayout' => $roomLayout, 'tickets' => $tickets, 'selectedSeats' => $selectedSeatsIdArray, 'rowType' => $rowType]);
         } else {
             return $this->redirectToRoute('workers_app/login_page');
@@ -116,7 +121,7 @@ class TransactionController extends Controller
             }
 
             $reservationsSeats = $this->getSeatsForReservation($reservation);
-
+            $error = null;
             if (!empty($requestArray)) {
                 $seatsIdArrayFromClient = explode(",", $requestArray['seatsIds']);
                 $ticketsIdArrayFromClient = explode(",", $requestArray['ticketsIds']);
@@ -144,6 +149,8 @@ class TransactionController extends Controller
                     $entityManager->merge($transaction);
                     $entityManager->flush();
                     return $this->redirectToRoute('workers_app/transactions/end', ['id' => $transaction->getId()]);
+                } else {
+                    $error = 'Coś poszło nie tak';
                 }
             }
 
@@ -154,7 +161,7 @@ class TransactionController extends Controller
             $promotions = $this->getDoctrine()->getRepository(Promocje::class)->findCurrent();
             $paymentWay = $this->getDoctrine()->getRepository(Rodzajeplatnosci::class)->findAll();
             return $this->render('workersApp/transactions/accomplish.html.twig', [
-                'reservation' => $reservation, 'promotions' => $promotions,
+                'reservation' => $reservation, 'promotions' => $promotions, 'error' => $error,
                 'selectedSeats' => $reservationsSeats, 'paymentWay' => $paymentWay]);
         } else {
             return $this->redirectToRoute('workers_app/login_page');
@@ -415,7 +422,6 @@ class TransactionController extends Controller
      */
     function checkVoucherByCode(Request $request, $id)
     {
-
         $voucherCode = $request->get('voucherCode');
 
         if (strlen($voucherCode) < 28 || !preg_match('/^[0-9]{1,}$/', $voucherCode) || !Vouchery::verifyCode($voucherCode)) {
@@ -511,7 +517,7 @@ class TransactionController extends Controller
      */
     function returnTicket(Request $request)
     {
-        if ($this->isGranted('IS_AUTHENTICATED_FULLY')) {
+        if ($this->isGranted('ROLE_MANAGER') or $this->isGranted('ROLE_ADMIN')) {
             if ($request->request->all()) {
                 if (is_a($ticketOrError = $this->checkTicket($ticketCode = $request->get('ticketCode')), 'App\Entity\Bilety')) {
                     $ticketOrError->setCzyanulowany(1);
@@ -525,7 +531,7 @@ class TransactionController extends Controller
             }
             return $this->render('workersApp/transactions/returnTicket.html.twig');
         } else {
-            return $this->redirectToRoute('workers_app/login_page');
+            return $this->redirectToRoute('workers_app/no_permission');
         }
     }
 

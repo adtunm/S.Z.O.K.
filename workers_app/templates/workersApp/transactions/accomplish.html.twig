@@ -103,6 +103,12 @@
 
                 </div>
             </div>
+            {% if error %}
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    {{ error }}
+                </div>
+            {% endif %}
             <div class="mx-3">
                 <div class="mx-3">
                     <div class="row mb-3">
@@ -118,10 +124,19 @@
                         <div class="col-sm-9 pl-sm-2">{{ reservation.telefon }}</div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-sm-3">Film:</div>
+                        <div class="col-sm-3">
+                            {% if reservation.seanse.wydarzeniaspecjalne %}
+                                Wydarzenie specjalne:
+                            {% else %}
+                                Film:
+                            {% endif %}
+                        </div>
                         <div class="col-sm-9 pl-sm-2">
                             {% if reservation.seanse.wydarzeniaspecjalne %}
-                                {{ reservation.seanse.wydarzeniaspecjalne }}
+                                {{ reservation.seanse.wydarzeniaspecjalne }} -
+                                {% for smf in reservation.seanse.seansMaFilmy %}
+                                    {{ smf.filmy }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
                             {% else %}
                                 {% for smf in reservation.seanse.seansMaFilmy|slice(0,1) %}
                                     {{ smf.filmy }}
@@ -157,7 +172,7 @@
                                 <th style="width: 10%">Miejsce</th>
                                 <th style="width: 30%">Rodzaj biletu</th>
                                 <th style="width: 5%"></th>
-                                <th style="width: 15%">Cena</th>
+                                <th style="width: 15%">Cena (w zł)</th>
                                 <th style="width: 20%"></th>
                             </tr>
                             </thead>
@@ -306,10 +321,10 @@
                 <input type="text" id="seanceId" name="seanceId" hidden value="{{ reservation.seanse.id }}">
                 <a class="btn btn-secondary"
                    href="{{ path('workers_app/reservations', {
-                       'date': reservation.seanse.poczatekseansu|date('Y-m-d'),
-                       'id': reservation.id,
-                       'name': reservation.imie,
-                       'surname': reservation.nazwisko
+                       'date': 0,
+                       'id': 0,
+                       'name': 0,
+                       'surname': 0
                    } ) }}">Wróć</a>
                 <button type="button" id="form_save" name="form[save]" class="btn btn-primary float-right"
                         onclick="setConfirm()">Zatwierdz
@@ -336,7 +351,7 @@
 
         window.onload = function () {
             price = 0;
-            document.getElementById('price').innerText = price.toFixed(2) + " PLN";
+            document.getElementById('price').innerText = price.toFixed(2) + " zł";
             document.getElementById('payment{{ paymentWay[0].id }}').checked = true;
 
             {% for ticket in reservation.seanse.pulebiletow.pulaMaRodzajeBiletow %}
@@ -382,7 +397,7 @@
                 if (this.value == '{{ paymentWay[1].id }}') {
                     document.getElementById('paymentInput').hidden = false;
                     document.getElementById('paymentChange').hidden = false;
-                    document.getElementById('paymentChangeValue').innerText = (document.getElementById('paymentValue').value - price).toFixed(2) + ' PLN';
+                    document.getElementById('paymentChangeValue').innerText = (document.getElementById('paymentValue').value - price).toFixed(2) + ' zł';
                     document.getElementById('paymentId').value = {{ paymentWay[1].id }};
                 }
                 else if (this.value == '{{ paymentWay[0].id }}') {
@@ -393,7 +408,7 @@
             });
 
             $('input[type=number][name=paymentValue]').keyup(function () {
-                document.getElementById('paymentChangeValue').innerText = (this.value - price).toFixed(2) + ' PLN';
+                document.getElementById('paymentChangeValue').innerText = (this.value - price).toFixed(2) + ' zł';
             });
         });
 
@@ -458,8 +473,8 @@
                     price += priceArray[i].voucherPrice;
                 }
             }
-            document.getElementById('price').innerText = price.toFixed(2) + " PLN";
-            document.getElementById('paymentChangeValue').innerText = (document.getElementById('paymentValue').value - price).toFixed(2) + ' PLN';
+            document.getElementById('price').innerText = price.toFixed(2) + " zł";
+            document.getElementById('paymentChangeValue').innerText = (document.getElementById('paymentValue').value - price).toFixed(2) + ' zł';
             var cardRadio = document.getElementById('payment{{ paymentWay[0].id }}');
             var cashRadio = document.getElementById('payment{{ paymentWay[1].id }}');
 
