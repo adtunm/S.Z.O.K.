@@ -892,7 +892,6 @@ class Generator extends AbstractController
 
         $entityManager->flush();
 
-        unset($this->vouchers);
         unset($this->bookings);
         unset($this->seances);
         unset($this->users);

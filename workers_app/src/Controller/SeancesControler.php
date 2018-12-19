@@ -324,11 +324,6 @@ class SeancesControler extends AbstractController
             and !$seance->getCzyodwolany()
         ) {
             $entityManager = $this->getDoctrine()->getManager();
-            $smfsToRemove = $seance->getSeansMaFilmy()->getValues();
-            foreach($smfsToRemove as $smf) {
-                $entityManager->remove($smf);
-                $entityManager->flush();
-            }
             $seance->setCzyodwolany(true);
             $entityManager->merge($seance);
             $entityManager->flush();

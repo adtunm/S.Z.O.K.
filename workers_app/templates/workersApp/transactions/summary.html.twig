@@ -106,10 +106,18 @@
             <div class="mx-3">
                 <div class="mx-3">
                     <div class="row mb-3">
-                        <div class="col-sm-3">Film:</div>
+                        <div class="col-sm-3">
+                            {% if seance.wydarzeniaspecjalne %}
+                                Wydarzenie specjalne:
+                            {% else %}
+                                Film:
+                            {% endif %}</div>
                         <div class="col-sm-9 pl-sm-2">
                             {% if seance.wydarzeniaspecjalne %}
-                                {{ seance.wydarzeniaspecjalne }}
+                                {{ seance.wydarzeniaspecjalne }} -
+                                {% for smf in seance.seansMaFilmy %}
+                                    {{ smf.filmy }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
                             {% else %}
                                 {% for smf in seance.seansMaFilmy|slice(0,1) %}
                                     {{ smf.filmy }}
@@ -144,7 +152,7 @@
                                 <th>Rząd</th>
                                 <th>Miejsce</th>
                                 <th>Rodzaj biletu</th>
-                                <th>Cena</th>
+                                <th>Cena (w zł)</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -278,7 +286,7 @@
 
         window.onload = function () {
             price = {{ price }};
-            document.getElementById('price').innerText = price.toFixed(2) + " PLN";
+            document.getElementById('price').innerText = price.toFixed(2) + " zł";
             document.getElementById('payment{{ paymentWay[0].id }}').checked = true;
 
             {% for selectedSeat in selectedSeats %}
@@ -305,7 +313,7 @@
                 if (this.value == '{{ paymentWay[1].id }}') {
                     document.getElementById('paymentInput').hidden = false;
                     document.getElementById('paymentChange').hidden = false;
-                    document.getElementById('paymentChangeValue').innerText = (document.getElementById('paymentValue').value - price).toFixed(2) + ' PLN';
+                    document.getElementById('paymentChangeValue').innerText = (document.getElementById('paymentValue').value - price).toFixed(2) + ' zł';
                     document.getElementById('paymentId').value = {{ paymentWay[1].id }};
                 }
                 else if (this.value == '{{ paymentWay[0].id }}') {
@@ -316,7 +324,7 @@
             });
 
             $('input[type=number][name=paymentValue]').keyup(function () {
-                document.getElementById('paymentChangeValue').innerText = (this.value - price).toFixed(2) + ' PLN';
+                document.getElementById('paymentChangeValue').innerText = (this.value - price).toFixed(2) + ' zł';
             });
         });
 
@@ -366,8 +374,8 @@
             for (var i = 0; i < priceArray.length; i++) {
                 price += priceArray[i].voucherPrice;
             }
-            document.getElementById('price').innerText = price.toFixed(2) + " PLN";
-            document.getElementById('paymentChangeValue').innerText = (document.getElementById('paymentValue').value - price).toFixed(2) + ' PLN';
+            document.getElementById('price').innerText = price.toFixed(2) + " zł";
+            document.getElementById('paymentChangeValue').innerText = (document.getElementById('paymentValue').value - price).toFixed(2) + ' zł';
             var cardRadio = document.getElementById('payment{{ paymentWay[0].id }}');
             var cashRadio = document.getElementById('payment{{ paymentWay[1].id }}');
 
@@ -454,7 +462,7 @@
             document.getElementById('form_save').disabled = true;
             document.getElementById('form_back').disabled = true;
             var seatIdInput = document.getElementById('seatsIds');
-            document.getElementById('submit').value = 2;
+            document.getElementById('submitNumber').value = 2;
             seatIdInput.value = '';
             for (var i = 0; i < seatsIdArray.length; i++) {
                 if (i != 0) {
@@ -477,7 +485,7 @@
                 document.getElementById('paymentId').value = document.getElementsByName('payment')[1].value;
             }
 
-            document.getElementById('submit').value = 1;
+            document.getElementById('submitNumber').value = 1;
             document.getElementById('promotionId').value = promotion;
             seatsIdInput.value = '';
             for (var i = 0; i < seatsIdArray.length; i++) {

@@ -352,7 +352,7 @@ class EmployeesControler extends AbstractController
                     $newPassword = $_POST['newPassword'];
                     $confirmPassword = $_POST['confirmPassword'];
                     if(!preg_match("/^[\S]+$/u", $newPassword)) {
-                        $error = 'Hasło może składać się ze wszystkich znaków z wyłączeniem znaków białych';
+                        $error = 'Hasło może składać się ze wszystkich znaków z wyłączeniem znaków białych.';
                     } else if($passwordEncoder->isPasswordValid($pracownik, $oldPassword)) {
                         if($newPassword == $confirmPassword) {
                             $newPassword = $passwordEncoder->encodePassword($pracownik, $newPassword);
@@ -362,10 +362,10 @@ class EmployeesControler extends AbstractController
                             $entityManager->flush();
                             return $this->redirectToRoute('workers_app/main_page');
                         } else {
-                            $error = "Podane hasła nie są identyczne";
+                            $error = "Podane hasła nie są identyczne.";
                         }
                     } else {
-                        $error = "Aktualne hasło jest błędne";
+                        $error = "Podałeś nie poprawne stare hasło.";
                     }
                 }
                 return $this->render('workersApp/employees/changePassword.html.twig', array(

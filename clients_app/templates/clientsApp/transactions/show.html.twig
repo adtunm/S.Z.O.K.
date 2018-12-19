@@ -4,15 +4,24 @@
     <div class="row justify-content-center">
         <div class="col-md-10 pb-4 mt-0">
             <div class="row justify-content-between px-3">
-                <div class="h1 pb-3">Moje transakcje - transakcja numer {{ transaction.id }}</div>
+                <div class="h1 pb-3">Moje transakcje - Transakcja numer {{ transaction.id }}</div>
             </div>
             <div class="mx-3">
                 <div class="mx-3">
                     <div class="row mb-3">
-                        <div class="col-sm-3">Film:</div>
+                        <div class="col-sm-3">
+                            {% if transaction.seanse.wydarzeniaspecjalne %}
+                                Wydarzenie specjalne:
+                            {% else %}
+                                Film:
+                            {% endif %}
+                        </div>
                         <div class="col-sm-9 pl-sm-2">
                             {% if transaction.seanse.wydarzeniaspecjalne %}
-                                {{ transaction.seanse.wydarzeniaspecjalne }}
+                                {{ transaction.seanse.wydarzeniaspecjalne }} -
+                                {% for smf in transaction.seanse.seansMaFilmy %}
+                                    {{ smf.filmy }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
                             {% else %}
                                 {% for smf in transaction.seanse.seansMaFilmy|slice(0,1) %}
                                     {{ smf.filmy }}
@@ -30,7 +39,7 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">Zapłacono:</div>
-                        <div class="col-sm-9 pl-sm-2" id="price">{{ transaction.sum }}</div>
+                        <div class="col-sm-9 pl-sm-2" id="price">{{ transaction.sum|number_format(2, '.', ' ') }} zł</div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-3">Promocja:</div>
@@ -63,7 +72,7 @@
                                     <td>{{ selectedSeat.miejsca.rzedy.numerrzedu }}</td>
                                     <td>{{ selectedSeat.miejsca.numermiejsca }}</td>
                                     <td>{{ selectedSeat.rodzajebiletow.nazwa }}</td>
-                                    <td>{{ selectedSeat.cena }}</td>
+                                    <td>{{ selectedSeat.cena }} zł</td>
                                 </tr>
                             {% endfor %}
                             </tbody>

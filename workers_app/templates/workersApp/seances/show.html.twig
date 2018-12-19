@@ -97,7 +97,8 @@
             <a href="{{ path('workers_app/program/date') }}" class="btn btn-secondary mt-2"><i class="fa fa-angle-left" aria-hidden="true"></i>
                 Przejdź do repertuaru</a>
             <div class="pull-right">
-                <a href="{{ path('workers_app/rooms_page/view', {'id': seance.sale.id }) }}" class="btn btn-primary mt-2">Pokaż salę</a>
+                <a href="{{ path('workers_app/reservations/add', {'id': seance.id }) }}" class="btn btn-primary mt-2">Rezerwacja</a>
+                <a href="{{ path('workers_app/transactions/add', {'id': seance.id }) }}" class="btn btn-primary mt-2">Sprzedaż</a>
                 {% if booking %}
                     <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#revId">
                         Zdejmij rezerwacje
