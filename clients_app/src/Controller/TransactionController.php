@@ -520,14 +520,16 @@ class TransactionController extends Controller
     }
 
     /**
-     * @Route("/transaction/check_voucher/{id<[1-9]\d*>?}", name="clients_app/transactions/check_voucher", methods={"POST"})
+     * @Route("/transaction/check_voucher/{id<[1-9]\d*>?}",
+     *      name="clients_app/transactions/check_voucher", methods={"POST"})
      */
     function checkVoucherByCode(Request $request, $id)
     {
 
         $voucherCode = $request->get('voucherCode');
 
-        if (strlen($voucherCode) < 28 || !preg_match('/^[0-9]{1,}$/', $voucherCode) || !Vouchery::verifyCode($voucherCode)) {
+        if (strlen($voucherCode) < 28 || !preg_match('/^[0-9]{1,}$/', $voucherCode)
+            || !Vouchery::verifyCode($voucherCode)) {
             return new JsonResponse(['error' => 'Błędny kod vouchera']);
         }
         $voucherId = $this->getDoctrine()->getRepository(Vouchery::class)->findVoucherByCode($voucherCode);

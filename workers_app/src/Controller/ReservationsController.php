@@ -160,7 +160,8 @@ class ReservationsController extends AbstractController
             foreach ($transaction->getBilety()->getIterator() AS $ticket) {
                 if (!$ticket->getCzyanulowany()) {
                     $transSeat = $ticket->getMiejsca();
-                    if ($roomLayout[$transSeat->getId()]['status'] == 1 or $roomLayout[$transSeat->getId()]['status'] == 2) {
+                    if ($roomLayout[$transSeat->getId()]['status'] == 1
+                        or $roomLayout[$transSeat->getId()]['status'] == 2) {
                         $roomLayout[$transSeat->getId()]['status'] = 4;
                     }
                 }
@@ -169,7 +170,8 @@ class ReservationsController extends AbstractController
         foreach ($seance->getRezerwacje()->getIterator() AS $booking) {
             if (!$booking->isSfinalizowana()) {
                 foreach ($booking->getMiejsca()->getIterator() AS $revSeat) {
-                    if ($roomLayout[$revSeat->getId()]['status'] == 1 or $roomLayout[$revSeat->getId()]['status'] == 2) {
+                    if ($roomLayout[$revSeat->getId()]['status'] == 1
+                        or $roomLayout[$revSeat->getId()]['status'] == 2) {
                         $roomLayout[$revSeat->getId()]['status'] = 3;
                     }
                 }

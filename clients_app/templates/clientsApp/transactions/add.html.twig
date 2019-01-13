@@ -262,7 +262,8 @@
                     for (var j = 0; j < seatIdArray[i].length; j++) {
                         if (seatIdArray[i][j].length > 0) {
                             tableHtml += '<td> Rząd: ' + (i + 1) + ' Miejsca: ' + (j + 1) + '</td>' +
-                                '<td><select id="ticketFor' + seatIdArray[i][j][0] + '" name="' + seatIdArray[i][j][0] + '"' +
+                                '<td><select id="ticketFor' + seatIdArray[i][j][0] +
+                                '" name="' + seatIdArray[i][j][0] + '"' +
                                 'class="form-control">' +
                                     {% for ticket in tickets %}
                                 '<option value="{{ ticket.id }}">{{ ticket.nazwa }} ({{ ticket.cena }})</option>' +
