@@ -45,12 +45,12 @@
 
                     {% for value in roomLayout %}
                     {% if loop.index == loop.first %}
-                        {% set currentRow = value.miejsca.rzedy %}
+                        {% set prevRow = value.miejsca.rzedy %}
                     {% endif %}
-                    {% if currentRow != value.miejsca.rzedy %}
+                    {% if prevRow != value.miejsca.rzedy %}
                 </div>
                 <div class="inline mb-2">
-                    <div class="mr-3 rowNumber seatViewPadding" id="Row"> {{ currentRow.numerrzedu + 1 }} </div>
+                    <div class="mr-3 rowNumber seatViewPadding" id="Row"> {{ value.miejsca.rzedy.numerrzedu }} </div>
                     {% endif %}
 
                     {% if value.miejsca.numermiejsca == 0 %}
@@ -67,13 +67,17 @@
                     {% else %}
                         <button class="seat seat_normal seatViewPadding mr-2 pointer"
                                 id="{{ value.miejsca.id }}"
-                                onclick="selectSeat(this, {{ value.miejsca.id }}, {{ value.miejsca.rzedy.numerrzedu }},{{ value.miejsca.numermiejsca }})">{{ value.miejsca.numermiejsca }}</button>
+                                onclick="selectSeat(this, {{ value.miejsca.id }}
+                                        , {{ value.miejsca.rzedy.numerrzedu }}
+                                        , {{ value.miejsca.numermiejsca }});">
+                            {{ value.miejsca.numermiejsca }}
+                        </button>
                     {% endif %}
 
-                    {% set currentRow = value.miejsca.rzedy %}
+                    {% set prevRow = value.miejsca.rzedy %}
                     {% endfor %}
-
                 </div>
+
             </div>
             <div class="mt-2 mx-2 p-3 legend float-right">
                 <h3 class="col-12 mb-3">Legenda</h3>
@@ -103,8 +107,8 @@
     <div class="row justify-content-between px-3">
         <div>
             <a href="{{ path('workers_app/program/date') }}" class="btn btn-secondary"><i class="fa fa-angle-left"
-                                                                                        aria-hidden="true"></i> Wróć</a>
-            {#<p id="test"></p>#}
+                                                                                          aria-hidden="true"></i>
+                Wróć</a>
         </div>
         <div>
             <form method="post">

@@ -259,11 +259,10 @@
     <script>
 
         var price;
-        var priceArray = [];
-        var dataArray = [];
-        var voucherArray = [];
         var promotion = null;
 
+        var priceArray = [];
+        var voucherArray = [];
         var seatsIdArray = [];
         var ticketsIdArray = [];
         var vouchersIdArray = [];
@@ -274,7 +273,6 @@
 
             {% for selectedSeat in selectedSeats %}
             {% if selectedSeat != null %}
-            dataArray.push({seatId: {{ selectedSeat.id }}, ticketId: {{ selectedTickets[loop.index0].id }}});
 
             seatsIdArray.push({{ selectedSeat.id }});
             ticketsIdArray.push({{ selectedTickets[loop.index0].id }});
@@ -383,12 +381,12 @@
                 },
                 async: true,
                 success: function (data) {
-                    console.log(data);
                     if ('error' in data) {
                         document.getElementById('voucherAlert' + seatId).innerHTML = data['error'];
                     } else {
                         if (vouchersIdArray.includes(data.id)) {
-                            document.getElementById('voucherAlert' + seatId).innerHTML = "Voucher został już użyty na innym bilecie w tej transakcji.";
+                            document.getElementById('voucherAlert' + seatId).innerHTML =
+                                "Voucher został już użyty na innym bilecie w tej transakcji.";
                         } else {
                             document.getElementById('closeModalButton' + seatId).click();
                             document.getElementById('voucherModalButton' + seatId).hidden = true;
