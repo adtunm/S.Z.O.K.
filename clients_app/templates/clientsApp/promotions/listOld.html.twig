@@ -27,7 +27,7 @@
                         <td>{{ promotion.wartosc }} {% if promotion.czykwotowa %}zł{% else %}%{% endif %}</td>
                         {% if promotion.staz is not null %}
                             {% if is_granted('ROLE_USER') %}
-                                {% if promotion.staz|date('Y-m-d') <= app.user.datarejestracji|date('Y-m-d') %}
+                                {% if promotion.staz|date('Y-m-d') > app.user.datarejestracji|date('Y-m-d') %}
                                     {% set class = 'text-danger' %}
                                 {% else %}
                                     {% set class = 'text-success' %}

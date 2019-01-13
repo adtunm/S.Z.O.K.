@@ -27,6 +27,7 @@
 <body>
 
 {% for bilet in transaction.bilety %}
+    {% if not bilet.czyanulowany %}
     <table style="width:100%">
         <tr>
             <td><h1 style="text-align: center;">SZOK</h1></td>
@@ -60,6 +61,7 @@
         </tr>
     </table>
     <br>
+    {% endif %}
     {% if loop.index is divisible by(4) and loop.index != loop.last %}
         <div class="page">
         </div>

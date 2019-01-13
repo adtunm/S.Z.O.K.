@@ -344,6 +344,7 @@ class SeancesControler extends AbstractController
                     'hour' => '--',
                     'minute' => '--'
                 ),
+                'minutes' => range(0,55,5),
                 'label' => false
             ))
             ->add('sale', EntityType::class, array(
