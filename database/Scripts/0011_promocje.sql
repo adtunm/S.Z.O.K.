@@ -1,6 +1,6 @@
 INSERT INTO `promocje` (`id`, `nazwa`, `czyKwotowa`, `wartosc`, `poczatekPromocji`, `koniecPromocji`, `czyKobieta`, `staz`) VALUES
 (0000000001, 'Promocja 1', 0, '8.51', '2017-10-01', '2017-10-07', 1, NULL),
-(0000000002, 'Promocja 2', 0, '2.13', '2017-10-15', '2017-10-21', 1, NULL),
+(0000000002, 'Promocja 2', 1, '2.50', '2017-10-15', '2019-02-01', 1, NULL),
 (0000000003, 'Promocja 3', 1, '6.41', '2017-10-29', '2017-11-04', 1, NULL),
 (0000000004, 'Promocja 4', 1, '6.94', '2017-11-12', '2017-11-18', NULL, '2017-10-01'),
 (0000000005, 'Promocja 5', 1, '2.21', '2017-11-26', '2017-12-02', NULL, NULL),
